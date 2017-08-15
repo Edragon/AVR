@@ -1,0 +1,244 @@
+#include <iom16v.h>
+#include <macros.h>
+#include "12864.h"
+
+//------------------------------------------------------------------------------
+//spi marker bits
+#define DDR_SPI DDRB
+#define DD_MOSI 5
+#define DD_MISO 6
+#define DD_SCK 7
+#define DD_SS 4
+#define CE PB3
+#define IRQ PB2
+//--------------------------------NRF24L01 pins definition--------------------------------
+//------------------------------------------------------------------------------
+//#define NRF24L01_MISO          PB6  // input 0 
+#define   Hign_24L01_MISO    PORTB|=(1 << PB6)
+#define   Low_24L01_MISO     PORTB &= ~(1 << PB6)
+#define   Read_24L01_MISO    PINB & (1 << PB6)
+
+//#define NRF24L01_MOSI         PB5       //output 1
+#define   Hign_24L01_MOSI    PORTB |= (1 << PB5) 
+#define   Low_24L01_MOSI     PORTB &= ~(1 << PB5)
+#define   Read_24L01_MOSI    PINB & (1 << PB5)
+
+//#define NRF24L01_SCK    PB7      //output 1
+#define   Hign_24L01_SCK    PORTB |= (1 << PB7)  
+#define   Low_24L01_SCK     PORTB &= ~(1 << PB7)   
+#define   Read_24L01_SCK    PINB & (1 << PB7);
+
+//#define NRF24L01_CSN       PB4       //output 1
+#define   Low_24L01_CSN     PORTB &= ~(1 << PB4)
+#define   Hign_24L01_CSN    PORTB |= (1 << PB4)
+
+//#define NRF24L01_CE         PB3       //output 1
+#define   Hign_24L01_CE    PORTB |= (1 << PB3) 
+#define   Low_24L01_CE     PORTB &= ~(1 << PB3)  
+#define   Read_24L01_CE    PINB & (1 << PB3)
+
+
+
+//*********************************************NRF24L01*************************************
+#define TX_ADR_WIDTH    5   	// send address length, the maxium length is 5 5*8=40 bit
+#define RX_ADR_WIDTH    5   	// receive date length
+#define TX_PLOAD_WIDTH  32    	// send bytes length
+#define RX_PLOAD_WIDTH  32  	// Receive bytes length
+ uchar TX_ADDRESS[TX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01};  //send address
+ uchar RX_ADDRESS[RX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01}; //receive address
+//***************************************NRF24L01 register commands*******************************************************
+#define READ_REG        0x00  	// Read register command
+#define WRITE_REG       0x20 	// Write register command
+#define RD_RX_PLOAD     0x61  	// Read receive data command
+#define WR_TX_PLOAD     0xA0  	// write command that waiting to send
+#define FLUSH_TX        0xE1 	// Clean send FIFO command
+#define FLUSH_RX        0xE2  	// Clean receive FIFO command 
+#define REUSE_TX_PL     0xE3  	// Define repeat loading data command
+#define NOP             0xFF  	// Nop
+//*************************************SPI(nRF24L01) register address ****************************************************
+#define CONFIG          0x00  // Configure send&receive status, CRC check mode and send&receive status respone mode
+#define EN_AA           0x01  // Auto answer function setup
+#define EN_RXADDR       0x02  // Available channel setup
+#define SETUP_AW        0x03  // Send&receive address width setup
+#define SETUP_RETR      0x04  // Auto resend funtion setup
+#define RF_CH           0x05  // Working frequency setup
+#define RF_SETUP        0x06  // Send data speed, power function setup
+#define STATUS          0x07  // status register
+#define OBSERVE_TX      0x08  // send monitor function
+#define CD              0x09  // address check         
+#define RX_ADDR_P0      0x0A  // channel 0 receive data address 
+#define RX_ADDR_P1      0x0B  // channel 1 receive data address 
+#define RX_ADDR_P2      0x0C  // channel 2 receive data address 
+#define RX_ADDR_P3      0x0D  // channel 3 receive data address 
+#define RX_ADDR_P4      0x0E  // channel 4 receive data address 
+#define RX_ADDR_P5      0x0F  // channel 5 receive data address 
+#define TX_ADDR         0x10  // Send address register
+#define RX_PW_P0        0x11  // receive channel 0 receive data length
+#define RX_PW_P1        0x12  // receive channel 1 receive data length
+#define RX_PW_P2        0x13  // receive channel 2 receive data length
+#define RX_PW_P3        0x14  // receive channel 3 receive data length
+#define RX_PW_P4        0x15  // receive channel 4 receive data length
+#define RX_PW_P5        0x16  // receive channel 5 receive data length
+#define FIFO_STATUS     0x17  // FIFO status register setup
+//*************************************************************
+
+
+//*************************************************
+//*******  void spi_init()  initilization SPI
+//**************************************************
+void spi_init()
+{
+ Hign_24L01_CSN;
+ DDR_SPI = (1<<DD_MOSI)|(1<<DD_SCK)|(1<<DD_SS)|(1 << CE);//setup MOSI,SCK,SS.CE to OUTPUT,others to INPUT
+ DDR_SPI&=~((1<<DD_MISO)|(1<<IRQ));
+ SPCR=(1<<SPE)|(1<<MSTR)|(1<<SPR0);//enable SPI protocol,master mode,MSB low bits on first,mode 0,16 frequency division,SPI clock 1MHZ
+ SPSR=0;
+}
+
+
+//**************************************************
+//*******  uchar SPI_RW(uchar date)  read write SPI
+//**************************************************
+uchar SPI_RW(uchar date)
+{
+ SPDR=date;
+    while(!(SPSR&(1<<SPIF)));
+    return SPDR;
+}
+ 
+//**************************************************
+//*******uchar SPI_Read(uchar reg)  read 24L01 register
+//**************************************************
+uchar SPI_Read(uchar reg)
+{
+ uchar reg_val;
+ 
+ Low_24L01_CSN;               
+ SPI_RW(reg);            
+ reg_val = SPI_RW(0);    
+ Hign_24L01_CSN;               
+ 
+ return(reg_val);       
+}
+
+//**************************************************
+//*******  uchar SPI_RW_Reg(uchar reg, uchar value) 
+//          write 24L01 register
+//**************************************************
+
+uchar SPI_RW_Reg(uchar reg, uchar value)
+{
+ uchar status;
+ 
+ Low_24L01_CSN;                 
+ status = SPI_RW(reg);     
+ SPI_RW(value);            
+ Hign_24L01_CSN;                   
+ 
+ return(status);           
+}
+
+//**************************************************
+//*******  uchar SPI_Read_Buf(uchar reg, uchar *pBuf, uchar bites) 
+//          read 24L01 register BUFF
+//**************************************************
+uchar SPI_Read_Buf(uchar reg, uchar *pBuf, uchar bites)
+{
+ uint status1,uchar_ctr;
+ 
+ Low_24L01_CSN;                     
+ status1 = SPI_RW(reg);         
+ 
+ for(uchar_ctr=0;uchar_ctr<bites;uchar_ctr++)
+  pBuf[uchar_ctr] = SPI_RW(0);   
+ 
+ Hign_24L01_CSN;                          
+ 
+ return(status1);                    
+}
+
+//**************************************************
+//*******  uchar SPI_Write_Buf(uchar reg, uchar *pBuf, uchar bites)
+//          write 24L01 register BUFF
+//**************************************************
+uchar SPI_Write_Buf(uchar reg, uchar *pBuf, uchar bites)
+{
+ uchar status1,uchar_ctr;
+ 
+ Low_24L01_CSN;             //SPI enable      
+ status1 = SPI_RW(reg);  
+ for(uchar_ctr=0; uchar_ctr<bites; uchar_ctr++) //
+ SPI_RW(*pBuf++);
+ Hign_24L01_CSN;           //close SPI
+ return(status1);        //
+}
+
+//**************************************************
+//*******  void SetRX_Mode(void)
+//          receive mode setup
+//**************************************************
+void SetRX_Mode(void)
+{
+ Low_24L01_CE;
+
+
+ SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, RX_ADDRESS, RX_ADR_WIDTH); //write receive address
+ SPI_RW_Reg(WRITE_REG + EN_AA, 0x01);      //0 channel answer
+ SPI_RW_Reg(WRITE_REG + EN_RXADDR, 0x01);  //data channel 0
+ SPI_RW_Reg(WRITE_REG + RF_CH,0);        //RF channel 
+ SPI_RW_Reg(WRITE_REG + RX_PW_P0, RX_PLOAD_WIDTH);//write channel 0 receive data length
+ SPI_RW_Reg(WRITE_REG + RF_SETUP, 0x07); //0db 1M 
+ SPI_RW_Reg(WRITE_REG + CONFIG, 0x0f); //receive mode 
+ Hign_24L01_CE;        //start to receive
+ delayus(200);//can't be too small
+}
+
+//**************************************************
+//*******  uchar nRF24L01_RxPacket(uchar* rx_buf)
+//          receive data packet
+//**************************************************
+uchar nRF24L01_RxPacket(uchar* rx_buf)
+{
+    uchar sta,flag=0;
+    sta=SPI_Read(STATUS);      // read status register to judge data receive status  
+    if(sta&0x40)                 // judge if recive data RX_DR==1?
+    {
+       Low_24L01_CE;   // StandBy I mode
+       SPI_Read_Buf(RD_RX_PLOAD,rx_buf,TX_PLOAD_WIDTH);// read receive payload from RX_FIFO buffer
+       flag =1;   //read data finish sign
+    }
+    SPI_RW_Reg(WRITE_REG+STATUS,sta);   //RX_DR,TX_DS,MAX_PT all set to1 after finishing received data£¬clear the interrupt sign by writing 1
+    return (flag);
+}
+
+//**************************************************
+//*******  void nRF24L01_TxPacket(uchar * tx_buf)
+//          send data packet
+//**************************************************
+void nRF24L01_TxPacket(  uchar * tx_buf)
+{ 
+   uchar sta=0;
+   uchar flag=0;
+   Low_24L01_CE;   //StandBy I mode 
+   SPI_Write_Buf(WRITE_REG + TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH); 
+   SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, TX_ADDRESS, TX_ADR_WIDTH); // load receive address
+   SPI_Write_Buf(WR_TX_PLOAD, tx_buf, TX_PLOAD_WIDTH);     // load data
+   SPI_RW_Reg(WRITE_REG + EN_AA, 0x01);      //
+   SPI_RW_Reg(WRITE_REG + EN_RXADDR, 0x01);  //
+   SPI_RW_Reg(WRITE_REG + SETUP_RETR, 0x1f); //500+86us
+   SPI_RW_Reg(WRITE_REG + RF_CH, 0);        //
+   SPI_RW_Reg(WRITE_REG + RF_SETUP, 0x07);   //
+   SPI_RW_Reg(WRITE_REG + CONFIG, 0x0e);      // IRQ receive finish interrupt, 16 bits CRC, master send
+   delayms(2);
+   Hign_24L01_CE;   //set to CE£¬activate data to send
+   delayus(10);
+   Low_24L01_CE;
+}
+
+void init_NRF24L01(void)
+{
+  spi_init();
+  Low_24L01_CE;    // stand by
+  Hign_24L01_CSN;   // SPI close
+  Low_24L01_SCK;   // close clock
+}

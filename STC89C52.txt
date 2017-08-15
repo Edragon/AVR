@@ -1,0 +1,477 @@
+arduino+STC89C52RC+nRF24L01制作远程测温系统
+作者:佚名   来源:本站原创   点击数: 6228   更新时间：2011年11月17日   【字体：大 中 小】
+
+
+断断续续使用3天的时间,终于弄明白nRF24L01无线传输芯片的原理,可以让两块不同型号的芯片进行远程数据交换.
+下面的这幅图片使用这个芯片进行温度传输.其中89C52RC+DS18B20作温度采集终端,由nRF24L01发送至arduino最后传送到PC和processing交互..
+最后尝试使用电池盒作为电源,发现在距离20米开外的地方也能保证数据传输的准确性,说明这块无线芯片确实性能不错.
+ 
+ 
+以下是其发送和接受的源代码,供有意向的人使用:
+ 
+STC89C52RC发送代码:------------------------------------------------------------------------------------------------------
+
+#include <reg52.h>
+#include <intrins.h>
+
+typedef unsigned char uchar;
+typedef unsigned char uint;
+
+//****************************************IO端口定义*********************************************
+
+sbit  MISO =P1^2;
+sbit  MOSI =P3^2;
+sbit SCK     =P1^6;
+sbit CE     =P1^5;
+sbit CSN  =P1^7;
+sbit IRQ  =P1^3;　　　　//实际上该端口并未使用
+//*****************************************DS1820端口设置****************************************
+
+sbit      DQ=P2^7   ;
+//************************************数码管位选**************************************************
+
+sbit led3=P2^0;
+sbit led2=P2^1;
+sbit led1=P2^2;
+sbit led0=P2^3;
+//***********************************数码管0-9编码***********************************************
+
+uchar seg[10]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};          //0~9段码(采用共阴四位数码管)
+uchar seg1[10]={0xBF,0x86,0xcD4,0xCF,0xE6,0xED,0xFD,0x87,0xFF,0xEF}; //加上小数点点后的段码
+uchar data temp_data[2]={0x00,0x00};          //温度采集数据缓冲区
+uchar display[7];               //显示缓冲区
+//******************************************************************************************
+
+uint  bdata sta;       //NRF24L01状态标志
+sbit RX_DR =sta^6;    
+sbit TX_DS =sta^5;
+sbit MAX_RT =sta^4;
+//*************************************NRF24L01**************************************************
+
+#define TX_ADR_WIDTH    5    // 本机地址宽度设置
+#define RX_ADR_WIDTH    5    // 接收方地址宽度设置
+
+#define TX_PLOAD_WIDTH  16   // 16 字节数据长度
+#define RX_PLOAD_WIDTH  16  // 16 字节数据长度
+
+uint const TX_ADDRESS[TX_ADR_WIDTH]= {0x34,0x43,0x10,0x10,0x01}; //本地地址
+uint const RX_ADDRESS[RX_ADR_WIDTH]= {0x34,0x43,0x10,0x10,0x01}; //接收地址
+//*****************************NRF24L01寄存器指令，详细请对照，Page18******************************
+
+#define READ_REG        0x00   // 读寄存器指令
+#define WRITE_REG       0x20  // 写寄存器指令
+#define RD_RX_PLOAD     0x61   // 读取接收数据指令
+#define WR_TX_PLOAD     0xA0   // 写待发数据指令
+#define FLUSH_TX        0xE1  // 冲洗发送 FIFO指令
+#define FLUSH_RX        0xE2   // 冲洗接收 FIFO指令
+#define REUSE_TX_PL     0xE3   // 定义重复装载数据指令
+#define NOP             0xFF   // 保留
+//****************************SPI(nRF24L01)寄存器地址，详细请对照，Page18-24**********************
+
+#define CONFIG          0x00   // 配置收发状态，CRC校验模式以及收发状态响应方式
+#define EN_AA           0x01   // 自动应答功能设置
+#define EN_RXADDR       0x02   // 可用信道设置
+#define SETUP_AW        0x03   // 收发地址宽度设置
+#define SETUP_RETR      0x04   // 自动重发功能设置
+#define RF_CH           0x05   // 工作频率设置
+#define RF_SETUP        0x06   // 发射速率、功耗功能设置
+#define STATUS          0x07   // 状态寄存器
+#define OBSERVE_TX      0x08   // 发送监测功能
+#define CD              0x09   // 地址检测          
+#define RX_ADDR_P0      0x0A   // 频道0接收数据地址
+#define RX_ADDR_P1      0x0B   // 频道1接收数据地址
+#define RX_ADDR_P2      0x0C   // 频道2接收数据地址
+#define RX_ADDR_P3      0x0D   // 频道3接收数据地址
+#define RX_ADDR_P4      0x0E   // 频道4接收数据地址
+#define RX_ADDR_P5      0x0F   // 频道5接收数据地址
+#define TX_ADDR         0x10   // 发送地址寄存器
+#define RX_PW_P0        0x11   // 接收频道0接收数据长度
+#define RX_PW_P1        0x12   // 接收频道0接收数据长度
+#define RX_PW_P2        0x13   // 接收频道0接收数据长度
+#define RX_PW_P3        0x14   // 接收频道0接收数据长度
+#define RX_PW_P4        0x15   // 接收频道0接收数据长度
+#define RX_PW_P5        0x16   // 接收频道0接收数据长度
+#define FIFO_STATUS     0x17   // FIFO栈入栈出状态寄存器设置
+//************************************NRF24L01函数申明**********************************************
+
+void Delay(unsigned int s);
+void inerDelay_us(unsigned char n);
+void init_NRF24L01(void);
+uint SPI_RW(uint uchar);
+uchar SPI_Read(uchar reg);
+void SetRX_Mode(void);
+uint SPI_RW_Reg(uchar reg, uchar value);
+uint SPI_Read_Buf(uchar reg, uchar *pBuf, uchar uchars);
+uint SPI_Write_Buf(uchar reg, uchar *pBuf, uchar uchars);
+unsigned char nRF24L01_RxPacket(unsigned char* rx_buf);
+void nRF24L01_TxPacket(unsigned char * tx_buf);
+//************************************DS18B20函数申明**********************************************
+
+void delay1(uint i);
+void ds_reset(void);
+void write_byte(uchar value);
+uchar read_byte(void);
+void read_temp();
+void work_temp();
+//*****************************************长延时*****************************************
+void Delay(unsigned int s)
+{
+ unsigned int i;
+ for(i=0; i<s; i++);
+ for(i=0; i<s; i++);
+}
+
+/******************************************************************************************
+/*延时函数
+/******************************************************************************************/
+void inerDelay_us(unsigned char n)
+{
+ for(;n>0;n--)
+  _nop_();
+}
+//****************************************************************************************
+/*NRF24L01初始化
+//***************************************************************************************/
+void init_NRF24L01(void)
+{
+    inerDelay_us(100);
+  CE=0; 
+  CSN=1;  
+  SCK=0;  
+ SPI_Write_Buf(WRITE_REG + TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);    // 写本地地址 
+ SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, RX_ADDRESS, RX_ADR_WIDTH); // 写接收端地址
+ SPI_RW_Reg(WRITE_REG + RX_PW_P0, RX_PLOAD_WIDTH); //设置接收数据长度，本次设置为4字节
+ SPI_RW_Reg(WRITE_REG + RX_PW_P1, RX_PLOAD_WIDTH); //设置接收数据长度，本次设置为4字节
+}
+/****************************************************************************************************
+/*函数：uint SPI_RW(uint uchar)
+/*功能：NRF24L01的SPI写时序,详细看时序图，Page19
+/****************************************************************************************************/
+uint SPI_RW(uint uchar)
+{
+ uint bit_ctr;
+    for(bit_ctr=0;bit_ctr<8;bit_ctr++) // output 8-bit
+    {
+  MOSI = (uchar & 0x80);         // output 'uchar', MSB to MOSI
+  uchar = (uchar << 1);           // shift next bit into MSB..
+  SCK = 1;                      // Set SCK high..
+  uchar |= MISO;           // capture current MISO bit
+  SCK = 0;                // ..then set SCK low again
+    }
+    return(uchar);               // return read uchar
+}
+/****************************************************************************************************
+/*函数：uchar SPI_Read(uchar reg)
+/*功能：NRF24L01的SPI时序,详细看时序图，Page19
+/****************************************************************************************************/
+uchar SPI_Read(uchar reg)
+{
+ uchar reg_val;
+ 
+ CSN = 0;                // CSN low, initialize SPI communication...
+ SPI_RW(reg);            // Select register to read from..
+ reg_val = SPI_RW(0);    // ..then read registervalue
+ CSN = 1;                // CSN high, terminate SPI communication
+ 
+ return(reg_val);        // return register value
+}
+/****************************************************************************************************/
+/*功能：NRF24L01读写寄存器函数,
+/****************************************************************************************************/
+uint SPI_RW_Reg(uchar reg, uchar value)
+{
+ uint status;
+ 
+ CSN = 0;                   // CSN low, init SPI transaction
+ status = SPI_RW(reg);      // select register
+ SPI_RW(value);             // ..and write value to it..
+ CSN = 1;                   // CSN high again
+ 
+ return(status);            // return nRF24L01 status uchar
+}
+/****************************************************************************************************/
+/*函数：uint SPI_Read_Buf(uchar reg, uchar *pBuf, uchar uchars)
+/*功能: 用于读数据，reg：为寄存器地址，pBuf：为待读出数据地址，uchars：读出数据的个数
+/****************************************************************************************************/
+uint SPI_Read_Buf(uchar reg, uchar *pBuf, uchar uchars)
+{
+ uint status,uchar_ctr;
+ 
+ CSN = 0;                      // Set CSN low, init SPI tranaction
+ status = SPI_RW(reg);         // Select register to write to and read status uchar
+ 
+ for(uchar_ctr=0;uchar_ctr<uchars;uchar_ctr++)
+  pBuf[uchar_ctr] = SPI_RW(0);    //
+ 
+ CSN = 1;                          
+ 
+ return(status);                    // return nRF24L01 status uchar
+}
+/*********************************************************************************************************
+/*函数：uint SPI_Write_Buf(uchar reg, uchar *pBuf, uchar uchars)
+/*功能: 用于写数据：为寄存器地址，pBuf：为待写入数据地址，uchars：写入数据的个数
+/*********************************************************************************************************/
+uint SPI_Write_Buf(uchar reg, uchar *pBuf, uchar uchars)
+{
+ uint status,uchar_ctr;
+ 
+ CSN = 0;            //SPI使能      
+ status = SPI_RW(reg);  
+ for(uchar_ctr=0; uchar_ctr<uchars; uchar_ctr++) //
+  SPI_RW(*pBuf++);
+ CSN = 1;           //关闭SPI
+ return(status);    //
+}
+
+/***********************************************************************************************************
+/*函数：void nRF24L01_TxPacket(unsigned char * tx_buf)
+/*功能：发送 tx_buf中数据
+/**********************************************************************************************************/
+void nRF24L01_TxPacket(unsigned char * tx_buf)
+{
+ CE=0;   //StandBy I模式 
+ SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, TX_ADDRESS, TX_ADR_WIDTH); // 装载接收端地址
+ SPI_Write_Buf(WR_TX_PLOAD, tx_buf, TX_PLOAD_WIDTH);     // 装载数据 
+ SPI_RW_Reg(WRITE_REG + CONFIG, 0x0A);      // IRQ收发完成中断响应，8位CRC，主发送
+ CE=1;   //置高CE，激发数据发送
+ inerDelay_us(10);
+}
+/***********************************************************************************************************
+/*以下是DS18B20温度传感相关函数
+/**********************************************************************************************************/
+
+void delay1(uint i)
+{
+ for(;i>0;i--);  
+}
+//****************************************************DS1820复位函数***************************************
+void ds_reset(void)
+{
+ char temp=1;
+ while(temp)
+{
+ while(temp)
+{
+    DQ=1;_nop_();_nop_();
+ DQ=0;
+ delay1(80);
+ DQ=1;
+ delay1(9);
+ temp=DQ;
+  }
+   delay1(64);
+  temp=~DQ; 
+}
+DQ=1;
+ }
+//***********************************************DS1820写函数*********************************************
+void write_byte(uchar value)
+{
+ uchar i;
+ for(i=8;i>0;i--)
+{
+  DQ=1;_nop_();_nop_();
+   DQ=0;_nop_();_nop_();_nop_();_nop_();_nop_();
+  DQ=value&0x01;
+   delay1(9);
+    value>>=1;
+}
+ DQ=1;
+ delay1(1);
+}
+//****************************************************DS1820读函数*****************************************
+uchar read_byte(void)
+{
+ uchar i;
+ uchar value1=0;
+for(i=8;i>0;i--)
+{
+ DQ=1;_nop_();_nop_();
+ value1>>=1;
+ DQ=0;
+ _nop_();_nop_();_nop_();_nop_();
+ DQ=1;
+ _nop_();_nop_();_nop_();_nop_();
+ if(DQ)
+ value1|=0x80;
+  delay1(9);
+}
+ DQ=1;
+ return(value1);
+}
+//****************************************************读取温度**********************************************
+void read_temp()
+{
+ ds_reset();
+ write_byte(0xcc);
+ write_byte(0xbe);
+ temp_data[0]=read_byte();
+ temp_data[1]=read_byte();
+ ds_reset();
+ write_byte(0xcc);
+ write_byte(0x44);
+}
+//****************************************************温度处理*********************************************
+void work_temp()
+{
+ uchar n=0;
+if(temp_data[1]>127)
+ {
+ temp_data[1]=(256-temp_data[1]);   //负值
+ temp_data[0]=(256-temp_data[0]);
+ n=1;
+ }
+ display[6]=((temp_data[0]&0xf0)>>4)|((temp_data[1]&0x0f)<<4);
+ display[5]=display[6]/100;    //百位
+ display[4]=display[6]%100;    //
+ display[2]=display[4]/10;    //十位
+ display[1]=display[4]%10;    //个位 
+ switch (temp_data[0]&0x0f)    //小数位
+ {
+  case 0x0f:display[0]=9;break;
+  case 0x0e:display[0]=9;break;
+  case 0x0d:display[0]=8;break;
+  case 0x0c:display[0]=8;break;
+  case 0x0b:display[0]=7;break;
+  case 0x0a:display[0]=6;break;
+  case 0x09:display[0]=6;break;
+  case 0x08:display[0]=5;break;
+  case 0x07:display[0]=4;break;
+  case 0x06:display[0]=4;break;
+  case 0x05:display[0]=3;break;
+  case 0x04:display[0]=3;break;
+  case 0x03:display[0]=2;break;
+  case 0x02:display[0]=1;break;
+  case 0x01:display[0]=1;break;
+  case 0x00:display[0]=1;break;
+  default:break;
+ }
+ if(n)          //负值时显示aa,正直显示dd
+ {
+  display[3]=0x11;     
+ }
+ else  
+  display[3]=0x22;
+}
+//****************************************************温度显示****************************************************
+void disdignit()
+{
+   P0=0x39;
+   led0=0;
+   delay1(40);
+   led0=1;
+
+   P0=seg[display[0]];
+   led1=0;
+   delay1(40);
+   led1=1;
+
+   P0=seg1[display[1]];
+   led2=0;
+   delay1(40);
+   led2=1;
+
+   P0=seg[display[2]];
+   led3=0;
+   delay1(40);
+   led3=1;
+  
+}
+//************************************主函数************************************************************
+void main(void)
+{
+ uchar i=0;
+    init_NRF24L01() ;     //NRF24L01初始化配置
+  ds_reset();
+  write_byte(0xcc);
+  write_byte(0x44);
+ Delay(6000);
+ while(1)
+ {
+ if(i==3)
+ {
+  i=0;
+  read_temp();
+  work_temp();
+  delay1(500);
+ }
+ i++;
+ disdignit();
+ nRF24L01_TxPacket(display);
+ SPI_RW_Reg(WRITE_REG+STATUS,0XFF); 
+ }
+ 
+}
+
+ 
+
+arduino接收代码:------------------------------------------------------------------------------------------------------------
+
+/**
+ * An Mirf example which copies back the data it recives.
+ *
+ * Pins:
+ * Hardware SPI:
+ * MISO -> 12
+ * MOSI -> 11
+ * SCK -> 13
+ *
+ * Configurable:
+ * CE -> 8
+ * CSN -> 7
+ *
+ */
+
+#include <Spi.h>
+#include <mirf.h>
+#include <nRF24L01.h>
+
+void setup(){
+  Serial.begin(9600);
+
+  Mirf.init();
+  unsigned char rx_addr[5] = {
+    0x34,0x43,0x10,0x10,0x01  };
+  Mirf.setRADDR(rx_addr);
+  Mirf.payload = 16;
+
+  Mirf.channel = 2;
+
+  Mirf.config();
+  Serial.print("channel=");
+  Serial.println(Mirf.channel,DEC);
+  Serial.print("payload=");
+  Serial.println(Mirf.payload,DEC);
+  for(int i=0;i<5;i++)
+  {
+    Serial.print("addr[");
+    Serial.print(i);
+    Serial.print("]=");
+    Serial.println(rx_addr[i],HEX);
+  }
+
+  Serial.println("Listening...");
+}
+
+void loop(){
+  byte data[Mirf.payload];
+  if(Mirf.dataReady()){
+
+    do{
+
+      Mirf.getData(data);
+      Serial.print("temp: ");
+      Serial.print(data[2],DEC);
+      Serial.print(data[1],DEC);
+      Serial.print(".");
+      Serial.println(data[0],DEC);
+    }
+    while(!Mirf.rxFifoEmpty());
+  }
+}
+
+ 
+
+函数中的缓冲区实际上只使用8个字节,所以可以将arduino中的payload改为8,C51单片机中的TX_PLOAD_WIDTH改为8就能避免传输数据的浪费.
+ 
+至于自动应答功能,等有空再尝试吧.
