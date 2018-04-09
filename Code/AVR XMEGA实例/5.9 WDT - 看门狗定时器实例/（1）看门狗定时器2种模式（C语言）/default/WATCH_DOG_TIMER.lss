@@ -1,0 +1,1292 @@
+
+WATCH_DOG_TIMER.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000077c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000be  00802000  0000077c  000007f0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .debug_aranges 00000020  00000000  00000000  000008ae  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 00000195  00000000  00000000  000008ce  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000adb  00000000  00000000  00000a63  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 0000022b  00000000  00000000  0000153e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000006b0  00000000  00000000  00001769  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000140  00000000  00000000  00001e1c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000699  00000000  00000000  00001f5c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000333  00000000  00000000  000025f5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000030  00000000  00000000  00002928  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  10:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  14:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  18:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  1c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  20:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  24:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  28:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  2c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  30:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  34:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  38:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  3c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  40:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  44:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  48:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  4c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  50:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  54:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  58:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  5c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  60:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  64:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  68:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  6c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  70:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  74:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  78:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  7c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  80:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  84:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  88:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  8c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  90:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  94:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  98:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  9c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  fc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 100:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 104:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 108:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 10c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 110:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 114:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 118:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 11c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 120:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 124:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 128:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 12c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 130:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 134:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 138:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 13c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 140:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 144:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 148:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 14c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 150:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 154:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 158:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 15c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 160:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 164:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 168:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 16c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 170:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 174:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 178:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 17c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 180:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 184:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 188:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 18c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 190:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 194:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 198:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 19c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	ec e7       	ldi	r30, 0x7C	; 124
+ 214:	f7 e0       	ldi	r31, 0x07	; 7
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	ae 3b       	cpi	r26, 0xBE	; 190
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+ 228:	0e 94 59 03 	call	0x6b2	; 0x6b2 <main>
+ 22c:	0c 94 bc 03 	jmp	0x778	; 0x778 <_exit>
+
+00000230 <__bad_interrupt>:
+ 230:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000234 <uart_putc>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc(unsigned char c)
+{
+ 234:	1f 93       	push	r17
+ 236:	18 2f       	mov	r17, r24
+    if(c == '\n')
+ 238:	8a 30       	cpi	r24, 0x0A	; 10
+ 23a:	19 f4       	brne	.+6      	; 0x242 <uart_putc+0xe>
+        uart_putc('\r');
+ 23c:	8d e0       	ldi	r24, 0x0D	; 13
+ 23e:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+    /* wait until transmit buffer is empty */
+    while(!(USART.STATUS & USART_DREIF_bm));
+ 242:	80 91 a1 08 	lds	r24, 0x08A1
+ 246:	85 ff       	sbrs	r24, 5
+ 248:	fc cf       	rjmp	.-8      	; 0x242 <uart_putc+0xe>
+
+    /* send next byte */
+    USART.DATA = c;
+ 24a:	10 93 a0 08 	sts	0x08A0, r17
+}
+ 24e:	1f 91       	pop	r17
+ 250:	08 95       	ret
+
+00000252 <uart_putc_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc_hex(unsigned char b)
+{
+ 252:	1f 93       	push	r17
+ 254:	18 2f       	mov	r17, r24
+    /* upper nibble */
+    if((b >> 4) < 0x0a)
+ 256:	82 95       	swap	r24
+ 258:	8f 70       	andi	r24, 0x0F	; 15
+ 25a:	8a 30       	cpi	r24, 0x0A	; 10
+ 25c:	10 f4       	brcc	.+4      	; 0x262 <uart_putc_hex+0x10>
+        uart_putc((b >> 4) + '0');
+ 25e:	80 5d       	subi	r24, 0xD0	; 208
+ 260:	01 c0       	rjmp	.+2      	; 0x264 <uart_putc_hex+0x12>
+    else
+        uart_putc((b >> 4) - 0x0a + 'a');
+ 262:	89 5a       	subi	r24, 0xA9	; 169
+ 264:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+    /* lower nibble */
+    if((b & 0x0f) < 0x0a)
+ 268:	81 2f       	mov	r24, r17
+ 26a:	90 e0       	ldi	r25, 0x00	; 0
+ 26c:	8f 70       	andi	r24, 0x0F	; 15
+ 26e:	90 70       	andi	r25, 0x00	; 0
+ 270:	21 2f       	mov	r18, r17
+ 272:	2f 70       	andi	r18, 0x0F	; 15
+ 274:	0a 97       	sbiw	r24, 0x0a	; 10
+ 276:	1c f4       	brge	.+6      	; 0x27e <uart_putc_hex+0x2c>
+        uart_putc((b & 0x0f) + '0');
+ 278:	82 2f       	mov	r24, r18
+ 27a:	80 5d       	subi	r24, 0xD0	; 208
+ 27c:	02 c0       	rjmp	.+4      	; 0x282 <uart_putc_hex+0x30>
+    else
+        uart_putc((b & 0x0f) - 0x0a + 'a');
+ 27e:	82 2f       	mov	r24, r18
+ 280:	89 5a       	subi	r24, 0xA9	; 169
+ 282:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+}
+ 286:	1f 91       	pop	r17
+ 288:	08 95       	ret
+
+0000028a <uart_putw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_hex(unsigned int w)
+{
+ 28a:	1f 93       	push	r17
+ 28c:	18 2f       	mov	r17, r24
+    uart_putc_hex((unsigned char) (w >> 8));
+ 28e:	89 2f       	mov	r24, r25
+ 290:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+    uart_putc_hex((unsigned char) (w & 0xff));
+ 294:	81 2f       	mov	r24, r17
+ 296:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+}
+ 29a:	1f 91       	pop	r17
+ 29c:	08 95       	ret
+
+0000029e <uart_putdw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_hex(unsigned long dw)
+{
+ 29e:	ef 92       	push	r14
+ 2a0:	ff 92       	push	r15
+ 2a2:	0f 93       	push	r16
+ 2a4:	1f 93       	push	r17
+ 2a6:	7b 01       	movw	r14, r22
+ 2a8:	8c 01       	movw	r16, r24
+    uart_putw_hex((unsigned int) (dw >> 16));
+ 2aa:	c8 01       	movw	r24, r16
+ 2ac:	aa 27       	eor	r26, r26
+ 2ae:	bb 27       	eor	r27, r27
+ 2b0:	0e 94 45 01 	call	0x28a	; 0x28a <uart_putw_hex>
+    uart_putw_hex((unsigned int) (dw & 0xffff));
+ 2b4:	c7 01       	movw	r24, r14
+ 2b6:	0e 94 45 01 	call	0x28a	; 0x28a <uart_putw_hex>
+}
+ 2ba:	1f 91       	pop	r17
+ 2bc:	0f 91       	pop	r16
+ 2be:	ff 90       	pop	r15
+ 2c0:	ef 90       	pop	r14
+ 2c2:	08 95       	ret
+
+000002c4 <uart_putw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_dec(unsigned int w)
+{
+ 2c4:	cf 92       	push	r12
+ 2c6:	df 92       	push	r13
+ 2c8:	ff 92       	push	r15
+ 2ca:	0f 93       	push	r16
+ 2cc:	1f 93       	push	r17
+ 2ce:	cf 93       	push	r28
+ 2d0:	df 93       	push	r29
+ 2d2:	6c 01       	movw	r12, r24
+ 2d4:	c0 e1       	ldi	r28, 0x10	; 16
+ 2d6:	d7 e2       	ldi	r29, 0x27	; 39
+ 2d8:	40 e0       	ldi	r20, 0x00	; 0
+ 2da:	00 e0       	ldi	r16, 0x00	; 0
+ 2dc:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = w / num;
+ 2de:	c6 01       	movw	r24, r12
+ 2e0:	be 01       	movw	r22, r28
+ 2e2:	0e 94 86 03 	call	0x70c	; 0x70c <__udivmodhi4>
+ 2e6:	f6 2e       	mov	r15, r22
+        if(b > 0 || started || num == 1)
+ 2e8:	66 23       	and	r22, r22
+ 2ea:	29 f4       	brne	.+10     	; 0x2f6 <uart_putw_dec+0x32>
+ 2ec:	44 23       	and	r20, r20
+ 2ee:	19 f4       	brne	.+6      	; 0x2f6 <uart_putw_dec+0x32>
+ 2f0:	c1 30       	cpi	r28, 0x01	; 1
+ 2f2:	d1 05       	cpc	r29, r1
+ 2f4:	29 f4       	brne	.+10     	; 0x300 <uart_putw_dec+0x3c>
+        {
+            uart_putc('0' + b);
+ 2f6:	8f 2d       	mov	r24, r15
+ 2f8:	80 5d       	subi	r24, 0xD0	; 208
+ 2fa:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 2fe:	41 e0       	ldi	r20, 0x01	; 1
+            started = 1;
+        }
+        w -= b * num;
+
+        num /= 10;
+ 300:	ce 01       	movw	r24, r28
+ 302:	6a e0       	ldi	r22, 0x0A	; 10
+ 304:	70 e0       	ldi	r23, 0x00	; 0
+ 306:	0e 94 86 03 	call	0x70c	; 0x70c <__udivmodhi4>
+ 30a:	0f 5f       	subi	r16, 0xFF	; 255
+ 30c:	1f 4f       	sbci	r17, 0xFF	; 255
+void uart_putw_dec(unsigned int w)
+{
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 30e:	05 30       	cpi	r16, 0x05	; 5
+ 310:	11 05       	cpc	r17, r1
+ 312:	71 f0       	breq	.+28     	; 0x330 <uart_putw_dec+0x6c>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        w -= b * num;
+ 314:	8f 2d       	mov	r24, r15
+ 316:	90 e0       	ldi	r25, 0x00	; 0
+ 318:	9c 01       	movw	r18, r24
+ 31a:	2c 9f       	mul	r18, r28
+ 31c:	c0 01       	movw	r24, r0
+ 31e:	2d 9f       	mul	r18, r29
+ 320:	90 0d       	add	r25, r0
+ 322:	3c 9f       	mul	r19, r28
+ 324:	90 0d       	add	r25, r0
+ 326:	11 24       	eor	r1, r1
+ 328:	c8 1a       	sub	r12, r24
+ 32a:	d9 0a       	sbc	r13, r25
+ 32c:	eb 01       	movw	r28, r22
+ 32e:	d7 cf       	rjmp	.-82     	; 0x2de <uart_putw_dec+0x1a>
+
+        num /= 10;
+    }
+}
+ 330:	df 91       	pop	r29
+ 332:	cf 91       	pop	r28
+ 334:	1f 91       	pop	r17
+ 336:	0f 91       	pop	r16
+ 338:	ff 90       	pop	r15
+ 33a:	df 90       	pop	r13
+ 33c:	cf 90       	pop	r12
+ 33e:	08 95       	ret
+
+00000340 <uart_putdw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_dec(unsigned long dw)
+{
+ 340:	4f 92       	push	r4
+ 342:	5f 92       	push	r5
+ 344:	6f 92       	push	r6
+ 346:	7f 92       	push	r7
+ 348:	8f 92       	push	r8
+ 34a:	9f 92       	push	r9
+ 34c:	af 92       	push	r10
+ 34e:	bf 92       	push	r11
+ 350:	cf 92       	push	r12
+ 352:	df 92       	push	r13
+ 354:	ef 92       	push	r14
+ 356:	ff 92       	push	r15
+ 358:	0f 93       	push	r16
+ 35a:	1f 93       	push	r17
+ 35c:	cf 93       	push	r28
+ 35e:	df 93       	push	r29
+ 360:	5b 01       	movw	r10, r22
+ 362:	6c 01       	movw	r12, r24
+ 364:	e1 2c       	mov	r14, r1
+ 366:	9a ec       	ldi	r25, 0xCA	; 202
+ 368:	f9 2e       	mov	r15, r25
+ 36a:	9a e9       	ldi	r25, 0x9A	; 154
+ 36c:	09 2f       	mov	r16, r25
+ 36e:	9b e3       	ldi	r25, 0x3B	; 59
+ 370:	19 2f       	mov	r17, r25
+ 372:	44 24       	eor	r4, r4
+ 374:	c0 e0       	ldi	r28, 0x00	; 0
+ 376:	d0 e0       	ldi	r29, 0x00	; 0
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = dw / num;
+ 378:	c6 01       	movw	r24, r12
+ 37a:	b5 01       	movw	r22, r10
+ 37c:	a8 01       	movw	r20, r16
+ 37e:	97 01       	movw	r18, r14
+ 380:	0e 94 9a 03 	call	0x734	; 0x734 <__udivmodsi4>
+ 384:	92 2e       	mov	r9, r18
+        if(b > 0 || started || num == 1)
+ 386:	22 23       	and	r18, r18
+ 388:	41 f4       	brne	.+16     	; 0x39a <uart_putdw_dec+0x5a>
+ 38a:	44 20       	and	r4, r4
+ 38c:	31 f4       	brne	.+12     	; 0x39a <uart_putdw_dec+0x5a>
+ 38e:	81 e0       	ldi	r24, 0x01	; 1
+ 390:	e8 16       	cp	r14, r24
+ 392:	f1 04       	cpc	r15, r1
+ 394:	01 05       	cpc	r16, r1
+ 396:	11 05       	cpc	r17, r1
+ 398:	31 f4       	brne	.+12     	; 0x3a6 <uart_putdw_dec+0x66>
+        {
+            uart_putc('0' + b);
+ 39a:	89 2d       	mov	r24, r9
+ 39c:	80 5d       	subi	r24, 0xD0	; 208
+ 39e:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 3a2:	44 24       	eor	r4, r4
+ 3a4:	43 94       	inc	r4
+            started = 1;
+        }
+        dw -= b * num;
+
+        num /= 10;
+ 3a6:	c8 01       	movw	r24, r16
+ 3a8:	b7 01       	movw	r22, r14
+ 3aa:	2a e0       	ldi	r18, 0x0A	; 10
+ 3ac:	30 e0       	ldi	r19, 0x00	; 0
+ 3ae:	40 e0       	ldi	r20, 0x00	; 0
+ 3b0:	50 e0       	ldi	r21, 0x00	; 0
+ 3b2:	0e 94 9a 03 	call	0x734	; 0x734 <__udivmodsi4>
+ 3b6:	82 2e       	mov	r8, r18
+ 3b8:	73 2e       	mov	r7, r19
+ 3ba:	64 2e       	mov	r6, r20
+ 3bc:	55 2e       	mov	r5, r21
+ 3be:	21 96       	adiw	r28, 0x01	; 1
+void uart_putdw_dec(unsigned long dw)
+{
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 3c0:	ca 30       	cpi	r28, 0x0A	; 10
+ 3c2:	d1 05       	cpc	r29, r1
+ 3c4:	a9 f0       	breq	.+42     	; 0x3f0 <uart_putdw_dec+0xb0>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        dw -= b * num;
+ 3c6:	69 2d       	mov	r22, r9
+ 3c8:	70 e0       	ldi	r23, 0x00	; 0
+ 3ca:	80 e0       	ldi	r24, 0x00	; 0
+ 3cc:	90 e0       	ldi	r25, 0x00	; 0
+ 3ce:	a8 01       	movw	r20, r16
+ 3d0:	97 01       	movw	r18, r14
+ 3d2:	0e 94 67 03 	call	0x6ce	; 0x6ce <__mulsi3>
+ 3d6:	a6 1a       	sub	r10, r22
+ 3d8:	b7 0a       	sbc	r11, r23
+ 3da:	c8 0a       	sbc	r12, r24
+ 3dc:	d9 0a       	sbc	r13, r25
+ 3de:	28 2d       	mov	r18, r8
+ 3e0:	37 2d       	mov	r19, r7
+ 3e2:	46 2d       	mov	r20, r6
+ 3e4:	55 2d       	mov	r21, r5
+ 3e6:	c9 01       	movw	r24, r18
+ 3e8:	da 01       	movw	r26, r20
+ 3ea:	7c 01       	movw	r14, r24
+ 3ec:	8d 01       	movw	r16, r26
+ 3ee:	c4 cf       	rjmp	.-120    	; 0x378 <uart_putdw_dec+0x38>
+
+        num /= 10;
+    }
+}
+ 3f0:	df 91       	pop	r29
+ 3f2:	cf 91       	pop	r28
+ 3f4:	1f 91       	pop	r17
+ 3f6:	0f 91       	pop	r16
+ 3f8:	ff 90       	pop	r15
+ 3fa:	ef 90       	pop	r14
+ 3fc:	df 90       	pop	r13
+ 3fe:	cf 90       	pop	r12
+ 400:	bf 90       	pop	r11
+ 402:	af 90       	pop	r10
+ 404:	9f 90       	pop	r9
+ 406:	8f 90       	pop	r8
+ 408:	7f 90       	pop	r7
+ 40a:	6f 90       	pop	r6
+ 40c:	5f 90       	pop	r5
+ 40e:	4f 90       	pop	r4
+ 410:	08 95       	ret
+
+00000412 <uart_puts>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+ 412:	cf 93       	push	r28
+ 414:	df 93       	push	r29
+ 416:	ec 01       	movw	r28, r24
+ 418:	03 c0       	rjmp	.+6      	; 0x420 <uart_puts+0xe>
+    while(*str)
+        uart_putc(*str++);
+ 41a:	21 96       	adiw	r28, 0x01	; 1
+ 41c:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+    while(*str)
+ 420:	88 81       	ld	r24, Y
+ 422:	88 23       	and	r24, r24
+ 424:	d1 f7       	brne	.-12     	; 0x41a <uart_puts+0x8>
+        uart_putc(*str++);
+}
+ 426:	df 91       	pop	r29
+ 428:	cf 91       	pop	r28
+ 42a:	08 95       	ret
+
+0000042c <uart_getc>:
++------------------------------------------------------------------------------
+*/
+unsigned char uart_getc(void)
+{
+    /* wait until receive buffer is full */
+    while(!(USART.STATUS & USART_RXCIF_bm));
+ 42c:	80 91 a1 08 	lds	r24, 0x08A1
+ 430:	87 ff       	sbrs	r24, 7
+ 432:	fc cf       	rjmp	.-8      	; 0x42c <uart_getc>
+
+    unsigned char b = USART.DATA;
+ 434:	80 91 a0 08 	lds	r24, 0x08A0
+    if(b == '\r')
+ 438:	8d 30       	cpi	r24, 0x0D	; 13
+ 43a:	09 f4       	brne	.+2      	; 0x43e <uart_getc+0x12>
+ 43c:	8a e0       	ldi	r24, 0x0A	; 10
+        b = '\n';
+		
+    return b;
+}
+ 43e:	08 95       	ret
+
+00000440 <WDT_Enable>:
+ *
+ *  写CTRL寄存器时需要解除CCP保护，等待看门狗和其他始终与同步完成
+ */
+void WDT_Enable( void )
+{
+	uint8_t temp = WDT.CTRL | WDT_ENABLE_bm | WDT_CEN_bm;
+ 440:	80 91 80 00 	lds	r24, 0x0080
+ 444:	83 60       	ori	r24, 0x03	; 3
+	CCP = CCP_IOREG_gc;
+ 446:	98 ed       	ldi	r25, 0xD8	; 216
+ 448:	94 bf       	out	0x34, r25	; 52
+	WDT.CTRL = temp;
+ 44a:	80 93 80 00 	sts	0x0080, r24
+	while(WDT_IsSyncBusy()){}
+ 44e:	80 91 82 00 	lds	r24, 0x0082
+ 452:	80 fd       	sbrc	r24, 0
+ 454:	fc cf       	rjmp	.-8      	; 0x44e <WDT_Enable+0xe>
+}
+ 456:	08 95       	ret
+
+00000458 <WDT_EnableAndSetTimeout>:
+ *
+ *  \参数  period  看门狗超时周期
+ */
+void WDT_EnableAndSetTimeout( WDT_PER_t period )
+{
+	uint8_t temp = WDT_ENABLE_bm | WDT_CEN_bm | period;
+ 458:	83 60       	ori	r24, 0x03	; 3
+	CCP = CCP_IOREG_gc;
+ 45a:	98 ed       	ldi	r25, 0xD8	; 216
+ 45c:	94 bf       	out	0x34, r25	; 52
+	WDT.CTRL = temp;
+ 45e:	80 93 80 00 	sts	0x0080, r24
+	while(WDT_IsSyncBusy()){}
+ 462:	80 91 82 00 	lds	r24, 0x0082
+ 466:	80 fd       	sbrc	r24, 0
+ 468:	fc cf       	rjmp	.-8      	; 0x462 <WDT_EnableAndSetTimeout+0xa>
+}
+ 46a:	08 95       	ret
+
+0000046c <WDT_Disable>:
+ *
+ *  立即生效
+ */
+void WDT_Disable( void )
+{
+	uint8_t temp = (WDT.CTRL & ~WDT_ENABLE_bm) | WDT_CEN_bm;
+ 46c:	e0 e8       	ldi	r30, 0x80	; 128
+ 46e:	f0 e0       	ldi	r31, 0x00	; 0
+ 470:	80 81       	ld	r24, Z
+ 472:	8c 7f       	andi	r24, 0xFC	; 252
+ 474:	81 60       	ori	r24, 0x01	; 1
+	CCP = CCP_IOREG_gc;
+ 476:	98 ed       	ldi	r25, 0xD8	; 216
+ 478:	94 bf       	out	0x34, r25	; 52
+	WDT.CTRL = temp;
+ 47a:	80 83       	st	Z, r24
+}
+ 47c:	08 95       	ret
+
+0000047e <WDT_IsWindowModeEnabled>:
+ *  \retval  true   窗口模式使能
+ *  \retval  false  窗口模式关闭
+ */
+bool WDT_IsWindowModeEnabled( void )
+{
+	uint8_t wdwm_enabled = (WDT.WINCTRL & WDT_WEN_bm);
+ 47e:	e0 e8       	ldi	r30, 0x80	; 128
+ 480:	f0 e0       	ldi	r31, 0x00	; 0
+ 482:	81 81       	ldd	r24, Z+1	; 0x01
+ 484:	86 95       	lsr	r24
+	return wdwm_enabled;
+}
+ 486:	81 70       	andi	r24, 0x01	; 1
+ 488:	08 95       	ret
+
+0000048a <WDT_EnableWindowMode>:
+ *  \retval  true   WD在窗口模式开启前使能
+ *  \retval  false  WD在窗口模式开启前未使能
+ */
+bool WDT_EnableWindowMode( void )
+{
+	uint8_t wd_enable = WDT.CTRL & WDT_ENABLE_bm;
+ 48a:	20 91 80 00 	lds	r18, 0x0080
+	uint8_t temp = WDT.WINCTRL | WDT_WEN_bm | WDT_WCEN_bm;
+ 48e:	90 91 81 00 	lds	r25, 0x0081
+ 492:	93 60       	ori	r25, 0x03	; 3
+	CCP = CCP_IOREG_gc;
+ 494:	88 ed       	ldi	r24, 0xD8	; 216
+ 496:	84 bf       	out	0x34, r24	; 52
+	WDT.WINCTRL = temp;
+ 498:	e0 e8       	ldi	r30, 0x80	; 128
+ 49a:	f0 e0       	ldi	r31, 0x00	; 0
+ 49c:	91 83       	std	Z+1, r25	; 0x01
+	while(WDT_IsSyncBusy()){}
+ 49e:	80 91 82 00 	lds	r24, 0x0082
+ 4a2:	80 fd       	sbrc	r24, 0
+ 4a4:	fc cf       	rjmp	.-8      	; 0x49e <WDT_EnableWindowMode+0x14>
+ 4a6:	26 95       	lsr	r18
+        
+	return wd_enable;
+}
+ 4a8:	82 2f       	mov	r24, r18
+ 4aa:	81 70       	andi	r24, 0x01	; 1
+ 4ac:	08 95       	ret
+
+000004ae <WDT_EnableWindowModeAndSetTimeout>:
+ *  \retval  true   WD在窗口模式开启前使能
+ *  \retval  false  WD在窗口模式开启前未使能
+ */
+bool WDT_EnableWindowModeAndSetTimeout( WDT_WPER_t period )
+{
+	uint8_t wd_enable = WDT.CTRL & WDT_ENABLE_bm;
+ 4ae:	20 91 80 00 	lds	r18, 0x0080
+	uint8_t temp = WDT_WEN_bm | WDT_WCEN_bm | period;
+ 4b2:	83 60       	ori	r24, 0x03	; 3
+	CCP = CCP_IOREG_gc;
+ 4b4:	98 ed       	ldi	r25, 0xD8	; 216
+ 4b6:	94 bf       	out	0x34, r25	; 52
+	WDT.WINCTRL = temp;
+ 4b8:	e0 e8       	ldi	r30, 0x80	; 128
+ 4ba:	f0 e0       	ldi	r31, 0x00	; 0
+ 4bc:	81 83       	std	Z+1, r24	; 0x01
+	while(WDT_IsSyncBusy()){}
+ 4be:	80 91 82 00 	lds	r24, 0x0082
+ 4c2:	80 fd       	sbrc	r24, 0
+ 4c4:	fc cf       	rjmp	.-8      	; 0x4be <WDT_EnableWindowModeAndSetTimeout+0x10>
+ 4c6:	26 95       	lsr	r18
+        
+	return wd_enable;
+}
+ 4c8:	82 2f       	mov	r24, r18
+ 4ca:	81 70       	andi	r24, 0x01	; 1
+ 4cc:	08 95       	ret
+
+000004ce <WDT_DisableWindowMode>:
+ *
+ *  立即生效
+ */
+void WDT_DisableWindowMode( void )
+{
+	uint8_t temp = (WDT.WINCTRL & ~WDT_WEN_bm) | WDT_WCEN_bm;
+ 4ce:	e0 e8       	ldi	r30, 0x80	; 128
+ 4d0:	f0 e0       	ldi	r31, 0x00	; 0
+ 4d2:	81 81       	ldd	r24, Z+1	; 0x01
+ 4d4:	8c 7f       	andi	r24, 0xFC	; 252
+ 4d6:	81 60       	ori	r24, 0x01	; 1
+	CCP = CCP_IOREG_gc;
+ 4d8:	98 ed       	ldi	r25, 0xD8	; 216
+ 4da:	94 bf       	out	0x34, r25	; 52
+	WDT.WINCTRL = temp;
+ 4dc:	81 83       	std	Z+1, r24	; 0x01
+}
+ 4de:	08 95       	ret
+
+000004e0 <uart_init>:
+*/
+void uart_init(void)
+{
+	/* USARTC0 引脚方向设置*/
+  	/* PC3 (TXD0) 输出 */
+	PORTC.DIRSET   = PIN3_bm;
+ 4e0:	e0 e4       	ldi	r30, 0x40	; 64
+ 4e2:	f6 e0       	ldi	r31, 0x06	; 6
+ 4e4:	88 e0       	ldi	r24, 0x08	; 8
+ 4e6:	81 83       	std	Z+1, r24	; 0x01
+	/* PC2 (RXD0) 输入 */
+	PORTC.DIRCLR   = PIN2_bm;
+ 4e8:	84 e0       	ldi	r24, 0x04	; 4
+ 4ea:	82 83       	std	Z+2, r24	; 0x02
+	/* USARTC0 模式 - 异步*/
+	USART_SetMode(&USARTC0,USART_CMODE_ASYNCHRONOUS_gc);
+ 4ec:	e0 ea       	ldi	r30, 0xA0	; 160
+ 4ee:	f8 e0       	ldi	r31, 0x08	; 8
+ 4f0:	85 81       	ldd	r24, Z+5	; 0x05
+ 4f2:	8f 73       	andi	r24, 0x3F	; 63
+ 4f4:	85 83       	std	Z+5, r24	; 0x05
+	/* USARTC0帧结构, 8 位数据位, 无校验, 1停止位 */
+	USART_Format_Set(&USARTC0, USART_CHSIZE_8BIT_gc,USART_PMODE_DISABLED_gc, false);
+ 4f6:	83 e0       	ldi	r24, 0x03	; 3
+ 4f8:	85 83       	std	Z+5, r24	; 0x05
+	/* 设置波特率 9600*/
+	USART_Baudrate_Set(&USARTC0, 12 , 0);
+ 4fa:	8c e0       	ldi	r24, 0x0C	; 12
+ 4fc:	86 83       	std	Z+6, r24	; 0x06
+ 4fe:	17 82       	std	Z+7, r1	; 0x07
+	/* USARTC0 使能发送*/
+	USART_Tx_Enable(&USARTC0);
+ 500:	84 81       	ldd	r24, Z+4	; 0x04
+ 502:	88 60       	ori	r24, 0x08	; 8
+ 504:	84 83       	std	Z+4, r24	; 0x04
+	/* USARTC0 使能接收*/
+	USART_Rx_Enable(&USARTC0);
+ 506:	84 81       	ldd	r24, Z+4	; 0x04
+ 508:	80 61       	ori	r24, 0x10	; 16
+ 50a:	84 83       	std	Z+4, r24	; 0x04
+}
+ 50c:	08 95       	ret
+
+0000050e <wdt_sw_enable_example>:
+| Description : 程序中，开启窗口模式（WD已使能）注意：WDLOCK熔丝位不能置位
++------------------------------------------------------------------------------
+*/
+void wdt_sw_enable_example( void )
+{
+	uart_puts("inside void wdt_sw_enable_example( void )");uart_putc('\n');
+ 50e:	80 e0       	ldi	r24, 0x00	; 0
+ 510:	90 e2       	ldi	r25, 0x20	; 32
+ 512:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 516:	8a e0       	ldi	r24, 0x0A	; 10
+ 518:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ *  \参数  period  看门狗超时周期
+ */
+void WDT_EnableAndSetTimeout( WDT_PER_t period )
+{
+	uint8_t temp = WDT_ENABLE_bm | WDT_CEN_bm | period;
+	CCP = CCP_IOREG_gc;
+ 51c:	88 ed       	ldi	r24, 0xD8	; 216
+ 51e:	84 bf       	out	0x34, r24	; 52
+	WDT.CTRL = temp;
+ 520:	8b e0       	ldi	r24, 0x0B	; 11
+ 522:	80 93 80 00 	sts	0x0080, r24
+	while(WDT_IsSyncBusy()){}
+ 526:	80 91 82 00 	lds	r24, 0x0082
+ 52a:	80 fd       	sbrc	r24, 0
+ 52c:	fc cf       	rjmp	.-8      	; 0x526 <wdt_sw_enable_example+0x18>
+
+	//使能看门狗普通模式，超时周期为32CLK=32 ms
+	WDT_EnableAndSetTimeout( WDT_PER_32CLK_gc );
+	
+	if(WDT.CTRL & WDT_ENABLE_bm)
+ 52e:	80 91 80 00 	lds	r24, 0x0080
+ 532:	81 ff       	sbrs	r24, 1
+ 534:	03 c0       	rjmp	.+6      	; 0x53c <wdt_sw_enable_example+0x2e>
+	{
+		uart_puts("WDT Is  Enabled");uart_putc('\n');
+ 536:	8a e2       	ldi	r24, 0x2A	; 42
+ 538:	90 e2       	ldi	r25, 0x20	; 32
+ 53a:	02 c0       	rjmp	.+4      	; 0x540 <wdt_sw_enable_example+0x32>
+	}
+	else
+	{
+		uart_puts("WDT Is not Enabled");uart_putc('\n');
+ 53c:	8a e3       	ldi	r24, 0x3A	; 58
+ 53e:	90 e2       	ldi	r25, 0x20	; 32
+ 540:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 544:	8a e0       	ldi	r24, 0x0A	; 10
+ 546:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ *
+ *  立即生效
+ */
+void WDT_Disable( void )
+{
+	uint8_t temp = (WDT.CTRL & ~WDT_ENABLE_bm) | WDT_CEN_bm;
+ 54a:	80 91 80 00 	lds	r24, 0x0080
+ 54e:	8c 7f       	andi	r24, 0xFC	; 252
+ 550:	81 60       	ori	r24, 0x01	; 1
+	CCP = CCP_IOREG_gc;
+ 552:	98 ed       	ldi	r25, 0xD8	; 216
+ 554:	94 bf       	out	0x34, r25	; 52
+	WDT.CTRL = temp;
+ 556:	80 93 80 00 	sts	0x0080, r24
+	}
+	//如果需要重新配置看门狗需要先关闭看门狗
+	WDT_Disable();
+
+	if(WDT.CTRL & WDT_ENABLE_bm)
+ 55a:	80 91 80 00 	lds	r24, 0x0080
+ 55e:	81 ff       	sbrs	r24, 1
+ 560:	03 c0       	rjmp	.+6      	; 0x568 <wdt_sw_enable_example+0x5a>
+	{
+		uart_puts("WDT Is  Enabled");uart_putc('\n');
+ 562:	8a e2       	ldi	r24, 0x2A	; 42
+ 564:	90 e2       	ldi	r25, 0x20	; 32
+ 566:	02 c0       	rjmp	.+4      	; 0x56c <wdt_sw_enable_example+0x5e>
+	}
+	else
+	{
+		uart_puts("WDT Is not Enabled");uart_putc('\n');
+ 568:	8a e3       	ldi	r24, 0x3A	; 58
+ 56a:	90 e2       	ldi	r25, 0x20	; 32
+ 56c:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 570:	8a e0       	ldi	r24, 0x0A	; 10
+ 572:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ *  \retval  true   窗口模式使能
+ *  \retval  false  窗口模式关闭
+ */
+bool WDT_IsWindowModeEnabled( void )
+{
+	uint8_t wdwm_enabled = (WDT.WINCTRL & WDT_WEN_bm);
+ 576:	80 91 81 00 	lds	r24, 0x0081
+	}
+
+	if(WDT_IsWindowModeEnabled())
+ 57a:	81 ff       	sbrs	r24, 1
+ 57c:	03 c0       	rjmp	.+6      	; 0x584 <wdt_sw_enable_example+0x76>
+	{
+		uart_puts("WDT Is WindowMode Enabled");uart_putc('\n');
+ 57e:	8d e4       	ldi	r24, 0x4D	; 77
+ 580:	90 e2       	ldi	r25, 0x20	; 32
+ 582:	02 c0       	rjmp	.+4      	; 0x588 <wdt_sw_enable_example+0x7a>
+	}
+	else
+	{
+		uart_puts("WDT Is not WindowMode Enabled");uart_putc('\n');
+ 584:	87 e6       	ldi	r24, 0x67	; 103
+ 586:	90 e2       	ldi	r25, 0x20	; 32
+ 588:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 58c:	8a e0       	ldi	r24, 0x0A	; 10
+ 58e:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ *  \参数  period  看门狗超时周期
+ */
+void WDT_EnableAndSetTimeout( WDT_PER_t period )
+{
+	uint8_t temp = WDT_ENABLE_bm | WDT_CEN_bm | period;
+	CCP = CCP_IOREG_gc;
+ 592:	88 ed       	ldi	r24, 0xD8	; 216
+ 594:	84 bf       	out	0x34, r24	; 52
+	WDT.CTRL = temp;
+ 596:	83 e1       	ldi	r24, 0x13	; 19
+ 598:	80 93 80 00 	sts	0x0080, r24
+	while(WDT_IsSyncBusy()){}
+ 59c:	80 91 82 00 	lds	r24, 0x0082
+ 5a0:	80 fd       	sbrc	r24, 0
+ 5a2:	fc cf       	rjmp	.-8      	; 0x59c <wdt_sw_enable_example+0x8e>
+	//在配置窗口模式前需要进行新的看门狗普通模式配置，
+	//因为窗口模式只有在普通模式使能时才能开启
+	WDT_EnableAndSetTimeout( WDT_PER_128CLK_gc );
+
+	//配置窗口模式
+	WDT_EnableWindowModeAndSetTimeout( WDT_WPER_64CLK_gc );
+ 5a4:	8c e0       	ldi	r24, 0x0C	; 12
+ 5a6:	0e 94 57 02 	call	0x4ae	; 0x4ae <WDT_EnableWindowModeAndSetTimeout>
+ *  \retval  true   窗口模式使能
+ *  \retval  false  窗口模式关闭
+ */
+bool WDT_IsWindowModeEnabled( void )
+{
+	uint8_t wdwm_enabled = (WDT.WINCTRL & WDT_WEN_bm);
+ 5aa:	80 91 81 00 	lds	r24, 0x0081
+
+	if(WDT_IsWindowModeEnabled())
+ 5ae:	81 ff       	sbrs	r24, 1
+ 5b0:	03 c0       	rjmp	.+6      	; 0x5b8 <wdt_sw_enable_example+0xaa>
+	{
+		uart_puts("WDT Is WindowMode Enabled");uart_putc('\n');
+ 5b2:	8d e4       	ldi	r24, 0x4D	; 77
+ 5b4:	90 e2       	ldi	r25, 0x20	; 32
+ 5b6:	02 c0       	rjmp	.+4      	; 0x5bc <wdt_sw_enable_example+0xae>
+	}
+	else
+	{
+		uart_puts("WDT Is not WindowMode Enabled");uart_putc('\n');
+ 5b8:	87 e6       	ldi	r24, 0x67	; 103
+ 5ba:	90 e2       	ldi	r25, 0x20	; 32
+ 5bc:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 5c0:	8a e0       	ldi	r24, 0x0A	; 10
+ 5c2:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 5c6:	20 e8       	ldi	r18, 0x80	; 128
+ 5c8:	30 e0       	ldi	r19, 0x00	; 0
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 5ca:	44 ef       	ldi	r20, 0xF4	; 244
+ 5cc:	51 e0       	ldi	r21, 0x01	; 1
+ 5ce:	05 c0       	rjmp	.+10     	; 0x5da <wdt_sw_enable_example+0xcc>
+ 5d0:	ca 01       	movw	r24, r20
+ 5d2:	01 97       	sbiw	r24, 0x01	; 1
+ 5d4:	f1 f7       	brne	.-4      	; 0x5d2 <wdt_sw_enable_example+0xc4>
+
+	while(true)
+	{
+		uint16_t repeatCounter;
+		//确保不要过早重置看门狗，否则会导致系统复位，插入延时要大于开放的窗口周期
+		for (repeatCounter = WINDOW_MODE_DELAY; repeatCounter > 0; --repeatCounter )
+ 5d6:	21 50       	subi	r18, 0x01	; 1
+ 5d8:	30 40       	sbci	r19, 0x00	; 0
+ 5da:	21 15       	cp	r18, r1
+ 5dc:	31 05       	cpc	r19, r1
+ 5de:	c1 f7       	brne	.-16     	; 0x5d0 <wdt_sw_enable_example+0xc2>
+		{
+			delay_us( 1000 ); // 1ms 延迟 @ 2MHz
+		}
+		WDT_Reset();//重置看门狗
+ 5e0:	a8 95       	wdr
+ 5e2:	20 e8       	ldi	r18, 0x80	; 128
+ 5e4:	30 e0       	ldi	r19, 0x00	; 0
+ 5e6:	f4 cf       	rjmp	.-24     	; 0x5d0 <wdt_sw_enable_example+0xc2>
+
+000005e8 <wdt_fuse_enable_example>:
++------------------------------------------------------------------------------
+*/
+void wdt_fuse_enable_example( void )
+{
+
+	uart_puts("inside void wdt_fuse_enable_example( void )");uart_putc('\n');
+ 5e8:	85 e8       	ldi	r24, 0x85	; 133
+ 5ea:	90 e2       	ldi	r25, 0x20	; 32
+ 5ec:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 5f0:	8a e0       	ldi	r24, 0x0A	; 10
+ 5f2:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+	//当看门狗通过熔丝位设定后，需要重置看门狗
+	WDT_Reset();
+ 5f6:	a8 95       	wdr
+
+	if(WDT.CTRL & WDT_ENABLE_bm)
+ 5f8:	80 91 80 00 	lds	r24, 0x0080
+ 5fc:	81 ff       	sbrs	r24, 1
+ 5fe:	03 c0       	rjmp	.+6      	; 0x606 <wdt_fuse_enable_example+0x1e>
+	{
+		uart_puts("WDT Is  Enabled");uart_putc('\n');
+ 600:	8a e2       	ldi	r24, 0x2A	; 42
+ 602:	90 e2       	ldi	r25, 0x20	; 32
+ 604:	02 c0       	rjmp	.+4      	; 0x60a <wdt_fuse_enable_example+0x22>
+	}
+	else
+	{
+		uart_puts("WDT Is not Enabled");uart_putc('\n');
+ 606:	8a e3       	ldi	r24, 0x3A	; 58
+ 608:	90 e2       	ldi	r25, 0x20	; 32
+ 60a:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 60e:	8a e0       	ldi	r24, 0x0A	; 10
+ 610:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 614:	80 91 81 00 	lds	r24, 0x0081
+	}
+
+	if(WDT_IsWindowModeEnabled())
+ 618:	81 ff       	sbrs	r24, 1
+ 61a:	03 c0       	rjmp	.+6      	; 0x622 <wdt_fuse_enable_example+0x3a>
+	{
+		uart_puts("WDT Is WindowMode Enabled");uart_putc('\n');
+ 61c:	8d e4       	ldi	r24, 0x4D	; 77
+ 61e:	90 e2       	ldi	r25, 0x20	; 32
+ 620:	02 c0       	rjmp	.+4      	; 0x626 <wdt_fuse_enable_example+0x3e>
+	}
+	else
+	{
+		uart_puts("WDT Is not WindowMode Enabled");uart_putc('\n');
+ 622:	87 e6       	ldi	r24, 0x67	; 103
+ 624:	90 e2       	ldi	r25, 0x20	; 32
+ 626:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 62a:	8a e0       	ldi	r24, 0x0A	; 10
+ 62c:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 630:	80 91 81 00 	lds	r24, 0x0081
+	}
+
+
+	if (true == WDT_IsWindowModeEnabled()){
+ 634:	81 fd       	sbrc	r24, 1
+ 636:	ff cf       	rjmp	.-2      	; 0x636 <wdt_fuse_enable_example+0x4e>
+			//如果窗口模式使能，系统将复位
+		}
+	}
+
+	//如果窗口模式未通过熔丝使能，需要在程序中使能，但是周期数不能设定，因为熔丝位已经置位
+	WDT_EnableWindowMode();
+ 638:	0e 94 45 02 	call	0x48a	; 0x48a <WDT_EnableWindowMode>
+ 63c:	88 ec       	ldi	r24, 0xC8	; 200
+ 63e:	9f ea       	ldi	r25, 0xAF	; 175
+ 640:	01 97       	sbiw	r24, 0x01	; 1
+ 642:	f1 f7       	brne	.-4      	; 0x640 <wdt_fuse_enable_example+0x58>
+
+	// 看门狗重置最好在(TO_WDW * 1.3) 和((TO_WDW + TO_WD)*0.7) 之间
+
+	delay_us( 90000 );
+	WDT_Reset();
+ 644:	a8 95       	wdr
+ 646:	80 91 81 00 	lds	r24, 0x0081
+
+	if(WDT_IsWindowModeEnabled())
+ 64a:	81 ff       	sbrs	r24, 1
+ 64c:	03 c0       	rjmp	.+6      	; 0x654 <wdt_fuse_enable_example+0x6c>
+	{
+		uart_puts("WDT Is WindowMode Enabled");uart_putc('\n');
+ 64e:	8d e4       	ldi	r24, 0x4D	; 77
+ 650:	90 e2       	ldi	r25, 0x20	; 32
+ 652:	02 c0       	rjmp	.+4      	; 0x658 <wdt_fuse_enable_example+0x70>
+	}
+	else
+	{
+		uart_puts("WDT Is not WindowMode Enabled");uart_putc('\n');
+ 654:	87 e6       	ldi	r24, 0x67	; 103
+ 656:	90 e2       	ldi	r25, 0x20	; 32
+ 658:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 65c:	8a e0       	ldi	r24, 0x0A	; 10
+ 65e:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ *
+ *  立即生效
+ */
+void WDT_DisableWindowMode( void )
+{
+	uint8_t temp = (WDT.WINCTRL & ~WDT_WEN_bm) | WDT_WCEN_bm;
+ 662:	80 91 81 00 	lds	r24, 0x0081
+ 666:	8c 7f       	andi	r24, 0xFC	; 252
+ 668:	81 60       	ori	r24, 0x01	; 1
+	CCP = CCP_IOREG_gc;
+ 66a:	98 ed       	ldi	r25, 0xD8	; 216
+ 66c:	94 bf       	out	0x34, r25	; 52
+	WDT.WINCTRL = temp;
+ 66e:	e0 e8       	ldi	r30, 0x80	; 128
+ 670:	f0 e0       	ldi	r31, 0x00	; 0
+ 672:	81 83       	std	Z+1, r24	; 0x01
+ *  \retval  true   窗口模式使能
+ *  \retval  false  窗口模式关闭
+ */
+bool WDT_IsWindowModeEnabled( void )
+{
+	uint8_t wdwm_enabled = (WDT.WINCTRL & WDT_WEN_bm);
+ 674:	80 91 81 00 	lds	r24, 0x0081
+	}
+
+
+	WDT_DisableWindowMode();
+
+	if(WDT_IsWindowModeEnabled())
+ 678:	81 ff       	sbrs	r24, 1
+ 67a:	03 c0       	rjmp	.+6      	; 0x682 <wdt_fuse_enable_example+0x9a>
+	{
+		uart_puts("WDT Is WindowMode Enabled");uart_putc('\n');
+ 67c:	8d e4       	ldi	r24, 0x4D	; 77
+ 67e:	90 e2       	ldi	r25, 0x20	; 32
+ 680:	02 c0       	rjmp	.+4      	; 0x686 <wdt_fuse_enable_example+0x9e>
+	}
+	else
+	{
+		uart_puts("WDT Is not WindowMode Enabled");uart_putc('\n');
+ 682:	87 e6       	ldi	r24, 0x67	; 103
+ 684:	90 e2       	ldi	r25, 0x20	; 32
+ 686:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 68a:	8a e0       	ldi	r24, 0x0A	; 10
+ 68c:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 690:	20 e4       	ldi	r18, 0x40	; 64
+ 692:	30 e0       	ldi	r19, 0x00	; 0
+ 694:	44 ef       	ldi	r20, 0xF4	; 244
+ 696:	51 e0       	ldi	r21, 0x01	; 1
+ 698:	05 c0       	rjmp	.+10     	; 0x6a4 <wdt_fuse_enable_example+0xbc>
+ 69a:	ca 01       	movw	r24, r20
+ 69c:	01 97       	sbiw	r24, 0x01	; 1
+ 69e:	f1 f7       	brne	.-4      	; 0x69c <wdt_fuse_enable_example+0xb4>
+
+
+	while(true)
+	{
+		uint16_t repeatCounter;
+		for (repeatCounter = NORMAL_MODE_DELAY; repeatCounter > 0; --repeatCounter ) {
+ 6a0:	21 50       	subi	r18, 0x01	; 1
+ 6a2:	30 40       	sbci	r19, 0x00	; 0
+ 6a4:	21 15       	cp	r18, r1
+ 6a6:	31 05       	cpc	r19, r1
+ 6a8:	c1 f7       	brne	.-16     	; 0x69a <wdt_fuse_enable_example+0xb2>
+			delay_us( 1000 ); 
+		}
+		WDT_Reset();
+ 6aa:	a8 95       	wdr
+ 6ac:	20 e4       	ldi	r18, 0x40	; 64
+ 6ae:	30 e0       	ldi	r19, 0x00	; 0
+ 6b0:	f4 cf       	rjmp	.-24     	; 0x69a <wdt_fuse_enable_example+0xb2>
+
+000006b2 <main>:
+| Function    : main
++------------------------------------------------------------------------------
+*/
+int main( void )
+{
+	uart_init(); 
+ 6b2:	0e 94 70 02 	call	0x4e0	; 0x4e0 <uart_init>
+	uart_puts("inside main");uart_putc('\n');
+ 6b6:	81 eb       	ldi	r24, 0xB1	; 177
+ 6b8:	90 e2       	ldi	r25, 0x20	; 32
+ 6ba:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 6be:	8a e0       	ldi	r24, 0x0A	; 10
+ 6c0:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+	//wdt_sw_enable_example();
+	wdt_fuse_enable_example();
+ 6c4:	0e 94 f4 02 	call	0x5e8	; 0x5e8 <wdt_fuse_enable_example>
+
+}
+ 6c8:	80 e0       	ldi	r24, 0x00	; 0
+ 6ca:	90 e0       	ldi	r25, 0x00	; 0
+ 6cc:	08 95       	ret
+
+000006ce <__mulsi3>:
+ 6ce:	62 9f       	mul	r22, r18
+ 6d0:	d0 01       	movw	r26, r0
+ 6d2:	73 9f       	mul	r23, r19
+ 6d4:	f0 01       	movw	r30, r0
+ 6d6:	82 9f       	mul	r24, r18
+ 6d8:	e0 0d       	add	r30, r0
+ 6da:	f1 1d       	adc	r31, r1
+ 6dc:	64 9f       	mul	r22, r20
+ 6de:	e0 0d       	add	r30, r0
+ 6e0:	f1 1d       	adc	r31, r1
+ 6e2:	92 9f       	mul	r25, r18
+ 6e4:	f0 0d       	add	r31, r0
+ 6e6:	83 9f       	mul	r24, r19
+ 6e8:	f0 0d       	add	r31, r0
+ 6ea:	74 9f       	mul	r23, r20
+ 6ec:	f0 0d       	add	r31, r0
+ 6ee:	65 9f       	mul	r22, r21
+ 6f0:	f0 0d       	add	r31, r0
+ 6f2:	99 27       	eor	r25, r25
+ 6f4:	72 9f       	mul	r23, r18
+ 6f6:	b0 0d       	add	r27, r0
+ 6f8:	e1 1d       	adc	r30, r1
+ 6fa:	f9 1f       	adc	r31, r25
+ 6fc:	63 9f       	mul	r22, r19
+ 6fe:	b0 0d       	add	r27, r0
+ 700:	e1 1d       	adc	r30, r1
+ 702:	f9 1f       	adc	r31, r25
+ 704:	bd 01       	movw	r22, r26
+ 706:	cf 01       	movw	r24, r30
+ 708:	11 24       	eor	r1, r1
+ 70a:	08 95       	ret
+
+0000070c <__udivmodhi4>:
+ 70c:	aa 1b       	sub	r26, r26
+ 70e:	bb 1b       	sub	r27, r27
+ 710:	51 e1       	ldi	r21, 0x11	; 17
+ 712:	07 c0       	rjmp	.+14     	; 0x722 <__udivmodhi4_ep>
+
+00000714 <__udivmodhi4_loop>:
+ 714:	aa 1f       	adc	r26, r26
+ 716:	bb 1f       	adc	r27, r27
+ 718:	a6 17       	cp	r26, r22
+ 71a:	b7 07       	cpc	r27, r23
+ 71c:	10 f0       	brcs	.+4      	; 0x722 <__udivmodhi4_ep>
+ 71e:	a6 1b       	sub	r26, r22
+ 720:	b7 0b       	sbc	r27, r23
+
+00000722 <__udivmodhi4_ep>:
+ 722:	88 1f       	adc	r24, r24
+ 724:	99 1f       	adc	r25, r25
+ 726:	5a 95       	dec	r21
+ 728:	a9 f7       	brne	.-22     	; 0x714 <__udivmodhi4_loop>
+ 72a:	80 95       	com	r24
+ 72c:	90 95       	com	r25
+ 72e:	bc 01       	movw	r22, r24
+ 730:	cd 01       	movw	r24, r26
+ 732:	08 95       	ret
+
+00000734 <__udivmodsi4>:
+ 734:	a1 e2       	ldi	r26, 0x21	; 33
+ 736:	1a 2e       	mov	r1, r26
+ 738:	aa 1b       	sub	r26, r26
+ 73a:	bb 1b       	sub	r27, r27
+ 73c:	fd 01       	movw	r30, r26
+ 73e:	0d c0       	rjmp	.+26     	; 0x75a <__udivmodsi4_ep>
+
+00000740 <__udivmodsi4_loop>:
+ 740:	aa 1f       	adc	r26, r26
+ 742:	bb 1f       	adc	r27, r27
+ 744:	ee 1f       	adc	r30, r30
+ 746:	ff 1f       	adc	r31, r31
+ 748:	a2 17       	cp	r26, r18
+ 74a:	b3 07       	cpc	r27, r19
+ 74c:	e4 07       	cpc	r30, r20
+ 74e:	f5 07       	cpc	r31, r21
+ 750:	20 f0       	brcs	.+8      	; 0x75a <__udivmodsi4_ep>
+ 752:	a2 1b       	sub	r26, r18
+ 754:	b3 0b       	sbc	r27, r19
+ 756:	e4 0b       	sbc	r30, r20
+ 758:	f5 0b       	sbc	r31, r21
+
+0000075a <__udivmodsi4_ep>:
+ 75a:	66 1f       	adc	r22, r22
+ 75c:	77 1f       	adc	r23, r23
+ 75e:	88 1f       	adc	r24, r24
+ 760:	99 1f       	adc	r25, r25
+ 762:	1a 94       	dec	r1
+ 764:	69 f7       	brne	.-38     	; 0x740 <__udivmodsi4_loop>
+ 766:	60 95       	com	r22
+ 768:	70 95       	com	r23
+ 76a:	80 95       	com	r24
+ 76c:	90 95       	com	r25
+ 76e:	9b 01       	movw	r18, r22
+ 770:	ac 01       	movw	r20, r24
+ 772:	bd 01       	movw	r22, r26
+ 774:	cf 01       	movw	r24, r30
+ 776:	08 95       	ret
+
+00000778 <_exit>:
+ 778:	f8 94       	cli
+
+0000077a <__stop_program>:
+ 77a:	ff cf       	rjmp	.-2      	; 0x77a <__stop_program>

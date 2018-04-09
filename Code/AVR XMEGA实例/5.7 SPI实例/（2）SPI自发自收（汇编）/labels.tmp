@@ -1,0 +1,32 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\usart_driver.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>91</LINE></RESET>
+  <MAIN><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>38</LINE></MAIN>
+  <masterSendData><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>42</LINE></masterSendData>
+  <uart_init><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>51</LINE></uart_init>
+  <RESET_1><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>142</LINE></RESET_1>
+  <RESET_2><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>149</LINE></RESET_2>
+  <RESET_3><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>176</LINE></RESET_3>
+  <RESET_4><FILE>E:\ATMAGE\书稿例子\ASM_example\7-1 SPI_asm\SPI.asm</FILE><LINE>193</LINE></RESET_4>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,766 @@
+
+CLK_OSC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000004b6  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000040  00000000  00000000  0000050a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 0000018c  00000000  00000000  0000054a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00000f44  00000000  00000000  000006d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000002f7  00000000  00000000  0000161a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   00000417  00000000  00000000  00001911  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000110  00000000  00000000  00001d28  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000b05  00000000  00000000  00001e38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    0000006f  00000000  00000000  0000293d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  10:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  14:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  18:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  1c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  20:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  24:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  28:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  2c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  30:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  34:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  38:	0c 94 1a 01 	jmp	0x234	; 0x234 <__vector_14>
+  3c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  40:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  44:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  48:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  4c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  50:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  54:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  58:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  5c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  60:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  64:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  68:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  6c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  70:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  74:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  78:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  7c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  80:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  84:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  88:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  8c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  90:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  94:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  98:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  9c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  fc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 100:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 104:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 108:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 10c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 110:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 114:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 118:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 11c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 120:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 124:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 128:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 12c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 130:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 134:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 138:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 13c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 140:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 144:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 148:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 14c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 150:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 154:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 158:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 15c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 160:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 164:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 168:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 16c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 170:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 174:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 178:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 17c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 180:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 184:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 188:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 18c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 190:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 194:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 198:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 19c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	e6 eb       	ldi	r30, 0xB6	; 182
+ 214:	f4 e0       	ldi	r31, 0x04	; 4
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a0 30       	cpi	r26, 0x00	; 0
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+ 228:	0e 94 7f 01 	call	0x2fe	; 0x2fe <main>
+ 22c:	0c 94 59 02 	jmp	0x4b2	; 0x4b2 <_exit>
+
+00000230 <__bad_interrupt>:
+ 230:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000234 <__vector_14>:
+}
+
+
+/*中断服务程序 LED闪烁*/
+ISR(TCC0_OVF_vect)
+{
+ 234:	1f 92       	push	r1
+ 236:	0f 92       	push	r0
+ 238:	0f b6       	in	r0, 0x3f	; 63
+ 23a:	0f 92       	push	r0
+ 23c:	08 b6       	in	r0, 0x38	; 56
+ 23e:	0f 92       	push	r0
+ 240:	0b b6       	in	r0, 0x3b	; 59
+ 242:	0f 92       	push	r0
+ 244:	11 24       	eor	r1, r1
+ 246:	18 be       	out	0x38, r1	; 56
+ 248:	1b be       	out	0x3b, r1	; 59
+ 24a:	8f 93       	push	r24
+ 24c:	ef 93       	push	r30
+ 24e:	ff 93       	push	r31
+	LED1_T();
+ 250:	e7 e6       	ldi	r30, 0x67	; 103
+ 252:	f6 e0       	ldi	r31, 0x06	; 6
+ 254:	80 e2       	ldi	r24, 0x20	; 32
+ 256:	80 83       	st	Z, r24
+	LED2_T();
+ 258:	80 e1       	ldi	r24, 0x10	; 16
+ 25a:	80 83       	st	Z, r24
+}
+ 25c:	ff 91       	pop	r31
+ 25e:	ef 91       	pop	r30
+ 260:	8f 91       	pop	r24
+ 262:	0f 90       	pop	r0
+ 264:	0b be       	out	0x3b, r0	; 59
+ 266:	0f 90       	pop	r0
+ 268:	08 be       	out	0x38, r0	; 56
+ 26a:	0f 90       	pop	r0
+ 26c:	0f be       	out	0x3f, r0	; 63
+ 26e:	0f 90       	pop	r0
+ 270:	1f 90       	pop	r1
+ 272:	18 95       	reti
+
+00000274 <RC2M_Initial>:
+	CLKSYS_Prescalers_Config( CLK_PSADIV_1_gc, CLK_PSBCDIV_1_1_gc );//设置预分频器A,B,C的值	
+}
+
+void RC2M_Initial(void)
+{
+	CLKSYS_Enable( OSC_RC2MEN_bm  );//使能RC2M振荡器
+ 274:	80 91 50 00 	lds	r24, 0x0050
+ 278:	81 60       	ori	r24, 0x01	; 1
+ 27a:	80 93 50 00 	sts	0x0050, r24
+	do {} while ( CLKSYS_IsReady( OSC_RC2MRDY_bm  ) == 0 );//等待RC2M振荡器准备好
+ 27e:	80 91 51 00 	lds	r24, 0x0051
+ 282:	80 ff       	sbrs	r24, 0
+ 284:	fc cf       	rjmp	.-8      	; 0x27e <RC2M_Initial+0xa>
+	CLKSYS_Main_ClockSource_Select( CLK_SCLKSEL_RC2M_gc);//选择系统时钟源
+ 286:	80 e0       	ldi	r24, 0x00	; 0
+ 288:	0e 94 e5 01 	call	0x3ca	; 0x3ca <CLKSYS_Main_ClockSource_Select>
+	CLKSYS_Prescalers_Config( CLK_PSADIV_1_gc, CLK_PSBCDIV_1_1_gc );//设置预分频器A,B,C的值	
+ 28c:	80 e0       	ldi	r24, 0x00	; 0
+ 28e:	60 e0       	ldi	r22, 0x00	; 0
+ 290:	0e 94 cd 01 	call	0x39a	; 0x39a <CLKSYS_Prescalers_Config>
+}
+ 294:	08 95       	ret
+
+00000296 <RC32M_Initial>:
+	CLKSYS_Prescalers_Config( CLK_PSADIV_1_gc, CLK_PSBCDIV_1_1_gc );//设置预分频器A,B,C的值	
+}
+
+void RC32M_Initial(void)
+{
+	CLKSYS_Enable( OSC_RC32MEN_bm  );//使能RC32M振荡器
+ 296:	80 91 50 00 	lds	r24, 0x0050
+ 29a:	82 60       	ori	r24, 0x02	; 2
+ 29c:	80 93 50 00 	sts	0x0050, r24
+	do {} while ( CLKSYS_IsReady( OSC_RC32MRDY_bm  ) == 0 );//等待RC32M振荡器准备好
+ 2a0:	80 91 51 00 	lds	r24, 0x0051
+ 2a4:	81 ff       	sbrs	r24, 1
+ 2a6:	fc cf       	rjmp	.-8      	; 0x2a0 <RC32M_Initial+0xa>
+	CLKSYS_Main_ClockSource_Select( CLK_SCLKSEL_RC32M_gc);//选择系统时钟源
+ 2a8:	81 e0       	ldi	r24, 0x01	; 1
+ 2aa:	0e 94 e5 01 	call	0x3ca	; 0x3ca <CLKSYS_Main_ClockSource_Select>
+	CLKSYS_Prescalers_Config( CLK_PSADIV_1_gc, CLK_PSBCDIV_1_1_gc );//设置预分频器A,B,C的值	
+ 2ae:	80 e0       	ldi	r24, 0x00	; 0
+ 2b0:	60 e0       	ldi	r22, 0x00	; 0
+ 2b2:	0e 94 cd 01 	call	0x39a	; 0x39a <CLKSYS_Prescalers_Config>
+}
+ 2b6:	08 95       	ret
+
+000002b8 <PLL_XOSC_Initial>:
++------------------------------------------------------------------------------
+*/
+void PLL_XOSC_Initial(void)
+{
+	unsigned char factor = 6;
+	CLKSYS_XOSC_Config( OSC_FRQRANGE_2TO9_gc, false,OSC_XOSCSEL_XTAL_16KCLK_gc );//设置晶振范围 启动时间
+ 2b8:	80 e4       	ldi	r24, 0x40	; 64
+ 2ba:	60 e0       	ldi	r22, 0x00	; 0
+ 2bc:	4b e0       	ldi	r20, 0x0B	; 11
+ 2be:	0e 94 b2 01 	call	0x364	; 0x364 <CLKSYS_XOSC_Config>
+	CLKSYS_Enable( OSC_XOSCEN_bm  );//使能外部振荡器
+ 2c2:	80 91 50 00 	lds	r24, 0x0050
+ 2c6:	88 60       	ori	r24, 0x08	; 8
+ 2c8:	80 93 50 00 	sts	0x0050, r24
+	do {} while ( CLKSYS_IsReady( OSC_XOSCRDY_bm  ) == 0 );//等待外部振荡器准备好
+ 2cc:	80 91 51 00 	lds	r24, 0x0051
+ 2d0:	83 ff       	sbrs	r24, 3
+ 2d2:	fc cf       	rjmp	.-8      	; 0x2cc <PLL_XOSC_Initial+0x14>
+	CLKSYS_PLL_Config( OSC_PLLSRC_XOSC_gc, factor );//设置倍频因子并选择外部振荡器为PLL参考时钟
+ 2d4:	80 ec       	ldi	r24, 0xC0	; 192
+ 2d6:	66 e0       	ldi	r22, 0x06	; 6
+ 2d8:	0e 94 bd 01 	call	0x37a	; 0x37a <CLKSYS_PLL_Config>
+	CLKSYS_Enable( OSC_PLLEN_bm );//使能PLL电路
+ 2dc:	80 91 50 00 	lds	r24, 0x0050
+ 2e0:	80 61       	ori	r24, 0x10	; 16
+ 2e2:	80 93 50 00 	sts	0x0050, r24
+	do {} while ( CLKSYS_IsReady( OSC_PLLRDY_bm ) == 0 );//等待PLL准备好
+ 2e6:	80 91 51 00 	lds	r24, 0x0051
+ 2ea:	84 ff       	sbrs	r24, 4
+ 2ec:	fc cf       	rjmp	.-8      	; 0x2e6 <PLL_XOSC_Initial+0x2e>
+	CLKSYS_Main_ClockSource_Select( CLK_SCLKSEL_PLL_gc);//选择系统时钟源
+ 2ee:	84 e0       	ldi	r24, 0x04	; 4
+ 2f0:	0e 94 e5 01 	call	0x3ca	; 0x3ca <CLKSYS_Main_ClockSource_Select>
+	CLKSYS_Prescalers_Config( CLK_PSADIV_1_gc, CLK_PSBCDIV_1_1_gc );//设置预分频器A,B,C的值	
+ 2f4:	80 e0       	ldi	r24, 0x00	; 0
+ 2f6:	60 e0       	ldi	r22, 0x00	; 0
+ 2f8:	0e 94 cd 01 	call	0x39a	; 0x39a <CLKSYS_Prescalers_Config>
+}
+ 2fc:	08 95       	ret
+
+000002fe <main>:
+}
+
+int main( void ) 
+{	
+	// PLL，外部晶振8M，输出8M*6=48M
+	PLL_XOSC_Initial();
+ 2fe:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <PLL_XOSC_Initial>
+	//RC32M_Initial();
+
+	//内部RC2M
+	//RC2M_Initial();
+
+	PORTD_DIRSET = 0x30;//PD5，PD4方向设为输出
+ 302:	80 e3       	ldi	r24, 0x30	; 48
+ 304:	80 93 61 06 	sts	0x0661, r24
+
+	/* 设置定时器C0，计数周期65535
+	 * 使能溢出中断
+	 */
+	TCC0.PER = 65535;
+ 308:	e0 e0       	ldi	r30, 0x00	; 0
+ 30a:	f8 e0       	ldi	r31, 0x08	; 8
+ 30c:	8f ef       	ldi	r24, 0xFF	; 255
+ 30e:	9f ef       	ldi	r25, 0xFF	; 255
+ 310:	86 a3       	std	Z+38, r24	; 0x26
+ 312:	97 a3       	std	Z+39, r25	; 0x27
+	TCC0.CTRLA = ( TCC0.CTRLA & ~TC0_CLKSEL_gm ) | TC_CLKSEL_DIV64_gc;
+ 314:	80 91 00 08 	lds	r24, 0x0800
+ 318:	80 7f       	andi	r24, 0xF0	; 240
+ 31a:	85 60       	ori	r24, 0x05	; 5
+ 31c:	80 93 00 08 	sts	0x0800, r24
+	TCC0.INTCTRLA = ( TCC0.INTCTRLA & ~TC0_OVFINTLVL_gm ) | TC_OVFINTLVL_MED_gc;
+ 320:	80 91 06 08 	lds	r24, 0x0806
+ 324:	8c 7f       	andi	r24, 0xFC	; 252
+ 326:	82 60       	ori	r24, 0x02	; 2
+ 328:	86 83       	std	Z+6, r24	; 0x06
+
+	/* 使能低级别中断，打开全局中断*/
+	PMIC.CTRL |= PMIC_MEDLVLEN_bm;
+ 32a:	80 91 a2 00 	lds	r24, 0x00A2
+ 32e:	82 60       	ori	r24, 0x02	; 2
+ 330:	e0 ea       	ldi	r30, 0xA0	; 160
+ 332:	f0 e0       	ldi	r31, 0x00	; 0
+ 334:	82 83       	std	Z+2, r24	; 0x02
+	sei();
+ 336:	78 94       	sei
+ 338:	ff cf       	rjmp	.-2      	; 0x338 <main+0x3a>
+
+0000033a <CCPWrite>:
+ *
+ *  \param address A pointer to the address to write to.
+ *  \param value   The value to put in to the register.
+ */
+void CCPWrite( volatile uint8_t * address, uint8_t value )
+{
+ 33a:	0f 93       	push	r16
+ 33c:	df 93       	push	r29
+ 33e:	cf 93       	push	r28
+ 340:	0f 92       	push	r0
+ 342:	cd b7       	in	r28, 0x3d	; 61
+ 344:	de b7       	in	r29, 0x3e	; 62
+
+	// Restore global interrupt setting from scratch register.
+        asm("out  0x3F, R1");
+
+#elif defined __GNUC__
+	AVR_ENTER_CRITICAL_REGION( );
+ 346:	2f b7       	in	r18, 0x3f	; 63
+ 348:	29 83       	std	Y+1, r18	; 0x01
+ 34a:	f8 94       	cli
+	volatile uint8_t * tmpAddr = address;
+#ifdef RAMPZ
+	RAMPZ = 0;
+ 34c:	1b be       	out	0x3b, r1	; 59
+#endif
+	asm volatile(
+ 34e:	fc 01       	movw	r30, r24
+ 350:	08 ed       	ldi	r16, 0xD8	; 216
+ 352:	04 bf       	out	0x34, r16	; 52
+ 354:	60 83       	st	Z, r22
+		:
+		: "r" (tmpAddr), "r" (value), "M" (CCP_IOREG_gc), "i" (&CCP)
+		: "r16", "r30", "r31"
+		);
+
+	AVR_LEAVE_CRITICAL_REGION( );
+ 356:	89 81       	ldd	r24, Y+1	; 0x01
+ 358:	8f bf       	out	0x3f, r24	; 63
+#endif
+}
+ 35a:	0f 90       	pop	r0
+ 35c:	cf 91       	pop	r28
+ 35e:	df 91       	pop	r29
+ 360:	0f 91       	pop	r16
+ 362:	08 95       	ret
+
+00000364 <CLKSYS_XOSC_Config>:
+ */
+void CLKSYS_XOSC_Config( OSC_FRQRANGE_t freqRange,
+                         bool lowPower32kHz,
+                         OSC_XOSCSEL_t xoscModeSelection )
+{
+	OSC.XOSCCTRL = (uint8_t) freqRange |
+ 364:	66 23       	and	r22, r22
+ 366:	11 f4       	brne	.+4      	; 0x36c <CLKSYS_XOSC_Config+0x8>
+ 368:	90 e0       	ldi	r25, 0x00	; 0
+ 36a:	01 c0       	rjmp	.+2      	; 0x36e <CLKSYS_XOSC_Config+0xa>
+ 36c:	90 e2       	ldi	r25, 0x20	; 32
+ 36e:	48 2b       	or	r20, r24
+ 370:	94 2b       	or	r25, r20
+ 372:	e0 e5       	ldi	r30, 0x50	; 80
+ 374:	f0 e0       	ldi	r31, 0x00	; 0
+ 376:	92 83       	std	Z+2, r25	; 0x02
+	               ( lowPower32kHz ? OSC_X32KLPM_bm : 0 ) |
+	               xoscModeSelection;
+}
+ 378:	08 95       	ret
+
+0000037a <CLKSYS_PLL_Config>:
+ *                      from 1 to 31, inclusive.
+ */
+void CLKSYS_PLL_Config( OSC_PLLSRC_t clockSource, uint8_t factor )
+{
+	factor &= OSC_PLLFAC_gm;
+	OSC.PLLCTRL = (uint8_t) clockSource | ( factor << OSC_PLLFAC_gp );
+ 37a:	6f 71       	andi	r22, 0x1F	; 31
+ 37c:	68 2b       	or	r22, r24
+ 37e:	e0 e5       	ldi	r30, 0x50	; 80
+ 380:	f0 e0       	ldi	r31, 0x00	; 0
+ 382:	65 83       	std	Z+5, r22	; 0x05
+}
+ 384:	08 95       	ret
+
+00000386 <CLKSYS_Disable>:
+ *
+ *  \return  Non-zero if oscillator was disabled successfully.
+ */
+uint8_t CLKSYS_Disable( uint8_t oscSel )
+{
+	OSC.CTRL &= ~oscSel;
+ 386:	e0 e5       	ldi	r30, 0x50	; 80
+ 388:	f0 e0       	ldi	r31, 0x00	; 0
+ 38a:	20 81       	ld	r18, Z
+ 38c:	98 2f       	mov	r25, r24
+ 38e:	90 95       	com	r25
+ 390:	92 23       	and	r25, r18
+ 392:	90 83       	st	Z, r25
+	uint8_t clkEnabled = OSC.CTRL & oscSel;
+ 394:	90 81       	ld	r25, Z
+	return clkEnabled;
+}
+ 396:	89 23       	and	r24, r25
+ 398:	08 95       	ret
+
+0000039a <CLKSYS_Prescalers_Config>:
+ *  \param  PSBCfactor  Prescaler B and C division factor, in the combination
+ *                      of (1,1), (1,2), (4,1) or (2,2).
+ */
+void CLKSYS_Prescalers_Config( CLK_PSADIV_t PSAfactor,
+                               CLK_PSBCDIV_t PSBCfactor )
+{
+ 39a:	0f 93       	push	r16
+ 39c:	df 93       	push	r29
+ 39e:	cf 93       	push	r28
+ 3a0:	0f 92       	push	r0
+ 3a2:	cd b7       	in	r28, 0x3d	; 61
+ 3a4:	de b7       	in	r29, 0x3e	; 62
+
+	// Restore global interrupt setting from scratch register.
+        asm("out  0x3F, R1");
+
+#elif defined __GNUC__
+	AVR_ENTER_CRITICAL_REGION( );
+ 3a6:	9f b7       	in	r25, 0x3f	; 63
+ 3a8:	99 83       	std	Y+1, r25	; 0x01
+ 3aa:	f8 94       	cli
+	volatile uint8_t * tmpAddr = address;
+#ifdef RAMPZ
+	RAMPZ = 0;
+ 3ac:	1b be       	out	0x3b, r1	; 59
+#endif
+	asm volatile(
+ 3ae:	68 2b       	or	r22, r24
+ 3b0:	81 e4       	ldi	r24, 0x41	; 65
+ 3b2:	90 e0       	ldi	r25, 0x00	; 0
+ 3b4:	fc 01       	movw	r30, r24
+ 3b6:	08 ed       	ldi	r16, 0xD8	; 216
+ 3b8:	04 bf       	out	0x34, r16	; 52
+ 3ba:	60 83       	st	Z, r22
+		:
+		: "r" (tmpAddr), "r" (value), "M" (CCP_IOREG_gc), "i" (&CCP)
+		: "r16", "r30", "r31"
+		);
+
+	AVR_LEAVE_CRITICAL_REGION( );
+ 3bc:	89 81       	ldd	r24, Y+1	; 0x01
+ 3be:	8f bf       	out	0x3f, r24	; 63
+void CLKSYS_Prescalers_Config( CLK_PSADIV_t PSAfactor,
+                               CLK_PSBCDIV_t PSBCfactor )
+{
+	uint8_t PSconfig = (uint8_t) PSAfactor | PSBCfactor;
+	CCPWrite( &CLK.PSCTRL, PSconfig );
+}
+ 3c0:	0f 90       	pop	r0
+ 3c2:	cf 91       	pop	r28
+ 3c4:	df 91       	pop	r29
+ 3c6:	0f 91       	pop	r16
+ 3c8:	08 95       	ret
+
+000003ca <CLKSYS_Main_ClockSource_Select>:
+ *                       prescaler block.
+ *
+ *  \return  Non-zero if change was successful.
+ */
+uint8_t CLKSYS_Main_ClockSource_Select( CLK_SCLKSEL_t clockSource )
+{
+ 3ca:	0f 93       	push	r16
+ 3cc:	df 93       	push	r29
+ 3ce:	cf 93       	push	r28
+ 3d0:	0f 92       	push	r0
+ 3d2:	cd b7       	in	r28, 0x3d	; 61
+ 3d4:	de b7       	in	r29, 0x3e	; 62
+	uint8_t clkCtrl = ( CLK.CTRL & ~CLK_SCLKSEL_gm ) | clockSource;
+ 3d6:	20 91 40 00 	lds	r18, 0x0040
+
+	// Restore global interrupt setting from scratch register.
+        asm("out  0x3F, R1");
+
+#elif defined __GNUC__
+	AVR_ENTER_CRITICAL_REGION( );
+ 3da:	9f b7       	in	r25, 0x3f	; 63
+ 3dc:	99 83       	std	Y+1, r25	; 0x01
+ 3de:	f8 94       	cli
+	volatile uint8_t * tmpAddr = address;
+#ifdef RAMPZ
+	RAMPZ = 0;
+ 3e0:	1b be       	out	0x3b, r1	; 59
+#endif
+	asm volatile(
+ 3e2:	a0 e4       	ldi	r26, 0x40	; 64
+ 3e4:	b0 e0       	ldi	r27, 0x00	; 0
+ 3e6:	28 7f       	andi	r18, 0xF8	; 248
+ 3e8:	28 2b       	or	r18, r24
+ 3ea:	fd 01       	movw	r30, r26
+ 3ec:	08 ed       	ldi	r16, 0xD8	; 216
+ 3ee:	04 bf       	out	0x34, r16	; 52
+ 3f0:	20 83       	st	Z, r18
+		:
+		: "r" (tmpAddr), "r" (value), "M" (CCP_IOREG_gc), "i" (&CCP)
+		: "r16", "r30", "r31"
+		);
+
+	AVR_LEAVE_CRITICAL_REGION( );
+ 3f2:	99 81       	ldd	r25, Y+1	; 0x01
+ 3f4:	9f bf       	out	0x3f, r25	; 63
+ */
+uint8_t CLKSYS_Main_ClockSource_Select( CLK_SCLKSEL_t clockSource )
+{
+	uint8_t clkCtrl = ( CLK.CTRL & ~CLK_SCLKSEL_gm ) | clockSource;
+	CCPWrite( &CLK.CTRL, clkCtrl );
+	clkCtrl = ( CLK.CTRL & clockSource );
+ 3f6:	9c 91       	ld	r25, X
+	return clkCtrl;
+}
+ 3f8:	89 23       	and	r24, r25
+ 3fa:	0f 90       	pop	r0
+ 3fc:	cf 91       	pop	r28
+ 3fe:	df 91       	pop	r29
+ 400:	0f 91       	pop	r16
+ 402:	08 95       	ret
+
+00000404 <CLKSYS_RTC_ClockSource_Enable>:
+ *
+ *  \param  clockSource  Clock source to use for the RTC.
+ */
+void CLKSYS_RTC_ClockSource_Enable( CLK_RTCSRC_t clockSource )
+{
+	CLK.RTCCTRL = ( CLK.RTCCTRL & ~CLK_RTCSRC_gm ) |
+ 404:	e0 e4       	ldi	r30, 0x40	; 64
+ 406:	f0 e0       	ldi	r31, 0x00	; 0
+ 408:	93 81       	ldd	r25, Z+3	; 0x03
+ 40a:	91 7f       	andi	r25, 0xF1	; 241
+ 40c:	91 60       	ori	r25, 0x01	; 1
+ 40e:	98 2b       	or	r25, r24
+ 410:	93 83       	std	Z+3, r25	; 0x03
+	              clockSource |
+	              CLK_RTCEN_bm;
+}
+ 412:	08 95       	ret
+
+00000414 <CLKSYS_AutoCalibration_Enable>:
+ *  \param  clkSource    Clock source to calibrate, either OSC_RC2MCREF_bm or
+ *                       OSC_RC32MCREF_bm.
+ *  \param  extReference True if external crystal should be used as reference.
+ */
+void CLKSYS_AutoCalibration_Enable( uint8_t clkSource, bool extReference )
+{
+ 414:	28 2f       	mov	r18, r24
+	OSC.DFLLCTRL = ( OSC.DFLLCTRL & ~clkSource ) |
+ 416:	30 91 56 00 	lds	r19, 0x0056
+ 41a:	66 23       	and	r22, r22
+ 41c:	11 f0       	breq	.+4      	; 0x422 <CLKSYS_AutoCalibration_Enable+0xe>
+ 41e:	98 2f       	mov	r25, r24
+ 420:	01 c0       	rjmp	.+2      	; 0x424 <CLKSYS_AutoCalibration_Enable+0x10>
+ 422:	90 e0       	ldi	r25, 0x00	; 0
+ 424:	82 2f       	mov	r24, r18
+ 426:	80 95       	com	r24
+ 428:	83 23       	and	r24, r19
+ 42a:	98 2b       	or	r25, r24
+ 42c:	e0 e5       	ldi	r30, 0x50	; 80
+ 42e:	f0 e0       	ldi	r31, 0x00	; 0
+ 430:	96 83       	std	Z+6, r25	; 0x06
+	               ( extReference ? clkSource : 0 );
+	if (clkSource == OSC_RC2MCREF_bm) {
+ 432:	21 30       	cpi	r18, 0x01	; 1
+ 434:	31 f4       	brne	.+12     	; 0x442 <CLKSYS_AutoCalibration_Enable+0x2e>
+		DFLLRC2M.CTRL |= DFLL_ENABLE_bm;
+ 436:	80 91 68 00 	lds	r24, 0x0068
+ 43a:	81 60       	ori	r24, 0x01	; 1
+ 43c:	80 93 68 00 	sts	0x0068, r24
+ 440:	08 95       	ret
+	} else if (clkSource == OSC_RC32MCREF_bm) {
+ 442:	22 30       	cpi	r18, 0x02	; 2
+ 444:	29 f4       	brne	.+10     	; 0x450 <CLKSYS_AutoCalibration_Enable+0x3c>
+		DFLLRC32M.CTRL |= DFLL_ENABLE_bm;
+ 446:	80 91 60 00 	lds	r24, 0x0060
+ 44a:	81 60       	ori	r24, 0x01	; 1
+ 44c:	80 93 60 00 	sts	0x0060, r24
+ 450:	08 95       	ret
+
+00000452 <CLKSYS_XOSC_FailureDetection_Enable>:
+ *  XOSCFD _will_ issue the XOSCF Non-maskable Interrupt (NMI) regardless of
+ *  any interrupt priorities and settings. Therefore, make sure that a handler
+ *  is implemented for the XOSCF NMI when you enable it.
+ */
+void CLKSYS_XOSC_FailureDetection_Enable( void )
+{
+ 452:	0f 93       	push	r16
+ 454:	df 93       	push	r29
+ 456:	cf 93       	push	r28
+ 458:	0f 92       	push	r0
+ 45a:	cd b7       	in	r28, 0x3d	; 61
+ 45c:	de b7       	in	r29, 0x3e	; 62
+
+	// Restore global interrupt setting from scratch register.
+        asm("out  0x3F, R1");
+
+#elif defined __GNUC__
+	AVR_ENTER_CRITICAL_REGION( );
+ 45e:	8f b7       	in	r24, 0x3f	; 63
+ 460:	89 83       	std	Y+1, r24	; 0x01
+ 462:	f8 94       	cli
+	volatile uint8_t * tmpAddr = address;
+#ifdef RAMPZ
+	RAMPZ = 0;
+ 464:	1b be       	out	0x3b, r1	; 59
+#endif
+	asm volatile(
+ 466:	23 e0       	ldi	r18, 0x03	; 3
+ 468:	83 e5       	ldi	r24, 0x53	; 83
+ 46a:	90 e0       	ldi	r25, 0x00	; 0
+ 46c:	fc 01       	movw	r30, r24
+ 46e:	08 ed       	ldi	r16, 0xD8	; 216
+ 470:	04 bf       	out	0x34, r16	; 52
+ 472:	20 83       	st	Z, r18
+		:
+		: "r" (tmpAddr), "r" (value), "M" (CCP_IOREG_gc), "i" (&CCP)
+		: "r16", "r30", "r31"
+		);
+
+	AVR_LEAVE_CRITICAL_REGION( );
+ 474:	89 81       	ldd	r24, Y+1	; 0x01
+ 476:	8f bf       	out	0x3f, r24	; 63
+ *  is implemented for the XOSCF NMI when you enable it.
+ */
+void CLKSYS_XOSC_FailureDetection_Enable( void )
+{
+	CCPWrite( &OSC.XOSCFAIL, ( OSC_XOSCFDIF_bm | OSC_XOSCFDEN_bm ) );
+}
+ 478:	0f 90       	pop	r0
+ 47a:	cf 91       	pop	r28
+ 47c:	df 91       	pop	r29
+ 47e:	0f 91       	pop	r16
+ 480:	08 95       	ret
+
+00000482 <CLKSYS_Configuration_Lock>:
+ *  This will lock the configuration until the next reset, or until the
+ *  External Oscillator Failure Detections (XOSCFD) feature detects a failure
+ *  and switches to internal 2MHz RC oscillator.
+ */
+void CLKSYS_Configuration_Lock( void )
+{
+ 482:	0f 93       	push	r16
+ 484:	df 93       	push	r29
+ 486:	cf 93       	push	r28
+ 488:	0f 92       	push	r0
+ 48a:	cd b7       	in	r28, 0x3d	; 61
+ 48c:	de b7       	in	r29, 0x3e	; 62
+
+	// Restore global interrupt setting from scratch register.
+        asm("out  0x3F, R1");
+
+#elif defined __GNUC__
+	AVR_ENTER_CRITICAL_REGION( );
+ 48e:	8f b7       	in	r24, 0x3f	; 63
+ 490:	89 83       	std	Y+1, r24	; 0x01
+ 492:	f8 94       	cli
+	volatile uint8_t * tmpAddr = address;
+#ifdef RAMPZ
+	RAMPZ = 0;
+ 494:	1b be       	out	0x3b, r1	; 59
+#endif
+	asm volatile(
+ 496:	21 e0       	ldi	r18, 0x01	; 1
+ 498:	82 e4       	ldi	r24, 0x42	; 66
+ 49a:	90 e0       	ldi	r25, 0x00	; 0
+ 49c:	fc 01       	movw	r30, r24
+ 49e:	08 ed       	ldi	r16, 0xD8	; 216
+ 4a0:	04 bf       	out	0x34, r16	; 52
+ 4a2:	20 83       	st	Z, r18
+		:
+		: "r" (tmpAddr), "r" (value), "M" (CCP_IOREG_gc), "i" (&CCP)
+		: "r16", "r30", "r31"
+		);
+
+	AVR_LEAVE_CRITICAL_REGION( );
+ 4a4:	89 81       	ldd	r24, Y+1	; 0x01
+ 4a6:	8f bf       	out	0x3f, r24	; 63
+ *  and switches to internal 2MHz RC oscillator.
+ */
+void CLKSYS_Configuration_Lock( void )
+{
+	CCPWrite( &CLK.LOCK, CLK_LOCK_bm );
+}
+ 4a8:	0f 90       	pop	r0
+ 4aa:	cf 91       	pop	r28
+ 4ac:	df 91       	pop	r29
+ 4ae:	0f 91       	pop	r16
+ 4b0:	08 95       	ret
+
+000004b2 <_exit>:
+ 4b2:	f8 94       	cli
+
+000004b4 <__stop_program>:
+ 4b4:	ff cf       	rjmp	.-2      	; 0x4b4 <__stop_program>

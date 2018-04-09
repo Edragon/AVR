@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\安装\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\书稿例子\ASM_example\4-2 TC_PWM_Sine_asm\labels.tmp" -fI -W+ie -o "E:\ATMAGE\书稿例子\ASM_example\4-2 TC_PWM_Sine_asm\TC_PWM_SINE_asm.hex" -d "E:\ATMAGE\书稿例子\ASM_example\4-2 TC_PWM_Sine_asm\TC_PWM_SINE_asm.obj" -e "E:\ATMAGE\书稿例子\ASM_example\4-2 TC_PWM_Sine_asm\TC_PWM_SINE_asm.eep" -m "E:\ATMAGE\书稿例子\ASM_example\4-2 TC_PWM_Sine_asm\TC_PWM_SINE_asm.map" "E:\ATMAGE\书稿例子\ASM_example\4-2 TC_PWM_Sine_asm\TC_PWM_SINE_asm.asm"

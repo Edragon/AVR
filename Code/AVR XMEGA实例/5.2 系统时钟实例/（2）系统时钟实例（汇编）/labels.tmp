@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</FILE><LINE>178</LINE></RESET>
+  <ISR><FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</FILE><LINE>210</LINE></ISR>
+  <PLL_XOSC_Initial><FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</FILE><LINE>95</LINE></PLL_XOSC_Initial>
+  <RC32M_Initial><FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</FILE><LINE>139</LINE></RC32M_Initial>
+  <RC2M_Initial><FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</FILE><LINE>158</LINE></RC2M_Initial>
+  <RESET_LOOP><FILE>E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm</FILE><LINE>207</LINE></RESET_LOOP>
+ </LABELS>
+</ASSEMBLER_INFO>

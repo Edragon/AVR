@@ -1,0 +1,1105 @@
+
+EBI.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000006fe  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000020  00000000  00000000  00000752  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 000000f7  00000000  00000000  00000772  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00000c8c  00000000  00000000  00000869  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 0000020c  00000000  00000000  000014f5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000003ca  00000000  00000000  00001701  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  000000f0  00000000  00000000  00001acc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000d39  00000000  00000000  00001bbc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000544  00000000  00000000  000028f5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000030  00000000  00000000  00002e39  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  10:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  14:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  18:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  1c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  20:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  24:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  28:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  2c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  30:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  34:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  38:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  3c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  40:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  44:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  48:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  4c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  50:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  54:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  58:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  5c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  60:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  64:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  68:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  6c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  70:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  74:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  78:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  7c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  80:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  84:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  88:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  8c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  90:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  94:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  98:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  9c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  fc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 100:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 104:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 108:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 10c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 110:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 114:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 118:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 11c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 120:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 124:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 128:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 12c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 130:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 134:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 138:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 13c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 140:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 144:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 148:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 14c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 150:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 154:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 158:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 15c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 160:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 164:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 168:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 16c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 170:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 174:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 178:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 17c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 180:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 184:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 188:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 18c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 190:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 194:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 198:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 19c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	ee ef       	ldi	r30, 0xFE	; 254
+ 214:	f6 e0       	ldi	r31, 0x06	; 6
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a0 30       	cpi	r26, 0x00	; 0
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+ 228:	0e 94 de 02 	call	0x5bc	; 0x5bc <main>
+ 22c:	0c 94 7d 03 	jmp	0x6fa	; 0x6fa <_exit>
+
+00000230 <__bad_interrupt>:
+ 230:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000234 <EBI_Enable>:
+                 EBI_LPCMODE_t lpcMode,
+                 EBI_SRMODE_t sramMode,
+                 EBI_IFMODE_t interfaceMode )
+{
+	/* These fields fill up the whole register, so we don't have to protect any bits with masks. */
+	EBI.CTRL = (uint8_t) sdramDataWidth | lpcMode | sramMode | interfaceMode;
+ 234:	68 2b       	or	r22, r24
+ 236:	64 2b       	or	r22, r20
+ 238:	62 2b       	or	r22, r18
+ 23a:	60 93 40 04 	sts	0x0440, r22
+}
+ 23e:	08 95       	ret
+
+00000240 <EBI_EnableSRAM>:
+ */
+void EBI_EnableSRAM( volatile EBI_CS_t * chipSelect,
+                     EBI_CS_ASPACE_t addrSpace,
+                     uint32_t baseAddr,
+                     uint8_t waitStateCycles )
+{
+ 240:	0f 93       	push	r16
+ 242:	fc 01       	movw	r30, r24
+	/* Configure SRAM settings. */
+	chipSelect->CTRLB = (chipSelect->CTRLB & ~EBI_CS_SRWS_gm) |
+ 244:	81 81       	ldd	r24, Z+1	; 0x01
+ 246:	07 70       	andi	r16, 0x07	; 7
+ 248:	88 7f       	andi	r24, 0xF8	; 248
+ 24a:	80 2b       	or	r24, r16
+ 24c:	81 83       	std	Z+1, r24	; 0x01
+	                    (waitStateCycles & EBI_CS_SRWS_gm); /* Truncate too large values. */
+
+	/* Truncate the base address to an address space boundary. */
+	chipSelect->BASEADDR = (((uint32_t) baseAddr)>>8) & (0xFFFF<<(addrSpace>>2));
+ 24e:	76 2f       	mov	r23, r22
+ 250:	76 95       	lsr	r23
+ 252:	76 95       	lsr	r23
+ 254:	8f ef       	ldi	r24, 0xFF	; 255
+ 256:	9f ef       	ldi	r25, 0xFF	; 255
+ 258:	02 c0       	rjmp	.+4      	; 0x25e <EBI_EnableSRAM+0x1e>
+ 25a:	88 0f       	add	r24, r24
+ 25c:	99 1f       	adc	r25, r25
+ 25e:	7a 95       	dec	r23
+ 260:	e2 f7       	brpl	.-8      	; 0x25a <EBI_EnableSRAM+0x1a>
+ 262:	23 2f       	mov	r18, r19
+ 264:	34 2f       	mov	r19, r20
+ 266:	45 2f       	mov	r20, r21
+ 268:	55 27       	eor	r21, r21
+ 26a:	82 23       	and	r24, r18
+ 26c:	93 23       	and	r25, r19
+ 26e:	82 83       	std	Z+2, r24	; 0x02
+ 270:	93 83       	std	Z+3, r25	; 0x03
+
+	/* Last part of configuration and then enable Chip Select module in SRAM mode. */
+	chipSelect->CTRLA = (chipSelect->CTRLA & ~(EBI_CS_ASPACE_gm | EBI_CS_MODE_gm)) |
+ 272:	80 81       	ld	r24, Z
+ 274:	80 78       	andi	r24, 0x80	; 128
+ 276:	81 60       	ori	r24, 0x01	; 1
+ 278:	86 2b       	or	r24, r22
+ 27a:	80 83       	st	Z, r24
+	                    addrSpace | EBI_CS_MODE_SRAM_gc;
+}
+ 27c:	0f 91       	pop	r16
+ 27e:	08 95       	ret
+
+00000280 <EBI_EnableLPC>:
+ */
+void EBI_EnableLPC( volatile EBI_CS_t * chipSelect,
+                    EBI_CS_ASPACE_t addrSpace,
+                    uint32_t baseAddr,
+                    uint8_t waitStateCycles )
+{
+ 280:	0f 93       	push	r16
+ 282:	fc 01       	movw	r30, r24
+	/* Configure SRAM LPC settings. */
+	chipSelect->CTRLB = (chipSelect->CTRLB & ~EBI_CS_SRWS_gm) |
+ 284:	81 81       	ldd	r24, Z+1	; 0x01
+ 286:	07 70       	andi	r16, 0x07	; 7
+ 288:	88 7f       	andi	r24, 0xF8	; 248
+ 28a:	80 2b       	or	r24, r16
+ 28c:	81 83       	std	Z+1, r24	; 0x01
+	                    (waitStateCycles & EBI_CS_SRWS_gm); /* Truncate too large values. */
+
+	/* Truncate the base address to an address space boundary. */
+	chipSelect->BASEADDR = (((uint32_t) baseAddr)>>8) & (0xFFFF<<(addrSpace>>2));
+ 28e:	76 2f       	mov	r23, r22
+ 290:	76 95       	lsr	r23
+ 292:	76 95       	lsr	r23
+ 294:	8f ef       	ldi	r24, 0xFF	; 255
+ 296:	9f ef       	ldi	r25, 0xFF	; 255
+ 298:	02 c0       	rjmp	.+4      	; 0x29e <EBI_EnableLPC+0x1e>
+ 29a:	88 0f       	add	r24, r24
+ 29c:	99 1f       	adc	r25, r25
+ 29e:	7a 95       	dec	r23
+ 2a0:	e2 f7       	brpl	.-8      	; 0x29a <EBI_EnableLPC+0x1a>
+ 2a2:	23 2f       	mov	r18, r19
+ 2a4:	34 2f       	mov	r19, r20
+ 2a6:	45 2f       	mov	r20, r21
+ 2a8:	55 27       	eor	r21, r21
+ 2aa:	82 23       	and	r24, r18
+ 2ac:	93 23       	and	r25, r19
+ 2ae:	82 83       	std	Z+2, r24	; 0x02
+ 2b0:	93 83       	std	Z+3, r25	; 0x03
+
+	/* Last part of configuration and then enable Chip Select module in SRAM LPC mode. */
+	chipSelect->CTRLA = (chipSelect->CTRLA & ~(EBI_CS_ASPACE_gm | EBI_CS_MODE_gm)) |
+ 2b2:	80 81       	ld	r24, Z
+ 2b4:	80 78       	andi	r24, 0x80	; 128
+ 2b6:	82 60       	ori	r24, 0x02	; 2
+ 2b8:	86 2b       	or	r24, r22
+ 2ba:	80 83       	st	Z, r24
+	                    addrSpace | EBI_CS_MODE_LPC_gc;
+}
+ 2bc:	0f 91       	pop	r16
+ 2be:	08 95       	ret
+
+000002c0 <EBI_EnableSDRAM>:
+                      EBI_WRDLY_t writeRecoveryDelay,
+                      EBI_ESRDLY_t exitSelfRefreshToActiveDelay,
+                      EBI_ROWCOLDLY_t rowToColumnDelay,
+                      uint16_t refreshPeriod,
+                      uint16_t initializationDelay )
+{
+ 2c0:	4f 92       	push	r4
+ 2c2:	5f 92       	push	r5
+ 2c4:	6f 92       	push	r6
+ 2c6:	7f 92       	push	r7
+ 2c8:	8f 92       	push	r8
+ 2ca:	af 92       	push	r10
+ 2cc:	cf 92       	push	r12
+ 2ce:	ef 92       	push	r14
+ 2d0:	0f 93       	push	r16
+ 2d2:	1f 93       	push	r17
+ 2d4:	df 93       	push	r29
+ 2d6:	cf 93       	push	r28
+ 2d8:	cd b7       	in	r28, 0x3d	; 61
+ 2da:	de b7       	in	r29, 0x3e	; 62
+ 2dc:	18 2f       	mov	r17, r24
+ 2de:	2a 01       	movw	r4, r20
+ 2e0:	3b 01       	movw	r6, r22
+ 2e2:	99 89       	ldd	r25, Y+17	; 0x11
+ 2e4:	4b 89       	ldd	r20, Y+19	; 0x13
+ 2e6:	5c 89       	ldd	r21, Y+20	; 0x14
+ 2e8:	6d 89       	ldd	r22, Y+21	; 0x15
+ 2ea:	7e 89       	ldd	r23, Y+22	; 0x16
+	/* Set two single-bit fields and one larger field, while protecting reserved bits. */
+	EBI.SDRAMCTRLA = (EBI.SDRAMCTRLA & ~(EBI_SDCAS_bm | EBI_SDROW_bm | EBI_SDCOL_gm)) |
+ 2ec:	30 91 41 04 	lds	r19, 0x0441
+ 2f0:	21 11       	cpse	r18, r1
+ 2f2:	28 e0       	ldi	r18, 0x08	; 8
+ 2f4:	00 23       	and	r16, r16
+ 2f6:	11 f4       	brne	.+4      	; 0x2fc <EBI_EnableSDRAM+0x3c>
+ 2f8:	80 e0       	ldi	r24, 0x00	; 0
+ 2fa:	01 c0       	rjmp	.+2      	; 0x2fe <EBI_EnableSDRAM+0x3e>
+ 2fc:	84 e0       	ldi	r24, 0x04	; 4
+ 2fe:	30 7f       	andi	r19, 0xF0	; 240
+ 300:	3e 29       	or	r19, r14
+ 302:	23 2b       	or	r18, r19
+ 304:	82 2b       	or	r24, r18
+ 306:	e0 e4       	ldi	r30, 0x40	; 64
+ 308:	f4 e0       	ldi	r31, 0x04	; 4
+ 30a:	81 83       	std	Z+1, r24	; 0x01
+	                 (casLatency ? EBI_SDCAS_bm : 0) | (rowBits ? EBI_SDROW_bm : 0) | columnBits;
+
+	/* Set delay counts. Fields fill up the entire registers. */
+	EBI.SDRAMCTRLB = (uint8_t) modeRegisterDelay | rowCycleDelay | rowToPrechargeDelay;
+ 30c:	ac 28       	or	r10, r12
+ 30e:	a8 28       	or	r10, r8
+ 310:	a0 86       	std	Z+8, r10	; 0x08
+	EBI.SDRAMCTRLC = (uint8_t) writeRecoveryDelay | exitSelfRefreshToActiveDelay | rowToColumnDelay;
+ 312:	88 89       	ldd	r24, Y+16	; 0x10
+ 314:	98 2b       	or	r25, r24
+ 316:	8a 89       	ldd	r24, Y+18	; 0x12
+ 318:	98 2b       	or	r25, r24
+ 31a:	91 87       	std	Z+9, r25	; 0x09
+
+	/* Set refresh period and initialization delay, truncate too large values. */
+	EBI.REFRESH = refreshPeriod & 0x03FF;
+ 31c:	53 70       	andi	r21, 0x03	; 3
+ 31e:	44 83       	std	Z+4, r20	; 0x04
+ 320:	55 83       	std	Z+5, r21	; 0x05
+	EBI.INITDLY = initializationDelay & 0x3FFF;
+ 322:	7f 73       	andi	r23, 0x3F	; 63
+ 324:	66 83       	std	Z+6, r22	; 0x06
+ 326:	77 83       	std	Z+7, r23	; 0x07
+
+	/* Last part of configuration and then enable Chip Select module in SDRAM mode. */
+	EBI.CS3.CTRLB = (EBI.CS3.CTRLB & ~(EBI_CS_SDSREN_bm | EBI_CS_SDMODE_gm)) |
+ 328:	80 91 5d 04 	lds	r24, 0x045D
+ 32c:	88 7f       	andi	r24, 0xF8	; 248
+ 32e:	85 8f       	std	Z+29, r24	; 0x1d
+	                EBI_CS_SDMODE_NORMAL_gc;
+
+	/* Truncate the base address to an address space boundary. */
+	EBI.CS3.BASEADDR = (((uint32_t) baseAddr)>>8) & (0xFFFF<<(addrSpace>>2));
+ 330:	81 2f       	mov	r24, r17
+ 332:	86 95       	lsr	r24
+ 334:	86 95       	lsr	r24
+ 336:	2f ef       	ldi	r18, 0xFF	; 255
+ 338:	3f ef       	ldi	r19, 0xFF	; 255
+ 33a:	02 c0       	rjmp	.+4      	; 0x340 <EBI_EnableSDRAM+0x80>
+ 33c:	22 0f       	add	r18, r18
+ 33e:	33 1f       	adc	r19, r19
+ 340:	8a 95       	dec	r24
+ 342:	e2 f7       	brpl	.-8      	; 0x33c <EBI_EnableSDRAM+0x7c>
+ 344:	bb 27       	eor	r27, r27
+ 346:	a7 2d       	mov	r26, r7
+ 348:	96 2d       	mov	r25, r6
+ 34a:	85 2d       	mov	r24, r5
+ 34c:	28 23       	and	r18, r24
+ 34e:	39 23       	and	r19, r25
+ 350:	26 8f       	std	Z+30, r18	; 0x1e
+ 352:	37 8f       	std	Z+31, r19	; 0x1f
+
+	EBI.CS3.CTRLA = (EBI.CS3.CTRLA & ~(EBI_CS_ASPACE_gm | EBI_CS_MODE_gm)) |
+ 354:	80 91 5c 04 	lds	r24, 0x045C
+ 358:	80 78       	andi	r24, 0x80	; 128
+ 35a:	83 60       	ori	r24, 0x03	; 3
+ 35c:	81 2b       	or	r24, r17
+ 35e:	84 8f       	std	Z+28, r24	; 0x1c
+	                addrSpace | EBI_CS_MODE_SDRAM_gc;
+
+	/* Wait for SDRAM to initialize. */
+	while ((EBI.CS3.CTRLB & EBI_CS_SDINITDONE_bm) == 0){
+ 360:	80 91 5d 04 	lds	r24, 0x045D
+ 364:	87 ff       	sbrs	r24, 7
+ 366:	fc cf       	rjmp	.-8      	; 0x360 <EBI_EnableSDRAM+0xa0>
+
+	}
+}
+ 368:	cf 91       	pop	r28
+ 36a:	df 91       	pop	r29
+ 36c:	1f 91       	pop	r17
+ 36e:	0f 91       	pop	r16
+ 370:	ef 90       	pop	r14
+ 372:	cf 90       	pop	r12
+ 374:	af 90       	pop	r10
+ 376:	8f 90       	pop	r8
+ 378:	7f 90       	pop	r7
+ 37a:	6f 90       	pop	r6
+ 37c:	5f 90       	pop	r5
+ 37e:	4f 90       	pop	r4
+ 380:	08 95       	ret
+
+00000382 <uart_putc>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc(unsigned char c)
+{
+ 382:	1f 93       	push	r17
+ 384:	18 2f       	mov	r17, r24
+    if(c == '\n')
+ 386:	8a 30       	cpi	r24, 0x0A	; 10
+ 388:	19 f4       	brne	.+6      	; 0x390 <uart_putc+0xe>
+        uart_putc('\r');
+ 38a:	8d e0       	ldi	r24, 0x0D	; 13
+ 38c:	0e 94 c1 01 	call	0x382	; 0x382 <uart_putc>
+
+    /* wait until transmit buffer is empty */
+    while(!(USART.STATUS & USART_DREIF_bm));
+ 390:	80 91 a1 08 	lds	r24, 0x08A1
+ 394:	85 ff       	sbrs	r24, 5
+ 396:	fc cf       	rjmp	.-8      	; 0x390 <uart_putc+0xe>
+
+    /* send next byte */
+    USART.DATA = c;
+ 398:	10 93 a0 08 	sts	0x08A0, r17
+}
+ 39c:	1f 91       	pop	r17
+ 39e:	08 95       	ret
+
+000003a0 <uart_putc_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc_hex(unsigned char b)
+{
+ 3a0:	1f 93       	push	r17
+ 3a2:	18 2f       	mov	r17, r24
+    /* upper nibble */
+    if((b >> 4) < 0x0a)
+ 3a4:	82 95       	swap	r24
+ 3a6:	8f 70       	andi	r24, 0x0F	; 15
+ 3a8:	8a 30       	cpi	r24, 0x0A	; 10
+ 3aa:	10 f4       	brcc	.+4      	; 0x3b0 <uart_putc_hex+0x10>
+        uart_putc((b >> 4) + '0');
+ 3ac:	80 5d       	subi	r24, 0xD0	; 208
+ 3ae:	01 c0       	rjmp	.+2      	; 0x3b2 <uart_putc_hex+0x12>
+    else
+        uart_putc((b >> 4) - 0x0a + 'a');
+ 3b0:	89 5a       	subi	r24, 0xA9	; 169
+ 3b2:	0e 94 c1 01 	call	0x382	; 0x382 <uart_putc>
+
+    /* lower nibble */
+    if((b & 0x0f) < 0x0a)
+ 3b6:	81 2f       	mov	r24, r17
+ 3b8:	90 e0       	ldi	r25, 0x00	; 0
+ 3ba:	8f 70       	andi	r24, 0x0F	; 15
+ 3bc:	90 70       	andi	r25, 0x00	; 0
+ 3be:	21 2f       	mov	r18, r17
+ 3c0:	2f 70       	andi	r18, 0x0F	; 15
+ 3c2:	0a 97       	sbiw	r24, 0x0a	; 10
+ 3c4:	1c f4       	brge	.+6      	; 0x3cc <uart_putc_hex+0x2c>
+        uart_putc((b & 0x0f) + '0');
+ 3c6:	82 2f       	mov	r24, r18
+ 3c8:	80 5d       	subi	r24, 0xD0	; 208
+ 3ca:	02 c0       	rjmp	.+4      	; 0x3d0 <uart_putc_hex+0x30>
+    else
+        uart_putc((b & 0x0f) - 0x0a + 'a');
+ 3cc:	82 2f       	mov	r24, r18
+ 3ce:	89 5a       	subi	r24, 0xA9	; 169
+ 3d0:	0e 94 c1 01 	call	0x382	; 0x382 <uart_putc>
+}
+ 3d4:	1f 91       	pop	r17
+ 3d6:	08 95       	ret
+
+000003d8 <uart_putw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_hex(unsigned int w)
+{
+ 3d8:	1f 93       	push	r17
+ 3da:	18 2f       	mov	r17, r24
+    uart_putc_hex((unsigned char) (w >> 8));
+ 3dc:	89 2f       	mov	r24, r25
+ 3de:	0e 94 d0 01 	call	0x3a0	; 0x3a0 <uart_putc_hex>
+    uart_putc_hex((unsigned char) (w & 0xff));
+ 3e2:	81 2f       	mov	r24, r17
+ 3e4:	0e 94 d0 01 	call	0x3a0	; 0x3a0 <uart_putc_hex>
+}
+ 3e8:	1f 91       	pop	r17
+ 3ea:	08 95       	ret
+
+000003ec <uart_putdw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_hex(unsigned long dw)
+{
+ 3ec:	ef 92       	push	r14
+ 3ee:	ff 92       	push	r15
+ 3f0:	0f 93       	push	r16
+ 3f2:	1f 93       	push	r17
+ 3f4:	7b 01       	movw	r14, r22
+ 3f6:	8c 01       	movw	r16, r24
+    uart_putw_hex((unsigned int) (dw >> 16));
+ 3f8:	c8 01       	movw	r24, r16
+ 3fa:	aa 27       	eor	r26, r26
+ 3fc:	bb 27       	eor	r27, r27
+ 3fe:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <uart_putw_hex>
+    uart_putw_hex((unsigned int) (dw & 0xffff));
+ 402:	c7 01       	movw	r24, r14
+ 404:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <uart_putw_hex>
+}
+ 408:	1f 91       	pop	r17
+ 40a:	0f 91       	pop	r16
+ 40c:	ff 90       	pop	r15
+ 40e:	ef 90       	pop	r14
+ 410:	08 95       	ret
+
+00000412 <uart_putw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_dec(unsigned int w)
+{
+ 412:	cf 92       	push	r12
+ 414:	df 92       	push	r13
+ 416:	ff 92       	push	r15
+ 418:	0f 93       	push	r16
+ 41a:	1f 93       	push	r17
+ 41c:	cf 93       	push	r28
+ 41e:	df 93       	push	r29
+ 420:	6c 01       	movw	r12, r24
+ 422:	c0 e1       	ldi	r28, 0x10	; 16
+ 424:	d7 e2       	ldi	r29, 0x27	; 39
+ 426:	40 e0       	ldi	r20, 0x00	; 0
+ 428:	00 e0       	ldi	r16, 0x00	; 0
+ 42a:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = w / num;
+ 42c:	c6 01       	movw	r24, r12
+ 42e:	be 01       	movw	r22, r28
+ 430:	0e 94 47 03 	call	0x68e	; 0x68e <__udivmodhi4>
+ 434:	f6 2e       	mov	r15, r22
+        if(b > 0 || started || num == 1)
+ 436:	66 23       	and	r22, r22
+ 438:	29 f4       	brne	.+10     	; 0x444 <uart_putw_dec+0x32>
+ 43a:	44 23       	and	r20, r20
+ 43c:	19 f4       	brne	.+6      	; 0x444 <uart_putw_dec+0x32>
+ 43e:	c1 30       	cpi	r28, 0x01	; 1
+ 440:	d1 05       	cpc	r29, r1
+ 442:	29 f4       	brne	.+10     	; 0x44e <uart_putw_dec+0x3c>
+        {
+            uart_putc('0' + b);
+ 444:	8f 2d       	mov	r24, r15
+ 446:	80 5d       	subi	r24, 0xD0	; 208
+ 448:	0e 94 c1 01 	call	0x382	; 0x382 <uart_putc>
+ 44c:	41 e0       	ldi	r20, 0x01	; 1
+            started = 1;
+        }
+        w -= b * num;
+
+        num /= 10;
+ 44e:	ce 01       	movw	r24, r28
+ 450:	6a e0       	ldi	r22, 0x0A	; 10
+ 452:	70 e0       	ldi	r23, 0x00	; 0
+ 454:	0e 94 47 03 	call	0x68e	; 0x68e <__udivmodhi4>
+ 458:	0f 5f       	subi	r16, 0xFF	; 255
+ 45a:	1f 4f       	sbci	r17, 0xFF	; 255
+void uart_putw_dec(unsigned int w)
+{
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 45c:	05 30       	cpi	r16, 0x05	; 5
+ 45e:	11 05       	cpc	r17, r1
+ 460:	71 f0       	breq	.+28     	; 0x47e <uart_putw_dec+0x6c>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        w -= b * num;
+ 462:	8f 2d       	mov	r24, r15
+ 464:	90 e0       	ldi	r25, 0x00	; 0
+ 466:	9c 01       	movw	r18, r24
+ 468:	2c 9f       	mul	r18, r28
+ 46a:	c0 01       	movw	r24, r0
+ 46c:	2d 9f       	mul	r18, r29
+ 46e:	90 0d       	add	r25, r0
+ 470:	3c 9f       	mul	r19, r28
+ 472:	90 0d       	add	r25, r0
+ 474:	11 24       	eor	r1, r1
+ 476:	c8 1a       	sub	r12, r24
+ 478:	d9 0a       	sbc	r13, r25
+ 47a:	eb 01       	movw	r28, r22
+ 47c:	d7 cf       	rjmp	.-82     	; 0x42c <uart_putw_dec+0x1a>
+
+        num /= 10;
+    }
+}
+ 47e:	df 91       	pop	r29
+ 480:	cf 91       	pop	r28
+ 482:	1f 91       	pop	r17
+ 484:	0f 91       	pop	r16
+ 486:	ff 90       	pop	r15
+ 488:	df 90       	pop	r13
+ 48a:	cf 90       	pop	r12
+ 48c:	08 95       	ret
+
+0000048e <uart_putdw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_dec(unsigned long dw)
+{
+ 48e:	4f 92       	push	r4
+ 490:	5f 92       	push	r5
+ 492:	6f 92       	push	r6
+ 494:	7f 92       	push	r7
+ 496:	8f 92       	push	r8
+ 498:	9f 92       	push	r9
+ 49a:	af 92       	push	r10
+ 49c:	bf 92       	push	r11
+ 49e:	cf 92       	push	r12
+ 4a0:	df 92       	push	r13
+ 4a2:	ef 92       	push	r14
+ 4a4:	ff 92       	push	r15
+ 4a6:	0f 93       	push	r16
+ 4a8:	1f 93       	push	r17
+ 4aa:	cf 93       	push	r28
+ 4ac:	df 93       	push	r29
+ 4ae:	5b 01       	movw	r10, r22
+ 4b0:	6c 01       	movw	r12, r24
+ 4b2:	e1 2c       	mov	r14, r1
+ 4b4:	9a ec       	ldi	r25, 0xCA	; 202
+ 4b6:	f9 2e       	mov	r15, r25
+ 4b8:	9a e9       	ldi	r25, 0x9A	; 154
+ 4ba:	09 2f       	mov	r16, r25
+ 4bc:	9b e3       	ldi	r25, 0x3B	; 59
+ 4be:	19 2f       	mov	r17, r25
+ 4c0:	44 24       	eor	r4, r4
+ 4c2:	c0 e0       	ldi	r28, 0x00	; 0
+ 4c4:	d0 e0       	ldi	r29, 0x00	; 0
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = dw / num;
+ 4c6:	c6 01       	movw	r24, r12
+ 4c8:	b5 01       	movw	r22, r10
+ 4ca:	a8 01       	movw	r20, r16
+ 4cc:	97 01       	movw	r18, r14
+ 4ce:	0e 94 5b 03 	call	0x6b6	; 0x6b6 <__udivmodsi4>
+ 4d2:	92 2e       	mov	r9, r18
+        if(b > 0 || started || num == 1)
+ 4d4:	22 23       	and	r18, r18
+ 4d6:	41 f4       	brne	.+16     	; 0x4e8 <uart_putdw_dec+0x5a>
+ 4d8:	44 20       	and	r4, r4
+ 4da:	31 f4       	brne	.+12     	; 0x4e8 <uart_putdw_dec+0x5a>
+ 4dc:	81 e0       	ldi	r24, 0x01	; 1
+ 4de:	e8 16       	cp	r14, r24
+ 4e0:	f1 04       	cpc	r15, r1
+ 4e2:	01 05       	cpc	r16, r1
+ 4e4:	11 05       	cpc	r17, r1
+ 4e6:	31 f4       	brne	.+12     	; 0x4f4 <uart_putdw_dec+0x66>
+        {
+            uart_putc('0' + b);
+ 4e8:	89 2d       	mov	r24, r9
+ 4ea:	80 5d       	subi	r24, 0xD0	; 208
+ 4ec:	0e 94 c1 01 	call	0x382	; 0x382 <uart_putc>
+ 4f0:	44 24       	eor	r4, r4
+ 4f2:	43 94       	inc	r4
+            started = 1;
+        }
+        dw -= b * num;
+
+        num /= 10;
+ 4f4:	c8 01       	movw	r24, r16
+ 4f6:	b7 01       	movw	r22, r14
+ 4f8:	2a e0       	ldi	r18, 0x0A	; 10
+ 4fa:	30 e0       	ldi	r19, 0x00	; 0
+ 4fc:	40 e0       	ldi	r20, 0x00	; 0
+ 4fe:	50 e0       	ldi	r21, 0x00	; 0
+ 500:	0e 94 5b 03 	call	0x6b6	; 0x6b6 <__udivmodsi4>
+ 504:	82 2e       	mov	r8, r18
+ 506:	73 2e       	mov	r7, r19
+ 508:	64 2e       	mov	r6, r20
+ 50a:	55 2e       	mov	r5, r21
+ 50c:	21 96       	adiw	r28, 0x01	; 1
+void uart_putdw_dec(unsigned long dw)
+{
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 50e:	ca 30       	cpi	r28, 0x0A	; 10
+ 510:	d1 05       	cpc	r29, r1
+ 512:	a9 f0       	breq	.+42     	; 0x53e <uart_putdw_dec+0xb0>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        dw -= b * num;
+ 514:	69 2d       	mov	r22, r9
+ 516:	70 e0       	ldi	r23, 0x00	; 0
+ 518:	80 e0       	ldi	r24, 0x00	; 0
+ 51a:	90 e0       	ldi	r25, 0x00	; 0
+ 51c:	a8 01       	movw	r20, r16
+ 51e:	97 01       	movw	r18, r14
+ 520:	0e 94 28 03 	call	0x650	; 0x650 <__mulsi3>
+ 524:	a6 1a       	sub	r10, r22
+ 526:	b7 0a       	sbc	r11, r23
+ 528:	c8 0a       	sbc	r12, r24
+ 52a:	d9 0a       	sbc	r13, r25
+ 52c:	28 2d       	mov	r18, r8
+ 52e:	37 2d       	mov	r19, r7
+ 530:	46 2d       	mov	r20, r6
+ 532:	55 2d       	mov	r21, r5
+ 534:	c9 01       	movw	r24, r18
+ 536:	da 01       	movw	r26, r20
+ 538:	7c 01       	movw	r14, r24
+ 53a:	8d 01       	movw	r16, r26
+ 53c:	c4 cf       	rjmp	.-120    	; 0x4c6 <uart_putdw_dec+0x38>
+
+        num /= 10;
+    }
+}
+ 53e:	df 91       	pop	r29
+ 540:	cf 91       	pop	r28
+ 542:	1f 91       	pop	r17
+ 544:	0f 91       	pop	r16
+ 546:	ff 90       	pop	r15
+ 548:	ef 90       	pop	r14
+ 54a:	df 90       	pop	r13
+ 54c:	cf 90       	pop	r12
+ 54e:	bf 90       	pop	r11
+ 550:	af 90       	pop	r10
+ 552:	9f 90       	pop	r9
+ 554:	8f 90       	pop	r8
+ 556:	7f 90       	pop	r7
+ 558:	6f 90       	pop	r6
+ 55a:	5f 90       	pop	r5
+ 55c:	4f 90       	pop	r4
+ 55e:	08 95       	ret
+
+00000560 <uart_puts>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+ 560:	cf 93       	push	r28
+ 562:	df 93       	push	r29
+ 564:	ec 01       	movw	r28, r24
+ 566:	03 c0       	rjmp	.+6      	; 0x56e <uart_puts+0xe>
+    while(*str)
+        uart_putc(*str++);
+ 568:	21 96       	adiw	r28, 0x01	; 1
+ 56a:	0e 94 c1 01 	call	0x382	; 0x382 <uart_putc>
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+    while(*str)
+ 56e:	88 81       	ld	r24, Y
+ 570:	88 23       	and	r24, r24
+ 572:	d1 f7       	brne	.-12     	; 0x568 <uart_puts+0x8>
+        uart_putc(*str++);
+}
+ 574:	df 91       	pop	r29
+ 576:	cf 91       	pop	r28
+ 578:	08 95       	ret
+
+0000057a <uart_getc>:
++------------------------------------------------------------------------------
+*/
+unsigned char uart_getc(void)
+{
+    /* wait until receive buffer is full */
+    while(!(USART.STATUS & USART_RXCIF_bm));
+ 57a:	80 91 a1 08 	lds	r24, 0x08A1
+ 57e:	87 ff       	sbrs	r24, 7
+ 580:	fc cf       	rjmp	.-8      	; 0x57a <uart_getc>
+
+    unsigned char b = USART.DATA;
+ 582:	80 91 a0 08 	lds	r24, 0x08A0
+    if(b == '\r')
+ 586:	8d 30       	cpi	r24, 0x0D	; 13
+ 588:	09 f4       	brne	.+2      	; 0x58c <uart_getc+0x12>
+ 58a:	8a e0       	ldi	r24, 0x0A	; 10
+        b = '\n';
+		
+    return b;
+}
+ 58c:	08 95       	ret
+
+0000058e <uart_init>:
+*/
+void uart_init(void)
+{
+	/* USARTC0 引脚方向设置*/
+  	/* PC3 (TXD0) 输出 */
+	PORTC.DIRSET   = PIN3_bm;
+ 58e:	e0 e4       	ldi	r30, 0x40	; 64
+ 590:	f6 e0       	ldi	r31, 0x06	; 6
+ 592:	88 e0       	ldi	r24, 0x08	; 8
+ 594:	81 83       	std	Z+1, r24	; 0x01
+	/* PC2 (RXD0) 输入 */
+	PORTC.DIRCLR   = PIN2_bm;
+ 596:	84 e0       	ldi	r24, 0x04	; 4
+ 598:	82 83       	std	Z+2, r24	; 0x02
+	/* USARTC0 模式 - 异步*/
+	USART_SetMode(&USARTC0,USART_CMODE_ASYNCHRONOUS_gc);
+ 59a:	e0 ea       	ldi	r30, 0xA0	; 160
+ 59c:	f8 e0       	ldi	r31, 0x08	; 8
+ 59e:	85 81       	ldd	r24, Z+5	; 0x05
+ 5a0:	8f 73       	andi	r24, 0x3F	; 63
+ 5a2:	85 83       	std	Z+5, r24	; 0x05
+	/* USARTC0帧结构, 8 位数据位, 无校验, 1停止位 */
+	USART_Format_Set(&USARTC0, USART_CHSIZE_8BIT_gc,USART_PMODE_DISABLED_gc, false);
+ 5a4:	83 e0       	ldi	r24, 0x03	; 3
+ 5a6:	85 83       	std	Z+5, r24	; 0x05
+	/* 设置波特率 9600*/
+	USART_Baudrate_Set(&USARTC0, 12 , 0);
+ 5a8:	8c e0       	ldi	r24, 0x0C	; 12
+ 5aa:	86 83       	std	Z+6, r24	; 0x06
+ 5ac:	17 82       	std	Z+7, r1	; 0x07
+	/* USARTC0 使能发送*/
+	USART_Tx_Enable(&USARTC0);
+ 5ae:	84 81       	ldd	r24, Z+4	; 0x04
+ 5b0:	88 60       	ori	r24, 0x08	; 8
+ 5b2:	84 83       	std	Z+4, r24	; 0x04
+	/* USARTC0 使能接收*/
+	USART_Rx_Enable(&USARTC0);
+ 5b4:	84 81       	ldd	r24, Z+4	; 0x04
+ 5b6:	80 61       	ori	r24, 0x10	; 16
+ 5b8:	84 83       	std	Z+4, r24	; 0x04
+}
+ 5ba:	08 95       	ret
+
+000005bc <main>:
+int main( void )
+{ 
+ 5bc:	ef 92       	push	r14
+ 5be:	ff 92       	push	r15
+ 5c0:	0f 93       	push	r16
+ 5c2:	1f 93       	push	r17
+	/* Configure bus pins as outputs(except for data lines). */
+	PORTH.DIR = 0xFF;
+ 5c4:	8f ef       	ldi	r24, 0xFF	; 255
+ 5c6:	80 93 e0 06 	sts	0x06E0, r24
+	PORTK.DIR = 0xFF;
+ 5ca:	80 93 20 07 	sts	0x0720, r24
+	PORTJ.DIR = 0x00;
+ 5ce:	10 92 00 07 	sts	0x0700, r1
+	uart_init();
+ 5d2:	0e 94 c7 02 	call	0x58e	; 0x58e <uart_init>
+                 EBI_LPCMODE_t lpcMode,
+                 EBI_SRMODE_t sramMode,
+                 EBI_IFMODE_t interfaceMode )
+{
+	/* These fields fill up the whole register, so we don't have to protect any bits with masks. */
+	EBI.CTRL = (uint8_t) sdramDataWidth | lpcMode | sramMode | interfaceMode;
+ 5d6:	85 e4       	ldi	r24, 0x45	; 69
+ 5d8:	80 93 40 04 	sts	0x0440, r24
+	            EBI_LPCMODE_ALE1_gc,
+	            EBI_SRMODE_ALE2_gc,
+	            EBI_IFMODE_3PORT_gc );
+
+	/*初始化SRAM*/
+	EBI_EnableSRAM( &EBI.CS0,               /* Chip Select 0. */
+ 5dc:	80 e5       	ldi	r24, 0x50	; 80
+ 5de:	94 e0       	ldi	r25, 0x04	; 4
+ 5e0:	60 e2       	ldi	r22, 0x20	; 32
+ 5e2:	20 e0       	ldi	r18, 0x00	; 0
+ 5e4:	30 e4       	ldi	r19, 0x40	; 64
+ 5e6:	40 e0       	ldi	r20, 0x00	; 0
+ 5e8:	50 e0       	ldi	r21, 0x00	; 0
+ 5ea:	00 e0       	ldi	r16, 0x00	; 0
+ 5ec:	0e 94 20 01 	call	0x240	; 0x240 <EBI_EnableSRAM>
+ 5f0:	80 e0       	ldi	r24, 0x00	; 0
+ 5f2:	90 e4       	ldi	r25, 0x40	; 64
+ 5f4:	a0 e0       	ldi	r26, 0x00	; 0
+ 5f6:	b0 e0       	ldi	r27, 0x00	; 0
+	                SRAM_ADDR,              /* Base address. */
+	                0 );                    /* 0 wait states. */
+
+	/* 写数据*/
+	for (uint32_t i = 0; i < WRITE_NUM; i++) {
+		__far_mem_write(i+SRAM_ADDR, TESTBYTE);
+ 5f8:	25 ea       	ldi	r18, 0xA5	; 165
+ 5fa:	0b b6       	in	r0, 0x3b	; 59
+ 5fc:	ab bf       	out	0x3b, r26	; 59
+ 5fe:	fc 01       	movw	r30, r24
+ 600:	20 83       	st	Z, r18
+ 602:	0b be       	out	0x3b, r0	; 59
+ 604:	01 96       	adiw	r24, 0x01	; 1
+ 606:	a1 1d       	adc	r26, r1
+ 608:	b1 1d       	adc	r27, r1
+	                EBI_CS_ASPACE_64KB_gc,  /* 64 KB Address space. */
+	                SRAM_ADDR,              /* Base address. */
+	                0 );                    /* 0 wait states. */
+
+	/* 写数据*/
+	for (uint32_t i = 0; i < WRITE_NUM; i++) {
+ 60a:	8a 30       	cpi	r24, 0x0A	; 10
+ 60c:	30 e4       	ldi	r19, 0x40	; 64
+ 60e:	93 07       	cpc	r25, r19
+ 610:	30 e0       	ldi	r19, 0x00	; 0
+ 612:	a3 07       	cpc	r26, r19
+ 614:	30 e0       	ldi	r19, 0x00	; 0
+ 616:	b3 07       	cpc	r27, r19
+ 618:	81 f7       	brne	.-32     	; 0x5fa <main+0x3e>
+ 61a:	e1 2c       	mov	r14, r1
+ 61c:	20 e4       	ldi	r18, 0x40	; 64
+ 61e:	f2 2e       	mov	r15, r18
+ 620:	01 2d       	mov	r16, r1
+ 622:	11 2d       	mov	r17, r1
+		__far_mem_write(i+SRAM_ADDR, TESTBYTE);
+	}
+
+	/*读数据*/
+	for (uint32_t i = 0; i < WRITE_NUM; i++) {
+			uart_putc_hex(__far_mem_read(i+SRAM_ADDR));
+ 624:	0b b6       	in	r0, 0x3b	; 59
+ 626:	0b bf       	out	0x3b, r16	; 59
+ 628:	f7 01       	movw	r30, r14
+ 62a:	80 81       	ld	r24, Z
+ 62c:	0b be       	out	0x3b, r0	; 59
+ 62e:	0e 94 d0 01 	call	0x3a0	; 0x3a0 <uart_putc_hex>
+ 632:	08 94       	sec
+ 634:	e1 1c       	adc	r14, r1
+ 636:	f1 1c       	adc	r15, r1
+ 638:	01 1d       	adc	r16, r1
+ 63a:	11 1d       	adc	r17, r1
+	for (uint32_t i = 0; i < WRITE_NUM; i++) {
+		__far_mem_write(i+SRAM_ADDR, TESTBYTE);
+	}
+
+	/*读数据*/
+	for (uint32_t i = 0; i < WRITE_NUM; i++) {
+ 63c:	8a e0       	ldi	r24, 0x0A	; 10
+ 63e:	e8 16       	cp	r14, r24
+ 640:	80 e4       	ldi	r24, 0x40	; 64
+ 642:	f8 06       	cpc	r15, r24
+ 644:	80 e0       	ldi	r24, 0x00	; 0
+ 646:	08 07       	cpc	r16, r24
+ 648:	80 e0       	ldi	r24, 0x00	; 0
+ 64a:	18 07       	cpc	r17, r24
+ 64c:	59 f7       	brne	.-42     	; 0x624 <main+0x68>
+ 64e:	ff cf       	rjmp	.-2      	; 0x64e <main+0x92>
+
+00000650 <__mulsi3>:
+ 650:	62 9f       	mul	r22, r18
+ 652:	d0 01       	movw	r26, r0
+ 654:	73 9f       	mul	r23, r19
+ 656:	f0 01       	movw	r30, r0
+ 658:	82 9f       	mul	r24, r18
+ 65a:	e0 0d       	add	r30, r0
+ 65c:	f1 1d       	adc	r31, r1
+ 65e:	64 9f       	mul	r22, r20
+ 660:	e0 0d       	add	r30, r0
+ 662:	f1 1d       	adc	r31, r1
+ 664:	92 9f       	mul	r25, r18
+ 666:	f0 0d       	add	r31, r0
+ 668:	83 9f       	mul	r24, r19
+ 66a:	f0 0d       	add	r31, r0
+ 66c:	74 9f       	mul	r23, r20
+ 66e:	f0 0d       	add	r31, r0
+ 670:	65 9f       	mul	r22, r21
+ 672:	f0 0d       	add	r31, r0
+ 674:	99 27       	eor	r25, r25
+ 676:	72 9f       	mul	r23, r18
+ 678:	b0 0d       	add	r27, r0
+ 67a:	e1 1d       	adc	r30, r1
+ 67c:	f9 1f       	adc	r31, r25
+ 67e:	63 9f       	mul	r22, r19
+ 680:	b0 0d       	add	r27, r0
+ 682:	e1 1d       	adc	r30, r1
+ 684:	f9 1f       	adc	r31, r25
+ 686:	bd 01       	movw	r22, r26
+ 688:	cf 01       	movw	r24, r30
+ 68a:	11 24       	eor	r1, r1
+ 68c:	08 95       	ret
+
+0000068e <__udivmodhi4>:
+ 68e:	aa 1b       	sub	r26, r26
+ 690:	bb 1b       	sub	r27, r27
+ 692:	51 e1       	ldi	r21, 0x11	; 17
+ 694:	07 c0       	rjmp	.+14     	; 0x6a4 <__udivmodhi4_ep>
+
+00000696 <__udivmodhi4_loop>:
+ 696:	aa 1f       	adc	r26, r26
+ 698:	bb 1f       	adc	r27, r27
+ 69a:	a6 17       	cp	r26, r22
+ 69c:	b7 07       	cpc	r27, r23
+ 69e:	10 f0       	brcs	.+4      	; 0x6a4 <__udivmodhi4_ep>
+ 6a0:	a6 1b       	sub	r26, r22
+ 6a2:	b7 0b       	sbc	r27, r23
+
+000006a4 <__udivmodhi4_ep>:
+ 6a4:	88 1f       	adc	r24, r24
+ 6a6:	99 1f       	adc	r25, r25
+ 6a8:	5a 95       	dec	r21
+ 6aa:	a9 f7       	brne	.-22     	; 0x696 <__udivmodhi4_loop>
+ 6ac:	80 95       	com	r24
+ 6ae:	90 95       	com	r25
+ 6b0:	bc 01       	movw	r22, r24
+ 6b2:	cd 01       	movw	r24, r26
+ 6b4:	08 95       	ret
+
+000006b6 <__udivmodsi4>:
+ 6b6:	a1 e2       	ldi	r26, 0x21	; 33
+ 6b8:	1a 2e       	mov	r1, r26
+ 6ba:	aa 1b       	sub	r26, r26
+ 6bc:	bb 1b       	sub	r27, r27
+ 6be:	fd 01       	movw	r30, r26
+ 6c0:	0d c0       	rjmp	.+26     	; 0x6dc <__udivmodsi4_ep>
+
+000006c2 <__udivmodsi4_loop>:
+ 6c2:	aa 1f       	adc	r26, r26
+ 6c4:	bb 1f       	adc	r27, r27
+ 6c6:	ee 1f       	adc	r30, r30
+ 6c8:	ff 1f       	adc	r31, r31
+ 6ca:	a2 17       	cp	r26, r18
+ 6cc:	b3 07       	cpc	r27, r19
+ 6ce:	e4 07       	cpc	r30, r20
+ 6d0:	f5 07       	cpc	r31, r21
+ 6d2:	20 f0       	brcs	.+8      	; 0x6dc <__udivmodsi4_ep>
+ 6d4:	a2 1b       	sub	r26, r18
+ 6d6:	b3 0b       	sbc	r27, r19
+ 6d8:	e4 0b       	sbc	r30, r20
+ 6da:	f5 0b       	sbc	r31, r21
+
+000006dc <__udivmodsi4_ep>:
+ 6dc:	66 1f       	adc	r22, r22
+ 6de:	77 1f       	adc	r23, r23
+ 6e0:	88 1f       	adc	r24, r24
+ 6e2:	99 1f       	adc	r25, r25
+ 6e4:	1a 94       	dec	r1
+ 6e6:	69 f7       	brne	.-38     	; 0x6c2 <__udivmodsi4_loop>
+ 6e8:	60 95       	com	r22
+ 6ea:	70 95       	com	r23
+ 6ec:	80 95       	com	r24
+ 6ee:	90 95       	com	r25
+ 6f0:	9b 01       	movw	r18, r22
+ 6f2:	ac 01       	movw	r20, r24
+ 6f4:	bd 01       	movw	r22, r26
+ 6f6:	cf 01       	movw	r24, r30
+ 6f8:	08 95       	ret
+
+000006fa <_exit>:
+ 6fa:	f8 94       	cli
+
+000006fc <__stop_program>:
+ 6fc:	ff cf       	rjmp	.-2      	; 0x6fc <__stop_program>

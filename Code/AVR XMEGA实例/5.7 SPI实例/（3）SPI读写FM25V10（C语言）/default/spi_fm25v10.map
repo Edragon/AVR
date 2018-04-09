@@ -1,0 +1,503 @@
+Archive member included because of file (symbol)
+
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_mulsi3.o)
+                              spi_fm25v10.o (__mulsi3)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodhi4.o)
+                              spi_fm25v10.o (__udivmodhi4)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodsi4.o)
+                              spi_fm25v10.o (__udivmodsi4)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+                              d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o (exit)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_clear_bss.o)
+                              spi_fm25v10.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+receivedata         0x64              spi_fm25v10.o
+writedata           0x64              spi_fm25v10.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00802000         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+LOAD spi_fm25v10.o
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a
+LOAD D:\安装\avr\lib\avrxmega3\libc.a
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x99a
+ *(.vectors)
+ .vectors       0x00000000      0x178 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000178                . = ALIGN (0x2)
+                0x00000178                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000178        0x0 linker stubs
+ *(.trampolines*)
+                0x00000178                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000178                __ctors_start = .
+ *(.ctors)
+                0x00000178                __ctors_end = .
+                0x00000178                __dtors_start = .
+ *(.dtors)
+                0x00000178                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000178        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+                0x00000178                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000178       0x14 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000018c       0x10 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_clear_bss.o)
+                0x0000018c                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000019c        0x8 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+ *(.init9)
+ *(.text)
+ .text          0x000001a4        0x4 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+                0x000001a4                __vector_38
+                0x000001a4                __vector_22
+                0x000001a4                __vector_63
+                0x000001a4                __vector_28
+                0x000001a4                __vector_67
+                0x000001a4                __vector_1
+                0x000001a4                __vector_32
+                0x000001a4                __vector_75
+                0x000001a4                __vector_71
+                0x000001a4                __vector_91
+                0x000001a4                __vector_34
+                0x000001a4                __vector_62
+                0x000001a4                __vector_77
+                0x000001a4                __vector_24
+                0x000001a4                __vector_12
+                0x000001a4                __vector_55
+                0x000001a4                __vector_69
+                0x000001a4                __vector_81
+                0x000001a4                __vector_90
+                0x000001a4                __vector_46
+                0x000001a4                __bad_interrupt
+                0x000001a4                __vector_72
+                0x000001a4                __vector_6
+                0x000001a4                __vector_31
+                0x000001a4                __vector_92
+                0x000001a4                __vector_35
+                0x000001a4                __vector_78
+                0x000001a4                __vector_74
+                0x000001a4                __vector_39
+                0x000001a4                __vector_3
+                0x000001a4                __vector_23
+                0x000001a4                __vector_68
+                0x000001a4                __vector_30
+                0x000001a4                __vector_73
+                0x000001a4                __vector_45
+                0x000001a4                __vector_93
+                0x000001a4                __vector_61
+                0x000001a4                __vector_11
+                0x000001a4                __vector_54
+                0x000001a4                __vector_13
+                0x000001a4                __vector_17
+                0x000001a4                __vector_19
+                0x000001a4                __vector_56
+                0x000001a4                __vector_7
+                0x000001a4                __vector_49
+                0x000001a4                __vector_41
+                0x000001a4                __vector_86
+                0x000001a4                __vector_64
+                0x000001a4                __vector_88
+                0x000001a4                __vector_43
+                0x000001a4                __vector_5
+                0x000001a4                __vector_33
+                0x000001a4                __vector_76
+                0x000001a4                __vector_47
+                0x000001a4                __vector_52
+                0x000001a4                __vector_37
+                0x000001a4                __vector_89
+                0x000001a4                __vector_4
+                0x000001a4                __vector_44
+                0x000001a4                __vector_82
+                0x000001a4                __vector_51
+                0x000001a4                __vector_9
+                0x000001a4                __vector_2
+                0x000001a4                __vector_21
+                0x000001a4                __vector_15
+                0x000001a4                __vector_66
+                0x000001a4                __vector_36
+                0x000001a4                __vector_79
+                0x000001a4                __vector_58
+                0x000001a4                __vector_70
+                0x000001a4                __vector_83
+                0x000001a4                __vector_29
+                0x000001a4                __vector_60
+                0x000001a4                __vector_40
+                0x000001a4                __vector_85
+                0x000001a4                __vector_8
+                0x000001a4                __vector_26
+                0x000001a4                __vector_48
+                0x000001a4                __vector_80
+                0x000001a4                __vector_14
+                0x000001a4                __vector_84
+                0x000001a4                __vector_57
+                0x000001a4                __vector_53
+                0x000001a4                __vector_10
+                0x000001a4                __vector_50
+                0x000001a4                __vector_16
+                0x000001a4                __vector_59
+                0x000001a4                __vector_18
+                0x000001a4                __vector_20
+                0x000001a4                __vector_42
+                0x000001a4                __vector_87
+                0x000001a4                __vector_65
+ .text          0x000001a8      0x744 spi_fm25v10.o
+                0x000005f4                TC0_SetCCBIntLevel
+                0x000002c0                CLKSYS_XOSC_FailureDetection_Enable
+                0x00000640                PLL_XOSC_Initial
+                0x000005ac                TC0_SetOverflowIntLevel
+                0x0000042c                uart_putdw_dec
+                0x0000073c                SPI_WRITE_ADDRESS
+                0x0000075a                SPI_WRITE_DATA
+                0x000005b8                TC1_SetOverflowIntLevel
+                0x000005c4                TC0_SetErrorIntLevel
+                0x0000059e                TC1_DisableCCChannels
+                0x000005e8                TC1_SetCCAIntLevel
+                0x000001d2                CLKSYS_XOSC_Config
+                0x0000033e                uart_putc_hex
+                0x00000550                TC1_ConfigWGM
+                0x000001a8                CCPWrite
+                0x00000238                CLKSYS_Main_ClockSource_Select
+                0x000005dc                TC0_SetCCAIntLevel
+                0x00000822                __vector_25
+                0x000004fe                uart_puts
+                0x00000282                CLKSYS_AutoCalibration_Enable
+                0x00000544                TC0_ConfigWGM
+                0x00000208                CLKSYS_Prescalers_Config
+                0x00000624                TC0_Reset
+                0x000006ca                uart_init
+                0x00000584                TC1_EnableCCChannels
+                0x000003b0                uart_putw_dec
+                0x000008ce                __vector_27
+                0x000001f4                CLKSYS_Disable
+                0x00000518                uart_getc
+                0x000006aa                SPI_MasterInit
+                0x0000038a                uart_putdw_hex
+                0x000006f8                main
+                0x00000320                uart_putc
+                0x0000060c                TC0_SetCCCIntLevel
+                0x00000590                TC0_DisableCCChannels
+                0x000007b6                SPI_READ_DATA
+                0x0000056a                TC1_ConfigInputCapture
+                0x00000632                TC1_Reset
+                0x00000538                TC1_ConfigClockSource
+                0x000001e8                CLKSYS_PLL_Config
+                0x00000578                TC0_EnableCCChannels
+                0x00000272                CLKSYS_RTC_ClockSource_Enable
+                0x0000052c                TC0_ConfigClockSource
+                0x000002f0                CLKSYS_Configuration_Lock
+                0x00000618                TC0_SetCCDIntLevel
+                0x000005d0                TC1_SetErrorIntLevel
+                0x00000376                uart_putw_hex
+                0x0000055c                TC0_ConfigInputCapture
+                0x00000600                TC1_SetCCBIntLevel
+ .text          0x000008ec        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_mulsi3.o)
+ .text          0x000008ec        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodhi4.o)
+ .text          0x000008ec        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodsi4.o)
+ .text          0x000008ec        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+ .text          0x000008ec        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_clear_bss.o)
+                0x000008ec                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000008ec       0x3e d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_mulsi3.o)
+                0x000008ec                __mulsi3
+ .text.libgcc   0x0000092a       0x28 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodhi4.o)
+                0x0000092a                __udivmodhi4
+ .text.libgcc   0x00000952       0x44 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodsi4.o)
+                0x00000952                __udivmodsi4
+ .text.libgcc   0x00000996        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+ .text.libgcc   0x00000996        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_clear_bss.o)
+                0x00000996                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000996        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+                0x00000996                exit
+                0x00000996                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000996        0x4 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000099a                _etext = .
+
+.data           0x00802000        0x0 load address 0x0000099a
+                0x00802000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+ .data          0x00802000        0x0 spi_fm25v10.o
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_mulsi3.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodhi4.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodsi4.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00802000                . = ALIGN (0x2)
+                0x00802000                _edata = .
+                0x00802000                PROVIDE (__data_end, .)
+
+.bss            0x00802000       0xc8
+                0x00802000                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega3/crtx32a4.o
+ .bss           0x00802000        0x0 spi_fm25v10.o
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_mulsi3.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodhi4.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_udivmodsi4.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_exit.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega3\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00802000       0xc8 spi_fm25v10.o
+                0x00802000                receivedata
+                0x00802064                writedata
+                0x008020c8                PROVIDE (__bss_end, .)
+                0x0000099a                __data_load_start = LOADADDR (.data)
+                0x0000099a                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008020c8        0x0
+                0x008020c8                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008020c8                PROVIDE (__noinit_end, .)
+                0x008020c8                _end = .
+                0x008020c8                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x20
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 spi_fm25v10.o
+
+.debug_pubnames
+                0x00000000      0x46b
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x46b spi_fm25v10.o
+
+.debug_info     0x00000000     0x1f64
+ *(.debug_info)
+ .debug_info    0x00000000     0x1f64 spi_fm25v10.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x31d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x31d spi_fm25v10.o
+
+.debug_line     0x00000000      0x9b2
+ *(.debug_line)
+ .debug_line    0x00000000      0x9b2 spi_fm25v10.o
+
+.debug_frame    0x00000000      0x320
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x320 spi_fm25v10.o
+
+.debug_str      0x00000000     0x1482
+ *(.debug_str)
+ .debug_str     0x00000000     0x1482 spi_fm25v10.o
+                               0x14d8 (size before relaxing)
+
+.debug_loc      0x00000000      0x6ae
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x6ae spi_fm25v10.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(spi_fm25v10.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x30
+ .debug_ranges  0x00000000       0x30 spi_fm25v10.o

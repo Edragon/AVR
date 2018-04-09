@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.asm</FILE><LINE>28</LINE></RESET>
+  <REST_LOOP><FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.asm</FILE><LINE>32</LINE></REST_LOOP>
+  <_delay_ms><FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.asm</FILE><LINE>45</LINE></_delay_ms>
+  <L0><FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.asm</FILE><LINE>46</LINE></L0>
+  <L1><FILE>E:\ATMAGE\书稿例子\ASM_example\1-1 IO_LED_Blinking_asm\LED_Blinking_asm.asm</FILE><LINE>47</LINE></L1>
+ </LABELS>
+</ASSEMBLER_INFO>

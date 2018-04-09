@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\°²×°\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\example\ASM_example\16-1 bootloader\labels.tmp" -fI -W+ie -C V3X -o "E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.hex" -d "E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.obj" -e "E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.eep" -m "E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.map" "E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm"

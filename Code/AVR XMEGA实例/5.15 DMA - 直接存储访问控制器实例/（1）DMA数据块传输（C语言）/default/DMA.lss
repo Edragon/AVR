@@ -1,0 +1,1443 @@
+
+DMA.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000085c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          000000ca  00802000  00802000  000008d0  2**0
+                  ALLOC
+  2 .debug_aranges 00000040  00000000  00000000  000008d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 000002d1  00000000  00000000  00000910  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   0000124b  00000000  00000000  00000be1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 0000031d  00000000  00000000  00001e2c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000671  00000000  00000000  00002149  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000210  00000000  00000000  000027bc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000b6d  00000000  00000000  000029cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000722  00000000  00000000  00003539  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000030  00000000  00000000  00003c5b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  10:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  14:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  18:	0c 94 3f 02 	jmp	0x47e	; 0x47e <__vector_6>
+  1c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  20:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  24:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  28:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  2c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  30:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  34:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  38:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  3c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  40:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  44:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  48:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  4c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  50:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  54:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  58:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  5c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  60:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  64:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  68:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  6c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  70:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  74:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  78:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  7c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  80:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  84:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  88:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  8c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  90:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  94:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  98:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  9c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  fc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 100:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 104:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 108:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 10c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 110:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 114:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 118:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 11c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 120:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 124:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 128:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 12c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 130:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 134:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 138:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 13c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 140:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 144:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 148:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 14c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 150:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 154:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 158:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 15c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 160:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 164:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 168:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 16c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 170:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 174:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 178:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 17c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 180:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 184:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 188:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 18c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 190:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 194:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 198:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 19c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	ec e5       	ldi	r30, 0x5C	; 92
+ 214:	f8 e0       	ldi	r31, 0x08	; 8
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a0 30       	cpi	r26, 0x00	; 0
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+
+00000228 <__do_clear_bss>:
+ 228:	10 e2       	ldi	r17, 0x20	; 32
+ 22a:	a0 e0       	ldi	r26, 0x00	; 0
+ 22c:	b0 e2       	ldi	r27, 0x20	; 32
+ 22e:	01 c0       	rjmp	.+2      	; 0x232 <.do_clear_bss_start>
+
+00000230 <.do_clear_bss_loop>:
+ 230:	1d 92       	st	X+, r1
+
+00000232 <.do_clear_bss_start>:
+ 232:	aa 3c       	cpi	r26, 0xCA	; 202
+ 234:	b1 07       	cpc	r27, r17
+ 236:	e1 f7       	brne	.-8      	; 0x230 <.do_clear_bss_loop>
+ 238:	0e 94 eb 02 	call	0x5d6	; 0x5d6 <main>
+ 23c:	0c 94 2c 04 	jmp	0x858	; 0x858 <_exit>
+
+00000240 <__bad_interrupt>:
+ 240:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000244 <uart_putc>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc(unsigned char c)
+{
+ 244:	1f 93       	push	r17
+ 246:	18 2f       	mov	r17, r24
+    if(c == '\n')
+ 248:	8a 30       	cpi	r24, 0x0A	; 10
+ 24a:	19 f4       	brne	.+6      	; 0x252 <uart_putc+0xe>
+        uart_putc('\r');
+ 24c:	8d e0       	ldi	r24, 0x0D	; 13
+ 24e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    /* wait until transmit buffer is empty */
+    while(!(USART.STATUS & USART_DREIF_bm));
+ 252:	80 91 a1 08 	lds	r24, 0x08A1
+ 256:	85 ff       	sbrs	r24, 5
+ 258:	fc cf       	rjmp	.-8      	; 0x252 <uart_putc+0xe>
+
+    /* send next byte */
+    USART.DATA = c;
+ 25a:	10 93 a0 08 	sts	0x08A0, r17
+}
+ 25e:	1f 91       	pop	r17
+ 260:	08 95       	ret
+
+00000262 <uart_putc_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc_hex(unsigned char b)
+{
+ 262:	1f 93       	push	r17
+ 264:	18 2f       	mov	r17, r24
+    /* upper nibble */
+    if((b >> 4) < 0x0a)
+ 266:	82 95       	swap	r24
+ 268:	8f 70       	andi	r24, 0x0F	; 15
+ 26a:	8a 30       	cpi	r24, 0x0A	; 10
+ 26c:	10 f4       	brcc	.+4      	; 0x272 <uart_putc_hex+0x10>
+        uart_putc((b >> 4) + '0');
+ 26e:	80 5d       	subi	r24, 0xD0	; 208
+ 270:	01 c0       	rjmp	.+2      	; 0x274 <uart_putc_hex+0x12>
+    else
+        uart_putc((b >> 4) - 0x0a + 'a');
+ 272:	89 5a       	subi	r24, 0xA9	; 169
+ 274:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    /* lower nibble */
+    if((b & 0x0f) < 0x0a)
+ 278:	81 2f       	mov	r24, r17
+ 27a:	90 e0       	ldi	r25, 0x00	; 0
+ 27c:	8f 70       	andi	r24, 0x0F	; 15
+ 27e:	90 70       	andi	r25, 0x00	; 0
+ 280:	21 2f       	mov	r18, r17
+ 282:	2f 70       	andi	r18, 0x0F	; 15
+ 284:	0a 97       	sbiw	r24, 0x0a	; 10
+ 286:	1c f4       	brge	.+6      	; 0x28e <uart_putc_hex+0x2c>
+        uart_putc((b & 0x0f) + '0');
+ 288:	82 2f       	mov	r24, r18
+ 28a:	80 5d       	subi	r24, 0xD0	; 208
+ 28c:	02 c0       	rjmp	.+4      	; 0x292 <uart_putc_hex+0x30>
+    else
+        uart_putc((b & 0x0f) - 0x0a + 'a');
+ 28e:	82 2f       	mov	r24, r18
+ 290:	89 5a       	subi	r24, 0xA9	; 169
+ 292:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+}
+ 296:	1f 91       	pop	r17
+ 298:	08 95       	ret
+
+0000029a <uart_putw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_hex(unsigned int w)
+{
+ 29a:	1f 93       	push	r17
+ 29c:	18 2f       	mov	r17, r24
+    uart_putc_hex((unsigned char) (w >> 8));
+ 29e:	89 2f       	mov	r24, r25
+ 2a0:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+    uart_putc_hex((unsigned char) (w & 0xff));
+ 2a4:	81 2f       	mov	r24, r17
+ 2a6:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+}
+ 2aa:	1f 91       	pop	r17
+ 2ac:	08 95       	ret
+
+000002ae <uart_putdw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_hex(unsigned long dw)
+{
+ 2ae:	ef 92       	push	r14
+ 2b0:	ff 92       	push	r15
+ 2b2:	0f 93       	push	r16
+ 2b4:	1f 93       	push	r17
+ 2b6:	7b 01       	movw	r14, r22
+ 2b8:	8c 01       	movw	r16, r24
+    uart_putw_hex((unsigned int) (dw >> 16));
+ 2ba:	c8 01       	movw	r24, r16
+ 2bc:	aa 27       	eor	r26, r26
+ 2be:	bb 27       	eor	r27, r27
+ 2c0:	0e 94 4d 01 	call	0x29a	; 0x29a <uart_putw_hex>
+    uart_putw_hex((unsigned int) (dw & 0xffff));
+ 2c4:	c7 01       	movw	r24, r14
+ 2c6:	0e 94 4d 01 	call	0x29a	; 0x29a <uart_putw_hex>
+}
+ 2ca:	1f 91       	pop	r17
+ 2cc:	0f 91       	pop	r16
+ 2ce:	ff 90       	pop	r15
+ 2d0:	ef 90       	pop	r14
+ 2d2:	08 95       	ret
+
+000002d4 <uart_putw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_dec(unsigned int w)
+{
+ 2d4:	cf 92       	push	r12
+ 2d6:	df 92       	push	r13
+ 2d8:	ff 92       	push	r15
+ 2da:	0f 93       	push	r16
+ 2dc:	1f 93       	push	r17
+ 2de:	cf 93       	push	r28
+ 2e0:	df 93       	push	r29
+ 2e2:	6c 01       	movw	r12, r24
+ 2e4:	c0 e1       	ldi	r28, 0x10	; 16
+ 2e6:	d7 e2       	ldi	r29, 0x27	; 39
+ 2e8:	40 e0       	ldi	r20, 0x00	; 0
+ 2ea:	00 e0       	ldi	r16, 0x00	; 0
+ 2ec:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = w / num;
+ 2ee:	c6 01       	movw	r24, r12
+ 2f0:	be 01       	movw	r22, r28
+ 2f2:	0e 94 f6 03 	call	0x7ec	; 0x7ec <__udivmodhi4>
+ 2f6:	f6 2e       	mov	r15, r22
+        if(b > 0 || started || num == 1)
+ 2f8:	66 23       	and	r22, r22
+ 2fa:	29 f4       	brne	.+10     	; 0x306 <uart_putw_dec+0x32>
+ 2fc:	44 23       	and	r20, r20
+ 2fe:	19 f4       	brne	.+6      	; 0x306 <uart_putw_dec+0x32>
+ 300:	c1 30       	cpi	r28, 0x01	; 1
+ 302:	d1 05       	cpc	r29, r1
+ 304:	29 f4       	brne	.+10     	; 0x310 <uart_putw_dec+0x3c>
+        {
+            uart_putc('0' + b);
+ 306:	8f 2d       	mov	r24, r15
+ 308:	80 5d       	subi	r24, 0xD0	; 208
+ 30a:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 30e:	41 e0       	ldi	r20, 0x01	; 1
+            started = 1;
+        }
+        w -= b * num;
+
+        num /= 10;
+ 310:	ce 01       	movw	r24, r28
+ 312:	6a e0       	ldi	r22, 0x0A	; 10
+ 314:	70 e0       	ldi	r23, 0x00	; 0
+ 316:	0e 94 f6 03 	call	0x7ec	; 0x7ec <__udivmodhi4>
+ 31a:	0f 5f       	subi	r16, 0xFF	; 255
+ 31c:	1f 4f       	sbci	r17, 0xFF	; 255
+void uart_putw_dec(unsigned int w)
+{
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 31e:	05 30       	cpi	r16, 0x05	; 5
+ 320:	11 05       	cpc	r17, r1
+ 322:	71 f0       	breq	.+28     	; 0x340 <uart_putw_dec+0x6c>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        w -= b * num;
+ 324:	8f 2d       	mov	r24, r15
+ 326:	90 e0       	ldi	r25, 0x00	; 0
+ 328:	9c 01       	movw	r18, r24
+ 32a:	2c 9f       	mul	r18, r28
+ 32c:	c0 01       	movw	r24, r0
+ 32e:	2d 9f       	mul	r18, r29
+ 330:	90 0d       	add	r25, r0
+ 332:	3c 9f       	mul	r19, r28
+ 334:	90 0d       	add	r25, r0
+ 336:	11 24       	eor	r1, r1
+ 338:	c8 1a       	sub	r12, r24
+ 33a:	d9 0a       	sbc	r13, r25
+ 33c:	eb 01       	movw	r28, r22
+ 33e:	d7 cf       	rjmp	.-82     	; 0x2ee <uart_putw_dec+0x1a>
+
+        num /= 10;
+    }
+}
+ 340:	df 91       	pop	r29
+ 342:	cf 91       	pop	r28
+ 344:	1f 91       	pop	r17
+ 346:	0f 91       	pop	r16
+ 348:	ff 90       	pop	r15
+ 34a:	df 90       	pop	r13
+ 34c:	cf 90       	pop	r12
+ 34e:	08 95       	ret
+
+00000350 <uart_putdw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_dec(unsigned long dw)
+{
+ 350:	4f 92       	push	r4
+ 352:	5f 92       	push	r5
+ 354:	6f 92       	push	r6
+ 356:	7f 92       	push	r7
+ 358:	8f 92       	push	r8
+ 35a:	9f 92       	push	r9
+ 35c:	af 92       	push	r10
+ 35e:	bf 92       	push	r11
+ 360:	cf 92       	push	r12
+ 362:	df 92       	push	r13
+ 364:	ef 92       	push	r14
+ 366:	ff 92       	push	r15
+ 368:	0f 93       	push	r16
+ 36a:	1f 93       	push	r17
+ 36c:	cf 93       	push	r28
+ 36e:	df 93       	push	r29
+ 370:	5b 01       	movw	r10, r22
+ 372:	6c 01       	movw	r12, r24
+ 374:	e1 2c       	mov	r14, r1
+ 376:	9a ec       	ldi	r25, 0xCA	; 202
+ 378:	f9 2e       	mov	r15, r25
+ 37a:	9a e9       	ldi	r25, 0x9A	; 154
+ 37c:	09 2f       	mov	r16, r25
+ 37e:	9b e3       	ldi	r25, 0x3B	; 59
+ 380:	19 2f       	mov	r17, r25
+ 382:	44 24       	eor	r4, r4
+ 384:	c0 e0       	ldi	r28, 0x00	; 0
+ 386:	d0 e0       	ldi	r29, 0x00	; 0
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = dw / num;
+ 388:	c6 01       	movw	r24, r12
+ 38a:	b5 01       	movw	r22, r10
+ 38c:	a8 01       	movw	r20, r16
+ 38e:	97 01       	movw	r18, r14
+ 390:	0e 94 0a 04 	call	0x814	; 0x814 <__udivmodsi4>
+ 394:	92 2e       	mov	r9, r18
+        if(b > 0 || started || num == 1)
+ 396:	22 23       	and	r18, r18
+ 398:	41 f4       	brne	.+16     	; 0x3aa <uart_putdw_dec+0x5a>
+ 39a:	44 20       	and	r4, r4
+ 39c:	31 f4       	brne	.+12     	; 0x3aa <uart_putdw_dec+0x5a>
+ 39e:	81 e0       	ldi	r24, 0x01	; 1
+ 3a0:	e8 16       	cp	r14, r24
+ 3a2:	f1 04       	cpc	r15, r1
+ 3a4:	01 05       	cpc	r16, r1
+ 3a6:	11 05       	cpc	r17, r1
+ 3a8:	31 f4       	brne	.+12     	; 0x3b6 <uart_putdw_dec+0x66>
+        {
+            uart_putc('0' + b);
+ 3aa:	89 2d       	mov	r24, r9
+ 3ac:	80 5d       	subi	r24, 0xD0	; 208
+ 3ae:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 3b2:	44 24       	eor	r4, r4
+ 3b4:	43 94       	inc	r4
+            started = 1;
+        }
+        dw -= b * num;
+
+        num /= 10;
+ 3b6:	c8 01       	movw	r24, r16
+ 3b8:	b7 01       	movw	r22, r14
+ 3ba:	2a e0       	ldi	r18, 0x0A	; 10
+ 3bc:	30 e0       	ldi	r19, 0x00	; 0
+ 3be:	40 e0       	ldi	r20, 0x00	; 0
+ 3c0:	50 e0       	ldi	r21, 0x00	; 0
+ 3c2:	0e 94 0a 04 	call	0x814	; 0x814 <__udivmodsi4>
+ 3c6:	82 2e       	mov	r8, r18
+ 3c8:	73 2e       	mov	r7, r19
+ 3ca:	64 2e       	mov	r6, r20
+ 3cc:	55 2e       	mov	r5, r21
+ 3ce:	21 96       	adiw	r28, 0x01	; 1
+void uart_putdw_dec(unsigned long dw)
+{
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 3d0:	ca 30       	cpi	r28, 0x0A	; 10
+ 3d2:	d1 05       	cpc	r29, r1
+ 3d4:	a9 f0       	breq	.+42     	; 0x400 <uart_putdw_dec+0xb0>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        dw -= b * num;
+ 3d6:	69 2d       	mov	r22, r9
+ 3d8:	70 e0       	ldi	r23, 0x00	; 0
+ 3da:	80 e0       	ldi	r24, 0x00	; 0
+ 3dc:	90 e0       	ldi	r25, 0x00	; 0
+ 3de:	a8 01       	movw	r20, r16
+ 3e0:	97 01       	movw	r18, r14
+ 3e2:	0e 94 d7 03 	call	0x7ae	; 0x7ae <__mulsi3>
+ 3e6:	a6 1a       	sub	r10, r22
+ 3e8:	b7 0a       	sbc	r11, r23
+ 3ea:	c8 0a       	sbc	r12, r24
+ 3ec:	d9 0a       	sbc	r13, r25
+ 3ee:	28 2d       	mov	r18, r8
+ 3f0:	37 2d       	mov	r19, r7
+ 3f2:	46 2d       	mov	r20, r6
+ 3f4:	55 2d       	mov	r21, r5
+ 3f6:	c9 01       	movw	r24, r18
+ 3f8:	da 01       	movw	r26, r20
+ 3fa:	7c 01       	movw	r14, r24
+ 3fc:	8d 01       	movw	r16, r26
+ 3fe:	c4 cf       	rjmp	.-120    	; 0x388 <uart_putdw_dec+0x38>
+
+        num /= 10;
+    }
+}
+ 400:	df 91       	pop	r29
+ 402:	cf 91       	pop	r28
+ 404:	1f 91       	pop	r17
+ 406:	0f 91       	pop	r16
+ 408:	ff 90       	pop	r15
+ 40a:	ef 90       	pop	r14
+ 40c:	df 90       	pop	r13
+ 40e:	cf 90       	pop	r12
+ 410:	bf 90       	pop	r11
+ 412:	af 90       	pop	r10
+ 414:	9f 90       	pop	r9
+ 416:	8f 90       	pop	r8
+ 418:	7f 90       	pop	r7
+ 41a:	6f 90       	pop	r6
+ 41c:	5f 90       	pop	r5
+ 41e:	4f 90       	pop	r4
+ 420:	08 95       	ret
+
+00000422 <uart_puts>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+ 422:	cf 93       	push	r28
+ 424:	df 93       	push	r29
+ 426:	ec 01       	movw	r28, r24
+ 428:	03 c0       	rjmp	.+6      	; 0x430 <uart_puts+0xe>
+    while(*str)
+        uart_putc(*str++);
+ 42a:	21 96       	adiw	r28, 0x01	; 1
+ 42c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+    while(*str)
+ 430:	88 81       	ld	r24, Y
+ 432:	88 23       	and	r24, r24
+ 434:	d1 f7       	brne	.-12     	; 0x42a <uart_puts+0x8>
+        uart_putc(*str++);
+}
+ 436:	df 91       	pop	r29
+ 438:	cf 91       	pop	r28
+ 43a:	08 95       	ret
+
+0000043c <uart_getc>:
++------------------------------------------------------------------------------
+*/
+unsigned char uart_getc(void)
+{
+    /* wait until receive buffer is full */
+    while(!(USART.STATUS & USART_RXCIF_bm));
+ 43c:	80 91 a1 08 	lds	r24, 0x08A1
+ 440:	87 ff       	sbrs	r24, 7
+ 442:	fc cf       	rjmp	.-8      	; 0x43c <uart_getc>
+
+    unsigned char b = USART.DATA;
+ 444:	80 91 a0 08 	lds	r24, 0x08A0
+    if(b == '\r')
+ 448:	8d 30       	cpi	r24, 0x0D	; 13
+ 44a:	09 f4       	brne	.+2      	; 0x44e <uart_getc+0x12>
+ 44c:	8a e0       	ldi	r24, 0x0A	; 10
+        b = '\n';
+		
+    return b;
+}
+ 44e:	08 95       	ret
+
+00000450 <uart_init>:
+*/
+void uart_init(void)
+{
+	/* USARTC0 引脚方向设置*/
+  	/* PC3 (TXD0) 输出 */
+	PORTC.DIRSET   = PIN3_bm;
+ 450:	e0 e4       	ldi	r30, 0x40	; 64
+ 452:	f6 e0       	ldi	r31, 0x06	; 6
+ 454:	88 e0       	ldi	r24, 0x08	; 8
+ 456:	81 83       	std	Z+1, r24	; 0x01
+	/* PC2 (RXD0) 输入 */
+	PORTC.DIRCLR   = PIN2_bm;
+ 458:	84 e0       	ldi	r24, 0x04	; 4
+ 45a:	82 83       	std	Z+2, r24	; 0x02
+	/* USARTC0 模式 - 异步*/
+	USART_SetMode(&USARTC0,USART_CMODE_ASYNCHRONOUS_gc);
+ 45c:	e0 ea       	ldi	r30, 0xA0	; 160
+ 45e:	f8 e0       	ldi	r31, 0x08	; 8
+ 460:	85 81       	ldd	r24, Z+5	; 0x05
+ 462:	8f 73       	andi	r24, 0x3F	; 63
+ 464:	85 83       	std	Z+5, r24	; 0x05
+	/* USARTC0帧结构, 8 位数据位, 无校验, 1停止位 */
+	USART_Format_Set(&USARTC0, USART_CHSIZE_8BIT_gc,USART_PMODE_DISABLED_gc, false);
+ 466:	83 e0       	ldi	r24, 0x03	; 3
+ 468:	85 83       	std	Z+5, r24	; 0x05
+	/* 设置波特率 9600*/
+	USART_Baudrate_Set(&USARTC0, 12 , 0);
+ 46a:	8c e0       	ldi	r24, 0x0C	; 12
+ 46c:	86 83       	std	Z+6, r24	; 0x06
+ 46e:	17 82       	std	Z+7, r1	; 0x07
+	/* USARTC0 使能发送*/
+	USART_Tx_Enable(&USARTC0);
+ 470:	84 81       	ldd	r24, Z+4	; 0x04
+ 472:	88 60       	ori	r24, 0x08	; 8
+ 474:	84 83       	std	Z+4, r24	; 0x04
+	/* USARTC0 使能接收*/
+	USART_Rx_Enable(&USARTC0);
+ 476:	84 81       	ldd	r24, Z+4	; 0x04
+ 478:	80 61       	ori	r24, 0x10	; 16
+ 47a:	84 83       	std	Z+4, r24	; 0x04
+}
+ 47c:	08 95       	ret
+
+0000047e <__vector_6>:
+ 
+
+
+//DMA出错中断和传输完成中断
+ISR(DMA_CH0_vect)
+{
+ 47e:	1f 92       	push	r1
+ 480:	0f 92       	push	r0
+ 482:	0f b6       	in	r0, 0x3f	; 63
+ 484:	0f 92       	push	r0
+ 486:	08 b6       	in	r0, 0x38	; 56
+ 488:	0f 92       	push	r0
+ 48a:	0b b6       	in	r0, 0x3b	; 59
+ 48c:	0f 92       	push	r0
+ 48e:	11 24       	eor	r1, r1
+ 490:	18 be       	out	0x38, r1	; 56
+ 492:	1b be       	out	0x3b, r1	; 59
+ 494:	8f 93       	push	r24
+ 496:	ef 93       	push	r30
+ 498:	ff 93       	push	r31
+	if (DMA.CH0.CTRLB & DMA_CH_ERRIF_bm) {
+ 49a:	e0 e0       	ldi	r30, 0x00	; 0
+ 49c:	f1 e0       	ldi	r31, 0x01	; 1
+ 49e:	80 91 11 01 	lds	r24, 0x0111
+ 4a2:	85 ff       	sbrs	r24, 5
+ 4a4:	07 c0       	rjmp	.+14     	; 0x4b4 <__vector_6+0x36>
+		DMA.CH0.CTRLB |= DMA_CH_ERRIF_bm;
+ 4a6:	80 91 11 01 	lds	r24, 0x0111
+ 4aa:	80 62       	ori	r24, 0x20	; 32
+ 4ac:	81 8b       	std	Z+17, r24	; 0x11
+		gStatus = false;
+ 4ae:	10 92 64 20 	sts	0x2064, r1
+ 4b2:	07 c0       	rjmp	.+14     	; 0x4c2 <__vector_6+0x44>
+	} else {
+		DMA.CH0.CTRLB |= DMA_CH_TRNIF_bm;
+ 4b4:	80 91 11 01 	lds	r24, 0x0111
+ 4b8:	80 61       	ori	r24, 0x10	; 16
+ 4ba:	81 8b       	std	Z+17, r24	; 0x11
+		gStatus = true;
+ 4bc:	81 e0       	ldi	r24, 0x01	; 1
+ 4be:	80 93 64 20 	sts	0x2064, r24
+	}
+	gInterruptDone = true;
+ 4c2:	81 e0       	ldi	r24, 0x01	; 1
+ 4c4:	80 93 65 20 	sts	0x2065, r24
+}
+ 4c8:	ff 91       	pop	r31
+ 4ca:	ef 91       	pop	r30
+ 4cc:	8f 91       	pop	r24
+ 4ce:	0f 90       	pop	r0
+ 4d0:	0b be       	out	0x3b, r0	; 59
+ 4d2:	0f 90       	pop	r0
+ 4d4:	08 be       	out	0x38, r0	; 56
+ 4d6:	0f 90       	pop	r0
+ 4d8:	0f be       	out	0x3f, r0	; 63
+ 4da:	0f 90       	pop	r0
+ 4dc:	1f 90       	pop	r1
+ 4de:	18 95       	reti
+
+000004e0 <BlockMemCopy>:
+*/
+bool BlockMemCopy( const void * src,
+                   void * dest,
+                   uint16_t blockSize,
+                   volatile DMA_CH_t * dmaChannel )
+{
+ 4e0:	6f 92       	push	r6
+ 4e2:	7f 92       	push	r7
+ 4e4:	8f 92       	push	r8
+ 4e6:	af 92       	push	r10
+ 4e8:	bf 92       	push	r11
+ 4ea:	cf 92       	push	r12
+ 4ec:	ef 92       	push	r14
+ 4ee:	ff 92       	push	r15
+ 4f0:	0f 93       	push	r16
+ 4f2:	1f 93       	push	r17
+ 4f4:	7c 01       	movw	r14, r24
+ 4f6:	8b 01       	movw	r16, r22
+ 4f8:	5a 01       	movw	r10, r20
+ 4fa:	39 01       	movw	r6, r18
+	DMA_EnableChannel( dmaChannel );
+ 4fc:	c9 01       	movw	r24, r18
+ 4fe:	0e 94 59 03 	call	0x6b2	; 0x6b2 <DMA_EnableChannel>
+
+	DMA_SetupBlock( dmaChannel,
+ 502:	0f 92       	push	r0
+ 504:	0f 92       	push	r0
+ 506:	ed b7       	in	r30, 0x3d	; 61
+ 508:	fe b7       	in	r31, 0x3e	; 62
+ 50a:	11 82       	std	Z+1, r1	; 0x01
+ 50c:	12 82       	std	Z+2, r1	; 0x02
+ 50e:	c3 01       	movw	r24, r6
+ 510:	b7 01       	movw	r22, r14
+ 512:	40 e0       	ldi	r20, 0x00	; 0
+ 514:	20 e1       	ldi	r18, 0x10	; 16
+ 516:	ee 24       	eor	r14, r14
+ 518:	cc 24       	eor	r12, r12
+ 51a:	c3 94       	inc	r12
+ 51c:	33 e0       	ldi	r19, 0x03	; 3
+ 51e:	83 2e       	mov	r8, r19
+ 520:	0e 94 75 03 	call	0x6ea	; 0x6ea <DMA_SetupBlock>
+	                blockSize,
+	                DMA_CH_BURSTLEN_8BYTE_gc,
+	                0,
+	                false );
+
+	DMA_StartTransfer( dmaChannel );
+ 524:	0f 90       	pop	r0
+ 526:	0f 90       	pop	r0
+ 528:	c3 01       	movw	r24, r6
+ 52a:	0e 94 d2 03 	call	0x7a4	; 0x7a4 <DMA_StartTransfer>
+
+	return true;
+}
+ 52e:	81 e0       	ldi	r24, 0x01	; 1
+ 530:	1f 91       	pop	r17
+ 532:	0f 91       	pop	r16
+ 534:	ff 90       	pop	r15
+ 536:	ef 90       	pop	r14
+ 538:	cf 90       	pop	r12
+ 53a:	bf 90       	pop	r11
+ 53c:	af 90       	pop	r10
+ 53e:	8f 90       	pop	r8
+ 540:	7f 90       	pop	r7
+ 542:	6f 90       	pop	r6
+ 544:	08 95       	ret
+
+00000546 <MultiBlockMemCopy>:
+| Description : 重复块传输
++------------------------------------------------------------------------------
+*/
+bool MultiBlockMemCopy( const void * src, void * dest, uint16_t blockSize,
+                          uint8_t repeatCount, volatile DMA_CH_t * dmaChannel )
+{
+ 546:	8f 92       	push	r8
+ 548:	9f 92       	push	r9
+ 54a:	af 92       	push	r10
+ 54c:	bf 92       	push	r11
+ 54e:	cf 92       	push	r12
+ 550:	df 92       	push	r13
+ 552:	ef 92       	push	r14
+ 554:	ff 92       	push	r15
+ 556:	0f 93       	push	r16
+ 558:	1f 93       	push	r17
+ 55a:	cf 93       	push	r28
+ 55c:	df 93       	push	r29
+ 55e:	6c 01       	movw	r12, r24
+ 560:	4b 01       	movw	r8, r22
+ 562:	5a 01       	movw	r10, r20
+ 564:	f2 2e       	mov	r15, r18
+ 566:	e8 01       	movw	r28, r16
+	uint8_t flags;
+    //使能DMA通道
+	DMA_EnableChannel( dmaChannel );
+ 568:	c8 01       	movw	r24, r16
+ 56a:	0e 94 59 03 	call	0x6b2	; 0x6b2 <DMA_EnableChannel>
+    //设置源地址目的地址，块大小，以及地址的重载设置、模式设置，突发传输8个字节，重复传输
+	DMA_SetupBlock( dmaChannel,
+ 56e:	0f 92       	push	r0
+ 570:	0f 92       	push	r0
+ 572:	ed b7       	in	r30, 0x3d	; 61
+ 574:	fe b7       	in	r31, 0x3e	; 62
+ 576:	f1 82       	std	Z+1, r15	; 0x01
+ 578:	81 e0       	ldi	r24, 0x01	; 1
+ 57a:	82 83       	std	Z+2, r24	; 0x02
+ 57c:	c8 01       	movw	r24, r16
+ 57e:	b6 01       	movw	r22, r12
+ 580:	40 e0       	ldi	r20, 0x00	; 0
+ 582:	20 e1       	ldi	r18, 0x10	; 16
+ 584:	84 01       	movw	r16, r8
+ 586:	ee 24       	eor	r14, r14
+ 588:	cc 24       	eor	r12, r12
+ 58a:	c3 94       	inc	r12
+ 58c:	53 e0       	ldi	r21, 0x03	; 3
+ 58e:	85 2e       	mov	r8, r21
+ 590:	0e 94 75 03 	call	0x6ea	; 0x6ea <DMA_SetupBlock>
+	                blockSize,
+	                DMA_CH_BURSTLEN_8BYTE_gc,
+	                repeatCount,
+	                true );
+
+	DMA_StartTransfer( dmaChannel );
+ 594:	0f 90       	pop	r0
+ 596:	0f 90       	pop	r0
+ 598:	ce 01       	movw	r24, r28
+ 59a:	0e 94 d2 03 	call	0x7a4	; 0x7a4 <DMA_StartTransfer>
+
+	//等待出现错误或传输结束
+	do {
+		flags = DMA_ReturnStatus_non_blocking( dmaChannel );
+ 59e:	ce 01       	movw	r24, r28
+ 5a0:	0e 94 4d 03 	call	0x69a	; 0x69a <DMA_ReturnStatus_non_blocking>
+ 5a4:	98 2f       	mov	r25, r24
+	} while ( flags == 0);
+ 5a6:	88 23       	and	r24, r24
+ 5a8:	d1 f3       	breq	.-12     	; 0x59e <MultiBlockMemCopy+0x58>
+
+	dmaChannel->CTRLB |= ( flags );
+ 5aa:	89 81       	ldd	r24, Y+1	; 0x01
+ 5ac:	89 2b       	or	r24, r25
+ 5ae:	89 83       	std	Y+1, r24	; 0x01
+ 5b0:	92 95       	swap	r25
+ 5b2:	96 95       	lsr	r25
+ 5b4:	97 70       	andi	r25, 0x07	; 7
+ 5b6:	90 95       	com	r25
+	if ( ( flags & DMA_CH_ERRIF_bm ) != 0x00 ) {
+		return false;
+	} else {
+		return true;
+	}
+}
+ 5b8:	89 2f       	mov	r24, r25
+ 5ba:	81 70       	andi	r24, 0x01	; 1
+ 5bc:	df 91       	pop	r29
+ 5be:	cf 91       	pop	r28
+ 5c0:	1f 91       	pop	r17
+ 5c2:	0f 91       	pop	r16
+ 5c4:	ff 90       	pop	r15
+ 5c6:	ef 90       	pop	r14
+ 5c8:	df 90       	pop	r13
+ 5ca:	cf 90       	pop	r12
+ 5cc:	bf 90       	pop	r11
+ 5ce:	af 90       	pop	r10
+ 5d0:	9f 90       	pop	r9
+ 5d2:	8f 90       	pop	r8
+ 5d4:	08 95       	ret
+
+000005d6 <main>:
++------------------------------------------------------------------------------
+| Description : 初始化 USARTC0
++------------------------------------------------------------------------------
+*/
+void main( void )
+{
+ 5d6:	0f 93       	push	r16
+ 5d8:	1f 93       	push	r17
+ 5da:	cf 93       	push	r28
+ 5dc:	df 93       	push	r29
+	uint32_t index;
+	uart_init();
+ 5de:	0e 94 28 02 	call	0x450	; 0x450 <uart_init>
+	volatile DMA_CH_t * Channel;
+	Channel = &DMA.CH0;
+
+	DMA_Enable();
+ 5e2:	80 91 00 01 	lds	r24, 0x0100
+ 5e6:	80 68       	ori	r24, 0x80	; 128
+ 5e8:	80 93 00 01 	sts	0x0100, r24
+ 5ec:	80 e0       	ldi	r24, 0x00	; 0
+ 5ee:	90 e0       	ldi	r25, 0x00	; 0
+ 
+    //进行单通道传输
+	for ( index = 0; index < MEM_BLOCK; ++index ) 
+	{
+		memoryBlockA[index] = ( (uint8_t) index & 0xff );
+ 5f0:	fc 01       	movw	r30, r24
+ 5f2:	ea 59       	subi	r30, 0x9A	; 154
+ 5f4:	ff 4d       	sbci	r31, 0xDF	; 223
+ 5f6:	80 83       	st	Z, r24
+ 5f8:	01 96       	adiw	r24, 0x01	; 1
+	Channel = &DMA.CH0;
+
+	DMA_Enable();
+ 
+    //进行单通道传输
+	for ( index = 0; index < MEM_BLOCK; ++index ) 
+ 5fa:	84 36       	cpi	r24, 0x64	; 100
+ 5fc:	91 05       	cpc	r25, r1
+ 5fe:	c1 f7       	brne	.-16     	; 0x5f0 <main+0x1a>
+	{
+		memoryBlockA[index] = ( (uint8_t) index & 0xff );
+	}
+    //重复数据块传输
+	gStatus = MultiBlockMemCopy( memoryBlockA,
+ 600:	86 e6       	ldi	r24, 0x66	; 102
+ 602:	90 e2       	ldi	r25, 0x20	; 32
+ 604:	60 e0       	ldi	r22, 0x00	; 0
+ 606:	70 e2       	ldi	r23, 0x20	; 32
+ 608:	4a e0       	ldi	r20, 0x0A	; 10
+ 60a:	50 e0       	ldi	r21, 0x00	; 0
+ 60c:	2a e0       	ldi	r18, 0x0A	; 10
+ 60e:	00 e1       	ldi	r16, 0x10	; 16
+ 610:	11 e0       	ldi	r17, 0x01	; 1
+ 612:	0e 94 a3 02 	call	0x546	; 0x546 <MultiBlockMemCopy>
+ 616:	80 93 64 20 	sts	0x2064, r24
+	                             memoryBlockB,
+	                             MEM_BLOCK_SIZE,
+	                             MEM_BLOCK_COUNT,
+	                             Channel );
+	if ( gStatus )
+ 61a:	80 91 64 20 	lds	r24, 0x2064
+ 61e:	88 23       	and	r24, r24
+ 620:	61 f0       	breq	.+24     	; 0x63a <main+0x64>
+ 622:	c0 e0       	ldi	r28, 0x00	; 0
+ 624:	d0 e2       	ldi	r29, 0x20	; 32
+	   {
+		       for ( index = 0; index < MEM_BLOCK; ++index) 
+		           uart_putdw_dec(memoryBlockB[index]);
+ 626:	69 91       	ld	r22, Y+
+ 628:	70 e0       	ldi	r23, 0x00	; 0
+ 62a:	80 e0       	ldi	r24, 0x00	; 0
+ 62c:	90 e0       	ldi	r25, 0x00	; 0
+ 62e:	0e 94 a8 01 	call	0x350	; 0x350 <uart_putdw_dec>
+	                             MEM_BLOCK_SIZE,
+	                             MEM_BLOCK_COUNT,
+	                             Channel );
+	if ( gStatus )
+	   {
+		       for ( index = 0; index < MEM_BLOCK; ++index) 
+ 632:	80 e2       	ldi	r24, 0x20	; 32
+ 634:	c4 36       	cpi	r28, 0x64	; 100
+ 636:	d8 07       	cpc	r29, r24
+ 638:	b1 f7       	brne	.-20     	; 0x626 <main+0x50>
+ 63a:	ff cf       	rjmp	.-2      	; 0x63a <main+0x64>
+
+0000063c <DMA_Reset>:
+
+#include "dma_driver.h"
+//DMA软件复位
+void DMA_Reset( void )                 
+{	                            
+	DMA.CTRL &= ~DMA_ENABLE_bm;
+ 63c:	80 91 00 01 	lds	r24, 0x0100
+ 640:	8f 77       	andi	r24, 0x7F	; 127
+ 642:	80 93 00 01 	sts	0x0100, r24
+	DMA.CTRL |= DMA_RESET_bm;   
+ 646:	80 91 00 01 	lds	r24, 0x0100
+ 64a:	80 64       	ori	r24, 0x40	; 64
+ 64c:	80 93 00 01 	sts	0x0100, r24
+	while (DMA.CTRL & DMA_RESET_bm);	// Wait until reset is completed
+ 650:	80 91 00 01 	lds	r24, 0x0100
+ 654:	86 fd       	sbrc	r24, 6
+ 656:	fc cf       	rjmp	.-8      	; 0x650 <DMA_Reset+0x14>
+}
+ 658:	08 95       	ret
+
+0000065a <DMA_ConfigDoubleBuffering>:
+//DMA设置双缓冲
+void DMA_ConfigDoubleBuffering( DMA_DBUFMODE_t dbufMode )
+{
+	DMA.CTRL = ( DMA.CTRL & ~DMA_DBUFMODE_gm ) | dbufMode;
+ 65a:	e0 e0       	ldi	r30, 0x00	; 0
+ 65c:	f1 e0       	ldi	r31, 0x01	; 1
+ 65e:	90 81       	ld	r25, Z
+ 660:	93 7f       	andi	r25, 0xF3	; 243
+ 662:	98 2b       	or	r25, r24
+ 664:	90 83       	st	Z, r25
+}
+ 666:	08 95       	ret
+
+00000668 <DMA_SetPriority>:
+//DMA通道设置优先级
+void DMA_SetPriority( DMA_PRIMODE_t priMode )
+{
+	DMA.CTRL = ( DMA.CTRL & ~DMA_PRIMODE_gm ) | priMode;
+ 668:	e0 e0       	ldi	r30, 0x00	; 0
+ 66a:	f1 e0       	ldi	r31, 0x01	; 1
+ 66c:	90 81       	ld	r25, Z
+ 66e:	9c 7f       	andi	r25, 0xFC	; 252
+ 670:	98 2b       	or	r25, r24
+ 672:	90 83       	st	Z, r25
+}
+ 674:	08 95       	ret
+
+00000676 <DMA_CH_IsOngoing>:
+//查看通道是否繁忙
+uint8_t DMA_CH_IsOngoing( volatile DMA_CH_t * channel )
+{
+ 676:	fc 01       	movw	r30, r24
+	uint8_t flagMask;
+	flagMask = channel->CTRLB & DMA_CH_CHBUSY_bm;
+ 678:	81 81       	ldd	r24, Z+1	; 0x01
+	return flagMask;
+}
+ 67a:	80 78       	andi	r24, 0x80	; 128
+ 67c:	08 95       	ret
+
+0000067e <DMA_IsOngoing>:
+//查看DMA状态寄存器通道繁忙位
+uint8_t DMA_IsOngoing( void )
+{
+	uint8_t flagMask;
+	flagMask = DMA.STATUS & 0xF0;
+ 67e:	e0 e0       	ldi	r30, 0x00	; 0
+ 680:	f1 e0       	ldi	r31, 0x01	; 1
+ 682:	84 81       	ldd	r24, Z+4	; 0x04
+	return flagMask;
+}
+ 684:	80 7f       	andi	r24, 0xF0	; 240
+ 686:	08 95       	ret
+
+00000688 <DMA_CH_IsPending>:
+
+//查看通道挂起位
+uint8_t DMA_CH_IsPending( volatile DMA_CH_t * channel )
+{
+ 688:	fc 01       	movw	r30, r24
+	uint8_t flagMask;
+	flagMask = channel->CTRLB & DMA_CH_CHPEND_bm;
+ 68a:	81 81       	ldd	r24, Z+1	; 0x01
+	return flagMask;
+}
+ 68c:	80 74       	andi	r24, 0x40	; 64
+ 68e:	08 95       	ret
+
+00000690 <DMA_IsPending>:
+//查看那些通道有块传输被挂起
+uint8_t DMA_IsPending( void )
+{
+	uint8_t flagMask;
+	flagMask = DMA.STATUS & 0x0F;
+ 690:	e0 e0       	ldi	r30, 0x00	; 0
+ 692:	f1 e0       	ldi	r31, 0x01	; 1
+ 694:	84 81       	ldd	r24, Z+4	; 0x04
+	return flagMask;
+}
+ 696:	8f 70       	andi	r24, 0x0F	; 15
+ 698:	08 95       	ret
+
+0000069a <DMA_ReturnStatus_non_blocking>:
+//查看通道的错误中断标志位和传输结束中断标志位
+uint8_t DMA_ReturnStatus_non_blocking( volatile DMA_CH_t * channel )
+{
+ 69a:	fc 01       	movw	r30, r24
+	uint8_t relevantFlags;
+	relevantFlags = channel->CTRLB & (DMA_CH_ERRIF_bm | DMA_CH_TRNIF_bm);
+ 69c:	81 81       	ldd	r24, Z+1	; 0x01
+	return relevantFlags;
+}
+ 69e:	80 73       	andi	r24, 0x30	; 48
+ 6a0:	08 95       	ret
+
+000006a2 <DMA_ReturnStatus_blocking>:
+
+//查看错误中断标志位和传输结束中断标志位，直到其中任一位置位结束循环返回标志位
+uint8_t DMA_ReturnStatus_blocking( volatile DMA_CH_t * channel )
+{
+ 6a2:	fc 01       	movw	r30, r24
+	uint8_t relevantFlags;
+
+	flagMask = DMA_CH_ERRIF_bm | DMA_CH_TRNIF_bm;
+
+	do {
+		relevantFlags = channel->CTRLB & flagMask;
+ 6a4:	91 81       	ldd	r25, Z+1	; 0x01
+ 6a6:	90 73       	andi	r25, 0x30	; 48
+	} while (relevantFlags == 0x00);
+ 6a8:	e9 f3       	breq	.-6      	; 0x6a4 <DMA_ReturnStatus_blocking+0x2>
+
+	channel->CTRLB = flagMask;
+ 6aa:	80 e3       	ldi	r24, 0x30	; 48
+ 6ac:	81 83       	std	Z+1, r24	; 0x01
+	return relevantFlags;
+}
+ 6ae:	89 2f       	mov	r24, r25
+ 6b0:	08 95       	ret
+
+000006b2 <DMA_EnableChannel>:
+//DMA通道使能位
+void DMA_EnableChannel( volatile DMA_CH_t * channel )
+{
+ 6b2:	fc 01       	movw	r30, r24
+	channel->CTRLA |= DMA_CH_ENABLE_bm;
+ 6b4:	80 81       	ld	r24, Z
+ 6b6:	80 68       	ori	r24, 0x80	; 128
+ 6b8:	80 83       	st	Z, r24
+}
+ 6ba:	08 95       	ret
+
+000006bc <DMA_DisableChannel>:
+
+//DMA通道关闭
+void DMA_DisableChannel( volatile DMA_CH_t * channel )
+{
+ 6bc:	fc 01       	movw	r30, r24
+	channel->CTRLA &= ~DMA_CH_ENABLE_bm;
+ 6be:	80 81       	ld	r24, Z
+ 6c0:	8f 77       	andi	r24, 0x7F	; 127
+ 6c2:	80 83       	st	Z, r24
+}
+ 6c4:	08 95       	ret
+
+000006c6 <DMA_ResetChannel>:
+
+//DMA通道复位，所有寄存器回复初始值，如果通道打开在复位之前一定要关闭
+void DMA_ResetChannel( volatile DMA_CH_t * channel )
+{
+ 6c6:	fc 01       	movw	r30, r24
+	channel->CTRLA &= ~DMA_CH_ENABLE_bm;
+ 6c8:	80 81       	ld	r24, Z
+ 6ca:	8f 77       	andi	r24, 0x7F	; 127
+ 6cc:	80 83       	st	Z, r24
+	channel->CTRLA |= DMA_CH_RESET_bm;
+ 6ce:	80 81       	ld	r24, Z
+ 6d0:	80 64       	ori	r24, 0x40	; 64
+ 6d2:	80 83       	st	Z, r24
+	channel->CTRLA &= ~DMA_CH_RESET_bm;
+ 6d4:	80 81       	ld	r24, Z
+ 6d6:	8f 7b       	andi	r24, 0xBF	; 191
+ 6d8:	80 83       	st	Z, r24
+}
+ 6da:	08 95       	ret
+
+000006dc <DMA_SetIntLevel>:
+
+//为DMA一通道设置中断优先级
+void DMA_SetIntLevel( volatile DMA_CH_t * channel,
+                      DMA_CH_TRNINTLVL_t transferInt,
+                      DMA_CH_ERRINTLVL_t errorInt )
+{
+ 6dc:	fc 01       	movw	r30, r24
+	channel->CTRLB = (channel->CTRLB & ~(DMA_CH_ERRINTLVL_gm | DMA_CH_TRNINTLVL_gm)) |
+ 6de:	81 81       	ldd	r24, Z+1	; 0x01
+ 6e0:	80 7f       	andi	r24, 0xF0	; 240
+ 6e2:	68 2b       	or	r22, r24
+ 6e4:	64 2b       	or	r22, r20
+ 6e6:	61 83       	std	Z+1, r22	; 0x01
+			 transferInt | errorInt;
+}
+ 6e8:	08 95       	ret
+
+000006ea <DMA_SetupBlock>:
+                     DMA_CH_DESTDIR_t destDirection,
+                     uint16_t blockSize,
+                     DMA_CH_BURSTLEN_t burstMode,
+                     uint8_t repeatCount,
+                     bool useRepeat )
+{
+ 6ea:	6f 92       	push	r6
+ 6ec:	7f 92       	push	r7
+ 6ee:	8f 92       	push	r8
+ 6f0:	9f 92       	push	r9
+ 6f2:	af 92       	push	r10
+ 6f4:	bf 92       	push	r11
+ 6f6:	cf 92       	push	r12
+ 6f8:	ef 92       	push	r14
+ 6fa:	0f 93       	push	r16
+ 6fc:	1f 93       	push	r17
+ 6fe:	df 93       	push	r29
+ 700:	cf 93       	push	r28
+ 702:	cd b7       	in	r28, 0x3d	; 61
+ 704:	de b7       	in	r29, 0x3e	; 62
+ 706:	fc 01       	movw	r30, r24
+ 708:	38 2d       	mov	r19, r8
+ 70a:	59 89       	ldd	r21, Y+17	; 0x11
+	channel->SRCADDR0 = (( (uint32_t) srcAddr) >> 0*8 ) & 0xFF;
+ 70c:	cb 01       	movw	r24, r22
+ 70e:	60 87       	std	Z+8, r22	; 0x08
+	channel->SRCADDR1 = (( (uint32_t) srcAddr) >> 1*8 ) & 0xFF;
+ 710:	aa 27       	eor	r26, r26
+ 712:	97 fd       	sbrc	r25, 7
+ 714:	a0 95       	com	r26
+ 716:	ba 2f       	mov	r27, r26
+ 718:	69 2e       	mov	r6, r25
+ 71a:	7a 2e       	mov	r7, r26
+ 71c:	8b 2e       	mov	r8, r27
+ 71e:	99 24       	eor	r9, r9
+ 720:	61 86       	std	Z+9, r6	; 0x09
+	channel->SRCADDR2 = (( (uint32_t) srcAddr) >> 2*8 ) & 0xFF;
+ 722:	cd 01       	movw	r24, r26
+ 724:	aa 27       	eor	r26, r26
+ 726:	bb 27       	eor	r27, r27
+ 728:	82 87       	std	Z+10, r24	; 0x0a
+
+	channel->DESTADDR0 = (( (uint32_t) destAddr) >> 0*8 ) & 0xFF;
+ 72a:	c8 01       	movw	r24, r16
+ 72c:	04 87       	std	Z+12, r16	; 0x0c
+	channel->DESTADDR1 = (( (uint32_t) destAddr) >> 1*8 ) & 0xFF;
+ 72e:	aa 27       	eor	r26, r26
+ 730:	97 fd       	sbrc	r25, 7
+ 732:	a0 95       	com	r26
+ 734:	ba 2f       	mov	r27, r26
+ 736:	69 2e       	mov	r6, r25
+ 738:	7a 2e       	mov	r7, r26
+ 73a:	8b 2e       	mov	r8, r27
+ 73c:	99 24       	eor	r9, r9
+ 73e:	65 86       	std	Z+13, r6	; 0x0d
+	channel->DESTADDR2 = (( (uint32_t) destAddr) >> 2*8 ) & 0xFF;
+ 740:	cd 01       	movw	r24, r26
+ 742:	aa 27       	eor	r26, r26
+ 744:	bb 27       	eor	r27, r27
+ 746:	86 87       	std	Z+14, r24	; 0x0e
+
+	channel->ADDRCTRL = (uint8_t) srcReload | srcDirection |
+ 748:	24 2b       	or	r18, r20
+ 74a:	2e 29       	or	r18, r14
+ 74c:	2c 29       	or	r18, r12
+ 74e:	22 83       	std	Z+2, r18	; 0x02
+	                              destReload | destDirection;
+	channel->TRFCNT = blockSize;
+ 750:	a4 82       	std	Z+4, r10	; 0x04
+ 752:	b5 82       	std	Z+5, r11	; 0x05
+	channel->CTRLA = ( channel->CTRLA & ~( DMA_CH_BURSTLEN_gm | DMA_CH_REPEAT_bm ) ) |
+ 754:	90 81       	ld	r25, Z
+ 756:	55 23       	and	r21, r21
+ 758:	11 f4       	brne	.+4      	; 0x75e <DMA_SetupBlock+0x74>
+ 75a:	80 e0       	ldi	r24, 0x00	; 0
+ 75c:	01 c0       	rjmp	.+2      	; 0x760 <DMA_SetupBlock+0x76>
+ 75e:	80 e2       	ldi	r24, 0x20	; 32
+ 760:	9c 7d       	andi	r25, 0xDC	; 220
+ 762:	93 2b       	or	r25, r19
+ 764:	89 2b       	or	r24, r25
+ 766:	80 83       	st	Z, r24
+	                  burstMode | ( useRepeat ? DMA_CH_REPEAT_bm : 0);
+
+	if ( useRepeat ) {
+ 768:	55 23       	and	r21, r21
+ 76a:	11 f0       	breq	.+4      	; 0x770 <DMA_SetupBlock+0x86>
+		channel->REPCNT = repeatCount;
+ 76c:	88 89       	ldd	r24, Y+16	; 0x10
+ 76e:	86 83       	std	Z+6, r24	; 0x06
+	}
+}
+ 770:	cf 91       	pop	r28
+ 772:	df 91       	pop	r29
+ 774:	1f 91       	pop	r17
+ 776:	0f 91       	pop	r16
+ 778:	ef 90       	pop	r14
+ 77a:	cf 90       	pop	r12
+ 77c:	bf 90       	pop	r11
+ 77e:	af 90       	pop	r10
+ 780:	9f 90       	pop	r9
+ 782:	8f 90       	pop	r8
+ 784:	7f 90       	pop	r7
+ 786:	6f 90       	pop	r6
+ 788:	08 95       	ret
+
+0000078a <DMA_EnableSingleShot>:
+
+
+//设置DMA通道单次传输
+void DMA_EnableSingleShot( volatile DMA_CH_t * channel )
+{
+ 78a:	fc 01       	movw	r30, r24
+	channel->CTRLA |= DMA_CH_SINGLE_bm;
+ 78c:	80 81       	ld	r24, Z
+ 78e:	84 60       	ori	r24, 0x04	; 4
+ 790:	80 83       	st	Z, r24
+}
+ 792:	08 95       	ret
+
+00000794 <DMA_DisableSingleShot>:
+
+//关闭单次通道传输
+void DMA_DisableSingleShot( volatile DMA_CH_t * channel )
+{
+ 794:	fc 01       	movw	r30, r24
+	channel->CTRLA &= ~DMA_CH_SINGLE_bm;
+ 796:	80 81       	ld	r24, Z
+ 798:	8b 7f       	andi	r24, 0xFB	; 251
+ 79a:	80 83       	st	Z, r24
+}
+ 79c:	08 95       	ret
+
+0000079e <DMA_SetTriggerSource>:
+
+//设置通道触发源
+void DMA_SetTriggerSource( volatile DMA_CH_t * channel, uint8_t trigger )
+{
+ 79e:	fc 01       	movw	r30, r24
+	channel->TRIGSRC = trigger;
+ 7a0:	63 83       	std	Z+3, r22	; 0x03
+}
+ 7a2:	08 95       	ret
+
+000007a4 <DMA_StartTransfer>:
+ //发出通道传输请求
+void DMA_StartTransfer( volatile DMA_CH_t * channel )
+{
+ 7a4:	fc 01       	movw	r30, r24
+	channel->CTRLA |= DMA_CH_TRFREQ_bm;
+ 7a6:	80 81       	ld	r24, Z
+ 7a8:	80 61       	ori	r24, 0x10	; 16
+ 7aa:	80 83       	st	Z, r24
+}
+ 7ac:	08 95       	ret
+
+000007ae <__mulsi3>:
+ 7ae:	62 9f       	mul	r22, r18
+ 7b0:	d0 01       	movw	r26, r0
+ 7b2:	73 9f       	mul	r23, r19
+ 7b4:	f0 01       	movw	r30, r0
+ 7b6:	82 9f       	mul	r24, r18
+ 7b8:	e0 0d       	add	r30, r0
+ 7ba:	f1 1d       	adc	r31, r1
+ 7bc:	64 9f       	mul	r22, r20
+ 7be:	e0 0d       	add	r30, r0
+ 7c0:	f1 1d       	adc	r31, r1
+ 7c2:	92 9f       	mul	r25, r18
+ 7c4:	f0 0d       	add	r31, r0
+ 7c6:	83 9f       	mul	r24, r19
+ 7c8:	f0 0d       	add	r31, r0
+ 7ca:	74 9f       	mul	r23, r20
+ 7cc:	f0 0d       	add	r31, r0
+ 7ce:	65 9f       	mul	r22, r21
+ 7d0:	f0 0d       	add	r31, r0
+ 7d2:	99 27       	eor	r25, r25
+ 7d4:	72 9f       	mul	r23, r18
+ 7d6:	b0 0d       	add	r27, r0
+ 7d8:	e1 1d       	adc	r30, r1
+ 7da:	f9 1f       	adc	r31, r25
+ 7dc:	63 9f       	mul	r22, r19
+ 7de:	b0 0d       	add	r27, r0
+ 7e0:	e1 1d       	adc	r30, r1
+ 7e2:	f9 1f       	adc	r31, r25
+ 7e4:	bd 01       	movw	r22, r26
+ 7e6:	cf 01       	movw	r24, r30
+ 7e8:	11 24       	eor	r1, r1
+ 7ea:	08 95       	ret
+
+000007ec <__udivmodhi4>:
+ 7ec:	aa 1b       	sub	r26, r26
+ 7ee:	bb 1b       	sub	r27, r27
+ 7f0:	51 e1       	ldi	r21, 0x11	; 17
+ 7f2:	07 c0       	rjmp	.+14     	; 0x802 <__udivmodhi4_ep>
+
+000007f4 <__udivmodhi4_loop>:
+ 7f4:	aa 1f       	adc	r26, r26
+ 7f6:	bb 1f       	adc	r27, r27
+ 7f8:	a6 17       	cp	r26, r22
+ 7fa:	b7 07       	cpc	r27, r23
+ 7fc:	10 f0       	brcs	.+4      	; 0x802 <__udivmodhi4_ep>
+ 7fe:	a6 1b       	sub	r26, r22
+ 800:	b7 0b       	sbc	r27, r23
+
+00000802 <__udivmodhi4_ep>:
+ 802:	88 1f       	adc	r24, r24
+ 804:	99 1f       	adc	r25, r25
+ 806:	5a 95       	dec	r21
+ 808:	a9 f7       	brne	.-22     	; 0x7f4 <__udivmodhi4_loop>
+ 80a:	80 95       	com	r24
+ 80c:	90 95       	com	r25
+ 80e:	bc 01       	movw	r22, r24
+ 810:	cd 01       	movw	r24, r26
+ 812:	08 95       	ret
+
+00000814 <__udivmodsi4>:
+ 814:	a1 e2       	ldi	r26, 0x21	; 33
+ 816:	1a 2e       	mov	r1, r26
+ 818:	aa 1b       	sub	r26, r26
+ 81a:	bb 1b       	sub	r27, r27
+ 81c:	fd 01       	movw	r30, r26
+ 81e:	0d c0       	rjmp	.+26     	; 0x83a <__udivmodsi4_ep>
+
+00000820 <__udivmodsi4_loop>:
+ 820:	aa 1f       	adc	r26, r26
+ 822:	bb 1f       	adc	r27, r27
+ 824:	ee 1f       	adc	r30, r30
+ 826:	ff 1f       	adc	r31, r31
+ 828:	a2 17       	cp	r26, r18
+ 82a:	b3 07       	cpc	r27, r19
+ 82c:	e4 07       	cpc	r30, r20
+ 82e:	f5 07       	cpc	r31, r21
+ 830:	20 f0       	brcs	.+8      	; 0x83a <__udivmodsi4_ep>
+ 832:	a2 1b       	sub	r26, r18
+ 834:	b3 0b       	sbc	r27, r19
+ 836:	e4 0b       	sbc	r30, r20
+ 838:	f5 0b       	sbc	r31, r21
+
+0000083a <__udivmodsi4_ep>:
+ 83a:	66 1f       	adc	r22, r22
+ 83c:	77 1f       	adc	r23, r23
+ 83e:	88 1f       	adc	r24, r24
+ 840:	99 1f       	adc	r25, r25
+ 842:	1a 94       	dec	r1
+ 844:	69 f7       	brne	.-38     	; 0x820 <__udivmodsi4_loop>
+ 846:	60 95       	com	r22
+ 848:	70 95       	com	r23
+ 84a:	80 95       	com	r24
+ 84c:	90 95       	com	r25
+ 84e:	9b 01       	movw	r18, r22
+ 850:	ac 01       	movw	r20, r24
+ 852:	bd 01       	movw	r22, r26
+ 854:	cf 01       	movw	r24, r30
+ 856:	08 95       	ret
+
+00000858 <_exit>:
+ 858:	f8 94       	cli
+
+0000085a <__stop_program>:
+ 85a:	ff cf       	rjmp	.-2      	; 0x85a <__stop_program>

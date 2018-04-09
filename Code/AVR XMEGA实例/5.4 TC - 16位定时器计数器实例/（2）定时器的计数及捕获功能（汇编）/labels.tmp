@@ -1,0 +1,44 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\usart_driver.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>452</LINE></RESET>
+  <ISR_OVFIF><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>390</LINE></ISR_OVFIF>
+  <ISR_CCA_vect><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>248</LINE></ISR_CCA_vect>
+  <uart_init><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>85</LINE></uart_init>
+  <Example1><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>113</LINE></Example1>
+  <Example1_0><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>122</LINE></Example1_0>
+  <Example2><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>136</LINE></Example2>
+  <Example2_1><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>172</LINE></Example2_1>
+  <Example3><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>193</LINE></Example3>
+  <Example3_0><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>241</LINE></Example3_0>
+  <Example3_1><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>266</LINE></Example3_1>
+  <Example3_END><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>272</LINE></Example3_END>
+  <Example4><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>284</LINE></Example4>
+  <Example4_0><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>314</LINE></Example4_0>
+  <Example4_1><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>324</LINE></Example4_1>
+  <Example4_2><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>330</LINE></Example4_2>
+  <Example5><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>350</LINE></Example5>
+  <Example5_0><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>385</LINE></Example5_0>
+  <Example6><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>405</LINE></Example6>
+  <Example6_1><FILE>E:\ATMAGE\书稿例子\ASM_example\4-1 TC_asm\TC_asm.asm</FILE><LINE>434</LINE></Example6_1>
+ </LABELS>
+</ASSEMBLER_INFO>

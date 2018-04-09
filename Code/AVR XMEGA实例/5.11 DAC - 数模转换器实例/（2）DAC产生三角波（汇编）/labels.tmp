@@ -1,0 +1,25 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm\DAC_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm\DAC_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm\DAC_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm\DAC_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm\DAC_asm.asm</FILE><LINE>32</LINE></RESET>
+  <RESET_1><FILE>E:\ATMAGE\书稿例子\ASM_example\11-1 DAC_Dual_Triangle_asm\DAC_asm.asm</FILE><LINE>44</LINE></RESET_1>
+ </LABELS>
+</ASSEMBLER_INFO>

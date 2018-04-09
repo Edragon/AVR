@@ -1,0 +1,1620 @@
+
+EEPROM_ON_CHIP.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000090e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000ae  00802000  0000090e  00000982  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .debug_aranges 00000020  00000000  00000000  00000a30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 0000019a  00000000  00000000  00000a50  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   000009dc  00000000  00000000  00000bea  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000001cf  00000000  00000000  000015c6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000711  00000000  00000000  00001795  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000150  00000000  00000000  00001ea8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000078d  00000000  00000000  00001ff8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000004ff  00000000  00000000  00002785  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000030  00000000  00000000  00002c84  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  10:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  14:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  18:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  1c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  20:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  24:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  28:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  2c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  30:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  34:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  38:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  3c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  40:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  44:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  48:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  4c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  50:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  54:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  58:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  5c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  60:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  64:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  68:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  6c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  70:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  74:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  78:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  7c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  80:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  84:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  88:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  8c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  90:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  94:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  98:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  9c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  fc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 100:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 104:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 108:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 10c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 110:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 114:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 118:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 11c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 120:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 124:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 128:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 12c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 130:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 134:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 138:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 13c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 140:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 144:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 148:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 14c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 150:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 154:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 158:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 15c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 160:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 164:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 168:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 16c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 170:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 174:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 178:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 17c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 180:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 184:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 188:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 18c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 190:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 194:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 198:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 19c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	ee e0       	ldi	r30, 0x0E	; 14
+ 214:	f9 e0       	ldi	r31, 0x09	; 9
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	ae 3a       	cpi	r26, 0xAE	; 174
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+ 228:	0e 94 62 03 	call	0x6c4	; 0x6c4 <main>
+ 22c:	0c 94 85 04 	jmp	0x90a	; 0x90a <_exit>
+
+00000230 <__bad_interrupt>:
+ 230:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000234 <uart_putc>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc(unsigned char c)
+{
+ 234:	1f 93       	push	r17
+ 236:	18 2f       	mov	r17, r24
+    if(c == '\n')
+ 238:	8a 30       	cpi	r24, 0x0A	; 10
+ 23a:	19 f4       	brne	.+6      	; 0x242 <uart_putc+0xe>
+        uart_putc('\r');
+ 23c:	8d e0       	ldi	r24, 0x0D	; 13
+ 23e:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+    /* wait until transmit buffer is empty */
+    while(!(USART.STATUS & USART_DREIF_bm));
+ 242:	80 91 a1 08 	lds	r24, 0x08A1
+ 246:	85 ff       	sbrs	r24, 5
+ 248:	fc cf       	rjmp	.-8      	; 0x242 <uart_putc+0xe>
+
+    /* send next byte */
+    USART.DATA = c;
+ 24a:	10 93 a0 08 	sts	0x08A0, r17
+}
+ 24e:	1f 91       	pop	r17
+ 250:	08 95       	ret
+
+00000252 <uart_putc_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc_hex(unsigned char b)
+{
+ 252:	1f 93       	push	r17
+ 254:	18 2f       	mov	r17, r24
+    /* upper nibble */
+    if((b >> 4) < 0x0a)
+ 256:	82 95       	swap	r24
+ 258:	8f 70       	andi	r24, 0x0F	; 15
+ 25a:	8a 30       	cpi	r24, 0x0A	; 10
+ 25c:	10 f4       	brcc	.+4      	; 0x262 <uart_putc_hex+0x10>
+        uart_putc((b >> 4) + '0');
+ 25e:	80 5d       	subi	r24, 0xD0	; 208
+ 260:	01 c0       	rjmp	.+2      	; 0x264 <uart_putc_hex+0x12>
+    else
+        uart_putc((b >> 4) - 0x0a + 'a');
+ 262:	89 5a       	subi	r24, 0xA9	; 169
+ 264:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+    /* lower nibble */
+    if((b & 0x0f) < 0x0a)
+ 268:	81 2f       	mov	r24, r17
+ 26a:	90 e0       	ldi	r25, 0x00	; 0
+ 26c:	8f 70       	andi	r24, 0x0F	; 15
+ 26e:	90 70       	andi	r25, 0x00	; 0
+ 270:	21 2f       	mov	r18, r17
+ 272:	2f 70       	andi	r18, 0x0F	; 15
+ 274:	0a 97       	sbiw	r24, 0x0a	; 10
+ 276:	1c f4       	brge	.+6      	; 0x27e <uart_putc_hex+0x2c>
+        uart_putc((b & 0x0f) + '0');
+ 278:	82 2f       	mov	r24, r18
+ 27a:	80 5d       	subi	r24, 0xD0	; 208
+ 27c:	02 c0       	rjmp	.+4      	; 0x282 <uart_putc_hex+0x30>
+    else
+        uart_putc((b & 0x0f) - 0x0a + 'a');
+ 27e:	82 2f       	mov	r24, r18
+ 280:	89 5a       	subi	r24, 0xA9	; 169
+ 282:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+}
+ 286:	1f 91       	pop	r17
+ 288:	08 95       	ret
+
+0000028a <uart_putw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_hex(unsigned int w)
+{
+ 28a:	1f 93       	push	r17
+ 28c:	18 2f       	mov	r17, r24
+    uart_putc_hex((unsigned char) (w >> 8));
+ 28e:	89 2f       	mov	r24, r25
+ 290:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+    uart_putc_hex((unsigned char) (w & 0xff));
+ 294:	81 2f       	mov	r24, r17
+ 296:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+}
+ 29a:	1f 91       	pop	r17
+ 29c:	08 95       	ret
+
+0000029e <uart_putdw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_hex(unsigned long dw)
+{
+ 29e:	ef 92       	push	r14
+ 2a0:	ff 92       	push	r15
+ 2a2:	0f 93       	push	r16
+ 2a4:	1f 93       	push	r17
+ 2a6:	7b 01       	movw	r14, r22
+ 2a8:	8c 01       	movw	r16, r24
+    uart_putw_hex((unsigned int) (dw >> 16));
+ 2aa:	c8 01       	movw	r24, r16
+ 2ac:	aa 27       	eor	r26, r26
+ 2ae:	bb 27       	eor	r27, r27
+ 2b0:	0e 94 45 01 	call	0x28a	; 0x28a <uart_putw_hex>
+    uart_putw_hex((unsigned int) (dw & 0xffff));
+ 2b4:	c7 01       	movw	r24, r14
+ 2b6:	0e 94 45 01 	call	0x28a	; 0x28a <uart_putw_hex>
+}
+ 2ba:	1f 91       	pop	r17
+ 2bc:	0f 91       	pop	r16
+ 2be:	ff 90       	pop	r15
+ 2c0:	ef 90       	pop	r14
+ 2c2:	08 95       	ret
+
+000002c4 <uart_putw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_dec(unsigned int w)
+{
+ 2c4:	cf 92       	push	r12
+ 2c6:	df 92       	push	r13
+ 2c8:	ff 92       	push	r15
+ 2ca:	0f 93       	push	r16
+ 2cc:	1f 93       	push	r17
+ 2ce:	cf 93       	push	r28
+ 2d0:	df 93       	push	r29
+ 2d2:	6c 01       	movw	r12, r24
+ 2d4:	c0 e1       	ldi	r28, 0x10	; 16
+ 2d6:	d7 e2       	ldi	r29, 0x27	; 39
+ 2d8:	40 e0       	ldi	r20, 0x00	; 0
+ 2da:	00 e0       	ldi	r16, 0x00	; 0
+ 2dc:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = w / num;
+ 2de:	c6 01       	movw	r24, r12
+ 2e0:	be 01       	movw	r22, r28
+ 2e2:	0e 94 4f 04 	call	0x89e	; 0x89e <__udivmodhi4>
+ 2e6:	f6 2e       	mov	r15, r22
+        if(b > 0 || started || num == 1)
+ 2e8:	66 23       	and	r22, r22
+ 2ea:	29 f4       	brne	.+10     	; 0x2f6 <uart_putw_dec+0x32>
+ 2ec:	44 23       	and	r20, r20
+ 2ee:	19 f4       	brne	.+6      	; 0x2f6 <uart_putw_dec+0x32>
+ 2f0:	c1 30       	cpi	r28, 0x01	; 1
+ 2f2:	d1 05       	cpc	r29, r1
+ 2f4:	29 f4       	brne	.+10     	; 0x300 <uart_putw_dec+0x3c>
+        {
+            uart_putc('0' + b);
+ 2f6:	8f 2d       	mov	r24, r15
+ 2f8:	80 5d       	subi	r24, 0xD0	; 208
+ 2fa:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 2fe:	41 e0       	ldi	r20, 0x01	; 1
+            started = 1;
+        }
+        w -= b * num;
+
+        num /= 10;
+ 300:	ce 01       	movw	r24, r28
+ 302:	6a e0       	ldi	r22, 0x0A	; 10
+ 304:	70 e0       	ldi	r23, 0x00	; 0
+ 306:	0e 94 4f 04 	call	0x89e	; 0x89e <__udivmodhi4>
+ 30a:	0f 5f       	subi	r16, 0xFF	; 255
+ 30c:	1f 4f       	sbci	r17, 0xFF	; 255
+void uart_putw_dec(unsigned int w)
+{
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 30e:	05 30       	cpi	r16, 0x05	; 5
+ 310:	11 05       	cpc	r17, r1
+ 312:	71 f0       	breq	.+28     	; 0x330 <uart_putw_dec+0x6c>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        w -= b * num;
+ 314:	8f 2d       	mov	r24, r15
+ 316:	90 e0       	ldi	r25, 0x00	; 0
+ 318:	9c 01       	movw	r18, r24
+ 31a:	2c 9f       	mul	r18, r28
+ 31c:	c0 01       	movw	r24, r0
+ 31e:	2d 9f       	mul	r18, r29
+ 320:	90 0d       	add	r25, r0
+ 322:	3c 9f       	mul	r19, r28
+ 324:	90 0d       	add	r25, r0
+ 326:	11 24       	eor	r1, r1
+ 328:	c8 1a       	sub	r12, r24
+ 32a:	d9 0a       	sbc	r13, r25
+ 32c:	eb 01       	movw	r28, r22
+ 32e:	d7 cf       	rjmp	.-82     	; 0x2de <uart_putw_dec+0x1a>
+
+        num /= 10;
+    }
+}
+ 330:	df 91       	pop	r29
+ 332:	cf 91       	pop	r28
+ 334:	1f 91       	pop	r17
+ 336:	0f 91       	pop	r16
+ 338:	ff 90       	pop	r15
+ 33a:	df 90       	pop	r13
+ 33c:	cf 90       	pop	r12
+ 33e:	08 95       	ret
+
+00000340 <uart_putdw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_dec(unsigned long dw)
+{
+ 340:	4f 92       	push	r4
+ 342:	5f 92       	push	r5
+ 344:	6f 92       	push	r6
+ 346:	7f 92       	push	r7
+ 348:	8f 92       	push	r8
+ 34a:	9f 92       	push	r9
+ 34c:	af 92       	push	r10
+ 34e:	bf 92       	push	r11
+ 350:	cf 92       	push	r12
+ 352:	df 92       	push	r13
+ 354:	ef 92       	push	r14
+ 356:	ff 92       	push	r15
+ 358:	0f 93       	push	r16
+ 35a:	1f 93       	push	r17
+ 35c:	cf 93       	push	r28
+ 35e:	df 93       	push	r29
+ 360:	5b 01       	movw	r10, r22
+ 362:	6c 01       	movw	r12, r24
+ 364:	e1 2c       	mov	r14, r1
+ 366:	9a ec       	ldi	r25, 0xCA	; 202
+ 368:	f9 2e       	mov	r15, r25
+ 36a:	9a e9       	ldi	r25, 0x9A	; 154
+ 36c:	09 2f       	mov	r16, r25
+ 36e:	9b e3       	ldi	r25, 0x3B	; 59
+ 370:	19 2f       	mov	r17, r25
+ 372:	44 24       	eor	r4, r4
+ 374:	c0 e0       	ldi	r28, 0x00	; 0
+ 376:	d0 e0       	ldi	r29, 0x00	; 0
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = dw / num;
+ 378:	c6 01       	movw	r24, r12
+ 37a:	b5 01       	movw	r22, r10
+ 37c:	a8 01       	movw	r20, r16
+ 37e:	97 01       	movw	r18, r14
+ 380:	0e 94 63 04 	call	0x8c6	; 0x8c6 <__udivmodsi4>
+ 384:	92 2e       	mov	r9, r18
+        if(b > 0 || started || num == 1)
+ 386:	22 23       	and	r18, r18
+ 388:	41 f4       	brne	.+16     	; 0x39a <uart_putdw_dec+0x5a>
+ 38a:	44 20       	and	r4, r4
+ 38c:	31 f4       	brne	.+12     	; 0x39a <uart_putdw_dec+0x5a>
+ 38e:	81 e0       	ldi	r24, 0x01	; 1
+ 390:	e8 16       	cp	r14, r24
+ 392:	f1 04       	cpc	r15, r1
+ 394:	01 05       	cpc	r16, r1
+ 396:	11 05       	cpc	r17, r1
+ 398:	31 f4       	brne	.+12     	; 0x3a6 <uart_putdw_dec+0x66>
+        {
+            uart_putc('0' + b);
+ 39a:	89 2d       	mov	r24, r9
+ 39c:	80 5d       	subi	r24, 0xD0	; 208
+ 39e:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 3a2:	44 24       	eor	r4, r4
+ 3a4:	43 94       	inc	r4
+            started = 1;
+        }
+        dw -= b * num;
+
+        num /= 10;
+ 3a6:	c8 01       	movw	r24, r16
+ 3a8:	b7 01       	movw	r22, r14
+ 3aa:	2a e0       	ldi	r18, 0x0A	; 10
+ 3ac:	30 e0       	ldi	r19, 0x00	; 0
+ 3ae:	40 e0       	ldi	r20, 0x00	; 0
+ 3b0:	50 e0       	ldi	r21, 0x00	; 0
+ 3b2:	0e 94 63 04 	call	0x8c6	; 0x8c6 <__udivmodsi4>
+ 3b6:	82 2e       	mov	r8, r18
+ 3b8:	73 2e       	mov	r7, r19
+ 3ba:	64 2e       	mov	r6, r20
+ 3bc:	55 2e       	mov	r5, r21
+ 3be:	21 96       	adiw	r28, 0x01	; 1
+void uart_putdw_dec(unsigned long dw)
+{
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 3c0:	ca 30       	cpi	r28, 0x0A	; 10
+ 3c2:	d1 05       	cpc	r29, r1
+ 3c4:	a9 f0       	breq	.+42     	; 0x3f0 <uart_putdw_dec+0xb0>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        dw -= b * num;
+ 3c6:	69 2d       	mov	r22, r9
+ 3c8:	70 e0       	ldi	r23, 0x00	; 0
+ 3ca:	80 e0       	ldi	r24, 0x00	; 0
+ 3cc:	90 e0       	ldi	r25, 0x00	; 0
+ 3ce:	a8 01       	movw	r20, r16
+ 3d0:	97 01       	movw	r18, r14
+ 3d2:	0e 94 30 04 	call	0x860	; 0x860 <__mulsi3>
+ 3d6:	a6 1a       	sub	r10, r22
+ 3d8:	b7 0a       	sbc	r11, r23
+ 3da:	c8 0a       	sbc	r12, r24
+ 3dc:	d9 0a       	sbc	r13, r25
+ 3de:	28 2d       	mov	r18, r8
+ 3e0:	37 2d       	mov	r19, r7
+ 3e2:	46 2d       	mov	r20, r6
+ 3e4:	55 2d       	mov	r21, r5
+ 3e6:	c9 01       	movw	r24, r18
+ 3e8:	da 01       	movw	r26, r20
+ 3ea:	7c 01       	movw	r14, r24
+ 3ec:	8d 01       	movw	r16, r26
+ 3ee:	c4 cf       	rjmp	.-120    	; 0x378 <uart_putdw_dec+0x38>
+
+        num /= 10;
+    }
+}
+ 3f0:	df 91       	pop	r29
+ 3f2:	cf 91       	pop	r28
+ 3f4:	1f 91       	pop	r17
+ 3f6:	0f 91       	pop	r16
+ 3f8:	ff 90       	pop	r15
+ 3fa:	ef 90       	pop	r14
+ 3fc:	df 90       	pop	r13
+ 3fe:	cf 90       	pop	r12
+ 400:	bf 90       	pop	r11
+ 402:	af 90       	pop	r10
+ 404:	9f 90       	pop	r9
+ 406:	8f 90       	pop	r8
+ 408:	7f 90       	pop	r7
+ 40a:	6f 90       	pop	r6
+ 40c:	5f 90       	pop	r5
+ 40e:	4f 90       	pop	r4
+ 410:	08 95       	ret
+
+00000412 <uart_puts>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+ 412:	cf 93       	push	r28
+ 414:	df 93       	push	r29
+ 416:	ec 01       	movw	r28, r24
+ 418:	03 c0       	rjmp	.+6      	; 0x420 <uart_puts+0xe>
+    while(*str)
+        uart_putc(*str++);
+ 41a:	21 96       	adiw	r28, 0x01	; 1
+ 41c:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+    while(*str)
+ 420:	88 81       	ld	r24, Y
+ 422:	88 23       	and	r24, r24
+ 424:	d1 f7       	brne	.-12     	; 0x41a <uart_puts+0x8>
+        uart_putc(*str++);
+}
+ 426:	df 91       	pop	r29
+ 428:	cf 91       	pop	r28
+ 42a:	08 95       	ret
+
+0000042c <uart_getc>:
++------------------------------------------------------------------------------
+*/
+unsigned char uart_getc(void)
+{
+    /* wait until receive buffer is full */
+    while(!(USART.STATUS & USART_RXCIF_bm));
+ 42c:	80 91 a1 08 	lds	r24, 0x08A1
+ 430:	87 ff       	sbrs	r24, 7
+ 432:	fc cf       	rjmp	.-8      	; 0x42c <uart_getc>
+
+    unsigned char b = USART.DATA;
+ 434:	80 91 a0 08 	lds	r24, 0x08A0
+    if(b == '\r')
+ 438:	8d 30       	cpi	r24, 0x0D	; 13
+ 43a:	09 f4       	brne	.+2      	; 0x43e <uart_getc+0x12>
+ 43c:	8a e0       	ldi	r24, 0x0A	; 10
+        b = '\n';
+		
+    return b;
+}
+ 43e:	08 95       	ret
+
+00000440 <EEPROM_ReadByte>:
+ *  \参数  byteAddr  EEPROM 字节地址, 0 < byteAddr < EEPROM_PAGESIZE
+ *
+ *  \return  读取的字节数据
+ */
+uint8_t EEPROM_ReadByte( uint8_t pageAddr, uint8_t byteAddr )
+{
+ 440:	98 2f       	mov	r25, r24
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 442:	e0 ec       	ldi	r30, 0xC0	; 192
+ 444:	f1 e0       	ldi	r31, 0x01	; 1
+ 446:	80 91 cf 01 	lds	r24, 0x01CF
+ 44a:	87 fd       	sbrc	r24, 7
+ 44c:	fa cf       	rjmp	.-12     	; 0x442 <EEPROM_ReadByte+0x2>
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+	//计算地址
+	uint16_t address = (uint16_t)(pageAddr*EEPROM_PAGESIZE)
+	                            |(byteAddr & (EEPROM_PAGESIZE-1));
+ 44e:	26 2f       	mov	r18, r22
+ 450:	30 e0       	ldi	r19, 0x00	; 0
+ 452:	2f 71       	andi	r18, 0x1F	; 31
+ 454:	30 70       	andi	r19, 0x00	; 0
+ 456:	89 2f       	mov	r24, r25
+ 458:	90 e0       	ldi	r25, 0x00	; 0
+ 45a:	45 e0       	ldi	r20, 0x05	; 5
+ 45c:	88 0f       	add	r24, r24
+ 45e:	99 1f       	adc	r25, r25
+ 460:	4a 95       	dec	r20
+ 462:	e1 f7       	brne	.-8      	; 0x45c <EEPROM_ReadByte+0x1c>
+ 464:	28 2b       	or	r18, r24
+ 466:	39 2b       	or	r19, r25
+	//写地址
+	NVM.ADDR0 = address & 0xFF;
+ 468:	20 93 c0 01 	sts	0x01C0, r18
+	NVM.ADDR1 = (address >> 8) & 0x1F;
+ 46c:	83 2f       	mov	r24, r19
+ 46e:	8f 71       	andi	r24, 0x1F	; 31
+ 470:	81 83       	std	Z+1, r24	; 0x01
+	NVM.ADDR2 = 0x00;
+ 472:	12 82       	std	Z+2, r1	; 0x02
+
+	//执行读命令
+	NVM.CMD = NVM_CMD_READ_EEPROM_gc;
+ 474:	86 e0       	ldi	r24, 0x06	; 6
+ 476:	82 87       	std	Z+10, r24	; 0x0a
+	NVM_EXEC();
+ 478:	ef 93       	push	r30
+ 47a:	ff 93       	push	r31
+ 47c:	0f 93       	push	r16
+ 47e:	2f 93       	push	r18
+ 480:	eb ec       	ldi	r30, 0xCB	; 203
+ 482:	f1 e0       	ldi	r31, 0x01	; 1
+ 484:	08 ed       	ldi	r16, 0xD8	; 216
+ 486:	21 e0       	ldi	r18, 0x01	; 1
+ 488:	04 bf       	out	0x34, r16	; 52
+ 48a:	20 83       	st	Z, r18
+ 48c:	2f 91       	pop	r18
+ 48e:	0f 91       	pop	r16
+ 490:	ff 91       	pop	r31
+ 492:	ef 91       	pop	r30
+
+	return NVM.DATA0;
+ 494:	80 91 c4 01 	lds	r24, 0x01C4
+}
+ 498:	08 95       	ret
+
+0000049a <EEPROM_WaitForNVM>:
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 49a:	80 91 cf 01 	lds	r24, 0x01CF
+ 49e:	87 fd       	sbrc	r24, 7
+ 4a0:	fc cf       	rjmp	.-8      	; 0x49a <EEPROM_WaitForNVM>
+}
+ 4a2:	08 95       	ret
+
+000004a4 <EEPROM_FlushBuffer>:
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 4a4:	80 91 cf 01 	lds	r24, 0x01CF
+ 4a8:	87 fd       	sbrc	r24, 7
+ 4aa:	fc cf       	rjmp	.-8      	; 0x4a4 <EEPROM_FlushBuffer>
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+
+	//清空页缓存
+	if ((NVM.STATUS & NVM_EELOAD_bm) != 0) {
+ 4ac:	80 91 cf 01 	lds	r24, 0x01CF
+ 4b0:	81 ff       	sbrs	r24, 1
+ 4b2:	12 c0       	rjmp	.+36     	; 0x4d8 <EEPROM_FlushBuffer+0x34>
+		NVM.CMD = NVM_CMD_ERASE_EEPROM_BUFFER_gc;
+ 4b4:	86 e3       	ldi	r24, 0x36	; 54
+ 4b6:	e0 ec       	ldi	r30, 0xC0	; 192
+ 4b8:	f1 e0       	ldi	r31, 0x01	; 1
+ 4ba:	82 87       	std	Z+10, r24	; 0x0a
+		NVM_EXEC();
+ 4bc:	ef 93       	push	r30
+ 4be:	ff 93       	push	r31
+ 4c0:	0f 93       	push	r16
+ 4c2:	2f 93       	push	r18
+ 4c4:	eb ec       	ldi	r30, 0xCB	; 203
+ 4c6:	f1 e0       	ldi	r31, 0x01	; 1
+ 4c8:	08 ed       	ldi	r16, 0xD8	; 216
+ 4ca:	21 e0       	ldi	r18, 0x01	; 1
+ 4cc:	04 bf       	out	0x34, r16	; 52
+ 4ce:	20 83       	st	Z, r18
+ 4d0:	2f 91       	pop	r18
+ 4d2:	0f 91       	pop	r16
+ 4d4:	ff 91       	pop	r31
+ 4d6:	ef 91       	pop	r30
+ 4d8:	08 95       	ret
+
+000004da <EEPROM_WriteByte>:
+ *  \参数  pageAddr  EEPROM 页地址,  0 < pageAddr < EEPROM_SIZE/EEPROM_PAGESIZE
+ *  \参数  byteAddr  EEPROM 字节地址, 0 < byteAddr < EEPROM_PAGESIZE
+ *  \参数  value     写到EEPROM的字节数据
+ */
+void EEPROM_WriteByte( uint8_t pageAddr, uint8_t byteAddr, uint8_t value )
+{
+ 4da:	df 92       	push	r13
+ 4dc:	ef 92       	push	r14
+ 4de:	ff 92       	push	r15
+ 4e0:	0f 93       	push	r16
+ 4e2:	1f 93       	push	r17
+ 4e4:	e8 2e       	mov	r14, r24
+ 4e6:	06 2f       	mov	r16, r22
+ 4e8:	d4 2e       	mov	r13, r20
+	// 清空缓存防止意外数据写入
+	EEPROM_FlushBuffer();
+ 4ea:	0e 94 52 02 	call	0x4a4	; 0x4a4 <EEPROM_FlushBuffer>
+	NVM.CMD = NVM_CMD_LOAD_EEPROM_BUFFER_gc;
+ 4ee:	e0 ec       	ldi	r30, 0xC0	; 192
+ 4f0:	f1 e0       	ldi	r31, 0x01	; 1
+ 4f2:	83 e3       	ldi	r24, 0x33	; 51
+ 4f4:	82 87       	std	Z+10, r24	; 0x0a
+	//计算地址
+	uint16_t address = (uint16_t)(pageAddr*EEPROM_PAGESIZE)
+	                            |(byteAddr & (EEPROM_PAGESIZE-1));
+ 4f6:	10 e0       	ldi	r17, 0x00	; 0
+ 4f8:	0f 71       	andi	r16, 0x1F	; 31
+ 4fa:	10 70       	andi	r17, 0x00	; 0
+ 4fc:	ff 24       	eor	r15, r15
+ 4fe:	55 e0       	ldi	r21, 0x05	; 5
+ 500:	ee 0c       	add	r14, r14
+ 502:	ff 1c       	adc	r15, r15
+ 504:	5a 95       	dec	r21
+ 506:	e1 f7       	brne	.-8      	; 0x500 <EEPROM_WriteByte+0x26>
+ 508:	0e 29       	or	r16, r14
+ 50a:	1f 29       	or	r17, r15
+	//写地址
+	NVM.ADDR0 = address & 0xFF;
+ 50c:	00 83       	st	Z, r16
+	NVM.ADDR1 = (address >> 8) & 0x1F;
+ 50e:	81 2f       	mov	r24, r17
+ 510:	8f 71       	andi	r24, 0x1F	; 31
+ 512:	81 83       	std	Z+1, r24	; 0x01
+	NVM.ADDR2 = 0x00;
+ 514:	12 82       	std	Z+2, r1	; 0x02
+
+	//加载数据触发命令执行
+	NVM.DATA0 = value;
+ 516:	d4 82       	std	Z+4, r13	; 0x04
+
+	//触发原子操作（擦&写）写签名，执行命令
+	NVM.CMD = NVM_CMD_ERASE_WRITE_EEPROM_PAGE_gc;
+ 518:	85 e3       	ldi	r24, 0x35	; 53
+ 51a:	82 87       	std	Z+10, r24	; 0x0a
+	NVM_EXEC();
+ 51c:	ef 93       	push	r30
+ 51e:	ff 93       	push	r31
+ 520:	0f 93       	push	r16
+ 522:	2f 93       	push	r18
+ 524:	eb ec       	ldi	r30, 0xCB	; 203
+ 526:	f1 e0       	ldi	r31, 0x01	; 1
+ 528:	08 ed       	ldi	r16, 0xD8	; 216
+ 52a:	21 e0       	ldi	r18, 0x01	; 1
+ 52c:	04 bf       	out	0x34, r16	; 52
+ 52e:	20 83       	st	Z, r18
+ 530:	2f 91       	pop	r18
+ 532:	0f 91       	pop	r16
+ 534:	ff 91       	pop	r31
+ 536:	ef 91       	pop	r30
+}
+ 538:	1f 91       	pop	r17
+ 53a:	0f 91       	pop	r16
+ 53c:	ff 90       	pop	r15
+ 53e:	ef 90       	pop	r14
+ 540:	df 90       	pop	r13
+ 542:	08 95       	ret
+
+00000544 <EEPROM_LoadByte>:
+ *
+ *  \参数  byteAddr  EEPROM 字节地址, 0 < byteAddr < EEPROM_PAGESIZE
+ *  \参数  value     加载到缓存的字节数据
+ */
+void EEPROM_LoadByte( uint8_t byteAddr, uint8_t value )
+{
+ 544:	98 2f       	mov	r25, r24
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 546:	e0 ec       	ldi	r30, 0xC0	; 192
+ 548:	f1 e0       	ldi	r31, 0x01	; 1
+ 54a:	80 91 cf 01 	lds	r24, 0x01CF
+ 54e:	87 fd       	sbrc	r24, 7
+ 550:	fa cf       	rjmp	.-12     	; 0x546 <EEPROM_LoadByte+0x2>
+ */
+void EEPROM_LoadByte( uint8_t byteAddr, uint8_t value )
+{
+	//等待NVM不忙，准备NVM命令
+	EEPROM_WaitForNVM();
+	NVM.CMD = NVM_CMD_LOAD_EEPROM_BUFFER_gc;
+ 552:	83 e3       	ldi	r24, 0x33	; 51
+ 554:	82 87       	std	Z+10, r24	; 0x0a
+
+	//写地址
+	NVM.ADDR0 = byteAddr & 0xFF;
+ 556:	90 93 c0 01 	sts	0x01C0, r25
+	NVM.ADDR1 = 0x00;
+ 55a:	11 82       	std	Z+1, r1	; 0x01
+	NVM.ADDR2 = 0x00;
+ 55c:	12 82       	std	Z+2, r1	; 0x02
+
+	//写数据，执行命令
+	NVM.DATA0 = value;
+ 55e:	64 83       	std	Z+4, r22	; 0x04
+}
+ 560:	08 95       	ret
+
+00000562 <EEPROM_LoadPage>:
+ *
+ *  \注意 只有地址的低几位用来对缓存寻址因此不需要地址作为参数 *
+ *  \参数  values   SRAM 缓存指针
+ */
+void EEPROM_LoadPage( const uint8_t * values )
+{
+ 562:	dc 01       	movw	r26, r24
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 564:	e0 ec       	ldi	r30, 0xC0	; 192
+ 566:	f1 e0       	ldi	r31, 0x01	; 1
+ 568:	80 91 cf 01 	lds	r24, 0x01CF
+ 56c:	87 fd       	sbrc	r24, 7
+ 56e:	fa cf       	rjmp	.-12     	; 0x564 <EEPROM_LoadPage+0x2>
+ */
+void EEPROM_LoadPage( const uint8_t * values )
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+	NVM.CMD = NVM_CMD_LOAD_EEPROM_BUFFER_gc;
+ 570:	83 e3       	ldi	r24, 0x33	; 51
+ 572:	82 87       	std	Z+10, r24	; 0x0a
+
+	//地址清零，只有低几位使用，再循环内会改变
+	NVM.ADDR1 = 0x00;
+ 574:	11 82       	std	Z+1, r1	; 0x01
+	NVM.ADDR2 = 0x00;
+ 576:	12 82       	std	Z+2, r1	; 0x02
+ 578:	90 e0       	ldi	r25, 0x00	; 0
+
+	//加载多个字节到缓存
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i) {
+		NVM.ADDR0 = i;
+ 57a:	90 93 c0 01 	sts	0x01C0, r25
+		NVM.DATA0 = *values;
+ 57e:	8d 91       	ld	r24, X+
+ 580:	84 83       	std	Z+4, r24	; 0x04
+	//地址清零，只有低几位使用，再循环内会改变
+	NVM.ADDR1 = 0x00;
+	NVM.ADDR2 = 0x00;
+
+	//加载多个字节到缓存
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i) {
+ 582:	9f 5f       	subi	r25, 0xFF	; 255
+ 584:	90 32       	cpi	r25, 0x20	; 32
+ 586:	c9 f7       	brne	.-14     	; 0x57a <EEPROM_LoadPage+0x18>
+		NVM.ADDR0 = i;
+		NVM.DATA0 = *values;
+		++values;
+	}
+}
+ 588:	08 95       	ret
+
+0000058a <EEPROM_AtomicWritePage>:
+ *  页缓存中没有写入数据的位置，不会对EEPROM数据产生操作（好强大啊）
+ *
+ *  \参数  pageAddr  EEPROM 页地址,  0 < pageAddr < EEPROM_SIZE/EEPROM_PAGESIZE
+ */
+void EEPROM_AtomicWritePage( uint8_t pageAddr )
+{
+ 58a:	98 2f       	mov	r25, r24
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 58c:	e0 ec       	ldi	r30, 0xC0	; 192
+ 58e:	f1 e0       	ldi	r31, 0x01	; 1
+ 590:	80 91 cf 01 	lds	r24, 0x01CF
+ 594:	87 fd       	sbrc	r24, 7
+ 596:	fa cf       	rjmp	.-12     	; 0x58c <EEPROM_AtomicWritePage+0x2>
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+
+	//计算页地址
+	uint16_t address = (uint16_t)(pageAddr*EEPROM_PAGESIZE);
+ 598:	89 2f       	mov	r24, r25
+ 59a:	90 e0       	ldi	r25, 0x00	; 0
+ 59c:	65 e0       	ldi	r22, 0x05	; 5
+ 59e:	88 0f       	add	r24, r24
+ 5a0:	99 1f       	adc	r25, r25
+ 5a2:	6a 95       	dec	r22
+ 5a4:	e1 f7       	brne	.-8      	; 0x59e <EEPROM_AtomicWritePage+0x14>
+
+	//写地址
+	NVM.ADDR0 = address & 0xFF;
+ 5a6:	80 93 c0 01 	sts	0x01C0, r24
+	NVM.ADDR1 = (address >> 8) & 0x1F;
+ 5aa:	89 2f       	mov	r24, r25
+ 5ac:	8f 71       	andi	r24, 0x1F	; 31
+ 5ae:	81 83       	std	Z+1, r24	; 0x01
+	NVM.ADDR2 = 0x00;
+ 5b0:	12 82       	std	Z+2, r1	; 0x02
+
+	//触发EEPROM 原子写操作 (擦&写)命令
+	NVM.CMD = NVM_CMD_ERASE_WRITE_EEPROM_PAGE_gc;
+ 5b2:	85 e3       	ldi	r24, 0x35	; 53
+ 5b4:	82 87       	std	Z+10, r24	; 0x0a
+	NVM_EXEC();
+ 5b6:	ef 93       	push	r30
+ 5b8:	ff 93       	push	r31
+ 5ba:	0f 93       	push	r16
+ 5bc:	2f 93       	push	r18
+ 5be:	eb ec       	ldi	r30, 0xCB	; 203
+ 5c0:	f1 e0       	ldi	r31, 0x01	; 1
+ 5c2:	08 ed       	ldi	r16, 0xD8	; 216
+ 5c4:	21 e0       	ldi	r18, 0x01	; 1
+ 5c6:	04 bf       	out	0x34, r16	; 52
+ 5c8:	20 83       	st	Z, r18
+ 5ca:	2f 91       	pop	r18
+ 5cc:	0f 91       	pop	r16
+ 5ce:	ff 91       	pop	r31
+ 5d0:	ef 91       	pop	r30
+}
+ 5d2:	08 95       	ret
+
+000005d4 <EEPROM_ErasePage>:
+/*! \擦除EEPROM页，所有数据变为0xFF.
+ *
+ *  \参数  pageAddr  EEPROM 页地址,  0 < pageAddr < EEPROM_SIZE/EEPROM_PAGESIZE
+ */
+void EEPROM_ErasePage( uint8_t pageAddr )
+{
+ 5d4:	98 2f       	mov	r25, r24
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 5d6:	e0 ec       	ldi	r30, 0xC0	; 192
+ 5d8:	f1 e0       	ldi	r31, 0x01	; 1
+ 5da:	80 91 cf 01 	lds	r24, 0x01CF
+ 5de:	87 fd       	sbrc	r24, 7
+ 5e0:	fa cf       	rjmp	.-12     	; 0x5d6 <EEPROM_ErasePage+0x2>
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+
+	//计算页地址
+	uint16_t address = (uint16_t)(pageAddr*EEPROM_PAGESIZE);
+ 5e2:	89 2f       	mov	r24, r25
+ 5e4:	90 e0       	ldi	r25, 0x00	; 0
+ 5e6:	75 e0       	ldi	r23, 0x05	; 5
+ 5e8:	88 0f       	add	r24, r24
+ 5ea:	99 1f       	adc	r25, r25
+ 5ec:	7a 95       	dec	r23
+ 5ee:	e1 f7       	brne	.-8      	; 0x5e8 <EEPROM_ErasePage+0x14>
+
+	//写地址
+	NVM.ADDR0 = address & 0xFF;
+ 5f0:	80 93 c0 01 	sts	0x01C0, r24
+	NVM.ADDR1 = (address >> 8) & 0x1F;
+ 5f4:	89 2f       	mov	r24, r25
+ 5f6:	8f 71       	andi	r24, 0x1F	; 31
+ 5f8:	81 83       	std	Z+1, r24	; 0x01
+	NVM.ADDR2 = 0x00;
+ 5fa:	12 82       	std	Z+2, r1	; 0x02
+
+	//触发EEPROM擦除命令
+	NVM.CMD = NVM_CMD_ERASE_EEPROM_PAGE_gc;
+ 5fc:	82 e3       	ldi	r24, 0x32	; 50
+ 5fe:	82 87       	std	Z+10, r24	; 0x0a
+	NVM_EXEC();
+ 600:	ef 93       	push	r30
+ 602:	ff 93       	push	r31
+ 604:	0f 93       	push	r16
+ 606:	2f 93       	push	r18
+ 608:	eb ec       	ldi	r30, 0xCB	; 203
+ 60a:	f1 e0       	ldi	r31, 0x01	; 1
+ 60c:	08 ed       	ldi	r16, 0xD8	; 216
+ 60e:	21 e0       	ldi	r18, 0x01	; 1
+ 610:	04 bf       	out	0x34, r16	; 52
+ 612:	20 83       	st	Z, r18
+ 614:	2f 91       	pop	r18
+ 616:	0f 91       	pop	r16
+ 618:	ff 91       	pop	r31
+ 61a:	ef 91       	pop	r30
+}
+ 61c:	08 95       	ret
+
+0000061e <EEPROM_SplitWritePage>:
+/*! \写EEPROM页（分离操作，写之前不擦除）
+ *
+ *  \参数  pageAddr  EEPROM 页地址,  0 < pageAddr < EEPROM_SIZE/EEPROM_PAGESIZE
+ */
+void EEPROM_SplitWritePage( uint8_t pageAddr )
+{
+ 61e:	98 2f       	mov	r25, r24
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 620:	e0 ec       	ldi	r30, 0xC0	; 192
+ 622:	f1 e0       	ldi	r31, 0x01	; 1
+ 624:	80 91 cf 01 	lds	r24, 0x01CF
+ 628:	87 fd       	sbrc	r24, 7
+ 62a:	fa cf       	rjmp	.-12     	; 0x620 <EEPROM_SplitWritePage+0x2>
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+
+	//计算页地址
+	uint16_t address = (uint16_t)(pageAddr*EEPROM_PAGESIZE);
+ 62c:	89 2f       	mov	r24, r25
+ 62e:	90 e0       	ldi	r25, 0x00	; 0
+ 630:	a5 e0       	ldi	r26, 0x05	; 5
+ 632:	88 0f       	add	r24, r24
+ 634:	99 1f       	adc	r25, r25
+ 636:	aa 95       	dec	r26
+ 638:	e1 f7       	brne	.-8      	; 0x632 <EEPROM_SplitWritePage+0x14>
+
+	//写地址
+	NVM.ADDR0 = address & 0xFF;
+ 63a:	80 93 c0 01 	sts	0x01C0, r24
+	NVM.ADDR1 = (address >> 8) & 0x1F;
+ 63e:	89 2f       	mov	r24, r25
+ 640:	8f 71       	andi	r24, 0x1F	; 31
+ 642:	81 83       	std	Z+1, r24	; 0x01
+	NVM.ADDR2 = 0x00;
+ 644:	12 82       	std	Z+2, r1	; 0x02
+
+	//触发写EEPROM页命令
+	NVM.CMD = NVM_CMD_WRITE_EEPROM_PAGE_gc;
+ 646:	84 e3       	ldi	r24, 0x34	; 52
+ 648:	82 87       	std	Z+10, r24	; 0x0a
+	NVM_EXEC();
+ 64a:	ef 93       	push	r30
+ 64c:	ff 93       	push	r31
+ 64e:	0f 93       	push	r16
+ 650:	2f 93       	push	r18
+ 652:	eb ec       	ldi	r30, 0xCB	; 203
+ 654:	f1 e0       	ldi	r31, 0x01	; 1
+ 656:	08 ed       	ldi	r16, 0xD8	; 216
+ 658:	21 e0       	ldi	r18, 0x01	; 1
+ 65a:	04 bf       	out	0x34, r16	; 52
+ 65c:	20 83       	st	Z, r18
+ 65e:	2f 91       	pop	r18
+ 660:	0f 91       	pop	r16
+ 662:	ff 91       	pop	r31
+ 664:	ef 91       	pop	r30
+}
+ 666:	08 95       	ret
+
+00000668 <EEPROM_EraseAll>:
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 668:	80 91 cf 01 	lds	r24, 0x01CF
+ 66c:	87 fd       	sbrc	r24, 7
+ 66e:	fc cf       	rjmp	.-8      	; 0x668 <EEPROM_EraseAll>
+{
+	//等待NVM不忙
+	EEPROM_WaitForNVM();
+
+	//触发擦除整个EEPROM命令
+	NVM.CMD = NVM_CMD_ERASE_EEPROM_gc;
+ 670:	80 e3       	ldi	r24, 0x30	; 48
+ 672:	e0 ec       	ldi	r30, 0xC0	; 192
+ 674:	f1 e0       	ldi	r31, 0x01	; 1
+ 676:	82 87       	std	Z+10, r24	; 0x0a
+	NVM_EXEC();
+ 678:	ef 93       	push	r30
+ 67a:	ff 93       	push	r31
+ 67c:	0f 93       	push	r16
+ 67e:	2f 93       	push	r18
+ 680:	eb ec       	ldi	r30, 0xCB	; 203
+ 682:	f1 e0       	ldi	r31, 0x01	; 1
+ 684:	08 ed       	ldi	r16, 0xD8	; 216
+ 686:	21 e0       	ldi	r18, 0x01	; 1
+ 688:	04 bf       	out	0x34, r16	; 52
+ 68a:	20 83       	st	Z, r18
+ 68c:	2f 91       	pop	r18
+ 68e:	0f 91       	pop	r16
+ 690:	ff 91       	pop	r31
+ 692:	ef 91       	pop	r30
+}
+ 694:	08 95       	ret
+
+00000696 <uart_init>:
+*/
+void uart_init(void)
+{
+	/* USARTC0 引脚方向设置*/
+  	/* PC3 (TXD0) 输出 */
+	PORTC.DIRSET   = PIN3_bm;
+ 696:	e0 e4       	ldi	r30, 0x40	; 64
+ 698:	f6 e0       	ldi	r31, 0x06	; 6
+ 69a:	88 e0       	ldi	r24, 0x08	; 8
+ 69c:	81 83       	std	Z+1, r24	; 0x01
+	/* PC2 (RXD0) 输入 */
+	PORTC.DIRCLR   = PIN2_bm;
+ 69e:	84 e0       	ldi	r24, 0x04	; 4
+ 6a0:	82 83       	std	Z+2, r24	; 0x02
+	/* USARTC0 模式 - 异步*/
+	USART_SetMode(&USARTC0,USART_CMODE_ASYNCHRONOUS_gc);
+ 6a2:	e0 ea       	ldi	r30, 0xA0	; 160
+ 6a4:	f8 e0       	ldi	r31, 0x08	; 8
+ 6a6:	85 81       	ldd	r24, Z+5	; 0x05
+ 6a8:	8f 73       	andi	r24, 0x3F	; 63
+ 6aa:	85 83       	std	Z+5, r24	; 0x05
+	/* USARTC0帧结构, 8 位数据位, 无校验, 1停止位 */
+	USART_Format_Set(&USARTC0, USART_CHSIZE_8BIT_gc,USART_PMODE_DISABLED_gc, false);
+ 6ac:	83 e0       	ldi	r24, 0x03	; 3
+ 6ae:	85 83       	std	Z+5, r24	; 0x05
+	/* 设置波特率 9600*/
+	USART_Baudrate_Set(&USARTC0, 12 , 0);
+ 6b0:	8c e0       	ldi	r24, 0x0C	; 12
+ 6b2:	86 83       	std	Z+6, r24	; 0x06
+ 6b4:	17 82       	std	Z+7, r1	; 0x07
+	/* USARTC0 使能发送*/
+	USART_Tx_Enable(&USARTC0);
+ 6b6:	84 81       	ldd	r24, Z+4	; 0x04
+ 6b8:	88 60       	ori	r24, 0x08	; 8
+ 6ba:	84 83       	std	Z+4, r24	; 0x04
+	/* USARTC0 使能接收*/
+	USART_Rx_Enable(&USARTC0);
+ 6bc:	84 81       	ldd	r24, Z+4	; 0x04
+ 6be:	80 61       	ori	r24, 0x10	; 16
+ 6c0:	84 83       	std	Z+4, r24	; 0x04
+}
+ 6c2:	08 95       	ret
+
+000006c4 <main>:
++------------------------------------------------------------------------------
+| Function    : main
++------------------------------------------------------------------------------
+*/
+int main( void )
+{
+ 6c4:	1f 93       	push	r17
+ 6c6:	cf 93       	push	r28
+ 6c8:	df 93       	push	r29
+	uart_init(); 
+ 6ca:	0e 94 4b 03 	call	0x696	; 0x696 <uart_init>
+	uart_puts("inside main");uart_putc('\n');
+ 6ce:	80 e0       	ldi	r24, 0x00	; 0
+ 6d0:	90 e2       	ldi	r25, 0x20	; 32
+ 6d2:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+ 6d6:	8a e0       	ldi	r24, 0x0A	; 10
+ 6d8:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+	//测试结果
+	bool test_ok = true;
+	uint8_t temp = 0;
+
+	//清空缓存
+	EEPROM_FlushBuffer();
+ 6dc:	0e 94 52 02 	call	0x4a4	; 0x4a4 <EEPROM_FlushBuffer>
+
+	//1.使用IO寄存器方式写入和读取2个字节
+	 
+	//关闭EEPROM映射到内存空间
+	EEPROM_DisableMapping();
+ 6e0:	80 91 cc 01 	lds	r24, 0x01CC
+ 6e4:	87 7f       	andi	r24, 0xF7	; 247
+ 6e6:	e0 ec       	ldi	r30, 0xC0	; 192
+ 6e8:	f1 e0       	ldi	r31, 0x01	; 1
+ 6ea:	84 87       	std	Z+12, r24	; 0x0c
+
+	//写单个字节
+	EEPROM_WriteByte(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_1, TEST_BYTE_1);
+ 6ec:	80 e0       	ldi	r24, 0x00	; 0
+ 6ee:	60 e0       	ldi	r22, 0x00	; 0
+ 6f0:	45 e5       	ldi	r20, 0x55	; 85
+ 6f2:	0e 94 6d 02 	call	0x4da	; 0x4da <EEPROM_WriteByte>
+	EEPROM_WriteByte(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_2, TEST_BYTE_2);
+ 6f6:	80 e0       	ldi	r24, 0x00	; 0
+ 6f8:	68 e0       	ldi	r22, 0x08	; 8
+ 6fa:	4a ea       	ldi	r20, 0xAA	; 170
+ 6fc:	0e 94 6d 02 	call	0x4da	; 0x4da <EEPROM_WriteByte>
+
+	//读取写入的字节
+	temp = EEPROM_ReadByte(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_1);
+ 700:	80 e0       	ldi	r24, 0x00	; 0
+ 702:	60 e0       	ldi	r22, 0x00	; 0
+ 704:	0e 94 20 02 	call	0x440	; 0x440 <EEPROM_ReadByte>
+ 708:	18 2f       	mov	r17, r24
+	if ( temp != TEST_BYTE_1) {
+		test_ok = false;
+	}
+	uart_puts("1 Read TEST_BYTE_1 = ");
+ 70a:	8c e0       	ldi	r24, 0x0C	; 12
+ 70c:	90 e2       	ldi	r25, 0x20	; 32
+ 70e:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+	uart_putc_hex(temp);
+ 712:	81 2f       	mov	r24, r17
+ 714:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+	uart_putc('\n');
+ 718:	8a e0       	ldi	r24, 0x0A	; 10
+ 71a:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+
+	temp = EEPROM_ReadByte(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_2);
+ 71e:	80 e0       	ldi	r24, 0x00	; 0
+ 720:	68 e0       	ldi	r22, 0x08	; 8
+ 722:	0e 94 20 02 	call	0x440	; 0x440 <EEPROM_ReadByte>
+ 726:	18 2f       	mov	r17, r24
+	if ( temp != TEST_BYTE_2) {
+		test_ok = false;
+	}
+	uart_puts("1 Read TEST_BYTE_2 = ");
+ 728:	82 e2       	ldi	r24, 0x22	; 34
+ 72a:	90 e2       	ldi	r25, 0x20	; 32
+ 72c:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+	uart_putc_hex(temp);
+ 730:	81 2f       	mov	r24, r17
+ 732:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+	uart_putc('\n');
+ 736:	8a e0       	ldi	r24, 0x0A	; 10
+ 738:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+
+	//2.分离操作写一整页
+
+	//加载页缓存，先擦页后写页
+	EEPROM_LoadPage(testBuffer);
+ 73c:	8e e8       	ldi	r24, 0x8E	; 142
+ 73e:	90 e2       	ldi	r25, 0x20	; 32
+ 740:	0e 94 b1 02 	call	0x562	; 0x562 <EEPROM_LoadPage>
+	EEPROM_ErasePage(TEST_PAGE_ADDR_2);
+ 744:	82 e0       	ldi	r24, 0x02	; 2
+ 746:	0e 94 ea 02 	call	0x5d4	; 0x5d4 <EEPROM_ErasePage>
+	EEPROM_SplitWritePage(TEST_PAGE_ADDR_2);
+ 74a:	82 e0       	ldi	r24, 0x02	; 2
+ 74c:	0e 94 0f 03 	call	0x61e	; 0x61e <EEPROM_SplitWritePage>
+
+	//读取
+	uart_puts("2 Read testBuffer = ");
+ 750:	88 e3       	ldi	r24, 0x38	; 56
+ 752:	90 e2       	ldi	r25, 0x20	; 32
+ 754:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+	uart_putc('\n');
+ 758:	8a e0       	ldi	r24, 0x0A	; 10
+ 75a:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 75e:	ce e8       	ldi	r28, 0x8E	; 142
+ 760:	d0 e2       	ldi	r29, 0x20	; 32
+ 762:	10 e0       	ldi	r17, 0x00	; 0
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i)
+	{	
+		temp = EEPROM_ReadByte(TEST_PAGE_ADDR_2, i );
+ 764:	82 e0       	ldi	r24, 0x02	; 2
+ 766:	61 2f       	mov	r22, r17
+ 768:	0e 94 20 02 	call	0x440	; 0x440 <EEPROM_ReadByte>
+ 76c:	98 2f       	mov	r25, r24
+		if ( temp != testBuffer[i] )
+ 76e:	88 81       	ld	r24, Y
+ 770:	98 17       	cp	r25, r24
+ 772:	39 f4       	brne	.+14     	; 0x782 <main+0xbe>
+		{
+			test_ok = false;
+			break;
+		}
+		uart_putc(temp);
+ 774:	89 2f       	mov	r24, r25
+ 776:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+	EEPROM_SplitWritePage(TEST_PAGE_ADDR_2);
+
+	//读取
+	uart_puts("2 Read testBuffer = ");
+	uart_putc('\n');
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i)
+ 77a:	1f 5f       	subi	r17, 0xFF	; 255
+ 77c:	21 96       	adiw	r28, 0x01	; 1
+ 77e:	10 32       	cpi	r17, 0x20	; 32
+ 780:	89 f7       	brne	.-30     	; 0x764 <main+0xa0>
+			test_ok = false;
+			break;
+		}
+		uart_putc(temp);
+	}
+	uart_putc('\n');
+ 782:	8a e0       	ldi	r24, 0x0A	; 10
+ 784:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+
+
+	//3.使用内存映射写入并读取两个字节
+
+	EEPROM_EnableMapping();
+ 788:	80 91 cc 01 	lds	r24, 0x01CC
+ 78c:	88 60       	ori	r24, 0x08	; 8
+ 78e:	e0 ec       	ldi	r30, 0xC0	; 192
+ 790:	f1 e0       	ldi	r31, 0x01	; 1
+ 792:	84 87       	std	Z+12, r24	; 0x0c
+ *
+ *  在任何EEPROM 访问时，如果不确定之前的操作是否完成，需要等待
+ */
+void EEPROM_WaitForNVM( void )
+{
+	do {} while ((NVM.STATUS & NVM_NVMBUSY_bm) == NVM_NVMBUSY_bm);
+ 794:	80 91 cf 01 	lds	r24, 0x01CF
+ 798:	87 fd       	sbrc	r24, 7
+ 79a:	fc cf       	rjmp	.-8      	; 0x794 <main+0xd0>
+
+	//写2个字节
+	EEPROM_WaitForNVM();
+	EEPROM(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_1) = TEST_BYTE_1;
+ 79c:	85 e5       	ldi	r24, 0x55	; 85
+ 79e:	80 93 00 10 	sts	0x1000, r24
+ 7a2:	80 91 cf 01 	lds	r24, 0x01CF
+ 7a6:	87 fd       	sbrc	r24, 7
+ 7a8:	fc cf       	rjmp	.-8      	; 0x7a2 <main+0xde>
+	//EEPROM_AtomicWritePage(TEST_PAGE_ADDR_1);//这里这一句应当用不着
+	EEPROM_WaitForNVM();
+	EEPROM(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_2) = TEST_BYTE_2;
+ 7aa:	8a ea       	ldi	r24, 0xAA	; 170
+ 7ac:	80 93 08 10 	sts	0x1008, r24
+ 7b0:	80 91 cf 01 	lds	r24, 0x01CF
+ 7b4:	87 fd       	sbrc	r24, 7
+ 7b6:	fc cf       	rjmp	.-8      	; 0x7b0 <main+0xec>
+	//EEPROM_AtomicWritePage(TEST_PAGE_ADDR_1);//这里这一句应当用不着
+
+	//读取2个字节
+	EEPROM_WaitForNVM();
+	temp = EEPROM(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_1);
+ 7b8:	10 91 00 10 	lds	r17, 0x1000
+	if ( temp != TEST_BYTE_1)
+	{
+		test_ok = false;
+	}
+	uart_puts("3 Read TEST_BYTE_1 = ");
+ 7bc:	8d e4       	ldi	r24, 0x4D	; 77
+ 7be:	90 e2       	ldi	r25, 0x20	; 32
+ 7c0:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+	uart_putc_hex(temp);
+ 7c4:	81 2f       	mov	r24, r17
+ 7c6:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+	uart_putc('\n');
+ 7ca:	8a e0       	ldi	r24, 0x0A	; 10
+ 7cc:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+	temp = EEPROM(TEST_PAGE_ADDR_1, TEST_BYTE_ADDR_2);
+ 7d0:	10 91 08 10 	lds	r17, 0x1008
+	if ( temp != TEST_BYTE_2)
+	{
+		test_ok = false;
+	}
+	uart_puts("3 Read TEST_BYTE_2 = ");
+ 7d4:	83 e6       	ldi	r24, 0x63	; 99
+ 7d6:	90 e2       	ldi	r25, 0x20	; 32
+ 7d8:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+	uart_putc_hex(temp);
+ 7dc:	81 2f       	mov	r24, r17
+ 7de:	0e 94 29 01 	call	0x252	; 0x252 <uart_putc_hex>
+	uart_putc('\n');
+ 7e2:	8a e0       	ldi	r24, 0x0A	; 10
+ 7e4:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+
+	//4.使用内存映射方式，分离操作，写一页缓存到EEPROM
+	EEPROM_EnableMapping();
+ 7e8:	80 91 cc 01 	lds	r24, 0x01CC
+ 7ec:	88 60       	ori	r24, 0x08	; 8
+ 7ee:	e0 ec       	ldi	r30, 0xC0	; 192
+ 7f0:	f1 e0       	ldi	r31, 0x01	; 1
+ 7f2:	84 87       	std	Z+12, r24	; 0x0c
+ 7f4:	80 91 cf 01 	lds	r24, 0x01CF
+ 7f8:	87 fd       	sbrc	r24, 7
+ 7fa:	fc cf       	rjmp	.-8      	; 0x7f4 <main+0x130>
+ 7fc:	a0 ea       	ldi	r26, 0xA0	; 160
+ 7fe:	b0 e1       	ldi	r27, 0x10	; 16
+	//加载缓存
+	EEPROM_WaitForNVM();
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i)
+	{
+		EEPROM(TEST_PAGE_ADDR_3, i) = testBuffer[i];
+ 800:	fd 01       	movw	r30, r26
+ 802:	e2 51       	subi	r30, 0x12	; 18
+ 804:	f0 4f       	sbci	r31, 0xF0	; 240
+ 806:	80 81       	ld	r24, Z
+ 808:	8d 93       	st	X+, r24
+
+	//4.使用内存映射方式，分离操作，写一页缓存到EEPROM
+	EEPROM_EnableMapping();
+	//加载缓存
+	EEPROM_WaitForNVM();
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i)
+ 80a:	80 e1       	ldi	r24, 0x10	; 16
+ 80c:	a0 3c       	cpi	r26, 0xC0	; 192
+ 80e:	b8 07       	cpc	r27, r24
+ 810:	b9 f7       	brne	.-18     	; 0x800 <main+0x13c>
+	{
+		EEPROM(TEST_PAGE_ADDR_3, i) = testBuffer[i];
+	}
+
+	//擦除EEPROM页，页缓存并没有被擦除
+	EEPROM_ErasePage(TEST_PAGE_ADDR_3);
+ 812:	85 e0       	ldi	r24, 0x05	; 5
+ 814:	0e 94 ea 02 	call	0x5d4	; 0x5d4 <EEPROM_ErasePage>
+
+	//分离写操作，缓存在操作完成后清空
+	EEPROM_SplitWritePage(TEST_PAGE_ADDR_3);
+ 818:	85 e0       	ldi	r24, 0x05	; 5
+ 81a:	0e 94 0f 03 	call	0x61e	; 0x61e <EEPROM_SplitWritePage>
+ 81e:	80 91 cf 01 	lds	r24, 0x01CF
+ 822:	87 fd       	sbrc	r24, 7
+ 824:	fc cf       	rjmp	.-8      	; 0x81e <main+0x15a>
+
+	//读取，串口显示
+	EEPROM_WaitForNVM();
+	uart_puts("4 Read testBuffer = ");
+ 826:	89 e7       	ldi	r24, 0x79	; 121
+ 828:	90 e2       	ldi	r25, 0x20	; 32
+ 82a:	0e 94 09 02 	call	0x412	; 0x412 <uart_puts>
+	uart_putc('\n');
+ 82e:	8a e0       	ldi	r24, 0x0A	; 10
+ 830:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 834:	c0 ea       	ldi	r28, 0xA0	; 160
+ 836:	d0 e1       	ldi	r29, 0x10	; 16
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i)
+	{
+		temp = EEPROM(TEST_PAGE_ADDR_3, i);
+ 838:	98 81       	ld	r25, Y
+		if ( temp!= testBuffer[i] )
+ 83a:	fe 01       	movw	r30, r28
+ 83c:	e2 51       	subi	r30, 0x12	; 18
+ 83e:	f0 4f       	sbci	r31, 0xF0	; 240
+ 840:	80 81       	ld	r24, Z
+ 842:	98 17       	cp	r25, r24
+ 844:	41 f4       	brne	.+16     	; 0x856 <main+0x192>
+			test_ok = false;
+			break;
+			uart_puts("test_ok = false");
+			uart_putc('\n');
+		}
+		uart_putc(temp);
+ 846:	89 2f       	mov	r24, r25
+ 848:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+ 84c:	21 96       	adiw	r28, 0x01	; 1
+
+	//读取，串口显示
+	EEPROM_WaitForNVM();
+	uart_puts("4 Read testBuffer = ");
+	uart_putc('\n');
+	for (uint8_t i = 0; i < EEPROM_PAGESIZE; ++i)
+ 84e:	80 e1       	ldi	r24, 0x10	; 16
+ 850:	c0 3c       	cpi	r28, 0xC0	; 192
+ 852:	d8 07       	cpc	r29, r24
+ 854:	89 f7       	brne	.-30     	; 0x838 <main+0x174>
+			uart_puts("test_ok = false");
+			uart_putc('\n');
+		}
+		uart_putc(temp);
+	}
+	uart_putc('\n');
+ 856:	8a e0       	ldi	r24, 0x0A	; 10
+ 858:	0e 94 1a 01 	call	0x234	; 0x234 <uart_putc>
+
+	while(1)
+		{
+			nop();
+ 85c:	00 00       	nop
+ 85e:	fe cf       	rjmp	.-4      	; 0x85c <main+0x198>
+
+00000860 <__mulsi3>:
+ 860:	62 9f       	mul	r22, r18
+ 862:	d0 01       	movw	r26, r0
+ 864:	73 9f       	mul	r23, r19
+ 866:	f0 01       	movw	r30, r0
+ 868:	82 9f       	mul	r24, r18
+ 86a:	e0 0d       	add	r30, r0
+ 86c:	f1 1d       	adc	r31, r1
+ 86e:	64 9f       	mul	r22, r20
+ 870:	e0 0d       	add	r30, r0
+ 872:	f1 1d       	adc	r31, r1
+ 874:	92 9f       	mul	r25, r18
+ 876:	f0 0d       	add	r31, r0
+ 878:	83 9f       	mul	r24, r19
+ 87a:	f0 0d       	add	r31, r0
+ 87c:	74 9f       	mul	r23, r20
+ 87e:	f0 0d       	add	r31, r0
+ 880:	65 9f       	mul	r22, r21
+ 882:	f0 0d       	add	r31, r0
+ 884:	99 27       	eor	r25, r25
+ 886:	72 9f       	mul	r23, r18
+ 888:	b0 0d       	add	r27, r0
+ 88a:	e1 1d       	adc	r30, r1
+ 88c:	f9 1f       	adc	r31, r25
+ 88e:	63 9f       	mul	r22, r19
+ 890:	b0 0d       	add	r27, r0
+ 892:	e1 1d       	adc	r30, r1
+ 894:	f9 1f       	adc	r31, r25
+ 896:	bd 01       	movw	r22, r26
+ 898:	cf 01       	movw	r24, r30
+ 89a:	11 24       	eor	r1, r1
+ 89c:	08 95       	ret
+
+0000089e <__udivmodhi4>:
+ 89e:	aa 1b       	sub	r26, r26
+ 8a0:	bb 1b       	sub	r27, r27
+ 8a2:	51 e1       	ldi	r21, 0x11	; 17
+ 8a4:	07 c0       	rjmp	.+14     	; 0x8b4 <__udivmodhi4_ep>
+
+000008a6 <__udivmodhi4_loop>:
+ 8a6:	aa 1f       	adc	r26, r26
+ 8a8:	bb 1f       	adc	r27, r27
+ 8aa:	a6 17       	cp	r26, r22
+ 8ac:	b7 07       	cpc	r27, r23
+ 8ae:	10 f0       	brcs	.+4      	; 0x8b4 <__udivmodhi4_ep>
+ 8b0:	a6 1b       	sub	r26, r22
+ 8b2:	b7 0b       	sbc	r27, r23
+
+000008b4 <__udivmodhi4_ep>:
+ 8b4:	88 1f       	adc	r24, r24
+ 8b6:	99 1f       	adc	r25, r25
+ 8b8:	5a 95       	dec	r21
+ 8ba:	a9 f7       	brne	.-22     	; 0x8a6 <__udivmodhi4_loop>
+ 8bc:	80 95       	com	r24
+ 8be:	90 95       	com	r25
+ 8c0:	bc 01       	movw	r22, r24
+ 8c2:	cd 01       	movw	r24, r26
+ 8c4:	08 95       	ret
+
+000008c6 <__udivmodsi4>:
+ 8c6:	a1 e2       	ldi	r26, 0x21	; 33
+ 8c8:	1a 2e       	mov	r1, r26
+ 8ca:	aa 1b       	sub	r26, r26
+ 8cc:	bb 1b       	sub	r27, r27
+ 8ce:	fd 01       	movw	r30, r26
+ 8d0:	0d c0       	rjmp	.+26     	; 0x8ec <__udivmodsi4_ep>
+
+000008d2 <__udivmodsi4_loop>:
+ 8d2:	aa 1f       	adc	r26, r26
+ 8d4:	bb 1f       	adc	r27, r27
+ 8d6:	ee 1f       	adc	r30, r30
+ 8d8:	ff 1f       	adc	r31, r31
+ 8da:	a2 17       	cp	r26, r18
+ 8dc:	b3 07       	cpc	r27, r19
+ 8de:	e4 07       	cpc	r30, r20
+ 8e0:	f5 07       	cpc	r31, r21
+ 8e2:	20 f0       	brcs	.+8      	; 0x8ec <__udivmodsi4_ep>
+ 8e4:	a2 1b       	sub	r26, r18
+ 8e6:	b3 0b       	sbc	r27, r19
+ 8e8:	e4 0b       	sbc	r30, r20
+ 8ea:	f5 0b       	sbc	r31, r21
+
+000008ec <__udivmodsi4_ep>:
+ 8ec:	66 1f       	adc	r22, r22
+ 8ee:	77 1f       	adc	r23, r23
+ 8f0:	88 1f       	adc	r24, r24
+ 8f2:	99 1f       	adc	r25, r25
+ 8f4:	1a 94       	dec	r1
+ 8f6:	69 f7       	brne	.-38     	; 0x8d2 <__udivmodsi4_loop>
+ 8f8:	60 95       	com	r22
+ 8fa:	70 95       	com	r23
+ 8fc:	80 95       	com	r24
+ 8fe:	90 95       	com	r25
+ 900:	9b 01       	movw	r18, r22
+ 902:	ac 01       	movw	r20, r24
+ 904:	bd 01       	movw	r22, r26
+ 906:	cf 01       	movw	r24, r30
+ 908:	08 95       	ret
+
+0000090a <_exit>:
+ 90a:	f8 94       	cli
+
+0000090c <__stop_program>:
+ 90c:	ff cf       	rjmp	.-2      	; 0x90c <__stop_program>

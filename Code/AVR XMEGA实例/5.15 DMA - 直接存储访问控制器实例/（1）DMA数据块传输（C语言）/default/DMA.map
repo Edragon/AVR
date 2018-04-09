@@ -1,0 +1,538 @@
+Archive member included because of file (symbol)
+
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+                              DMA.o (__mulsi3)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+                              DMA.o (__udivmodhi4)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+                              DMA.o (__udivmodsi4)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+                              d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o (exit)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                              DMA.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+memoryBlockB        0x64              DMA.o
+gStatus             0x1               DMA.o
+gInterruptDone      0x1               DMA.o
+memoryBlockA        0x64              DMA.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00802000         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+LOAD DMA.o
+LOAD dma_driver.o
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7\libc.a
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x85c
+ *(.vectors)
+ .vectors       0x00000000      0x1f4 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x000001f4                . = ALIGN (0x2)
+                0x000001f4                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000001f4        0x0 linker stubs
+ *(.trampolines*)
+                0x000001f4                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000001f4                __ctors_start = .
+ *(.ctors)
+                0x000001f4                __ctors_end = .
+                0x000001f4                __dtors_start = .
+ *(.dtors)
+                0x000001f4                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000001f4        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x000001f4                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000001f4       0x18 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000020c       0x1c d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x0000020c                __do_copy_data
+ .init4         0x00000228       0x10 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                0x00000228                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000238        0x8 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ *(.init9)
+ *(.text)
+ .text          0x00000240        0x4 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00000240                __vector_38
+                0x00000240                __vector_104
+                0x00000240                __vector_22
+                0x00000240                __vector_63
+                0x00000240                __vector_28
+                0x00000240                __vector_67
+                0x00000240                __vector_1
+                0x00000240                __vector_119
+                0x00000240                __vector_32
+                0x00000240                __vector_75
+                0x00000240                __vector_71
+                0x00000240                __vector_91
+                0x00000240                __vector_34
+                0x00000240                __vector_62
+                0x00000240                __vector_77
+                0x00000240                __vector_102
+                0x00000240                __vector_24
+                0x00000240                __vector_12
+                0x00000240                __vector_55
+                0x00000240                __vector_69
+                0x00000240                __vector_81
+                0x00000240                __vector_90
+                0x00000240                __vector_46
+                0x00000240                __bad_interrupt
+                0x00000240                __vector_122
+                0x00000240                __vector_72
+                0x00000240                __vector_114
+                0x00000240                __vector_110
+                0x00000240                __vector_31
+                0x00000240                __vector_92
+                0x00000240                __vector_35
+                0x00000240                __vector_78
+                0x00000240                __vector_74
+                0x00000240                __vector_117
+                0x00000240                __vector_39
+                0x00000240                __vector_107
+                0x00000240                __vector_3
+                0x00000240                __vector_105
+                0x00000240                __vector_98
+                0x00000240                __vector_23
+                0x00000240                __vector_68
+                0x00000240                __vector_30
+                0x00000240                __vector_73
+                0x00000240                __vector_45
+                0x00000240                __vector_25
+                0x00000240                __vector_93
+                0x00000240                __vector_61
+                0x00000240                __vector_11
+                0x00000240                __vector_54
+                0x00000240                __vector_99
+                0x00000240                __vector_13
+                0x00000240                __vector_17
+                0x00000240                __vector_19
+                0x00000240                __vector_56
+                0x00000240                __vector_7
+                0x00000240                __vector_49
+                0x00000240                __vector_123
+                0x00000240                __vector_41
+                0x00000240                __vector_86
+                0x00000240                __vector_100
+                0x00000240                __vector_101
+                0x00000240                __vector_64
+                0x00000240                __vector_88
+                0x00000240                __vector_109
+                0x00000240                __vector_43
+                0x00000240                __vector_27
+                0x00000240                __vector_5
+                0x00000240                __vector_113
+                0x00000240                __vector_33
+                0x00000240                __vector_76
+                0x00000240                __vector_115
+                0x00000240                __vector_47
+                0x00000240                __vector_52
+                0x00000240                __vector_37
+                0x00000240                __vector_95
+                0x00000240                __vector_103
+                0x00000240                __vector_96
+                0x00000240                __vector_89
+                0x00000240                __vector_108
+                0x00000240                __vector_4
+                0x00000240                __vector_44
+                0x00000240                __vector_82
+                0x00000240                __vector_106
+                0x00000240                __vector_118
+                0x00000240                __vector_51
+                0x00000240                __vector_9
+                0x00000240                __vector_2
+                0x00000240                __vector_21
+                0x00000240                __vector_15
+                0x00000240                __vector_66
+                0x00000240                __vector_36
+                0x00000240                __vector_79
+                0x00000240                __vector_58
+                0x00000240                __vector_70
+                0x00000240                __vector_83
+                0x00000240                __vector_29
+                0x00000240                __vector_60
+                0x00000240                __vector_121
+                0x00000240                __vector_40
+                0x00000240                __vector_85
+                0x00000240                __vector_94
+                0x00000240                __vector_8
+                0x00000240                __vector_26
+                0x00000240                __vector_48
+                0x00000240                __vector_124
+                0x00000240                __vector_116
+                0x00000240                __vector_112
+                0x00000240                __vector_111
+                0x00000240                __vector_80
+                0x00000240                __vector_14
+                0x00000240                __vector_84
+                0x00000240                __vector_57
+                0x00000240                __vector_53
+                0x00000240                __vector_10
+                0x00000240                __vector_50
+                0x00000240                __vector_16
+                0x00000240                __vector_59
+                0x00000240                __vector_18
+                0x00000240                __vector_97
+                0x00000240                __vector_20
+                0x00000240                __vector_42
+                0x00000240                __vector_87
+                0x00000240                __vector_65
+                0x00000240                __vector_120
+ .text          0x00000244      0x3f8 DMA.o
+                0x00000350                uart_putdw_dec
+                0x00000262                uart_putc_hex
+                0x0000047e                __vector_6
+                0x00000422                uart_puts
+                0x00000546                MultiBlockMemCopy
+                0x00000450                uart_init
+                0x000002d4                uart_putw_dec
+                0x0000043c                uart_getc
+                0x000002ae                uart_putdw_hex
+                0x000005d6                main
+                0x00000244                uart_putc
+                0x000004e0                BlockMemCopy
+                0x0000029a                uart_putw_hex
+ .text          0x0000063c      0x172 dma_driver.o
+                0x0000078a                DMA_EnableSingleShot
+                0x0000069a                DMA_ReturnStatus_non_blocking
+                0x00000668                DMA_SetPriority
+                0x000006bc                DMA_DisableChannel
+                0x000006c6                DMA_ResetChannel
+                0x000007a4                DMA_StartTransfer
+                0x0000067e                DMA_IsOngoing
+                0x0000063c                DMA_Reset
+                0x00000676                DMA_CH_IsOngoing
+                0x0000079e                DMA_SetTriggerSource
+                0x00000690                DMA_IsPending
+                0x00000794                DMA_DisableSingleShot
+                0x00000688                DMA_CH_IsPending
+                0x0000065a                DMA_ConfigDoubleBuffering
+                0x000006a2                DMA_ReturnStatus_blocking
+                0x000006b2                DMA_EnableChannel
+                0x000006ea                DMA_SetupBlock
+                0x000006dc                DMA_SetIntLevel
+ .text          0x000007ae        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+ .text          0x000007ae        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+ .text          0x000007ae        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+ .text          0x000007ae        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .text          0x000007ae        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                0x000007ae                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000007ae       0x3e d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+                0x000007ae                __mulsi3
+ .text.libgcc   0x000007ec       0x28 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+                0x000007ec                __udivmodhi4
+ .text.libgcc   0x00000814       0x44 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+                0x00000814                __udivmodsi4
+ .text.libgcc   0x00000858        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .text.libgcc   0x00000858        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                0x00000858                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000858        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+                0x00000858                exit
+                0x00000858                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000858        0x4 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000085c                _etext = .
+
+.data           0x00802000        0x0 load address 0x0000085c
+                0x00802000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .data          0x00802000        0x0 DMA.o
+ .data          0x00802000        0x0 dma_driver.o
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00802000                . = ALIGN (0x2)
+                0x00802000                _edata = .
+                0x00802000                PROVIDE (__data_end, .)
+
+.bss            0x00802000       0xca
+                0x00802000                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .bss           0x00802000        0x0 DMA.o
+ .bss           0x00802000        0x0 dma_driver.o
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .bss           0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00802000       0xca DMA.o
+                0x00802000                memoryBlockB
+                0x00802064                gStatus
+                0x00802065                gInterruptDone
+                0x00802066                memoryBlockA
+                0x008020ca                PROVIDE (__bss_end, .)
+                0x0000085c                __data_load_start = LOADADDR (.data)
+                0x0000085c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008020ca        0x0
+                0x008020ca                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008020ca                PROVIDE (__noinit_end, .)
+                0x008020ca                _end = .
+                0x008020ca                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 DMA.o
+ .debug_aranges
+                0x00000020       0x20 dma_driver.o
+
+.debug_pubnames
+                0x00000000      0x2d1
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x126 DMA.o
+ .debug_pubnames
+                0x00000126      0x1ab dma_driver.o
+
+.debug_info     0x00000000     0x124b
+ *(.debug_info)
+ .debug_info    0x00000000      0x99d DMA.o
+ .debug_info    0x0000099d      0x8ae dma_driver.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x31d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1a4 DMA.o
+ .debug_abbrev  0x000001a4      0x179 dma_driver.o
+
+.debug_line     0x00000000      0x671
+ *(.debug_line)
+ .debug_line    0x00000000      0x38a DMA.o
+ .debug_line    0x0000038a      0x2e7 dma_driver.o
+
+.debug_frame    0x00000000      0x210
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xe0 DMA.o
+ .debug_frame   0x000000e0      0x130 dma_driver.o
+
+.debug_str      0x00000000      0xb6d
+ *(.debug_str)
+ .debug_str     0x00000000      0x70a DMA.o
+                                0x769 (size before relaxing)
+ .debug_str     0x0000070a      0x463 dma_driver.o
+                                0x8ba (size before relaxing)
+
+.debug_loc      0x00000000      0x722
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x466 DMA.o
+ .debug_loc     0x00000466      0x2bc dma_driver.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(DMA.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x30
+ .debug_ranges  0x00000000       0x30 DMA.o

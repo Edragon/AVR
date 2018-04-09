@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>32</LINE></RESET>
+  <Example1><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>46</LINE></Example1>
+  <RESET_1><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>38</LINE></RESET_1>
+  <Example1_1><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>75</LINE></Example1_1>
+  <Example2><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>91</LINE></Example2>
+  <Example2_1><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>142</LINE></Example2_1>
+  <Example3><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>152</LINE></Example3>
+  <Example3_1><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>192</LINE></Example3_1>
+  <Example4><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>210</LINE></Example4>
+  <Example4_1><FILE>E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm</FILE><LINE>238</LINE></Example4_1>
+ </LABELS>
+</ASSEMBLER_INFO>

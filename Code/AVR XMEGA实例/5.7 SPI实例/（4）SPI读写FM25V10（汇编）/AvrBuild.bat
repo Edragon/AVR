@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\°²×°\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\labels.tmp" -fI -W+ie -C V3X -o "E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.hex" -d "E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.obj" -e "E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.eep" -m "E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.map" "E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm"

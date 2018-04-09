@@ -1,0 +1,561 @@
+Archive member included because of file (symbol)
+
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+                              bootloader.o (__mulsi3)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+                              bootloader.o (__udivmodhi4)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+                              bootloader.o (__udivmodsi4)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+                              d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o (exit)
+d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                              bootloader.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+bootapp             0x1               bootloader.o
+receivedata         0x1fe             bootloader.o
+FlashAddr           0x4               bootloader.o
+readdata            0x1fe             bootloader.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00802000         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+Address of section .text set to 0x20000
+LOAD bootloader.o
+LOAD sp_driver.o
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7\libc.a
+LOAD d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00020000      0x996
+ *(.vectors)
+ .vectors       0x00020000      0x1f4 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00020000                __vectors
+                0x00020000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x000201f4                . = ALIGN (0x2)
+                0x000201f4                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000201f4        0x0 linker stubs
+ *(.trampolines*)
+                0x000201f4                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000201f4                __ctors_start = .
+ *(.ctors)
+                0x000201f4                __ctors_end = .
+                0x000201f4                __dtors_start = .
+ *(.dtors)
+                0x000201f4                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000201f4        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x000201f4                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000201f4       0x18 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0002020c       0x1c d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x0002020c                __do_copy_data
+ .init4         0x00020228       0x10 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                0x00020228                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00020238        0x8 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ *(.init9)
+ *(.text)
+ .text          0x00020240        0x4 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00020240                __vector_38
+                0x00020240                __vector_104
+                0x00020240                __vector_22
+                0x00020240                __vector_63
+                0x00020240                __vector_28
+                0x00020240                __vector_67
+                0x00020240                __vector_1
+                0x00020240                __vector_119
+                0x00020240                __vector_32
+                0x00020240                __vector_75
+                0x00020240                __vector_71
+                0x00020240                __vector_91
+                0x00020240                __vector_34
+                0x00020240                __vector_62
+                0x00020240                __vector_77
+                0x00020240                __vector_102
+                0x00020240                __vector_24
+                0x00020240                __vector_12
+                0x00020240                __vector_55
+                0x00020240                __vector_69
+                0x00020240                __vector_81
+                0x00020240                __vector_90
+                0x00020240                __vector_46
+                0x00020240                __bad_interrupt
+                0x00020240                __vector_122
+                0x00020240                __vector_72
+                0x00020240                __vector_114
+                0x00020240                __vector_6
+                0x00020240                __vector_110
+                0x00020240                __vector_31
+                0x00020240                __vector_92
+                0x00020240                __vector_35
+                0x00020240                __vector_78
+                0x00020240                __vector_74
+                0x00020240                __vector_117
+                0x00020240                __vector_39
+                0x00020240                __vector_107
+                0x00020240                __vector_3
+                0x00020240                __vector_105
+                0x00020240                __vector_98
+                0x00020240                __vector_23
+                0x00020240                __vector_68
+                0x00020240                __vector_30
+                0x00020240                __vector_73
+                0x00020240                __vector_45
+                0x00020240                __vector_93
+                0x00020240                __vector_61
+                0x00020240                __vector_11
+                0x00020240                __vector_54
+                0x00020240                __vector_99
+                0x00020240                __vector_13
+                0x00020240                __vector_17
+                0x00020240                __vector_19
+                0x00020240                __vector_56
+                0x00020240                __vector_7
+                0x00020240                __vector_49
+                0x00020240                __vector_123
+                0x00020240                __vector_41
+                0x00020240                __vector_86
+                0x00020240                __vector_100
+                0x00020240                __vector_101
+                0x00020240                __vector_64
+                0x00020240                __vector_88
+                0x00020240                __vector_109
+                0x00020240                __vector_43
+                0x00020240                __vector_27
+                0x00020240                __vector_5
+                0x00020240                __vector_113
+                0x00020240                __vector_33
+                0x00020240                __vector_76
+                0x00020240                __vector_115
+                0x00020240                __vector_47
+                0x00020240                __vector_52
+                0x00020240                __vector_37
+                0x00020240                __vector_95
+                0x00020240                __vector_103
+                0x00020240                __vector_96
+                0x00020240                __vector_89
+                0x00020240                __vector_108
+                0x00020240                __vector_4
+                0x00020240                __vector_44
+                0x00020240                __vector_82
+                0x00020240                __vector_106
+                0x00020240                __vector_118
+                0x00020240                __vector_51
+                0x00020240                __vector_9
+                0x00020240                __vector_2
+                0x00020240                __vector_21
+                0x00020240                __vector_15
+                0x00020240                __vector_66
+                0x00020240                __vector_36
+                0x00020240                __vector_79
+                0x00020240                __vector_58
+                0x00020240                __vector_70
+                0x00020240                __vector_83
+                0x00020240                __vector_29
+                0x00020240                __vector_60
+                0x00020240                __vector_121
+                0x00020240                __vector_40
+                0x00020240                __vector_85
+                0x00020240                __vector_94
+                0x00020240                __vector_8
+                0x00020240                __vector_26
+                0x00020240                __vector_48
+                0x00020240                __vector_124
+                0x00020240                __vector_116
+                0x00020240                __vector_112
+                0x00020240                __vector_111
+                0x00020240                __vector_80
+                0x00020240                __vector_14
+                0x00020240                __vector_84
+                0x00020240                __vector_57
+                0x00020240                __vector_53
+                0x00020240                __vector_10
+                0x00020240                __vector_50
+                0x00020240                __vector_16
+                0x00020240                __vector_59
+                0x00020240                __vector_18
+                0x00020240                __vector_97
+                0x00020240                __vector_20
+                0x00020240                __vector_42
+                0x00020240                __vector_87
+                0x00020240                __vector_65
+                0x00020240                __vector_120
+ .text          0x00020244      0x540 bootloader.o
+                0x00020518                TC0_SetCCBIntLevel
+                0x000204d0                TC0_SetOverflowIntLevel
+                0x00020350                uart_putdw_dec
+                0x00020602                write_one_page
+                0x00020564                quit
+                0x000204dc                TC1_SetOverflowIntLevel
+                0x000204e8                TC0_SetErrorIntLevel
+                0x000204c2                TC1_DisableCCChannels
+                0x0002050c                TC1_SetCCAIntLevel
+                0x00020262                uart_putc_hex
+                0x00020474                TC1_ConfigWGM
+                0x00020500                TC0_SetCCAIntLevel
+                0x00020638                __vector_25
+                0x00020422                uart_puts
+                0x00020468                TC0_ConfigWGM
+                0x00020548                TC0_Reset
+                0x00020578                uart_init
+                0x000204a8                TC1_EnableCCChannels
+                0x000202d4                uart_putw_dec
+                0x0002043c                uart_getc
+                0x000202ae                uart_putdw_hex
+                0x000205a6                main
+                0x00020244                uart_putc
+                0x00020530                TC0_SetCCCIntLevel
+                0x000204b4                TC0_DisableCCChannels
+                0x0002048e                TC1_ConfigInputCapture
+                0x00020556                TC1_Reset
+                0x0002045c                TC1_ConfigClockSource
+                0x0002049c                TC0_EnableCCChannels
+                0x00020450                TC0_ConfigClockSource
+                0x0002053c                TC0_SetCCDIntLevel
+                0x000204f4                TC1_SetErrorIntLevel
+                0x0002029a                uart_putw_hex
+                0x00020480                TC0_ConfigInputCapture
+                0x00020524                TC1_SetCCBIntLevel
+ .text          0x00020784      0x164 sp_driver.o
+                0x00020888                SP_BootCRC
+                0x000207a2                SP_ReadUserSignatureByte
+                0x000207da                SP_EraseApplicationSection
+                0x0002084c                SP_EraseWriteApplicationPage
+                0x0002086c                SP_WriteBootPage
+                0x000207ee                SP_LoadFlashWord
+                0x000207c4                SP_ReadLockBits
+                0x000207d2                SP_WriteUserSignatureRow
+                0x00020878                SP_EraseWriteBootPage
+                0x00020884                SP_ApplicationCRC
+                0x000207e2                SP_EraseApplicationPage
+                0x00020860                SP_EraseBootPage
+                0x000207bc                SP_WriteLockBits
+                0x0002079e                SP_ReadCalibrationByte
+                0x00020790                SP_ReadWord
+                0x00020840                SP_WriteApplicationPage
+                0x000207ca                SP_EraseUserSignatureRow
+                0x0002088c                SP_LockSPM
+                0x0002081e                SP_ReadFlashPage
+                0x00020784                SP_ReadByte
+                0x000207a6                SP_ReadFuseByte
+                0x00020858                SP_EraseFlashBuffer
+                0x000207f8                SP_LoadFlashPage
+                0x0002089a                SP_WaitForSPM
+ .text          0x000208e8        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+ .text          0x000208e8        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+ .text          0x000208e8        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+ .text          0x000208e8        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .text          0x000208e8        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                0x000208e8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000208e8       0x3e d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+                0x000208e8                __mulsi3
+ .text.libgcc   0x00020926       0x28 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+                0x00020926                __udivmodhi4
+ .text.libgcc   0x0002094e       0x44 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+                0x0002094e                __udivmodsi4
+ .text.libgcc   0x00020992        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .text.libgcc   0x00020992        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+                0x00020992                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00020992        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+                0x00020992                exit
+                0x00020992                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00020992        0x4 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00020996                _etext = .
+
+.data           0x00802000       0x10 load address 0x00020996
+                0x00802000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00802000        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .data          0x00802000       0x10 bootloader.o
+ .data          0x00802010        0x0 sp_driver.o
+ .data          0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+ .data          0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+ .data          0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+ .data          0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .data          0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00802010                . = ALIGN (0x2)
+                0x00802010                _edata = .
+                0x00802010                PROVIDE (__data_end, .)
+
+.bss            0x00802010      0x401
+                0x00802010                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .bss           0x00802010        0x0 bootloader.o
+ .bss           0x00802010        0x0 sp_driver.o
+ .bss           0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_mulsi3.o)
+ .bss           0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodhi4.o)
+ .bss           0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_udivmodsi4.o)
+ .bss           0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_exit.o)
+ .bss           0x00802010        0x0 d:/安装/bin/../lib/gcc/avr/4.3.3/avrxmega7\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00802010      0x401 bootloader.o
+                0x00802010                bootapp
+                0x00802011                receivedata
+                0x0080220f                FlashAddr
+                0x00802213                readdata
+                0x00802411                PROVIDE (__bss_end, .)
+                0x00020996                __data_load_start = LOADADDR (.data)
+                0x000209a6                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00802411        0x0
+                0x00802411                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00802411                PROVIDE (__noinit_end, .)
+                0x00802411                _end = .
+                0x00802411                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 bootloader.o
+ .debug_aranges
+                0x00000020       0x20 sp_driver.o
+
+.debug_pubnames
+                0x00000000      0x316
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x316 bootloader.o
+
+.debug_info     0x00000000     0x18a9
+ *(.debug_info)
+ .debug_info    0x00000000     0x184b bootloader.o
+ .debug_info    0x0000184b       0x5e sp_driver.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x277
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x263 bootloader.o
+ .debug_abbrev  0x00000263       0x14 sp_driver.o
+
+.debug_line     0x00000000      0x743
+ *(.debug_line)
+ .debug_line    0x00000000      0x642 bootloader.o
+ .debug_line    0x00000642      0x101 sp_driver.o
+
+.debug_frame    0x00000000      0x240
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x240 bootloader.o
+
+.debug_str      0x00000000      0xede
+ *(.debug_str)
+ .debug_str     0x00000000      0xede bootloader.o
+                                0xf28 (size before relaxing)
+
+.debug_loc      0x00000000      0x6eb
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x6eb bootloader.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(bootloader.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x30
+ .debug_ranges  0x00000000       0x30 bootloader.o

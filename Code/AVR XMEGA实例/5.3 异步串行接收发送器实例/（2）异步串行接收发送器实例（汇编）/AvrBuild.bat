@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\°²×°\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\example\ASM_example\3-1 USART_asm\labels.tmp" -fI -W+ie -C V3X -o "E:\ATMAGE\example\ASM_example\3-1 USART_asm\USART_asm.hex" -d "E:\ATMAGE\example\ASM_example\3-1 USART_asm\USART_asm.obj" -e "E:\ATMAGE\example\ASM_example\3-1 USART_asm\USART_asm.eep" -m "E:\ATMAGE\example\ASM_example\3-1 USART_asm\USART_asm.map" "E:\ATMAGE\example\ASM_example\3-1 USART_asm\USART_asm.asm"

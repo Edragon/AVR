@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\°²×°\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\labels.tmp" -fI -W+ie -o "E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.hex" -d "E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.obj" -e "E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.eep" -m "E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.map" "E:\ATMAGE\example\ASM_example\13-1 Event_System_asm\event_system_asm.asm"

@@ -1,0 +1,1650 @@
+
+SPI.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000996  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000b4  00802000  00000996  00000a2a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000019  008020b4  008020b4  00000ade  2**0
+                  ALLOC
+  3 .debug_aranges 00000020  00000000  00000000  00000ade  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000001d8  00000000  00000000  00000afe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000c60  00000000  00000000  00000cd6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000258  00000000  00000000  00001936  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000763  00000000  00000000  00001b8e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000120  00000000  00000000  000022f4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000075c  00000000  00000000  00002414  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000620  00000000  00000000  00002b70  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00003190  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  10:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  14:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  18:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  1c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  20:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  24:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  28:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  2c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  30:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  34:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  38:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  3c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  40:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  44:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  48:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  4c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  50:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  54:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  58:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  5c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  60:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  64:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  68:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  6c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  70:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  74:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  78:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  7c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  80:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  84:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  88:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  8c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  90:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  94:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  98:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  9c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  fc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 100:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 104:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 108:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 10c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 110:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 114:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 118:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 11c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 120:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 124:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 128:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 12c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 130:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 134:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 138:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 13c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 140:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 144:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 148:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 14c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 150:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 154:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 158:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 15c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 160:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 164:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 168:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 16c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 170:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 174:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 178:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 17c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 180:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 184:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 188:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 18c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 190:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 194:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 198:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 19c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	e6 e9       	ldi	r30, 0x96	; 150
+ 214:	f9 e0       	ldi	r31, 0x09	; 9
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a4 3b       	cpi	r26, 0xB4	; 180
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+
+00000228 <__do_clear_bss>:
+ 228:	10 e2       	ldi	r17, 0x20	; 32
+ 22a:	a4 eb       	ldi	r26, 0xB4	; 180
+ 22c:	b0 e2       	ldi	r27, 0x20	; 32
+ 22e:	01 c0       	rjmp	.+2      	; 0x232 <.do_clear_bss_start>
+
+00000230 <.do_clear_bss_loop>:
+ 230:	1d 92       	st	X+, r1
+
+00000232 <.do_clear_bss_start>:
+ 232:	ad 3c       	cpi	r26, 0xCD	; 205
+ 234:	b1 07       	cpc	r27, r17
+ 236:	e1 f7       	brne	.-8      	; 0x230 <.do_clear_bss_loop>
+ 238:	0e 94 73 03 	call	0x6e6	; 0x6e6 <main>
+ 23c:	0c 94 c9 04 	jmp	0x992	; 0x992 <_exit>
+
+00000240 <__bad_interrupt>:
+ 240:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000244 <uart_putc>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc(unsigned char c)
+{
+ 244:	1f 93       	push	r17
+ 246:	18 2f       	mov	r17, r24
+    if(c == '\n')
+ 248:	8a 30       	cpi	r24, 0x0A	; 10
+ 24a:	19 f4       	brne	.+6      	; 0x252 <uart_putc+0xe>
+        uart_putc('\r');
+ 24c:	8d e0       	ldi	r24, 0x0D	; 13
+ 24e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    /* wait until transmit buffer is empty */
+    while(!(USART.STATUS & USART_DREIF_bm));
+ 252:	80 91 a1 08 	lds	r24, 0x08A1
+ 256:	85 ff       	sbrs	r24, 5
+ 258:	fc cf       	rjmp	.-8      	; 0x252 <uart_putc+0xe>
+
+    /* send next byte */
+    USART.DATA = c;
+ 25a:	10 93 a0 08 	sts	0x08A0, r17
+}
+ 25e:	1f 91       	pop	r17
+ 260:	08 95       	ret
+
+00000262 <uart_putc_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc_hex(unsigned char b)
+{
+ 262:	1f 93       	push	r17
+ 264:	18 2f       	mov	r17, r24
+    /* upper nibble */
+    if((b >> 4) < 0x0a)
+ 266:	82 95       	swap	r24
+ 268:	8f 70       	andi	r24, 0x0F	; 15
+ 26a:	8a 30       	cpi	r24, 0x0A	; 10
+ 26c:	10 f4       	brcc	.+4      	; 0x272 <uart_putc_hex+0x10>
+        uart_putc((b >> 4) + '0');
+ 26e:	80 5d       	subi	r24, 0xD0	; 208
+ 270:	01 c0       	rjmp	.+2      	; 0x274 <uart_putc_hex+0x12>
+    else
+        uart_putc((b >> 4) - 0x0a + 'a');
+ 272:	89 5a       	subi	r24, 0xA9	; 169
+ 274:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    /* lower nibble */
+    if((b & 0x0f) < 0x0a)
+ 278:	81 2f       	mov	r24, r17
+ 27a:	90 e0       	ldi	r25, 0x00	; 0
+ 27c:	8f 70       	andi	r24, 0x0F	; 15
+ 27e:	90 70       	andi	r25, 0x00	; 0
+ 280:	21 2f       	mov	r18, r17
+ 282:	2f 70       	andi	r18, 0x0F	; 15
+ 284:	0a 97       	sbiw	r24, 0x0a	; 10
+ 286:	1c f4       	brge	.+6      	; 0x28e <uart_putc_hex+0x2c>
+        uart_putc((b & 0x0f) + '0');
+ 288:	82 2f       	mov	r24, r18
+ 28a:	80 5d       	subi	r24, 0xD0	; 208
+ 28c:	02 c0       	rjmp	.+4      	; 0x292 <uart_putc_hex+0x30>
+    else
+        uart_putc((b & 0x0f) - 0x0a + 'a');
+ 28e:	82 2f       	mov	r24, r18
+ 290:	89 5a       	subi	r24, 0xA9	; 169
+ 292:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+}
+ 296:	1f 91       	pop	r17
+ 298:	08 95       	ret
+
+0000029a <uart_putw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_hex(unsigned int w)
+{
+ 29a:	1f 93       	push	r17
+ 29c:	18 2f       	mov	r17, r24
+    uart_putc_hex((unsigned char) (w >> 8));
+ 29e:	89 2f       	mov	r24, r25
+ 2a0:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+    uart_putc_hex((unsigned char) (w & 0xff));
+ 2a4:	81 2f       	mov	r24, r17
+ 2a6:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+}
+ 2aa:	1f 91       	pop	r17
+ 2ac:	08 95       	ret
+
+000002ae <uart_putdw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_hex(unsigned long dw)
+{
+ 2ae:	ef 92       	push	r14
+ 2b0:	ff 92       	push	r15
+ 2b2:	0f 93       	push	r16
+ 2b4:	1f 93       	push	r17
+ 2b6:	7b 01       	movw	r14, r22
+ 2b8:	8c 01       	movw	r16, r24
+    uart_putw_hex((unsigned int) (dw >> 16));
+ 2ba:	c8 01       	movw	r24, r16
+ 2bc:	aa 27       	eor	r26, r26
+ 2be:	bb 27       	eor	r27, r27
+ 2c0:	0e 94 4d 01 	call	0x29a	; 0x29a <uart_putw_hex>
+    uart_putw_hex((unsigned int) (dw & 0xffff));
+ 2c4:	c7 01       	movw	r24, r14
+ 2c6:	0e 94 4d 01 	call	0x29a	; 0x29a <uart_putw_hex>
+}
+ 2ca:	1f 91       	pop	r17
+ 2cc:	0f 91       	pop	r16
+ 2ce:	ff 90       	pop	r15
+ 2d0:	ef 90       	pop	r14
+ 2d2:	08 95       	ret
+
+000002d4 <uart_putw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_dec(unsigned int w)
+{
+ 2d4:	cf 92       	push	r12
+ 2d6:	df 92       	push	r13
+ 2d8:	ff 92       	push	r15
+ 2da:	0f 93       	push	r16
+ 2dc:	1f 93       	push	r17
+ 2de:	cf 93       	push	r28
+ 2e0:	df 93       	push	r29
+ 2e2:	6c 01       	movw	r12, r24
+ 2e4:	c0 e1       	ldi	r28, 0x10	; 16
+ 2e6:	d7 e2       	ldi	r29, 0x27	; 39
+ 2e8:	40 e0       	ldi	r20, 0x00	; 0
+ 2ea:	00 e0       	ldi	r16, 0x00	; 0
+ 2ec:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = w / num;
+ 2ee:	c6 01       	movw	r24, r12
+ 2f0:	be 01       	movw	r22, r28
+ 2f2:	0e 94 93 04 	call	0x926	; 0x926 <__udivmodhi4>
+ 2f6:	f6 2e       	mov	r15, r22
+        if(b > 0 || started || num == 1)
+ 2f8:	66 23       	and	r22, r22
+ 2fa:	29 f4       	brne	.+10     	; 0x306 <uart_putw_dec+0x32>
+ 2fc:	44 23       	and	r20, r20
+ 2fe:	19 f4       	brne	.+6      	; 0x306 <uart_putw_dec+0x32>
+ 300:	c1 30       	cpi	r28, 0x01	; 1
+ 302:	d1 05       	cpc	r29, r1
+ 304:	29 f4       	brne	.+10     	; 0x310 <uart_putw_dec+0x3c>
+        {
+            uart_putc('0' + b);
+ 306:	8f 2d       	mov	r24, r15
+ 308:	80 5d       	subi	r24, 0xD0	; 208
+ 30a:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 30e:	41 e0       	ldi	r20, 0x01	; 1
+            started = 1;
+        }
+        w -= b * num;
+
+        num /= 10;
+ 310:	ce 01       	movw	r24, r28
+ 312:	6a e0       	ldi	r22, 0x0A	; 10
+ 314:	70 e0       	ldi	r23, 0x00	; 0
+ 316:	0e 94 93 04 	call	0x926	; 0x926 <__udivmodhi4>
+ 31a:	0f 5f       	subi	r16, 0xFF	; 255
+ 31c:	1f 4f       	sbci	r17, 0xFF	; 255
+void uart_putw_dec(unsigned int w)
+{
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 31e:	05 30       	cpi	r16, 0x05	; 5
+ 320:	11 05       	cpc	r17, r1
+ 322:	71 f0       	breq	.+28     	; 0x340 <uart_putw_dec+0x6c>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        w -= b * num;
+ 324:	8f 2d       	mov	r24, r15
+ 326:	90 e0       	ldi	r25, 0x00	; 0
+ 328:	9c 01       	movw	r18, r24
+ 32a:	2c 9f       	mul	r18, r28
+ 32c:	c0 01       	movw	r24, r0
+ 32e:	2d 9f       	mul	r18, r29
+ 330:	90 0d       	add	r25, r0
+ 332:	3c 9f       	mul	r19, r28
+ 334:	90 0d       	add	r25, r0
+ 336:	11 24       	eor	r1, r1
+ 338:	c8 1a       	sub	r12, r24
+ 33a:	d9 0a       	sbc	r13, r25
+ 33c:	eb 01       	movw	r28, r22
+ 33e:	d7 cf       	rjmp	.-82     	; 0x2ee <uart_putw_dec+0x1a>
+
+        num /= 10;
+    }
+}
+ 340:	df 91       	pop	r29
+ 342:	cf 91       	pop	r28
+ 344:	1f 91       	pop	r17
+ 346:	0f 91       	pop	r16
+ 348:	ff 90       	pop	r15
+ 34a:	df 90       	pop	r13
+ 34c:	cf 90       	pop	r12
+ 34e:	08 95       	ret
+
+00000350 <uart_putdw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_dec(unsigned long dw)
+{
+ 350:	4f 92       	push	r4
+ 352:	5f 92       	push	r5
+ 354:	6f 92       	push	r6
+ 356:	7f 92       	push	r7
+ 358:	8f 92       	push	r8
+ 35a:	9f 92       	push	r9
+ 35c:	af 92       	push	r10
+ 35e:	bf 92       	push	r11
+ 360:	cf 92       	push	r12
+ 362:	df 92       	push	r13
+ 364:	ef 92       	push	r14
+ 366:	ff 92       	push	r15
+ 368:	0f 93       	push	r16
+ 36a:	1f 93       	push	r17
+ 36c:	cf 93       	push	r28
+ 36e:	df 93       	push	r29
+ 370:	5b 01       	movw	r10, r22
+ 372:	6c 01       	movw	r12, r24
+ 374:	e1 2c       	mov	r14, r1
+ 376:	9a ec       	ldi	r25, 0xCA	; 202
+ 378:	f9 2e       	mov	r15, r25
+ 37a:	9a e9       	ldi	r25, 0x9A	; 154
+ 37c:	09 2f       	mov	r16, r25
+ 37e:	9b e3       	ldi	r25, 0x3B	; 59
+ 380:	19 2f       	mov	r17, r25
+ 382:	44 24       	eor	r4, r4
+ 384:	c0 e0       	ldi	r28, 0x00	; 0
+ 386:	d0 e0       	ldi	r29, 0x00	; 0
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = dw / num;
+ 388:	c6 01       	movw	r24, r12
+ 38a:	b5 01       	movw	r22, r10
+ 38c:	a8 01       	movw	r20, r16
+ 38e:	97 01       	movw	r18, r14
+ 390:	0e 94 a7 04 	call	0x94e	; 0x94e <__udivmodsi4>
+ 394:	92 2e       	mov	r9, r18
+        if(b > 0 || started || num == 1)
+ 396:	22 23       	and	r18, r18
+ 398:	41 f4       	brne	.+16     	; 0x3aa <uart_putdw_dec+0x5a>
+ 39a:	44 20       	and	r4, r4
+ 39c:	31 f4       	brne	.+12     	; 0x3aa <uart_putdw_dec+0x5a>
+ 39e:	81 e0       	ldi	r24, 0x01	; 1
+ 3a0:	e8 16       	cp	r14, r24
+ 3a2:	f1 04       	cpc	r15, r1
+ 3a4:	01 05       	cpc	r16, r1
+ 3a6:	11 05       	cpc	r17, r1
+ 3a8:	31 f4       	brne	.+12     	; 0x3b6 <uart_putdw_dec+0x66>
+        {
+            uart_putc('0' + b);
+ 3aa:	89 2d       	mov	r24, r9
+ 3ac:	80 5d       	subi	r24, 0xD0	; 208
+ 3ae:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 3b2:	44 24       	eor	r4, r4
+ 3b4:	43 94       	inc	r4
+            started = 1;
+        }
+        dw -= b * num;
+
+        num /= 10;
+ 3b6:	c8 01       	movw	r24, r16
+ 3b8:	b7 01       	movw	r22, r14
+ 3ba:	2a e0       	ldi	r18, 0x0A	; 10
+ 3bc:	30 e0       	ldi	r19, 0x00	; 0
+ 3be:	40 e0       	ldi	r20, 0x00	; 0
+ 3c0:	50 e0       	ldi	r21, 0x00	; 0
+ 3c2:	0e 94 a7 04 	call	0x94e	; 0x94e <__udivmodsi4>
+ 3c6:	82 2e       	mov	r8, r18
+ 3c8:	73 2e       	mov	r7, r19
+ 3ca:	64 2e       	mov	r6, r20
+ 3cc:	55 2e       	mov	r5, r21
+ 3ce:	21 96       	adiw	r28, 0x01	; 1
+void uart_putdw_dec(unsigned long dw)
+{
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 3d0:	ca 30       	cpi	r28, 0x0A	; 10
+ 3d2:	d1 05       	cpc	r29, r1
+ 3d4:	a9 f0       	breq	.+42     	; 0x400 <uart_putdw_dec+0xb0>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        dw -= b * num;
+ 3d6:	69 2d       	mov	r22, r9
+ 3d8:	70 e0       	ldi	r23, 0x00	; 0
+ 3da:	80 e0       	ldi	r24, 0x00	; 0
+ 3dc:	90 e0       	ldi	r25, 0x00	; 0
+ 3de:	a8 01       	movw	r20, r16
+ 3e0:	97 01       	movw	r18, r14
+ 3e2:	0e 94 74 04 	call	0x8e8	; 0x8e8 <__mulsi3>
+ 3e6:	a6 1a       	sub	r10, r22
+ 3e8:	b7 0a       	sbc	r11, r23
+ 3ea:	c8 0a       	sbc	r12, r24
+ 3ec:	d9 0a       	sbc	r13, r25
+ 3ee:	28 2d       	mov	r18, r8
+ 3f0:	37 2d       	mov	r19, r7
+ 3f2:	46 2d       	mov	r20, r6
+ 3f4:	55 2d       	mov	r21, r5
+ 3f6:	c9 01       	movw	r24, r18
+ 3f8:	da 01       	movw	r26, r20
+ 3fa:	7c 01       	movw	r14, r24
+ 3fc:	8d 01       	movw	r16, r26
+ 3fe:	c4 cf       	rjmp	.-120    	; 0x388 <uart_putdw_dec+0x38>
+
+        num /= 10;
+    }
+}
+ 400:	df 91       	pop	r29
+ 402:	cf 91       	pop	r28
+ 404:	1f 91       	pop	r17
+ 406:	0f 91       	pop	r16
+ 408:	ff 90       	pop	r15
+ 40a:	ef 90       	pop	r14
+ 40c:	df 90       	pop	r13
+ 40e:	cf 90       	pop	r12
+ 410:	bf 90       	pop	r11
+ 412:	af 90       	pop	r10
+ 414:	9f 90       	pop	r9
+ 416:	8f 90       	pop	r8
+ 418:	7f 90       	pop	r7
+ 41a:	6f 90       	pop	r6
+ 41c:	5f 90       	pop	r5
+ 41e:	4f 90       	pop	r4
+ 420:	08 95       	ret
+
+00000422 <uart_puts>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+ 422:	cf 93       	push	r28
+ 424:	df 93       	push	r29
+ 426:	ec 01       	movw	r28, r24
+ 428:	03 c0       	rjmp	.+6      	; 0x430 <uart_puts+0xe>
+    while(*str)
+        uart_putc(*str++);
+ 42a:	21 96       	adiw	r28, 0x01	; 1
+ 42c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+    while(*str)
+ 430:	88 81       	ld	r24, Y
+ 432:	88 23       	and	r24, r24
+ 434:	d1 f7       	brne	.-12     	; 0x42a <uart_puts+0x8>
+        uart_putc(*str++);
+}
+ 436:	df 91       	pop	r29
+ 438:	cf 91       	pop	r28
+ 43a:	08 95       	ret
+
+0000043c <uart_getc>:
++------------------------------------------------------------------------------
+*/
+unsigned char uart_getc(void)
+{
+    /* wait until receive buffer is full */
+    while(!(USART.STATUS & USART_RXCIF_bm));
+ 43c:	80 91 a1 08 	lds	r24, 0x08A1
+ 440:	87 ff       	sbrs	r24, 7
+ 442:	fc cf       	rjmp	.-8      	; 0x43c <uart_getc>
+
+    unsigned char b = USART.DATA;
+ 444:	80 91 a0 08 	lds	r24, 0x08A0
+    if(b == '\r')
+ 448:	8d 30       	cpi	r24, 0x0D	; 13
+ 44a:	09 f4       	brne	.+2      	; 0x44e <uart_getc+0x12>
+ 44c:	8a e0       	ldi	r24, 0x0A	; 10
+        b = '\n';
+		
+    return b;
+}
+ 44e:	08 95       	ret
+
+00000450 <SPI_MasterInit>:
+                    bool lsbFirst,
+                    SPI_MODE_t mode,
+                    SPI_INTLVL_t intLevel,
+                    bool clk2x,
+                    SPI_PRESCALER_t clockDivision)
+{
+ 450:	af 92       	push	r10
+ 452:	cf 92       	push	r12
+ 454:	ef 92       	push	r14
+ 456:	0f 93       	push	r16
+ 458:	dc 01       	movw	r26, r24
+ 45a:	fb 01       	movw	r30, r22
+	spi->module         = module;
+ 45c:	6d 93       	st	X+, r22
+ 45e:	7c 93       	st	X, r23
+ 460:	11 97       	sbiw	r26, 0x01	; 1
+	spi->port           = port;
+ 462:	12 96       	adiw	r26, 0x02	; 2
+ 464:	4d 93       	st	X+, r20
+ 466:	5c 93       	st	X, r21
+ 468:	13 97       	sbiw	r26, 0x03	; 3
+	spi->interrupted    = false;
+ 46a:	14 96       	adiw	r26, 0x04	; 4
+ 46c:	1c 92       	st	X, r1
+ 46e:	14 97       	sbiw	r26, 0x04	; 4
+	spi->module->CTRL   = clockDivision |                  //分频因子
+ 470:	cc 20       	and	r12, r12
+ 472:	11 f4       	brne	.+4      	; 0x478 <SPI_MasterInit+0x28>
+ 474:	90 e0       	ldi	r25, 0x00	; 0
+ 476:	01 c0       	rjmp	.+2      	; 0x47a <SPI_MasterInit+0x2a>
+ 478:	90 e8       	ldi	r25, 0x80	; 128
+ 47a:	22 23       	and	r18, r18
+ 47c:	11 f4       	brne	.+4      	; 0x482 <SPI_MasterInit+0x32>
+ 47e:	80 e0       	ldi	r24, 0x00	; 0
+ 480:	01 c0       	rjmp	.+2      	; 0x484 <SPI_MasterInit+0x34>
+ 482:	80 e2       	ldi	r24, 0x20	; 32
+ 484:	00 65       	ori	r16, 0x50	; 80
+ 486:	0a 29       	or	r16, r10
+ 488:	90 2b       	or	r25, r16
+ 48a:	89 2b       	or	r24, r25
+ 48c:	80 83       	st	Z, r24
+	                      SPI_ENABLE_bm |                  //SPI模块使能
+	                      (lsbFirst ? SPI_DORD_bm  : 0) |  //数据顺序
+	                      SPI_MASTER_bm |                  //SPI主机
+	                      mode;                            //SPI 模式
+	//中断级别
+	spi->module->INTCTRL = intLevel;
+ 48e:	ed 91       	ld	r30, X+
+ 490:	fc 91       	ld	r31, X
+ 492:	11 97       	sbiw	r26, 0x01	; 1
+ 494:	e1 82       	std	Z+1, r14	; 0x01
+	//未指向数据包
+	spi->dataPacket = NULL;
+ 496:	15 96       	adiw	r26, 0x05	; 5
+ 498:	1d 92       	st	X+, r1
+ 49a:	1c 92       	st	X, r1
+ 49c:	16 97       	sbiw	r26, 0x06	; 6
+ 	//MOSI 和 SCK 设为输出
+	spi->port->DIRSET  = SPI_MOSI_bm | SPI_SCK_bm;
+ 49e:	12 96       	adiw	r26, 0x02	; 2
+ 4a0:	ed 91       	ld	r30, X+
+ 4a2:	fc 91       	ld	r31, X
+ 4a4:	13 97       	sbiw	r26, 0x03	; 3
+ 4a6:	80 ea       	ldi	r24, 0xA0	; 160
+ 4a8:	81 83       	std	Z+1, r24	; 0x01
+}
+ 4aa:	0f 91       	pop	r16
+ 4ac:	ef 90       	pop	r14
+ 4ae:	cf 90       	pop	r12
+ 4b0:	af 90       	pop	r10
+ 4b2:	08 95       	ret
+
+000004b4 <SPI_SlaveInit>:
+                   SPI_t *module,
+                   PORT_t *port,
+                   bool lsbFirst,
+                   SPI_MODE_t mode,
+                   SPI_INTLVL_t intLevel)
+{
+ 4b4:	ef 92       	push	r14
+ 4b6:	0f 93       	push	r16
+ 4b8:	dc 01       	movw	r26, r24
+ 4ba:	fb 01       	movw	r30, r22
+	//SPI模块
+	spi->module       = module;
+ 4bc:	6d 93       	st	X+, r22
+ 4be:	7c 93       	st	X, r23
+ 4c0:	11 97       	sbiw	r26, 0x01	; 1
+	spi->port         = port;
+ 4c2:	12 96       	adiw	r26, 0x02	; 2
+ 4c4:	4d 93       	st	X+, r20
+ 4c6:	5c 93       	st	X, r21
+ 4c8:	13 97       	sbiw	r26, 0x03	; 3
+	spi->module->CTRL = SPI_ENABLE_bm |                //SPI模块使能
+ 4ca:	22 23       	and	r18, r18
+ 4cc:	11 f4       	brne	.+4      	; 0x4d2 <SPI_SlaveInit+0x1e>
+ 4ce:	80 e4       	ldi	r24, 0x40	; 64
+ 4d0:	01 c0       	rjmp	.+2      	; 0x4d4 <SPI_SlaveInit+0x20>
+ 4d2:	80 e6       	ldi	r24, 0x60	; 96
+ 4d4:	80 2b       	or	r24, r16
+ 4d6:	80 83       	st	Z, r24
+	                    (lsbFirst ? SPI_DORD_bm : 0) | //数据顺序
+	                    mode;                          //SPI 模式
+	//中断级别
+	spi->module->INTCTRL = intLevel;
+ 4d8:	ed 91       	ld	r30, X+
+ 4da:	fc 91       	ld	r31, X
+ 4dc:	11 97       	sbiw	r26, 0x01	; 1
+ 4de:	e1 82       	std	Z+1, r14	; 0x01
+ 	//MISO设为输出
+	spi->port->DIRSET = SPI_MISO_bm;
+ 4e0:	12 96       	adiw	r26, 0x02	; 2
+ 4e2:	ed 91       	ld	r30, X+
+ 4e4:	fc 91       	ld	r31, X
+ 4e6:	13 97       	sbiw	r26, 0x03	; 3
+ 4e8:	80 e4       	ldi	r24, 0x40	; 64
+ 4ea:	81 83       	std	Z+1, r24	; 0x01
+}
+ 4ec:	0f 91       	pop	r16
+ 4ee:	ef 90       	pop	r14
+ 4f0:	08 95       	ret
+
+000004f2 <SPI_MasterCreateDataPacket>:
+                                const uint8_t *transmitData,
+                                uint8_t *receiveData,
+                                uint8_t bytesToTransceive,
+                                PORT_t *ssPort,
+                                uint8_t ssPinMask)
+{
+ 4f2:	ef 92       	push	r14
+ 4f4:	0f 93       	push	r16
+ 4f6:	1f 93       	push	r17
+ 4f8:	fc 01       	movw	r30, r24
+	dataPacket->ssPort            = ssPort;
+ 4fa:	00 83       	st	Z, r16
+ 4fc:	11 83       	std	Z+1, r17	; 0x01
+	dataPacket->ssPinMask         = ssPinMask;
+ 4fe:	e2 82       	std	Z+2, r14	; 0x02
+	dataPacket->transmitData      = transmitData;
+ 500:	63 83       	std	Z+3, r22	; 0x03
+ 502:	74 83       	std	Z+4, r23	; 0x04
+	dataPacket->receiveData       = receiveData;
+ 504:	45 83       	std	Z+5, r20	; 0x05
+ 506:	56 83       	std	Z+6, r21	; 0x06
+	dataPacket->bytesToTransceive  = bytesToTransceive;
+ 508:	27 83       	std	Z+7, r18	; 0x07
+	dataPacket->bytesTransceived   = 0;
+ 50a:	10 86       	std	Z+8, r1	; 0x08
+	dataPacket->complete          = false;
+ 50c:	11 86       	std	Z+9, r1	; 0x09
+}
+ 50e:	1f 91       	pop	r17
+ 510:	0f 91       	pop	r16
+ 512:	ef 90       	pop	r14
+ 514:	08 95       	ret
+
+00000516 <SPI_MasterInterruptHandler>:
+
+/*! \SPI主机中断服务程序
+ *  \参数 spi        SPI主机结构体实例
+ */
+void SPI_MasterInterruptHandler(SPI_Master_t *spi)
+{
+ 516:	cf 93       	push	r28
+ 518:	df 93       	push	r29
+ 51a:	dc 01       	movw	r26, r24
+	uint8_t data;
+	uint8_t bytesTransceived = spi->dataPacket->bytesTransceived;
+ 51c:	15 96       	adiw	r26, 0x05	; 5
+ 51e:	cd 91       	ld	r28, X+
+ 520:	dc 91       	ld	r29, X
+ 522:	16 97       	sbiw	r26, 0x06	; 6
+ 524:	98 85       	ldd	r25, Y+8	; 0x08
+
+	// 如果SS引脚中断(SS 使用且被拉低).此时没有数据接收到
+	if ( !(spi->module->CTRL & SPI_MASTER_bm) )
+ 526:	ed 91       	ld	r30, X+
+ 528:	fc 91       	ld	r31, X
+ 52a:	11 97       	sbiw	r26, 0x01	; 1
+ 52c:	80 81       	ld	r24, Z
+ 52e:	84 fd       	sbrc	r24, 4
+ 530:	05 c0       	rjmp	.+10     	; 0x53c <SPI_MasterInterruptHandler+0x26>
+	{
+		spi->interrupted = true;
+ 532:	81 e0       	ldi	r24, 0x01	; 1
+ 534:	14 96       	adiw	r26, 0x04	; 4
+ 536:	8c 93       	st	X, r24
+ 538:	14 97       	sbiw	r26, 0x04	; 4
+ 53a:	24 c0       	rjmp	.+72     	; 0x584 <SPI_MasterInterruptHandler+0x6e>
+	}
+	else 
+	{   //数据中断
+		//存储数据
+		data = spi->module->DATA;
+ 53c:	83 81       	ldd	r24, Z+3	; 0x03
+		spi->dataPacket->receiveData[bytesTransceived] = data;
+ 53e:	ed 81       	ldd	r30, Y+5	; 0x05
+ 540:	fe 81       	ldd	r31, Y+6	; 0x06
+ 542:	e9 0f       	add	r30, r25
+ 544:	f1 1d       	adc	r31, r1
+ 546:	80 83       	st	Z, r24
+		//下一字节
+		bytesTransceived++;
+ 548:	9f 5f       	subi	r25, 0xFF	; 255
+		//如果还有数据没传完
+		if (bytesTransceived < spi->dataPacket->bytesToTransceive)
+ 54a:	15 96       	adiw	r26, 0x05	; 5
+ 54c:	ed 91       	ld	r30, X+
+ 54e:	fc 91       	ld	r31, X
+ 550:	16 97       	sbiw	r26, 0x06	; 6
+ 552:	87 81       	ldd	r24, Z+7	; 0x07
+ 554:	98 17       	cp	r25, r24
+ 556:	58 f4       	brcc	.+22     	; 0x56e <SPI_MasterInterruptHandler+0x58>
+		{
+			//将数据写入数据寄存器
+			data = spi->dataPacket->transmitData[bytesTransceived];
+ 558:	03 80       	ldd	r0, Z+3	; 0x03
+ 55a:	f4 81       	ldd	r31, Z+4	; 0x04
+ 55c:	e0 2d       	mov	r30, r0
+ 55e:	e9 0f       	add	r30, r25
+ 560:	f1 1d       	adc	r31, r1
+ 562:	80 81       	ld	r24, Z
+			spi->module->DATA = data;
+ 564:	ed 91       	ld	r30, X+
+ 566:	fc 91       	ld	r31, X
+ 568:	11 97       	sbiw	r26, 0x01	; 1
+ 56a:	83 83       	std	Z+3, r24	; 0x03
+ 56c:	0b c0       	rjmp	.+22     	; 0x584 <SPI_MasterInterruptHandler+0x6e>
+		}
+		else //传输结束
+		{
+			//释放SS
+			uint8_t ssPinMask = spi->dataPacket->ssPinMask;
+ 56e:	82 81       	ldd	r24, Z+2	; 0x02
+			SPI_MasterSSHigh(spi->dataPacket->ssPort, ssPinMask);
+ 570:	01 90       	ld	r0, Z+
+ 572:	f0 81       	ld	r31, Z
+ 574:	e0 2d       	mov	r30, r0
+ 576:	85 83       	std	Z+5, r24	; 0x05
+			spi->dataPacket->complete = true;
+ 578:	15 96       	adiw	r26, 0x05	; 5
+ 57a:	ed 91       	ld	r30, X+
+ 57c:	fc 91       	ld	r31, X
+ 57e:	16 97       	sbiw	r26, 0x06	; 6
+ 580:	81 e0       	ldi	r24, 0x01	; 1
+ 582:	81 87       	std	Z+9, r24	; 0x09
+		}
+	}
+	//将bytesTransceived写回数据包
+	spi->dataPacket->bytesTransceived = bytesTransceived;
+ 584:	15 96       	adiw	r26, 0x05	; 5
+ 586:	ed 91       	ld	r30, X+
+ 588:	fc 91       	ld	r31, X
+ 58a:	16 97       	sbiw	r26, 0x06	; 6
+ 58c:	90 87       	std	Z+8, r25	; 0x08
+}
+ 58e:	df 91       	pop	r29
+ 590:	cf 91       	pop	r28
+ 592:	08 95       	ret
+
+00000594 <SPI_MasterInterruptTransceivePacket>:
+ *  \retval SPI_BUSY          SPI模块忙
+ *  \retval SPI_INTERRUPTED   被其他主机打断
+ */
+uint8_t SPI_MasterInterruptTransceivePacket(SPI_Master_t *spi,
+                                            SPI_DataPacket_t *dataPacket)
+{
+ 594:	cf 93       	push	r28
+ 596:	df 93       	push	r29
+ 598:	dc 01       	movw	r26, r24
+ 59a:	eb 01       	movw	r28, r22
+	uint8_t data;
+	bool interrupted = spi->interrupted;
+ 59c:	14 96       	adiw	r26, 0x04	; 4
+ 59e:	9c 91       	ld	r25, X
+ 5a0:	14 97       	sbiw	r26, 0x04	; 4
+
+	//如果还没有数据包被发送
+	if (spi->dataPacket == NULL)
+ 5a2:	15 96       	adiw	r26, 0x05	; 5
+ 5a4:	ed 91       	ld	r30, X+
+ 5a6:	fc 91       	ld	r31, X
+ 5a8:	16 97       	sbiw	r26, 0x06	; 6
+ 5aa:	30 97       	sbiw	r30, 0x00	; 0
+ 5ac:	29 f4       	brne	.+10     	; 0x5b8 <SPI_MasterInterruptTransceivePacket+0x24>
+	{
+		spi->dataPacket = dataPacket;
+ 5ae:	15 96       	adiw	r26, 0x05	; 5
+ 5b0:	6d 93       	st	X+, r22
+ 5b2:	7c 93       	st	X, r23
+ 5b4:	16 97       	sbiw	r26, 0x06	; 6
+ 5b6:	10 c0       	rjmp	.+32     	; 0x5d8 <SPI_MasterInterruptTransceivePacket+0x44>
+	}
+	//如果传输正在进行
+	else if (spi->dataPacket->complete == false)
+ 5b8:	81 85       	ldd	r24, Z+9	; 0x09
+ 5ba:	88 23       	and	r24, r24
+ 5bc:	11 f4       	brne	.+4      	; 0x5c2 <SPI_MasterInterruptTransceivePacket+0x2e>
+ 5be:	82 e0       	ldi	r24, 0x02	; 2
+ 5c0:	28 c0       	rjmp	.+80     	; 0x612 <SPI_MasterInterruptTransceivePacket+0x7e>
+	{
+		return (SPI_BUSY);
+	}
+	//如果被其他主机打断
+	else if (interrupted)
+ 5c2:	99 23       	and	r25, r25
+ 5c4:	49 f0       	breq	.+18     	; 0x5d8 <SPI_MasterInterruptTransceivePacket+0x44>
+	{
+		//如果SS被释放
+		if (spi->port->OUT & SPI_SS_bm)
+ 5c6:	12 96       	adiw	r26, 0x02	; 2
+ 5c8:	ed 91       	ld	r30, X+
+ 5ca:	fc 91       	ld	r31, X
+ 5cc:	13 97       	sbiw	r26, 0x03	; 3
+ 5ce:	84 81       	ldd	r24, Z+4	; 0x04
+ 5d0:	84 fd       	sbrc	r24, 4
+ 5d2:	02 c0       	rjmp	.+4      	; 0x5d8 <SPI_MasterInterruptTransceivePacket+0x44>
+ 5d4:	81 e0       	ldi	r24, 0x01	; 1
+ 5d6:	1d c0       	rjmp	.+58     	; 0x612 <SPI_MasterInterruptTransceivePacket+0x7e>
+		else {
+			return (SPI_INTERRUPTED);
+		}
+	}
+	//如果没有被其他主机打断，启动传输
+	spi->dataPacket = dataPacket;
+ 5d8:	15 96       	adiw	r26, 0x05	; 5
+ 5da:	cd 93       	st	X+, r28
+ 5dc:	dc 93       	st	X, r29
+ 5de:	16 97       	sbiw	r26, 0x06	; 6
+	spi->dataPacket->complete = false;
+ 5e0:	19 86       	std	Y+9, r1	; 0x09
+	spi->interrupted = false;
+ 5e2:	14 96       	adiw	r26, 0x04	; 4
+ 5e4:	1c 92       	st	X, r1
+ 5e6:	14 97       	sbiw	r26, 0x04	; 4
+	//拉低SS
+	uint8_t ssPinMask = spi->dataPacket->ssPinMask;
+ 5e8:	8a 81       	ldd	r24, Y+2	; 0x02
+	SPI_MasterSSLow(spi->dataPacket->ssPort, ssPinMask);
+ 5ea:	e8 81       	ld	r30, Y
+ 5ec:	f9 81       	ldd	r31, Y+1	; 0x01
+ 5ee:	86 83       	std	Z+6, r24	; 0x06
+	spi->dataPacket->bytesTransceived = 0;
+ 5f0:	15 96       	adiw	r26, 0x05	; 5
+ 5f2:	ed 91       	ld	r30, X+
+ 5f4:	fc 91       	ld	r31, X
+ 5f6:	16 97       	sbiw	r26, 0x06	; 6
+ 5f8:	10 86       	std	Z+8, r1	; 0x08
+	//开始发送数据
+	data = spi->dataPacket->transmitData[0];
+ 5fa:	15 96       	adiw	r26, 0x05	; 5
+ 5fc:	ed 91       	ld	r30, X+
+ 5fe:	fc 91       	ld	r31, X
+ 600:	16 97       	sbiw	r26, 0x06	; 6
+ 602:	03 80       	ldd	r0, Z+3	; 0x03
+ 604:	f4 81       	ldd	r31, Z+4	; 0x04
+ 606:	e0 2d       	mov	r30, r0
+ 608:	80 81       	ld	r24, Z
+	spi->module->DATA = data;
+ 60a:	ed 91       	ld	r30, X+
+ 60c:	fc 91       	ld	r31, X
+ 60e:	83 83       	std	Z+3, r24	; 0x03
+ 610:	80 e0       	ldi	r24, 0x00	; 0
+	//发送成功
+	return (SPI_OK);
+}
+ 612:	df 91       	pop	r29
+ 614:	cf 91       	pop	r28
+ 616:	08 95       	ret
+
+00000618 <SPI_MasterTransceiveByte>:
+ *  \参数 TXdata     发送到从机的数据
+ *
+ *  \返回            从机发来的数据
+ */
+uint8_t SPI_MasterTransceiveByte(SPI_Master_t *spi, uint8_t TXdata)
+{
+ 618:	fc 01       	movw	r30, r24
+	//发送数据
+	spi->module->DATA = TXdata;
+ 61a:	a0 81       	ld	r26, Z
+ 61c:	b1 81       	ldd	r27, Z+1	; 0x01
+ 61e:	13 96       	adiw	r26, 0x03	; 3
+ 620:	6c 93       	st	X, r22
+	//等待传输完成
+	while(!(spi->module->STATUS & SPI_IF_bm)) {}
+ 622:	01 90       	ld	r0, Z+
+ 624:	f0 81       	ld	r31, Z
+ 626:	e0 2d       	mov	r30, r0
+ 628:	82 81       	ldd	r24, Z+2	; 0x02
+ 62a:	87 ff       	sbrs	r24, 7
+ 62c:	fd cf       	rjmp	.-6      	; 0x628 <SPI_MasterTransceiveByte+0x10>
+	//读数据
+	uint8_t result = spi->module->DATA;
+ 62e:	83 81       	ldd	r24, Z+3	; 0x03
+	return(result);
+}
+ 630:	08 95       	ret
+
+00000632 <SPI_MasterTransceivePacket>:
+ *  \retval true	   成功
+ *  \retval false	   失败
+ */
+bool SPI_MasterTransceivePacket(SPI_Master_t *spi,
+                                SPI_DataPacket_t *dataPacket)
+{
+ 632:	cf 93       	push	r28
+ 634:	df 93       	push	r29
+ 636:	ec 01       	movw	r28, r24
+ 638:	fb 01       	movw	r30, r22
+	//检查数据包是否被创建
+	if(dataPacket == NULL){return false;}
+ 63a:	61 15       	cp	r22, r1
+ 63c:	71 05       	cpc	r23, r1
+ 63e:	11 f4       	brne	.+4      	; 0x644 <SPI_MasterTransceivePacket+0x12>
+ 640:	80 e0       	ldi	r24, 0x00	; 0
+ 642:	37 c0       	rjmp	.+110    	; 0x6b2 <SPI_MasterTransceivePacket+0x80>
+	//将数据包指针赋给SPI模块
+	spi->dataPacket = dataPacket;
+ 644:	6d 83       	std	Y+5, r22	; 0x05
+ 646:	7e 83       	std	Y+6, r23	; 0x06
+	uint8_t ssPinMask = spi->dataPacket->ssPinMask;
+ 648:	42 81       	ldd	r20, Z+2	; 0x02
+	//如果使用了SS
+	if (spi->dataPacket->ssPort != NULL)
+ 64a:	a0 81       	ld	r26, Z
+ 64c:	b1 81       	ldd	r27, Z+1	; 0x01
+ 64e:	10 97       	sbiw	r26, 0x00	; 0
+ 650:	11 f0       	breq	.+4      	; 0x656 <SPI_MasterTransceivePacket+0x24>
+	{
+		//SS拉低
+		SPI_MasterSSLow(spi->dataPacket->ssPort, ssPinMask);
+ 652:	16 96       	adiw	r26, 0x06	; 6
+ 654:	4c 93       	st	X, r20
+	}
+	//传输字节
+	uint8_t bytesTransceived = 0;
+	uint8_t bytesToTransceive = dataPacket->bytesToTransceive;
+ 656:	67 81       	ldd	r22, Z+7	; 0x07
+ 658:	90 e0       	ldi	r25, 0x00	; 0
+ 65a:	1a c0       	rjmp	.+52     	; 0x690 <SPI_MasterTransceivePacket+0x5e>
+	while (bytesTransceived < bytesToTransceive)
+	{
+		//发送数据
+		uint8_t data = spi->dataPacket->transmitData[bytesTransceived];
+ 65c:	29 2f       	mov	r18, r25
+ 65e:	30 e0       	ldi	r19, 0x00	; 0
+ 660:	03 80       	ldd	r0, Z+3	; 0x03
+ 662:	f4 81       	ldd	r31, Z+4	; 0x04
+ 664:	e0 2d       	mov	r30, r0
+ 666:	e2 0f       	add	r30, r18
+ 668:	f3 1f       	adc	r31, r19
+ 66a:	80 81       	ld	r24, Z
+		spi->module->DATA = data;
+ 66c:	e8 81       	ld	r30, Y
+ 66e:	f9 81       	ldd	r31, Y+1	; 0x01
+ 670:	83 83       	std	Z+3, r24	; 0x03
+		//等待传输完成
+		while(!(spi->module->STATUS & SPI_IF_bm)){}
+ 672:	e8 81       	ld	r30, Y
+ 674:	f9 81       	ldd	r31, Y+1	; 0x01
+ 676:	82 81       	ldd	r24, Z+2	; 0x02
+ 678:	87 ff       	sbrs	r24, 7
+ 67a:	fd cf       	rjmp	.-6      	; 0x676 <SPI_MasterTransceivePacket+0x44>
+		//读数据
+		data = spi->module->DATA;
+ 67c:	83 81       	ldd	r24, Z+3	; 0x03
+		spi->dataPacket->receiveData[bytesTransceived] = data;
+ 67e:	ed 81       	ldd	r30, Y+5	; 0x05
+ 680:	fe 81       	ldd	r31, Y+6	; 0x06
+ 682:	05 80       	ldd	r0, Z+5	; 0x05
+ 684:	f6 81       	ldd	r31, Z+6	; 0x06
+ 686:	e0 2d       	mov	r30, r0
+ 688:	e2 0f       	add	r30, r18
+ 68a:	f3 1f       	adc	r31, r19
+ 68c:	80 83       	st	Z, r24
+		bytesTransceived++;
+ 68e:	9f 5f       	subi	r25, 0xFF	; 255
+ 690:	ed 81       	ldd	r30, Y+5	; 0x05
+ 692:	fe 81       	ldd	r31, Y+6	; 0x06
+		SPI_MasterSSLow(spi->dataPacket->ssPort, ssPinMask);
+	}
+	//传输字节
+	uint8_t bytesTransceived = 0;
+	uint8_t bytesToTransceive = dataPacket->bytesToTransceive;
+	while (bytesTransceived < bytesToTransceive)
+ 694:	96 17       	cp	r25, r22
+ 696:	10 f3       	brcs	.-60     	; 0x65c <SPI_MasterTransceivePacket+0x2a>
+		data = spi->module->DATA;
+		spi->dataPacket->receiveData[bytesTransceived] = data;
+		bytesTransceived++;
+	}
+	//如果使用了SS
+	if (spi->dataPacket->ssPort != NULL)
+ 698:	01 90       	ld	r0, Z+
+ 69a:	f0 81       	ld	r31, Z
+ 69c:	e0 2d       	mov	r30, r0
+ 69e:	30 97       	sbiw	r30, 0x00	; 0
+ 6a0:	09 f0       	breq	.+2      	; 0x6a4 <SPI_MasterTransceivePacket+0x72>
+	{
+		//SS释放
+		SPI_MasterSSHigh(spi->dataPacket->ssPort, ssPinMask);
+ 6a2:	45 83       	std	Z+5, r20	; 0x05
+	}
+	//设置变量指示传输成功
+	spi->dataPacket->bytesTransceived = bytesTransceived;
+ 6a4:	ed 81       	ldd	r30, Y+5	; 0x05
+ 6a6:	fe 81       	ldd	r31, Y+6	; 0x06
+ 6a8:	60 87       	std	Z+8, r22	; 0x08
+	spi->dataPacket->complete = true;
+ 6aa:	ed 81       	ldd	r30, Y+5	; 0x05
+ 6ac:	fe 81       	ldd	r31, Y+6	; 0x06
+ 6ae:	81 e0       	ldi	r24, 0x01	; 1
+ 6b0:	81 87       	std	Z+9, r24	; 0x09
+	//执行成功
+	return true;
+}
+ 6b2:	df 91       	pop	r29
+ 6b4:	cf 91       	pop	r28
+ 6b6:	08 95       	ret
+
+000006b8 <uart_init>:
+*/
+void uart_init(void)
+{
+	/* USARTC0 引脚方向设置*/
+  	/* PC3 (TXD0) 输出 */
+	PORTC.DIRSET   = PIN3_bm;
+ 6b8:	e0 e4       	ldi	r30, 0x40	; 64
+ 6ba:	f6 e0       	ldi	r31, 0x06	; 6
+ 6bc:	88 e0       	ldi	r24, 0x08	; 8
+ 6be:	81 83       	std	Z+1, r24	; 0x01
+	/* PC2 (RXD0) 输入 */
+	PORTC.DIRCLR   = PIN2_bm;
+ 6c0:	84 e0       	ldi	r24, 0x04	; 4
+ 6c2:	82 83       	std	Z+2, r24	; 0x02
+	/* USARTC0 模式 - 异步*/
+	USART_SetMode(&USARTC0,USART_CMODE_ASYNCHRONOUS_gc);
+ 6c4:	e0 ea       	ldi	r30, 0xA0	; 160
+ 6c6:	f8 e0       	ldi	r31, 0x08	; 8
+ 6c8:	85 81       	ldd	r24, Z+5	; 0x05
+ 6ca:	8f 73       	andi	r24, 0x3F	; 63
+ 6cc:	85 83       	std	Z+5, r24	; 0x05
+	/* USARTC0帧结构, 8 位数据位, 无校验, 1停止位 */
+	USART_Format_Set(&USARTC0, USART_CHSIZE_8BIT_gc,USART_PMODE_DISABLED_gc, false);
+ 6ce:	83 e0       	ldi	r24, 0x03	; 3
+ 6d0:	85 83       	std	Z+5, r24	; 0x05
+	/* 设置波特率 9600*/
+	USART_Baudrate_Set(&USARTC0, 12 , 0);
+ 6d2:	8c e0       	ldi	r24, 0x0C	; 12
+ 6d4:	86 83       	std	Z+6, r24	; 0x06
+ 6d6:	17 82       	std	Z+7, r1	; 0x07
+	/* USARTC0 使能发送*/
+	USART_Tx_Enable(&USARTC0);
+ 6d8:	84 81       	ldd	r24, Z+4	; 0x04
+ 6da:	88 60       	ori	r24, 0x08	; 8
+ 6dc:	84 83       	std	Z+4, r24	; 0x04
+	/* USARTC0 使能接收*/
+	USART_Rx_Enable(&USARTC0);
+ 6de:	84 81       	ldd	r24, Z+4	; 0x04
+ 6e0:	80 61       	ori	r24, 0x10	; 16
+ 6e2:	84 83       	std	Z+4, r24	; 0x04
+}
+ 6e4:	08 95       	ret
+
+000006e6 <main>:
+ *
+ *  The variable, 'success', will be non-zero when the function reaches the
+ *  infinite for-loop if the test was successful.
+ */
+int main(void)
+{
+ 6e6:	8f 92       	push	r8
+ 6e8:	9f 92       	push	r9
+ 6ea:	af 92       	push	r10
+ 6ec:	cf 92       	push	r12
+ 6ee:	ef 92       	push	r14
+ 6f0:	ff 92       	push	r15
+ 6f2:	0f 93       	push	r16
+ 6f4:	1f 93       	push	r17
+ 6f6:	cf 93       	push	r28
+ 6f8:	df 93       	push	r29
+	uart_init(); 
+ 6fa:	0e 94 5c 03 	call	0x6b8	; 0x6b8 <uart_init>
+	uart_puts("inside main");uart_putc('\n');
+ 6fe:	80 e0       	ldi	r24, 0x00	; 0
+ 700:	90 e2       	ldi	r25, 0x20	; 32
+ 702:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ 706:	8a e0       	ldi	r24, 0x0A	; 10
+ 708:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+	//SS引脚线与上拉，方向输出
+	PORTE.DIRSET = PIN4_bm;
+ 70c:	30 e8       	ldi	r19, 0x80	; 128
+ 70e:	83 2e       	mov	r8, r19
+ 710:	36 e0       	ldi	r19, 0x06	; 6
+ 712:	93 2e       	mov	r9, r19
+ 714:	10 e1       	ldi	r17, 0x10	; 16
+ 716:	f4 01       	movw	r30, r8
+ 718:	11 83       	std	Z+1, r17	; 0x01
+	PORTE.PIN4CTRL = PORT_OPC_WIREDANDPULL_gc;
+ 71a:	88 e3       	ldi	r24, 0x38	; 56
+ 71c:	84 8b       	std	Z+20, r24	; 0x14
+
+	//SS拉高
+	PORTE.OUTSET = PIN4_bm;
+ 71e:	15 83       	std	Z+5, r17	; 0x05
+
+	//SS引脚所在端口
+	PORT_t *ssPort = &PORTE;
+
+	//初始化端口E上的SPI主机
+	SPI_MasterInit(&spiMasterE,
+ 720:	86 ec       	ldi	r24, 0xC6	; 198
+ 722:	90 e2       	ldi	r25, 0x20	; 32
+ 724:	60 ec       	ldi	r22, 0xC0	; 192
+ 726:	7a e0       	ldi	r23, 0x0A	; 10
+ 728:	40 e8       	ldi	r20, 0x80	; 128
+ 72a:	56 e0       	ldi	r21, 0x06	; 6
+ 72c:	20 e0       	ldi	r18, 0x00	; 0
+ 72e:	00 e0       	ldi	r16, 0x00	; 0
+ 730:	ee 24       	eor	r14, r14
+ 732:	cc 24       	eor	r12, r12
+ 734:	aa 24       	eor	r10, r10
+ 736:	0e 94 28 02 	call	0x450	; 0x450 <SPI_MasterInit>
+                   bool lsbFirst,
+                   SPI_MODE_t mode,
+                   SPI_INTLVL_t intLevel)
+{
+	//SPI模块
+	spi->module       = module;
+ 73a:	a0 ec       	ldi	r26, 0xC0	; 192
+ 73c:	bb e0       	ldi	r27, 0x0B	; 11
+ 73e:	a0 93 b8 20 	sts	0x20B8, r26
+ 742:	b0 93 b9 20 	sts	0x20B9, r27
+	spi->port         = port;
+ 746:	e0 ea       	ldi	r30, 0xA0	; 160
+ 748:	f6 e0       	ldi	r31, 0x06	; 6
+ 74a:	e0 93 ba 20 	sts	0x20BA, r30
+ 74e:	f0 93 bb 20 	sts	0x20BB, r31
+	spi->module->CTRL = SPI_ENABLE_bm |                //SPI模块使能
+ 752:	80 e4       	ldi	r24, 0x40	; 64
+ 754:	80 93 c0 0b 	sts	0x0BC0, r24
+	                    (lsbFirst ? SPI_DORD_bm : 0) | //数据顺序
+	                    mode;                          //SPI 模式
+	//中断级别
+	spi->module->INTCTRL = intLevel;
+ 758:	11 96       	adiw	r26, 0x01	; 1
+ 75a:	1c 92       	st	X, r1
+ 	//MISO设为输出
+	spi->port->DIRSET = SPI_MISO_bm;
+ 75c:	81 83       	std	Z+1, r24	; 0x01
+				  SPI_INTLVL_OFF_gc);
+
+	
+	//1.单个字节方式传输
+	// 主机: 拉低SS SPI_MasterTransceiveByte()不控制SS
+	SPI_MasterSSLow(ssPort, PIN4_bm);
+ 75e:	f4 01       	movw	r30, r8
+ 760:	16 83       	std	Z+6, r17	; 0x06
+ 762:	ce ea       	ldi	r28, 0xAE	; 174
+ 764:	d0 e2       	ldi	r29, 0x20	; 32
+	uint8_t result = 0;
+
+	for(uint8_t i = 0; i < NUM_BYTES; i++)
+	{
+		//主机: 主机传输数据到从机
+		SPI_MasterTransceiveByte(&spiMasterE, masterSendData[i]);
+ 766:	88 81       	ld	r24, Y
+ *  \返回            从机发来的数据
+ */
+uint8_t SPI_MasterTransceiveByte(SPI_Master_t *spi, uint8_t TXdata)
+{
+	//发送数据
+	spi->module->DATA = TXdata;
+ 768:	e0 91 c6 20 	lds	r30, 0x20C6
+ 76c:	f0 91 c7 20 	lds	r31, 0x20C7
+ 770:	83 83       	std	Z+3, r24	; 0x03
+	//等待传输完成
+	while(!(spi->module->STATUS & SPI_IF_bm)) {}
+ 772:	82 81       	ldd	r24, Z+2	; 0x02
+ 774:	87 ff       	sbrs	r24, 7
+ 776:	fd cf       	rjmp	.-6      	; 0x772 <main+0x8c>
+	//读数据
+	uint8_t result = spi->module->DATA;
+ 778:	83 81       	ldd	r24, Z+3	; 0x03
+		uart_puts("SPI_MasterTransceiveByte() return result = ");
+ 77a:	8c e0       	ldi	r24, 0x0C	; 12
+ 77c:	90 e2       	ldi	r25, 0x20	; 32
+ 77e:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_putc_hex(result);
+ 782:	80 e0       	ldi	r24, 0x00	; 0
+ 784:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+		uart_putc('\n');
+ 788:	8a e0       	ldi	r24, 0x0A	; 10
+ 78a:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+		//从机: 等待数据可用
+		while (SPI_SlaveDataAvailable(&spiSlaveF) == false){}
+ 78e:	e0 91 b8 20 	lds	r30, 0x20B8
+ 792:	f0 91 b9 20 	lds	r31, 0x20B9
+ 796:	82 81       	ldd	r24, Z+2	; 0x02
+ 798:	87 ff       	sbrs	r24, 7
+ 79a:	fd cf       	rjmp	.-6      	; 0x796 <main+0xb0>
+		uart_puts("SPI_SlaveDataAvailable");
+ 79c:	88 e3       	ldi	r24, 0x38	; 56
+ 79e:	90 e2       	ldi	r25, 0x20	; 32
+ 7a0:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_putc('\n');
+ 7a4:	8a e0       	ldi	r24, 0x0A	; 10
+ 7a6:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+		//从机: 取数据
+		uint8_t slaveByte = SPI_SlaveReadByte(&spiSlaveF);
+ 7aa:	e0 91 b8 20 	lds	r30, 0x20B8
+ 7ae:	f0 91 b9 20 	lds	r31, 0x20B9
+ 7b2:	13 81       	ldd	r17, Z+3	; 0x03
+		uart_puts("slaveByte = ");
+ 7b4:	8f e4       	ldi	r24, 0x4F	; 79
+ 7b6:	90 e2       	ldi	r25, 0x20	; 32
+ 7b8:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_putc_hex(slaveByte);
+ 7bc:	81 2f       	mov	r24, r17
+ 7be:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+		uart_putc('\n');
+ 7c2:	8a e0       	ldi	r24, 0x0A	; 10
+ 7c4:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+		//从机: 收到数据加1，发送回去
+		slaveByte++;
+ 7c8:	1f 5f       	subi	r17, 0xFF	; 255
+		SPI_SlaveWriteByte(&spiSlaveF, slaveByte);
+ 7ca:	e0 91 b8 20 	lds	r30, 0x20B8
+ 7ce:	f0 91 b9 20 	lds	r31, 0x20B9
+ 7d2:	13 83       	std	Z+3, r17	; 0x03
+ *  \返回            从机发来的数据
+ */
+uint8_t SPI_MasterTransceiveByte(SPI_Master_t *spi, uint8_t TXdata)
+{
+	//发送数据
+	spi->module->DATA = TXdata;
+ 7d4:	e0 91 c6 20 	lds	r30, 0x20C6
+ 7d8:	f0 91 c7 20 	lds	r31, 0x20C7
+ 7dc:	13 82       	std	Z+3, r1	; 0x03
+	//等待传输完成
+	while(!(spi->module->STATUS & SPI_IF_bm)) {}
+ 7de:	82 81       	ldd	r24, Z+2	; 0x02
+ 7e0:	87 ff       	sbrs	r24, 7
+ 7e2:	fd cf       	rjmp	.-6      	; 0x7de <main+0xf8>
+	//读数据
+	uint8_t result = spi->module->DATA;
+ 7e4:	03 81       	ldd	r16, Z+3	; 0x03
+
+		//主机: 发送空字节读数据
+		uint8_t masterReceivedByte = SPI_MasterTransceiveByte(&spiMasterE, 0x00);
+		uart_puts("masterReceivedByte = ");
+ 7e6:	8c e5       	ldi	r24, 0x5C	; 92
+ 7e8:	90 e2       	ldi	r25, 0x20	; 32
+ 7ea:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_putc_hex(masterReceivedByte);
+ 7ee:	80 2f       	mov	r24, r16
+ 7f0:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+		uart_putc('\n');
+ 7f4:	8a e0       	ldi	r24, 0x0A	; 10
+ 7f6:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+		//主机: 检查数据是否正确
+		if (masterReceivedByte != (masterSendData[i] + 1) )
+ 7fa:	10 e0       	ldi	r17, 0x00	; 0
+ 7fc:	88 81       	ld	r24, Y
+ 7fe:	90 e0       	ldi	r25, 0x00	; 0
+ 800:	01 96       	adiw	r24, 0x01	; 1
+ 802:	08 17       	cp	r16, r24
+ 804:	19 07       	cpc	r17, r25
+ 806:	49 f0       	breq	.+18     	; 0x81a <main+0x134>
+		{
+			success = false;
+ 808:	10 92 b2 20 	sts	0x20B2, r1
+			uart_puts("success = false");
+ 80c:	82 e7       	ldi	r24, 0x72	; 114
+ 80e:	90 e2       	ldi	r25, 0x20	; 32
+ 810:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+			uart_putc('\n');
+ 814:	8a e0       	ldi	r24, 0x0A	; 10
+ 816:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		}
+		uart_putc('\n');
+ 81a:	8a e0       	ldi	r24, 0x0A	; 10
+ 81c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		uart_putc('\n');
+ 820:	8a e0       	ldi	r24, 0x0A	; 10
+ 822:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 826:	21 96       	adiw	r28, 0x01	; 1
+	//1.单个字节方式传输
+	// 主机: 拉低SS SPI_MasterTransceiveByte()不控制SS
+	SPI_MasterSSLow(ssPort, PIN4_bm);
+	uint8_t result = 0;
+
+	for(uint8_t i = 0; i < NUM_BYTES; i++)
+ 828:	f0 e2       	ldi	r31, 0x20	; 32
+ 82a:	c2 3b       	cpi	r28, 0xB2	; 178
+ 82c:	df 07       	cpc	r29, r31
+ 82e:	09 f0       	breq	.+2      	; 0x832 <main+0x14c>
+ 830:	9a cf       	rjmp	.-204    	; 0x766 <main+0x80>
+		}
+		uart_putc('\n');
+		uart_putc('\n');
+	}
+	//主机: 释放SS
+	SPI_MasterSSHigh(ssPort, PIN4_bm);
+ 832:	e0 e8       	ldi	r30, 0x80	; 128
+ 834:	f6 e0       	ldi	r31, 0x06	; 6
+ 836:	80 e1       	ldi	r24, 0x10	; 16
+ 838:	85 83       	std	Z+5, r24	; 0x05
+                                uint8_t *receiveData,
+                                uint8_t bytesToTransceive,
+                                PORT_t *ssPort,
+                                uint8_t ssPinMask)
+{
+	dataPacket->ssPort            = ssPort;
+ 83a:	e0 93 bc 20 	sts	0x20BC, r30
+ 83e:	f0 93 bd 20 	sts	0x20BD, r31
+	dataPacket->ssPinMask         = ssPinMask;
+ 842:	80 93 be 20 	sts	0x20BE, r24
+	dataPacket->transmitData      = transmitData;
+ 846:	24 97       	sbiw	r28, 0x04	; 4
+ 848:	c0 93 bf 20 	sts	0x20BF, r28
+ 84c:	d0 93 c0 20 	sts	0x20C0, r29
+	dataPacket->receiveData       = receiveData;
+ 850:	24 eb       	ldi	r18, 0xB4	; 180
+ 852:	e2 2e       	mov	r14, r18
+ 854:	20 e2       	ldi	r18, 0x20	; 32
+ 856:	f2 2e       	mov	r15, r18
+ 858:	e0 92 c1 20 	sts	0x20C1, r14
+ 85c:	f0 92 c2 20 	sts	0x20C2, r15
+	dataPacket->bytesToTransceive  = bytesToTransceive;
+ 860:	84 e0       	ldi	r24, 0x04	; 4
+ 862:	80 93 c3 20 	sts	0x20C3, r24
+	dataPacket->bytesTransceived   = 0;
+ 866:	10 92 c4 20 	sts	0x20C4, r1
+	dataPacket->complete          = false;
+ 86a:	10 92 c5 20 	sts	0x20C5, r1
+	                           NUM_BYTES,
+	                           &PORTE,
+	                           PIN4_bm);
+
+	// 传输数据包
+	uint8_t SPI_MTP_FLAG = SPI_MasterTransceivePacket(&spiMasterE, &dataPacket);
+ 86e:	86 ec       	ldi	r24, 0xC6	; 198
+ 870:	90 e2       	ldi	r25, 0x20	; 32
+ 872:	6c eb       	ldi	r22, 0xBC	; 188
+ 874:	70 e2       	ldi	r23, 0x20	; 32
+ 876:	0e 94 19 03 	call	0x632	; 0x632 <SPI_MasterTransceivePacket>
+ 87a:	18 2f       	mov	r17, r24
+
+	uart_puts("SPI_MTP_FLAG = ");
+ 87c:	82 e8       	ldi	r24, 0x82	; 130
+ 87e:	90 e2       	ldi	r25, 0x20	; 32
+ 880:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+	uart_putc_hex(SPI_MTP_FLAG);
+ 884:	81 2f       	mov	r24, r17
+ 886:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+	uart_putc('\n');
+ 88a:	8a e0       	ldi	r24, 0x0A	; 10
+ 88c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 890:	e7 01       	movw	r28, r14
+ 892:	21 96       	adiw	r28, 0x01	; 1
+ 894:	00 e0       	ldi	r16, 0x00	; 0
+ 896:	10 e0       	ldi	r17, 0x00	; 0
+
+	// 检查接收数据的正确性，假设接收正确
+	for (uint8_t i = 0; i < NUM_BYTES - 1; i++)
+	{
+		if (masterReceivedData[i + 1] != masterSendData[i])
+ 898:	f8 01       	movw	r30, r16
+ 89a:	e2 55       	subi	r30, 0x52	; 82
+ 89c:	ff 4d       	sbci	r31, 0xDF	; 223
+ 89e:	98 81       	ld	r25, Y
+ 8a0:	80 81       	ld	r24, Z
+ 8a2:	98 17       	cp	r25, r24
+ 8a4:	49 f0       	breq	.+18     	; 0x8b8 <main+0x1d2>
+		{
+			success = false;
+ 8a6:	10 92 b2 20 	sts	0x20B2, r1
+			uart_puts("success = false");
+ 8aa:	82 e7       	ldi	r24, 0x72	; 114
+ 8ac:	90 e2       	ldi	r25, 0x20	; 32
+ 8ae:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+			uart_putc('\n');
+ 8b2:	8a e0       	ldi	r24, 0x0A	; 10
+ 8b4:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		}
+		uart_puts("masterReceivedData[");uart_putw_dec(i);uart_puts("+ 1] = ");
+ 8b8:	82 e9       	ldi	r24, 0x92	; 146
+ 8ba:	90 e2       	ldi	r25, 0x20	; 32
+ 8bc:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ 8c0:	c8 01       	movw	r24, r16
+ 8c2:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ 8c6:	86 ea       	ldi	r24, 0xA6	; 166
+ 8c8:	90 e2       	ldi	r25, 0x20	; 32
+ 8ca:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_putc_hex(masterReceivedData[i + 1]);uart_putc('\n');
+ 8ce:	89 91       	ld	r24, Y+
+ 8d0:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+ 8d4:	8a e0       	ldi	r24, 0x0A	; 10
+ 8d6:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 8da:	0f 5f       	subi	r16, 0xFF	; 255
+ 8dc:	1f 4f       	sbci	r17, 0xFF	; 255
+	uart_puts("SPI_MTP_FLAG = ");
+	uart_putc_hex(SPI_MTP_FLAG);
+	uart_putc('\n');
+
+	// 检查接收数据的正确性，假设接收正确
+	for (uint8_t i = 0; i < NUM_BYTES - 1; i++)
+ 8de:	03 30       	cpi	r16, 0x03	; 3
+ 8e0:	11 05       	cpc	r17, r1
+ 8e2:	d1 f6       	brne	.-76     	; 0x898 <main+0x1b2>
+		uart_putc_hex(masterReceivedData[i + 1]);uart_putc('\n');
+	}
+	
+	while(true)
+	{
+		nop();
+ 8e4:	00 00       	nop
+ 8e6:	fe cf       	rjmp	.-4      	; 0x8e4 <main+0x1fe>
+
+000008e8 <__mulsi3>:
+ 8e8:	62 9f       	mul	r22, r18
+ 8ea:	d0 01       	movw	r26, r0
+ 8ec:	73 9f       	mul	r23, r19
+ 8ee:	f0 01       	movw	r30, r0
+ 8f0:	82 9f       	mul	r24, r18
+ 8f2:	e0 0d       	add	r30, r0
+ 8f4:	f1 1d       	adc	r31, r1
+ 8f6:	64 9f       	mul	r22, r20
+ 8f8:	e0 0d       	add	r30, r0
+ 8fa:	f1 1d       	adc	r31, r1
+ 8fc:	92 9f       	mul	r25, r18
+ 8fe:	f0 0d       	add	r31, r0
+ 900:	83 9f       	mul	r24, r19
+ 902:	f0 0d       	add	r31, r0
+ 904:	74 9f       	mul	r23, r20
+ 906:	f0 0d       	add	r31, r0
+ 908:	65 9f       	mul	r22, r21
+ 90a:	f0 0d       	add	r31, r0
+ 90c:	99 27       	eor	r25, r25
+ 90e:	72 9f       	mul	r23, r18
+ 910:	b0 0d       	add	r27, r0
+ 912:	e1 1d       	adc	r30, r1
+ 914:	f9 1f       	adc	r31, r25
+ 916:	63 9f       	mul	r22, r19
+ 918:	b0 0d       	add	r27, r0
+ 91a:	e1 1d       	adc	r30, r1
+ 91c:	f9 1f       	adc	r31, r25
+ 91e:	bd 01       	movw	r22, r26
+ 920:	cf 01       	movw	r24, r30
+ 922:	11 24       	eor	r1, r1
+ 924:	08 95       	ret
+
+00000926 <__udivmodhi4>:
+ 926:	aa 1b       	sub	r26, r26
+ 928:	bb 1b       	sub	r27, r27
+ 92a:	51 e1       	ldi	r21, 0x11	; 17
+ 92c:	07 c0       	rjmp	.+14     	; 0x93c <__udivmodhi4_ep>
+
+0000092e <__udivmodhi4_loop>:
+ 92e:	aa 1f       	adc	r26, r26
+ 930:	bb 1f       	adc	r27, r27
+ 932:	a6 17       	cp	r26, r22
+ 934:	b7 07       	cpc	r27, r23
+ 936:	10 f0       	brcs	.+4      	; 0x93c <__udivmodhi4_ep>
+ 938:	a6 1b       	sub	r26, r22
+ 93a:	b7 0b       	sbc	r27, r23
+
+0000093c <__udivmodhi4_ep>:
+ 93c:	88 1f       	adc	r24, r24
+ 93e:	99 1f       	adc	r25, r25
+ 940:	5a 95       	dec	r21
+ 942:	a9 f7       	brne	.-22     	; 0x92e <__udivmodhi4_loop>
+ 944:	80 95       	com	r24
+ 946:	90 95       	com	r25
+ 948:	bc 01       	movw	r22, r24
+ 94a:	cd 01       	movw	r24, r26
+ 94c:	08 95       	ret
+
+0000094e <__udivmodsi4>:
+ 94e:	a1 e2       	ldi	r26, 0x21	; 33
+ 950:	1a 2e       	mov	r1, r26
+ 952:	aa 1b       	sub	r26, r26
+ 954:	bb 1b       	sub	r27, r27
+ 956:	fd 01       	movw	r30, r26
+ 958:	0d c0       	rjmp	.+26     	; 0x974 <__udivmodsi4_ep>
+
+0000095a <__udivmodsi4_loop>:
+ 95a:	aa 1f       	adc	r26, r26
+ 95c:	bb 1f       	adc	r27, r27
+ 95e:	ee 1f       	adc	r30, r30
+ 960:	ff 1f       	adc	r31, r31
+ 962:	a2 17       	cp	r26, r18
+ 964:	b3 07       	cpc	r27, r19
+ 966:	e4 07       	cpc	r30, r20
+ 968:	f5 07       	cpc	r31, r21
+ 96a:	20 f0       	brcs	.+8      	; 0x974 <__udivmodsi4_ep>
+ 96c:	a2 1b       	sub	r26, r18
+ 96e:	b3 0b       	sbc	r27, r19
+ 970:	e4 0b       	sbc	r30, r20
+ 972:	f5 0b       	sbc	r31, r21
+
+00000974 <__udivmodsi4_ep>:
+ 974:	66 1f       	adc	r22, r22
+ 976:	77 1f       	adc	r23, r23
+ 978:	88 1f       	adc	r24, r24
+ 97a:	99 1f       	adc	r25, r25
+ 97c:	1a 94       	dec	r1
+ 97e:	69 f7       	brne	.-38     	; 0x95a <__udivmodsi4_loop>
+ 980:	60 95       	com	r22
+ 982:	70 95       	com	r23
+ 984:	80 95       	com	r24
+ 986:	90 95       	com	r25
+ 988:	9b 01       	movw	r18, r22
+ 98a:	ac 01       	movw	r20, r24
+ 98c:	bd 01       	movw	r22, r26
+ 98e:	cf 01       	movw	r24, r30
+ 990:	08 95       	ret
+
+00000992 <_exit>:
+ 992:	f8 94       	cli
+
+00000994 <__stop_program>:
+ 994:	ff cf       	rjmp	.-2      	; 0x994 <__stop_program>

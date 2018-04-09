@@ -1,0 +1,1129 @@
+
+AC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000598  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000020  00000000  00000000  000005ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 00000399  00000000  00000000  0000060c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   000019c6  00000000  00000000  000009a5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 00000239  00000000  00000000  0000236b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000005b5  00000000  00000000  000025a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000280  00000000  00000000  00002b5c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    000010db  00000000  00000000  00002ddc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    000005ef  00000000  00000000  00003eb7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  10:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  14:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  18:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  1c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  20:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  24:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  28:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  2c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  30:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  34:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  38:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  3c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  40:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  44:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  48:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  4c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  50:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  54:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  58:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  5c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  60:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  64:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  68:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  6c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  70:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  74:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  78:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  7c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  80:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  84:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  88:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  8c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  90:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  94:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  98:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  9c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  fc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 100:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 104:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 108:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 10c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 110:	0c 94 a2 02 	jmp	0x544	; 0x544 <__vector_68>
+ 114:	0c 94 b6 02 	jmp	0x56c	; 0x56c <__vector_69>
+ 118:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 11c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 120:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 124:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 128:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 12c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 130:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 134:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 138:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 13c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 140:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 144:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 148:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 14c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 150:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 154:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 158:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 15c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 160:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 164:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 168:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 16c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 170:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 174:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 178:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 17c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 180:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 184:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 188:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 18c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 190:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 194:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 198:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 19c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	e8 e9       	ldi	r30, 0x98	; 152
+ 214:	f5 e0       	ldi	r31, 0x05	; 5
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a0 30       	cpi	r26, 0x00	; 0
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+ 228:	0e 94 32 02 	call	0x464	; 0x464 <main>
+ 22c:	0c 94 ca 02 	jmp	0x594	; 0x594 <_exit>
+
+00000230 <__bad_interrupt>:
+ 230:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000234 <AC_Enable>:
+ *  \param  ac         Pointer to Analog Comparator module.
+ *  \param  comp       Which submodule, 0 or 1.
+ *  \param  highSpeed  Set to false for low-power, true for high-speed.
+ */
+void AC_Enable(AC_t * ac, AC_COMP_t comp, bool highSpeed)
+{
+ 234:	fc 01       	movw	r30, r24
+	/* Access correct registers based on which comparator submodule indicated. */
+	if(comp == 0){
+ 236:	66 23       	and	r22, r22
+ 238:	51 f4       	brne	.+20     	; 0x24e <AC_Enable+0x1a>
+		ac->AC0CTRL = (ac->AC0CTRL & ~AC_HSMODE_bm)|
+ 23a:	90 81       	ld	r25, Z
+ 23c:	44 23       	and	r20, r20
+ 23e:	11 f4       	brne	.+4      	; 0x244 <AC_Enable+0x10>
+ 240:	81 e0       	ldi	r24, 0x01	; 1
+ 242:	01 c0       	rjmp	.+2      	; 0x246 <AC_Enable+0x12>
+ 244:	89 e0       	ldi	r24, 0x09	; 9
+ 246:	97 7f       	andi	r25, 0xF7	; 247
+ 248:	89 2b       	or	r24, r25
+ 24a:	80 83       	st	Z, r24
+ 24c:	08 95       	ret
+ 		              (AC_ENABLE_bm | (highSpeed ? AC_HSMODE_bm : 0));
+	}else{
+		ac->AC1CTRL = (ac->AC1CTRL & ~AC_HSMODE_bm)|
+ 24e:	91 81       	ldd	r25, Z+1	; 0x01
+ 250:	44 23       	and	r20, r20
+ 252:	11 f4       	brne	.+4      	; 0x258 <AC_Enable+0x24>
+ 254:	81 e0       	ldi	r24, 0x01	; 1
+ 256:	01 c0       	rjmp	.+2      	; 0x25a <AC_Enable+0x26>
+ 258:	89 e0       	ldi	r24, 0x09	; 9
+ 25a:	97 7f       	andi	r25, 0xF7	; 247
+ 25c:	89 2b       	or	r24, r25
+ 25e:	81 83       	std	Z+1, r24	; 0x01
+ 260:	08 95       	ret
+
+00000262 <AC_Disable>:
+ *
+ *  \param  ac    Pointer to Analog Comparator module.
+ *  \param  comp  Which submodule, 0 or 1.
+ */
+void AC_Disable(AC_t * ac, AC_COMP_t comp)
+{
+ 262:	fc 01       	movw	r30, r24
+	/* Access correct registers based on which comparator submodule indicated. */
+	if(comp == 0){
+ 264:	66 23       	and	r22, r22
+ 266:	21 f4       	brne	.+8      	; 0x270 <AC_Disable+0xe>
+		ac->AC0CTRL &= ~AC_ENABLE_bm;
+ 268:	80 81       	ld	r24, Z
+ 26a:	8e 7f       	andi	r24, 0xFE	; 254
+ 26c:	80 83       	st	Z, r24
+ 26e:	08 95       	ret
+	}else{
+		ac->AC1CTRL &= ~AC_ENABLE_bm;
+ 270:	81 81       	ldd	r24, Z+1	; 0x01
+ 272:	8e 7f       	andi	r24, 0xFE	; 254
+ 274:	81 83       	std	Z+1, r24	; 0x01
+ 276:	08 95       	ret
+
+00000278 <AC_ConfigInterrupt>:
+ *  \param  interruptMode   Interrupt mode setting (falling, rising, toggle).
+ *  \param  interruptLevel  Interrupt level setting.
+ */
+void AC_ConfigInterrupt(AC_t * ac, AC_COMP_t comp, AC_INTMODE_t interruptMode,
+						AC_INTLVL_t interruptLevel)
+{
+ 278:	fc 01       	movw	r30, r24
+ 27a:	24 2b       	or	r18, r20
+	/* Access correct registers based on which comparator submodule indicated. */
+	if(comp == 0){
+ 27c:	66 23       	and	r22, r22
+ 27e:	29 f4       	brne	.+10     	; 0x28a <AC_ConfigInterrupt+0x12>
+		ac->AC0CTRL = (ac->AC0CTRL & ~(AC_INTMODE_gm | AC_INTLVL_gm))|
+ 280:	80 81       	ld	r24, Z
+ 282:	8f 70       	andi	r24, 0x0F	; 15
+ 284:	28 2b       	or	r18, r24
+ 286:	20 83       	st	Z, r18
+ 288:	08 95       	ret
+		              ((uint8_t) interruptMode | interruptLevel);
+	}else{
+		ac->AC1CTRL = (ac->AC1CTRL & ~(AC_INTMODE_gm | AC_INTLVL_gm)) |
+ 28a:	81 81       	ldd	r24, Z+1	; 0x01
+ 28c:	8f 70       	andi	r24, 0x0F	; 15
+ 28e:	28 2b       	or	r18, r24
+ 290:	21 83       	std	Z+1, r18	; 0x01
+ 292:	08 95       	ret
+
+00000294 <AC_ConfigHysteresis>:
+ *  \param  ac              Pointer to Analog Comparator module.
+ *  \param  comp            Which submodule, 0 or 1.
+ *  \param  hysteresisMode  Hysteresis setting (none, small, large).
+ */
+void AC_ConfigHysteresis(AC_t * ac, AC_COMP_t comp, AC_HYSMODE_t hysteresisMode)
+{
+ 294:	fc 01       	movw	r30, r24
+	/* Access correct registers based on which comparator submodule indicated. */
+	if(comp == 0){
+ 296:	66 23       	and	r22, r22
+ 298:	29 f4       	brne	.+10     	; 0x2a4 <AC_ConfigHysteresis+0x10>
+		ac->AC0CTRL = (ac->AC0CTRL & ~AC_HYSMODE_gm) | hysteresisMode;
+ 29a:	80 81       	ld	r24, Z
+ 29c:	89 7f       	andi	r24, 0xF9	; 249
+ 29e:	84 2b       	or	r24, r20
+ 2a0:	80 83       	st	Z, r24
+ 2a2:	08 95       	ret
+	}else{
+		ac->AC1CTRL = (ac->AC1CTRL & ~AC_HYSMODE_gm) | hysteresisMode;
+ 2a4:	81 81       	ldd	r24, Z+1	; 0x01
+ 2a6:	89 7f       	andi	r24, 0xF9	; 249
+ 2a8:	84 2b       	or	r24, r20
+ 2aa:	81 83       	std	Z+1, r24	; 0x01
+ 2ac:	08 95       	ret
+
+000002ae <AC_ConfigMUX>:
+ *  \param  comp  Which submodule, 0 or 1.
+ *  \param  pos   Positive MUX input.
+ *  \param  neg   Negative MUX input.
+ */
+void AC_ConfigMUX(AC_t * ac, AC_COMP_t comp, AC_MUXPOS_t pos, AC_MUXNEG_t neg)
+{
+ 2ae:	fc 01       	movw	r30, r24
+ 2b0:	24 2b       	or	r18, r20
+	/* Access correct registers based on which comparator submodule indicated. */
+	if(comp == 0){
+ 2b2:	66 23       	and	r22, r22
+ 2b4:	29 f4       	brne	.+10     	; 0x2c0 <AC_ConfigMUX+0x12>
+		ac->AC0MUXCTRL = (ac->AC0MUXCTRL & ~(AC_MUXPOS_gm | AC_MUXNEG_gm)) |
+ 2b6:	82 81       	ldd	r24, Z+2	; 0x02
+ 2b8:	80 7c       	andi	r24, 0xC0	; 192
+ 2ba:	28 2b       	or	r18, r24
+ 2bc:	22 83       	std	Z+2, r18	; 0x02
+ 2be:	08 95       	ret
+		                 ((uint8_t) pos | neg);
+	}else{
+		ac->AC1MUXCTRL = (ac->AC1MUXCTRL & ~(AC_MUXPOS_gm | AC_MUXNEG_gm)) |
+ 2c0:	83 81       	ldd	r24, Z+3	; 0x03
+ 2c2:	80 7c       	andi	r24, 0xC0	; 192
+ 2c4:	28 2b       	or	r18, r24
+ 2c6:	23 83       	std	Z+3, r18	; 0x03
+ 2c8:	08 95       	ret
+
+000002ca <AC_ConfigVoltageScaler>:
+ *
+ *  \param  ac              Pointer to Analog Comparator module.
+ *  \param  scaleFactor     Scale factor in number of 1/64ths.
+ */
+void AC_ConfigVoltageScaler(AC_t * ac, uint8_t scaleFactor)
+{
+ 2ca:	fc 01       	movw	r30, r24
+	/* Scale factor gets truncated to bit field size. */
+	ac->CTRLB = (ac->CTRLB & ~AC_SCALEFAC_gm) |
+ 2cc:	85 81       	ldd	r24, Z+5	; 0x05
+ 2ce:	6f 73       	andi	r22, 0x3F	; 63
+ 2d0:	80 7c       	andi	r24, 0xC0	; 192
+ 2d2:	86 2b       	or	r24, r22
+ 2d4:	85 83       	std	Z+5, r24	; 0x05
+	            ((scaleFactor << AC_SCALEFAC_gp) & AC_SCALEFAC_gm);
+}
+ 2d6:	08 95       	ret
+
+000002d8 <AC_EnableWindowMode>:
+ *  \note Both submodules in the Analog Comparator must be enabled to make the
+ *        window mode work. This is done by using the AC_enable function.
+ */
+void AC_EnableWindowMode(AC_t * ac, AC_WINTMODE_t interruptMode,
+                         AC_WINTLVL_t interruptLevel)
+{
+ 2d8:	fc 01       	movw	r30, r24
+	ac->WINCTRL = (ac->WINCTRL & ~(AC_WINTMODE_gm | AC_WINTLVL_gm)) |
+ 2da:	86 81       	ldd	r24, Z+6	; 0x06
+ 2dc:	60 61       	ori	r22, 0x10	; 16
+ 2de:	64 2b       	or	r22, r20
+ 2e0:	80 7f       	andi	r24, 0xF0	; 240
+ 2e2:	86 2b       	or	r24, r22
+ 2e4:	86 83       	std	Z+6, r24	; 0x06
+	              (AC_WEN_bm | interruptMode | interruptLevel);
+}
+ 2e6:	08 95       	ret
+
+000002e8 <AC_DisableWindowMode>:
+/*! \brief  This function disables the window mode.
+ *
+ *  \param  ac  Pointer to Analog Comparator module.
+ */
+void AC_DisableWindowMode(AC_t * ac)
+{
+ 2e8:	fc 01       	movw	r30, r24
+	ac->WINCTRL = ~AC_WEN_bm;
+ 2ea:	8f ee       	ldi	r24, 0xEF	; 239
+ 2ec:	86 83       	std	Z+6, r24	; 0x06
+}
+ 2ee:	08 95       	ret
+
+000002f0 <AC_EnableComparator0_Output>:
+/*! \brief  This function enables routing of comparator 0 output to pin 0.
+ *
+ *  \param  ac  Pointer to Analog Comparator module.
+ */
+void AC_EnableComparator0_Output(AC_t * ac)
+{
+ 2f0:	fc 01       	movw	r30, r24
+	ac->CTRLA |= AC_AC0OUT_bm;
+ 2f2:	84 81       	ldd	r24, Z+4	; 0x04
+ 2f4:	81 60       	ori	r24, 0x01	; 1
+ 2f6:	84 83       	std	Z+4, r24	; 0x04
+}
+ 2f8:	08 95       	ret
+
+000002fa <AC_DisableComparator0_Output>:
+/*! \brief  This function disables routing of comparator 0 output to pin 0.
+ *
+ *  \param  ac  Pointer to Analog Comparator module.
+ */
+void AC_DisableComparator0_Output(AC_t * ac)
+{
+ 2fa:	fc 01       	movw	r30, r24
+	ac->CTRLA &= ~AC_AC0OUT_bm;
+ 2fc:	84 81       	ldd	r24, Z+4	; 0x04
+ 2fe:	8e 7f       	andi	r24, 0xFE	; 254
+ 300:	84 83       	std	Z+4, r24	; 0x04
+}
+ 302:	08 95       	ret
+
+00000304 <AC_GetComparatorState>:
+ *  \param  comp  Which submodule, 0 or 1.
+ *
+ *  \return  0 if positive input is below negative, non-zero otherwise.
+ */
+uint8_t AC_GetComparatorState(AC_t * ac, AC_COMP_t comp)
+{
+ 304:	fc 01       	movw	r30, r24
+	uint8_t state = 0;
+
+	/* Access correct bits based on which comparator submodule indicated. */
+	if(comp == 0){
+ 306:	66 23       	and	r22, r22
+ 308:	19 f4       	brne	.+6      	; 0x310 <AC_GetComparatorState+0xc>
+		state = ac->STATUS & AC_AC0STATE_bm;
+ 30a:	87 81       	ldd	r24, Z+7	; 0x07
+ 30c:	80 71       	andi	r24, 0x10	; 16
+ 30e:	08 95       	ret
+	}else if(comp == 1){
+ 310:	61 30       	cpi	r22, 0x01	; 1
+ 312:	11 f0       	breq	.+4      	; 0x318 <AC_GetComparatorState+0x14>
+ 314:	80 e0       	ldi	r24, 0x00	; 0
+ 316:	08 95       	ret
+		state = ac->STATUS & AC_AC1STATE_bm;
+ 318:	87 81       	ldd	r24, Z+7	; 0x07
+ 31a:	80 72       	andi	r24, 0x20	; 32
+	}else{
+
+	}
+
+	return state;
+}
+ 31c:	08 95       	ret
+
+0000031e <AC_GetWindowState>:
+ *  \param  ac  Pointer to Analog Comparator module.
+ *
+ *  \return  Window state.
+ */
+uint8_t AC_GetWindowState(AC_t * ac)
+{
+ 31e:	fc 01       	movw	r30, r24
+	return (ac->STATUS & AC_WSTATE_gm);
+ 320:	87 81       	ldd	r24, Z+7	; 0x07
+}
+ 322:	80 7c       	andi	r24, 0xC0	; 192
+ 324:	08 95       	ret
+
+00000326 <AC_WaitForComparator_Blocking>:
+ *
+ *  \param  ac    Pointer to Analog Comparator module.
+ *  \param  comp  Which submodule, 0 or 1.
+ */
+void AC_WaitForComparator_Blocking(AC_t * ac, AC_COMP_t comp)
+{
+ 326:	fc 01       	movw	r30, r24
+	/* Access correct bits based on which comparator submodule indicated.*/
+	if(comp == 0){
+ 328:	66 23       	and	r22, r22
+ 32a:	29 f4       	brne	.+10     	; 0x336 <AC_WaitForComparator_Blocking+0x10>
+		/* Wait for interrupt flag to be set and clear it. */
+		do {} while ((ac->STATUS & AC_AC0IF_bm) == 0);
+ 32c:	87 81       	ldd	r24, Z+7	; 0x07
+ 32e:	80 ff       	sbrs	r24, 0
+ 330:	fd cf       	rjmp	.-6      	; 0x32c <AC_WaitForComparator_Blocking+0x6>
+		ac->STATUS = AC_AC0IF_bm;
+ 332:	81 e0       	ldi	r24, 0x01	; 1
+ 334:	04 c0       	rjmp	.+8      	; 0x33e <AC_WaitForComparator_Blocking+0x18>
+	}else{
+		/* Wait for interrupt flag to be set and clear it. */
+		do {} while ((ac->STATUS & AC_AC1IF_bm) == 0);
+ 336:	87 81       	ldd	r24, Z+7	; 0x07
+ 338:	81 ff       	sbrs	r24, 1
+ 33a:	fd cf       	rjmp	.-6      	; 0x336 <AC_WaitForComparator_Blocking+0x10>
+		ac->STATUS = AC_AC1IF_bm;
+ 33c:	82 e0       	ldi	r24, 0x02	; 2
+ 33e:	87 83       	std	Z+7, r24	; 0x07
+ 340:	08 95       	ret
+
+00000342 <AC_WaitForWindow_Blocking>:
+ *  Which event to wait for is decided by the window interrupt mode setting.
+ *
+ *  \param  ac    Pointer to Analog Comparator module.
+ */
+void AC_WaitForWindow_Blocking(AC_t * ac)
+{
+ 342:	fc 01       	movw	r30, r24
+	/* Wait for interrupt flag to be set and clear it. */
+	do {} while ((ac->STATUS & AC_WIF_bm) == 0);
+ 344:	87 81       	ldd	r24, Z+7	; 0x07
+ 346:	82 ff       	sbrs	r24, 2
+ 348:	fd cf       	rjmp	.-6      	; 0x344 <AC_WaitForWindow_Blocking+0x2>
+	ac->STATUS = AC_WIF_bm;
+ 34a:	84 e0       	ldi	r24, 0x04	; 4
+ 34c:	87 83       	std	Z+7, r24	; 0x07
+}
+ 34e:	08 95       	ret
+
+00000350 <TC0_ConfigClockSource>:
+ *
+ *  \param tc              Timer/Counter module instance.
+ *  \param clockSelection  Timer/Counter clock source setting.
+ */
+void TC0_ConfigClockSource( volatile TC0_t * tc, TC_CLKSEL_t clockSelection )
+{
+ 350:	fc 01       	movw	r30, r24
+	tc->CTRLA = ( tc->CTRLA & ~TC0_CLKSEL_gm ) | clockSelection;
+ 352:	80 81       	ld	r24, Z
+ 354:	80 7f       	andi	r24, 0xF0	; 240
+ 356:	86 2b       	or	r24, r22
+ 358:	80 83       	st	Z, r24
+}
+ 35a:	08 95       	ret
+
+0000035c <TC1_ConfigClockSource>:
+ *
+ *  \param tc              Timer/Counter module instance.
+ *  \param clockSelection  Timer/Counter clock source setting.
+ */
+void TC1_ConfigClockSource( volatile TC1_t * tc, TC_CLKSEL_t clockSelection )
+{
+ 35c:	fc 01       	movw	r30, r24
+	tc->CTRLA = ( tc->CTRLA & ~TC1_CLKSEL_gm ) | clockSelection;
+ 35e:	80 81       	ld	r24, Z
+ 360:	80 7f       	andi	r24, 0xF0	; 240
+ 362:	86 2b       	or	r24, r22
+ 364:	80 83       	st	Z, r24
+}
+ 366:	08 95       	ret
+
+00000368 <TC0_ConfigWGM>:
+ *
+ *  \param tc    Timer/Counter module instance.
+ *  \param wgm   Waveform generation mode.
+ */
+void TC0_ConfigWGM( volatile TC0_t * tc, TC_WGMODE_t wgm )
+{
+ 368:	fc 01       	movw	r30, r24
+	tc->CTRLB = ( tc->CTRLB & ~TC0_WGMODE_gm ) | wgm;
+ 36a:	81 81       	ldd	r24, Z+1	; 0x01
+ 36c:	88 7f       	andi	r24, 0xF8	; 248
+ 36e:	86 2b       	or	r24, r22
+ 370:	81 83       	std	Z+1, r24	; 0x01
+}
+ 372:	08 95       	ret
+
+00000374 <TC1_ConfigWGM>:
+ *
+ *  \param tc    Timer/Counter module instance.
+ *  \param wgm   Waveform generation mode.
+ */
+void TC1_ConfigWGM( volatile TC1_t * tc, TC_WGMODE_t wgm )
+{
+ 374:	fc 01       	movw	r30, r24
+	tc->CTRLB = ( tc->CTRLB & ~TC1_WGMODE_gm ) | wgm;
+ 376:	81 81       	ldd	r24, Z+1	; 0x01
+ 378:	88 7f       	andi	r24, 0xF8	; 248
+ 37a:	86 2b       	or	r24, r22
+ 37c:	81 83       	std	Z+1, r24	; 0x01
+}
+ 37e:	08 95       	ret
+
+00000380 <TC0_ConfigInputCapture>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param eventSource      Event source selection.
+ */
+void TC0_ConfigInputCapture( volatile TC0_t * tc, TC_EVSEL_t eventSource )
+{
+ 380:	fc 01       	movw	r30, r24
+	tc->CTRLD = ( tc->CTRLD & ~( TC0_EVSEL_gm | TC0_EVACT_gm ) ) |
+ 382:	83 81       	ldd	r24, Z+3	; 0x03
+ 384:	80 71       	andi	r24, 0x10	; 16
+ 386:	80 62       	ori	r24, 0x20	; 32
+ 388:	86 2b       	or	r24, r22
+ 38a:	83 83       	std	Z+3, r24	; 0x03
+	            eventSource |
+	            TC_EVACT_CAPT_gc;
+}
+ 38c:	08 95       	ret
+
+0000038e <TC1_ConfigInputCapture>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param eventSource      Event source selection.
+ */
+void TC1_ConfigInputCapture( volatile TC1_t * tc, TC_EVSEL_t eventSource )
+{
+ 38e:	fc 01       	movw	r30, r24
+	tc->CTRLD = ( tc->CTRLD & ~( TC1_EVSEL_gm | TC1_EVACT_gm ) ) |
+ 390:	83 81       	ldd	r24, Z+3	; 0x03
+ 392:	80 71       	andi	r24, 0x10	; 16
+ 394:	80 62       	ori	r24, 0x20	; 32
+ 396:	86 2b       	or	r24, r22
+ 398:	83 83       	std	Z+3, r24	; 0x03
+	            eventSource |
+	            TC_EVACT_CAPT_gc;
+}
+ 39a:	08 95       	ret
+
+0000039c <TC0_EnableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param enableMask       Mask of channels to enable.
+ */
+void TC0_EnableCCChannels( volatile TC0_t * tc, uint8_t enableMask )
+{
+ 39c:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in enableMask. */
+	enableMask &= ( TC0_CCAEN_bm | TC0_CCBEN_bm | TC0_CCCEN_bm | TC0_CCDEN_bm );
+
+	/* Enable channels. */
+	tc->CTRLB |= enableMask;
+ 39e:	81 81       	ldd	r24, Z+1	; 0x01
+ 3a0:	60 7f       	andi	r22, 0xF0	; 240
+ 3a2:	86 2b       	or	r24, r22
+ 3a4:	81 83       	std	Z+1, r24	; 0x01
+}
+ 3a6:	08 95       	ret
+
+000003a8 <TC1_EnableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param enableMask       Mask of channels to enable.
+ */
+void TC1_EnableCCChannels( volatile TC1_t * tc, uint8_t enableMask )
+{
+ 3a8:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in enableMask. */
+	enableMask &= ( TC1_CCAEN_bm | TC1_CCBEN_bm );
+
+	/* Enable channels. */
+	tc->CTRLB |= enableMask;
+ 3aa:	81 81       	ldd	r24, Z+1	; 0x01
+ 3ac:	60 73       	andi	r22, 0x30	; 48
+ 3ae:	86 2b       	or	r24, r22
+ 3b0:	81 83       	std	Z+1, r24	; 0x01
+}
+ 3b2:	08 95       	ret
+
+000003b4 <TC0_DisableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param disableMask      Mask of channels to disable.
+ */
+void TC0_DisableCCChannels( volatile TC0_t * tc, uint8_t disableMask )
+{
+ 3b4:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in disableMask. */
+	disableMask &= ( TC0_CCAEN_bm | TC0_CCBEN_bm | TC0_CCCEN_bm | TC0_CCDEN_bm );
+
+	/* Disable channels. */
+	tc->CTRLB &= ~disableMask;
+ 3b6:	81 81       	ldd	r24, Z+1	; 0x01
+ 3b8:	60 7f       	andi	r22, 0xF0	; 240
+ 3ba:	60 95       	com	r22
+ 3bc:	86 23       	and	r24, r22
+ 3be:	81 83       	std	Z+1, r24	; 0x01
+}
+ 3c0:	08 95       	ret
+
+000003c2 <TC1_DisableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param disableMask      Mask of channels to disable.
+ */
+void TC1_DisableCCChannels( volatile TC1_t * tc, uint8_t disableMask )
+{
+ 3c2:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in disableMask. */
+	disableMask &= ( TC1_CCAEN_bm | TC1_CCBEN_bm );
+
+	/* Disable channels. */
+	tc->CTRLB &= ~disableMask;
+ 3c4:	81 81       	ldd	r24, Z+1	; 0x01
+ 3c6:	60 73       	andi	r22, 0x30	; 48
+ 3c8:	60 95       	com	r22
+ 3ca:	86 23       	and	r24, r22
+ 3cc:	81 83       	std	Z+1, r24	; 0x01
+}
+ 3ce:	08 95       	ret
+
+000003d0 <TC0_SetOverflowIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New overflow interrupt level.
+ */
+void TC0_SetOverflowIntLevel( volatile TC0_t * tc, TC_OVFINTLVL_t intLevel )
+{
+ 3d0:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC0_OVFINTLVL_gm ) | intLevel;
+ 3d2:	86 81       	ldd	r24, Z+6	; 0x06
+ 3d4:	8c 7f       	andi	r24, 0xFC	; 252
+ 3d6:	86 2b       	or	r24, r22
+ 3d8:	86 83       	std	Z+6, r24	; 0x06
+}
+ 3da:	08 95       	ret
+
+000003dc <TC1_SetOverflowIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New overflow interrupt level.
+ */
+void TC1_SetOverflowIntLevel( volatile TC1_t * tc, TC_OVFINTLVL_t intLevel )
+{
+ 3dc:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC1_OVFINTLVL_gm ) | intLevel;
+ 3de:	86 81       	ldd	r24, Z+6	; 0x06
+ 3e0:	8c 7f       	andi	r24, 0xFC	; 252
+ 3e2:	86 2b       	or	r24, r22
+ 3e4:	86 83       	std	Z+6, r24	; 0x06
+}
+ 3e6:	08 95       	ret
+
+000003e8 <TC0_SetErrorIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New error interrupt level.
+ */
+void TC0_SetErrorIntLevel( volatile TC0_t * tc, TC_ERRINTLVL_t intLevel )
+{
+ 3e8:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC0_ERRINTLVL_gm ) | intLevel;
+ 3ea:	86 81       	ldd	r24, Z+6	; 0x06
+ 3ec:	83 7f       	andi	r24, 0xF3	; 243
+ 3ee:	86 2b       	or	r24, r22
+ 3f0:	86 83       	std	Z+6, r24	; 0x06
+}
+ 3f2:	08 95       	ret
+
+000003f4 <TC1_SetErrorIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New error interrupt level.
+ */
+void TC1_SetErrorIntLevel( volatile TC1_t * tc, TC_ERRINTLVL_t intLevel )
+{
+ 3f4:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC1_ERRINTLVL_gm ) | intLevel;
+ 3f6:	86 81       	ldd	r24, Z+6	; 0x06
+ 3f8:	83 7f       	andi	r24, 0xF3	; 243
+ 3fa:	86 2b       	or	r24, r22
+ 3fc:	86 83       	std	Z+6, r24	; 0x06
+}
+ 3fe:	08 95       	ret
+
+00000400 <TC0_SetCCAIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC0_SetCCAIntLevel( volatile TC0_t * tc, TC_CCAINTLVL_t intLevel )
+{
+ 400:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCAINTLVL_gm ) | intLevel;
+ 402:	87 81       	ldd	r24, Z+7	; 0x07
+ 404:	8c 7f       	andi	r24, 0xFC	; 252
+ 406:	86 2b       	or	r24, r22
+ 408:	87 83       	std	Z+7, r24	; 0x07
+}
+ 40a:	08 95       	ret
+
+0000040c <TC1_SetCCAIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC1_SetCCAIntLevel( volatile TC1_t * tc, TC_CCAINTLVL_t intLevel )
+{
+ 40c:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC1_CCAINTLVL_gm ) | intLevel;
+ 40e:	87 81       	ldd	r24, Z+7	; 0x07
+ 410:	8c 7f       	andi	r24, 0xFC	; 252
+ 412:	86 2b       	or	r24, r22
+ 414:	87 83       	std	Z+7, r24	; 0x07
+}
+ 416:	08 95       	ret
+
+00000418 <TC0_SetCCBIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel B interrupt level.
+ */
+void TC0_SetCCBIntLevel( volatile TC0_t * tc, TC_CCBINTLVL_t intLevel )
+{
+ 418:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCBINTLVL_gm ) | intLevel;
+ 41a:	87 81       	ldd	r24, Z+7	; 0x07
+ 41c:	83 7f       	andi	r24, 0xF3	; 243
+ 41e:	86 2b       	or	r24, r22
+ 420:	87 83       	std	Z+7, r24	; 0x07
+}
+ 422:	08 95       	ret
+
+00000424 <TC1_SetCCBIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel B interrupt level.
+ */
+void TC1_SetCCBIntLevel( volatile TC1_t * tc, TC_CCBINTLVL_t intLevel )
+{
+ 424:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC1_CCBINTLVL_gm ) | intLevel;
+ 426:	87 81       	ldd	r24, Z+7	; 0x07
+ 428:	83 7f       	andi	r24, 0xF3	; 243
+ 42a:	86 2b       	or	r24, r22
+ 42c:	87 83       	std	Z+7, r24	; 0x07
+}
+ 42e:	08 95       	ret
+
+00000430 <TC0_SetCCCIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC0_SetCCCIntLevel( volatile TC0_t * tc, TC_CCCINTLVL_t intLevel )
+{
+ 430:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCCINTLVL_gm ) | intLevel;
+ 432:	87 81       	ldd	r24, Z+7	; 0x07
+ 434:	8f 7c       	andi	r24, 0xCF	; 207
+ 436:	86 2b       	or	r24, r22
+ 438:	87 83       	std	Z+7, r24	; 0x07
+}
+ 43a:	08 95       	ret
+
+0000043c <TC0_SetCCDIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC0_SetCCDIntLevel( volatile TC0_t * tc, TC_CCDINTLVL_t intLevel )
+{
+ 43c:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCDINTLVL_gm ) | intLevel;
+ 43e:	87 81       	ldd	r24, Z+7	; 0x07
+ 440:	8f 73       	andi	r24, 0x3F	; 63
+ 442:	86 2b       	or	r24, r22
+ 444:	87 83       	std	Z+7, r24	; 0x07
+}
+ 446:	08 95       	ret
+
+00000448 <TC0_Reset>:
+ *  reset of the device.
+ *
+ *  \param tc  Timer/Counter 0 module instance.
+ */
+void TC0_Reset( volatile TC0_t * tc )
+{
+ 448:	fc 01       	movw	r30, r24
+	/* TC must be turned off before a Reset command. */
+	tc->CTRLA = ( tc->CTRLA & ~TC0_CLKSEL_gm ) | TC_CLKSEL_OFF_gc;
+ 44a:	80 81       	ld	r24, Z
+ 44c:	80 7f       	andi	r24, 0xF0	; 240
+ 44e:	80 83       	st	Z, r24
+
+	/* Issue Reset command. */
+	tc->CTRLFSET = TC_CMD_RESET_gc;
+ 450:	8c e0       	ldi	r24, 0x0C	; 12
+ 452:	81 87       	std	Z+9, r24	; 0x09
+}
+ 454:	08 95       	ret
+
+00000456 <TC1_Reset>:
+ *  reset of the device.
+ *
+ *  \param tc  Timer/Counter 1 module instance.
+ */
+void TC1_Reset( volatile TC1_t * tc )
+{
+ 456:	fc 01       	movw	r30, r24
+	/* TC must be turned off before a Reset command. */
+	tc->CTRLA = ( tc->CTRLA & ~TC1_CLKSEL_gm ) | TC_CLKSEL_OFF_gc;
+ 458:	80 81       	ld	r24, Z
+ 45a:	80 7f       	andi	r24, 0xF0	; 240
+ 45c:	80 83       	st	Z, r24
+
+	/* Issue Reset command. */
+	tc->CTRLFSET = TC_CMD_RESET_gc;
+ 45e:	8c e0       	ldi	r24, 0x0C	; 12
+ 460:	81 87       	std	Z+9, r24	; 0x09
+}
+ 462:	08 95       	ret
+
+00000464 <main>:
++------------------------------------------------------------------------------
+| Function    : main
++------------------------------------------------------------------------------
+*/
+int main(void)
+{  
+ 464:	0f 93       	push	r16
+ 466:	1f 93       	push	r17
+ 
+     PORTCFG.VPCTRLA=0x10;//;PORTB映射到虚拟端口1，PORTA映射到虚拟端口0
+ 468:	e0 eb       	ldi	r30, 0xB0	; 176
+ 46a:	f0 e0       	ldi	r31, 0x00	; 0
+ 46c:	80 e1       	ldi	r24, 0x10	; 16
+ 46e:	82 83       	std	Z+2, r24	; 0x02
+	    
+	 PORTCFG.VPCTRLB=0x32;//;PORTC映射到虚拟端口2，PORTD映射到虚拟端口3
+ 470:	82 e3       	ldi	r24, 0x32	; 50
+ 472:	83 83       	std	Z+3, r24	; 0x03
+ 
+	 VPORT0_DIR=0x00; //PORTA引脚输入
+ 474:	10 ba       	out	0x10, r1	; 16
+     VPORT2_DIR=0xFF; //PORTC引脚输出
+ 476:	8f ef       	ldi	r24, 0xFF	; 255
+ 478:	88 bb       	out	0x18, r24	; 24
+     VPORT3_DIR=0xFF; //PORTD引脚输出
+ 47a:	8c bb       	out	0x1c, r24	; 28
+
+	 /* 设置计数周期 */
+	 TC_SetPeriod( &TCC0,4000 );
+ 47c:	e0 e0       	ldi	r30, 0x00	; 0
+ 47e:	f8 e0       	ldi	r31, 0x08	; 8
+ 480:	80 ea       	ldi	r24, 0xA0	; 160
+ 482:	9f e0       	ldi	r25, 0x0F	; 15
+ 484:	86 a3       	std	Z+38, r24	; 0x26
+ 486:	97 a3       	std	Z+39, r25	; 0x27
+     TC_SetCompareA( &TCC0,1000);
+ 488:	88 ee       	ldi	r24, 0xE8	; 232
+ 48a:	93 e0       	ldi	r25, 0x03	; 3
+ 48c:	80 af       	std	Z+56, r24	; 0x38
+ 48e:	91 af       	std	Z+57, r25	; 0x39
+	 TC_SetCompareB( &TCC0,2000);
+ 490:	80 ed       	ldi	r24, 0xD0	; 208
+ 492:	97 e0       	ldi	r25, 0x07	; 7
+ 494:	82 af       	std	Z+58, r24	; 0x3a
+ 496:	93 af       	std	Z+59, r25	; 0x3b
+ *  \param tc    Timer/Counter module instance.
+ *  \param wgm   Waveform generation mode.
+ */
+void TC0_ConfigWGM( volatile TC0_t * tc, TC_WGMODE_t wgm )
+{
+	tc->CTRLB = ( tc->CTRLB & ~TC0_WGMODE_gm ) | wgm;
+ 498:	80 91 01 08 	lds	r24, 0x0801
+ 49c:	88 7f       	andi	r24, 0xF8	; 248
+ 49e:	83 60       	ori	r24, 0x03	; 3
+ 4a0:	81 83       	std	Z+1, r24	; 0x01
+{
+	/* Make sure only CCxEN bits are set in enableMask. */
+	enableMask &= ( TC0_CCAEN_bm | TC0_CCBEN_bm | TC0_CCCEN_bm | TC0_CCDEN_bm );
+
+	/* Enable channels. */
+	tc->CTRLB |= enableMask;
+ 4a2:	80 91 01 08 	lds	r24, 0x0801
+ 4a6:	80 61       	ori	r24, 0x10	; 16
+ 4a8:	81 83       	std	Z+1, r24	; 0x01
+ *  \param tc              Timer/Counter module instance.
+ *  \param clockSelection  Timer/Counter clock source setting.
+ */
+void TC0_ConfigClockSource( volatile TC0_t * tc, TC_CLKSEL_t clockSelection )
+{
+	tc->CTRLA = ( tc->CTRLA & ~TC0_CLKSEL_gm ) | clockSelection;
+ 4aa:	80 91 01 08 	lds	r24, 0x0801
+ 4ae:	80 62       	ori	r24, 0x20	; 32
+ 4b0:	81 83       	std	Z+1, r24	; 0x01
+ 4b2:	80 91 00 08 	lds	r24, 0x0800
+ 4b6:	80 7f       	andi	r24, 0xF0	; 240
+ 4b8:	87 60       	ori	r24, 0x07	; 7
+ 4ba:	80 93 00 08 	sts	0x0800, r24
+	 /* 选择时钟，启动定时器 */
+	 TC0_ConfigClockSource( &TCC0, TC_CLKSEL_DIV1024_gc );
+	 
+
+	//使能模拟比较器AC0 AC1
+	 AC_Enable(&AC, ANALOG_COMPARATOR0, false);
+ 4be:	80 e8       	ldi	r24, 0x80	; 128
+ 4c0:	93 e0       	ldi	r25, 0x03	; 3
+ 4c2:	60 e0       	ldi	r22, 0x00	; 0
+ 4c4:	40 e0       	ldi	r20, 0x00	; 0
+ 4c6:	0e 94 1a 01 	call	0x234	; 0x234 <AC_Enable>
+	 AC_Enable(&AC, ANALOG_COMPARATOR1, false);
+ 4ca:	80 e8       	ldi	r24, 0x80	; 128
+ 4cc:	93 e0       	ldi	r25, 0x03	; 3
+ 4ce:	61 e0       	ldi	r22, 0x01	; 1
+ 4d0:	40 e0       	ldi	r20, 0x00	; 0
+ 4d2:	0e 94 1a 01 	call	0x234	; 0x234 <AC_Enable>
+ *  \param  scaleFactor     Scale factor in number of 1/64ths.
+ */
+void AC_ConfigVoltageScaler(AC_t * ac, uint8_t scaleFactor)
+{
+	/* Scale factor gets truncated to bit field size. */
+	ac->CTRLB = (ac->CTRLB & ~AC_SCALEFAC_gm) |
+ 4d6:	00 e8       	ldi	r16, 0x80	; 128
+ 4d8:	13 e0       	ldi	r17, 0x03	; 3
+ 4da:	80 91 85 03 	lds	r24, 0x0385
+ 4de:	80 7c       	andi	r24, 0xC0	; 192
+ 4e0:	f8 01       	movw	r30, r16
+ 4e2:	85 83       	std	Z+5, r24	; 0x05
+
+	 //模拟比较器输入电压比例因子
+     AC_ConfigVoltageScaler(&AC,0);
+	/* 设置模拟比较器0的引脚是 pin 0 and 1. */
+	 AC_ConfigMUX(&AC, ANALOG_COMPARATOR0, AC_MUXPOS_PIN0_gc, AC_MUXNEG_SCALER_gc);
+ 4e4:	80 e8       	ldi	r24, 0x80	; 128
+ 4e6:	93 e0       	ldi	r25, 0x03	; 3
+ 4e8:	60 e0       	ldi	r22, 0x00	; 0
+ 4ea:	40 e0       	ldi	r20, 0x00	; 0
+ 4ec:	27 e0       	ldi	r18, 0x07	; 7
+ 4ee:	0e 94 57 01 	call	0x2ae	; 0x2ae <AC_ConfigMUX>
+
+	 AC_ConfigMUX(&AC, ANALOG_COMPARATOR1, AC_MUXPOS_PIN2_gc, AC_MUXNEG_SCALER_gc);
+ 4f2:	80 e8       	ldi	r24, 0x80	; 128
+ 4f4:	93 e0       	ldi	r25, 0x03	; 3
+ 4f6:	61 e0       	ldi	r22, 0x01	; 1
+ 4f8:	40 e1       	ldi	r20, 0x10	; 16
+ 4fa:	27 e0       	ldi	r18, 0x07	; 7
+ 4fc:	0e 94 57 01 	call	0x2ae	; 0x2ae <AC_ConfigMUX>
+ */
+void AC_ConfigHysteresis(AC_t * ac, AC_COMP_t comp, AC_HYSMODE_t hysteresisMode)
+{
+	/* Access correct registers based on which comparator submodule indicated. */
+	if(comp == 0){
+		ac->AC0CTRL = (ac->AC0CTRL & ~AC_HYSMODE_gm) | hysteresisMode;
+ 500:	80 91 80 03 	lds	r24, 0x0380
+ 504:	89 7f       	andi	r24, 0xF9	; 249
+ 506:	82 60       	ori	r24, 0x02	; 2
+ 508:	80 93 80 03 	sts	0x0380, r24
+	}else{
+		ac->AC1CTRL = (ac->AC1CTRL & ~AC_HYSMODE_gm) | hysteresisMode;
+ 50c:	80 91 81 03 	lds	r24, 0x0381
+ 510:	89 7f       	andi	r24, 0xF9	; 249
+ 512:	82 60       	ori	r24, 0x02	; 2
+ 514:	f8 01       	movw	r30, r16
+ 516:	81 83       	std	Z+1, r24	; 0x01
+
+	/*设置AC0 AC1的磁滞 */ 
+	 AC_ConfigHysteresis(&AC, ANALOG_COMPARATOR0, AC_HYSMODE_SMALL_gc);
+	 AC_ConfigHysteresis(&AC, ANALOG_COMPARATOR1, AC_HYSMODE_SMALL_gc);
+
+	 AC_ConfigInterrupt(&AC, ANALOG_COMPARATOR0,AC_INTMODE_RISING_gc,AC_INTLVL_LO_gc);
+ 518:	80 e8       	ldi	r24, 0x80	; 128
+ 51a:	93 e0       	ldi	r25, 0x03	; 3
+ 51c:	60 e0       	ldi	r22, 0x00	; 0
+ 51e:	40 ec       	ldi	r20, 0xC0	; 192
+ 520:	20 e1       	ldi	r18, 0x10	; 16
+ 522:	0e 94 3c 01 	call	0x278	; 0x278 <AC_ConfigInterrupt>
+	 AC_ConfigInterrupt(&AC, ANALOG_COMPARATOR1,AC_INTMODE_FALLING_gc,AC_INTLVL_LO_gc);
+ 526:	80 e8       	ldi	r24, 0x80	; 128
+ 528:	93 e0       	ldi	r25, 0x03	; 3
+ 52a:	61 e0       	ldi	r22, 0x01	; 1
+ 52c:	40 e8       	ldi	r20, 0x80	; 128
+ 52e:	20 e1       	ldi	r18, 0x10	; 16
+ 530:	0e 94 3c 01 	call	0x278	; 0x278 <AC_ConfigInterrupt>
+ 
+     PMIC.CTRL |=PMIC_MEDLVLEN_bm+PMIC_LOLVLEN_bm+PMIC_HILVLEN_bm; //Enable Low_Level interrupts
+ 534:	80 91 a2 00 	lds	r24, 0x00A2
+ 538:	87 60       	ori	r24, 0x07	; 7
+ 53a:	e0 ea       	ldi	r30, 0xA0	; 160
+ 53c:	f0 e0       	ldi	r31, 0x00	; 0
+ 53e:	82 83       	std	Z+2, r24	; 0x02
+     sei();
+ 540:	78 94       	sei
+ 542:	ff cf       	rjmp	.-2      	; 0x542 <main+0xde>
+
+00000544 <__vector_68>:
+/*
++------------------------------------------------------------------------------
+| Function    : 中断函数
++------------------------------------------------------------------------------
+*/ ISR(ACA_AC0_vect)
+{
+ 544:	1f 92       	push	r1
+ 546:	0f 92       	push	r0
+ 548:	0f b6       	in	r0, 0x3f	; 63
+ 54a:	0f 92       	push	r0
+ 54c:	08 b6       	in	r0, 0x38	; 56
+ 54e:	0f 92       	push	r0
+ 550:	11 24       	eor	r1, r1
+ 552:	18 be       	out	0x38, r1	; 56
+ 554:	8f 93       	push	r24
+  LED2_T();
+ 556:	80 e1       	ldi	r24, 0x10	; 16
+ 558:	80 93 67 06 	sts	0x0667, r24
+}
+ 55c:	8f 91       	pop	r24
+ 55e:	0f 90       	pop	r0
+ 560:	08 be       	out	0x38, r0	; 56
+ 562:	0f 90       	pop	r0
+ 564:	0f be       	out	0x3f, r0	; 63
+ 566:	0f 90       	pop	r0
+ 568:	1f 90       	pop	r1
+ 56a:	18 95       	reti
+
+0000056c <__vector_69>:
+ISR(ACA_AC1_vect)
+{
+ 56c:	1f 92       	push	r1
+ 56e:	0f 92       	push	r0
+ 570:	0f b6       	in	r0, 0x3f	; 63
+ 572:	0f 92       	push	r0
+ 574:	08 b6       	in	r0, 0x38	; 56
+ 576:	0f 92       	push	r0
+ 578:	11 24       	eor	r1, r1
+ 57a:	18 be       	out	0x38, r1	; 56
+ 57c:	8f 93       	push	r24
+  LED1_T();
+ 57e:	80 e2       	ldi	r24, 0x20	; 32
+ 580:	80 93 67 06 	sts	0x0667, r24
+}
+ 584:	8f 91       	pop	r24
+ 586:	0f 90       	pop	r0
+ 588:	08 be       	out	0x38, r0	; 56
+ 58a:	0f 90       	pop	r0
+ 58c:	0f be       	out	0x3f, r0	; 63
+ 58e:	0f 90       	pop	r0
+ 590:	1f 90       	pop	r1
+ 592:	18 95       	reti
+
+00000594 <_exit>:
+ 594:	f8 94       	cli
+
+00000596 <__stop_program>:
+ 596:	ff cf       	rjmp	.-2      	; 0x596 <__stop_program>

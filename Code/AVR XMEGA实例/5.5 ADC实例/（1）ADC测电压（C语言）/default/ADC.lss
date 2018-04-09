@@ -1,0 +1,2475 @@
+
+ADC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000cf2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000e2  00802000  00000cf2  00000d86  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000053  008020e2  008020e2  00000e68  2**0
+                  ALLOC
+  3 .debug_aranges 00000020  00000000  00000000  00000e68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 00000251  00000000  00000000  00000e88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000165a  00000000  00000000  000010d9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000003a4  00000000  00000000  00002733  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000b4f  00000000  00000000  00002ad7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000190  00000000  00000000  00003628  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000f5a  00000000  00000000  000037b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000064c  00000000  00000000  00004712  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000d0  00000000  00000000  00004d5e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  10:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  14:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  18:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  1c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  20:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  24:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  28:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  2c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  30:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  34:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  38:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  3c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  40:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  44:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  48:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  4c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  50:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  54:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  58:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  5c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  60:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  64:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  68:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  6c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  70:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  74:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  78:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  7c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  80:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  84:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  88:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  8c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  90:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  94:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  98:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  9c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  fc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 100:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 104:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 108:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 10c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 110:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 114:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 118:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 11c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 120:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 124:	0c 94 fe 04 	jmp	0x9fc	; 0x9fc <__vector_73>
+ 128:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 12c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 130:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 134:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 138:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 13c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 140:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 144:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 148:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 14c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 150:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 154:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 158:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 15c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 160:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 164:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 168:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 16c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 170:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 174:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 178:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 17c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 180:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 184:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 188:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 18c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 190:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 194:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 198:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 19c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	e2 ef       	ldi	r30, 0xF2	; 242
+ 214:	fc e0       	ldi	r31, 0x0C	; 12
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a2 3e       	cpi	r26, 0xE2	; 226
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+
+00000228 <__do_clear_bss>:
+ 228:	11 e2       	ldi	r17, 0x21	; 33
+ 22a:	a2 ee       	ldi	r26, 0xE2	; 226
+ 22c:	b0 e2       	ldi	r27, 0x20	; 32
+ 22e:	01 c0       	rjmp	.+2      	; 0x232 <.do_clear_bss_start>
+
+00000230 <.do_clear_bss_loop>:
+ 230:	1d 92       	st	X+, r1
+
+00000232 <.do_clear_bss_start>:
+ 232:	a5 33       	cpi	r26, 0x35	; 53
+ 234:	b1 07       	cpc	r27, r17
+ 236:	e1 f7       	brne	.-8      	; 0x230 <.do_clear_bss_loop>
+ 238:	0e 94 f9 04 	call	0x9f2	; 0x9f2 <main>
+ 23c:	0c 94 77 06 	jmp	0xcee	; 0xcee <_exit>
+
+00000240 <__bad_interrupt>:
+ 240:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000244 <uart_putc>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc(unsigned char c)
+{
+ 244:	1f 93       	push	r17
+ 246:	18 2f       	mov	r17, r24
+    if(c == '\n')
+ 248:	8a 30       	cpi	r24, 0x0A	; 10
+ 24a:	19 f4       	brne	.+6      	; 0x252 <uart_putc+0xe>
+        uart_putc('\r');
+ 24c:	8d e0       	ldi	r24, 0x0D	; 13
+ 24e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    /* wait until transmit buffer is empty */
+    while(!(USART.STATUS & USART_DREIF_bm));
+ 252:	80 91 a1 08 	lds	r24, 0x08A1
+ 256:	85 ff       	sbrs	r24, 5
+ 258:	fc cf       	rjmp	.-8      	; 0x252 <uart_putc+0xe>
+
+    /* send next byte */
+    USART.DATA = c;
+ 25a:	10 93 a0 08 	sts	0x08A0, r17
+}
+ 25e:	1f 91       	pop	r17
+ 260:	08 95       	ret
+
+00000262 <uart_putc_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putc_hex(unsigned char b)
+{
+ 262:	1f 93       	push	r17
+ 264:	18 2f       	mov	r17, r24
+    /* upper nibble */
+    if((b >> 4) < 0x0a)
+ 266:	82 95       	swap	r24
+ 268:	8f 70       	andi	r24, 0x0F	; 15
+ 26a:	8a 30       	cpi	r24, 0x0A	; 10
+ 26c:	10 f4       	brcc	.+4      	; 0x272 <uart_putc_hex+0x10>
+        uart_putc((b >> 4) + '0');
+ 26e:	80 5d       	subi	r24, 0xD0	; 208
+ 270:	01 c0       	rjmp	.+2      	; 0x274 <uart_putc_hex+0x12>
+    else
+        uart_putc((b >> 4) - 0x0a + 'a');
+ 272:	89 5a       	subi	r24, 0xA9	; 169
+ 274:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    /* lower nibble */
+    if((b & 0x0f) < 0x0a)
+ 278:	81 2f       	mov	r24, r17
+ 27a:	90 e0       	ldi	r25, 0x00	; 0
+ 27c:	8f 70       	andi	r24, 0x0F	; 15
+ 27e:	90 70       	andi	r25, 0x00	; 0
+ 280:	21 2f       	mov	r18, r17
+ 282:	2f 70       	andi	r18, 0x0F	; 15
+ 284:	0a 97       	sbiw	r24, 0x0a	; 10
+ 286:	1c f4       	brge	.+6      	; 0x28e <uart_putc_hex+0x2c>
+        uart_putc((b & 0x0f) + '0');
+ 288:	82 2f       	mov	r24, r18
+ 28a:	80 5d       	subi	r24, 0xD0	; 208
+ 28c:	02 c0       	rjmp	.+4      	; 0x292 <uart_putc_hex+0x30>
+    else
+        uart_putc((b & 0x0f) - 0x0a + 'a');
+ 28e:	82 2f       	mov	r24, r18
+ 290:	89 5a       	subi	r24, 0xA9	; 169
+ 292:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+}
+ 296:	1f 91       	pop	r17
+ 298:	08 95       	ret
+
+0000029a <uart_putw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_hex(unsigned int w)
+{
+ 29a:	1f 93       	push	r17
+ 29c:	18 2f       	mov	r17, r24
+    uart_putc_hex((unsigned char) (w >> 8));
+ 29e:	89 2f       	mov	r24, r25
+ 2a0:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+    uart_putc_hex((unsigned char) (w & 0xff));
+ 2a4:	81 2f       	mov	r24, r17
+ 2a6:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+}
+ 2aa:	1f 91       	pop	r17
+ 2ac:	08 95       	ret
+
+000002ae <uart_putdw_hex>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_hex(unsigned long dw)
+{
+ 2ae:	ef 92       	push	r14
+ 2b0:	ff 92       	push	r15
+ 2b2:	0f 93       	push	r16
+ 2b4:	1f 93       	push	r17
+ 2b6:	7b 01       	movw	r14, r22
+ 2b8:	8c 01       	movw	r16, r24
+    uart_putw_hex((unsigned int) (dw >> 16));
+ 2ba:	c8 01       	movw	r24, r16
+ 2bc:	aa 27       	eor	r26, r26
+ 2be:	bb 27       	eor	r27, r27
+ 2c0:	0e 94 4d 01 	call	0x29a	; 0x29a <uart_putw_hex>
+    uart_putw_hex((unsigned int) (dw & 0xffff));
+ 2c4:	c7 01       	movw	r24, r14
+ 2c6:	0e 94 4d 01 	call	0x29a	; 0x29a <uart_putw_hex>
+}
+ 2ca:	1f 91       	pop	r17
+ 2cc:	0f 91       	pop	r16
+ 2ce:	ff 90       	pop	r15
+ 2d0:	ef 90       	pop	r14
+ 2d2:	08 95       	ret
+
+000002d4 <uart_putw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putw_dec(unsigned int w)
+{
+ 2d4:	cf 92       	push	r12
+ 2d6:	df 92       	push	r13
+ 2d8:	ff 92       	push	r15
+ 2da:	0f 93       	push	r16
+ 2dc:	1f 93       	push	r17
+ 2de:	cf 93       	push	r28
+ 2e0:	df 93       	push	r29
+ 2e2:	6c 01       	movw	r12, r24
+ 2e4:	c0 e1       	ldi	r28, 0x10	; 16
+ 2e6:	d7 e2       	ldi	r29, 0x27	; 39
+ 2e8:	40 e0       	ldi	r20, 0x00	; 0
+ 2ea:	00 e0       	ldi	r16, 0x00	; 0
+ 2ec:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = w / num;
+ 2ee:	c6 01       	movw	r24, r12
+ 2f0:	be 01       	movw	r22, r28
+ 2f2:	0e 94 2e 06 	call	0xc5c	; 0xc5c <__udivmodhi4>
+ 2f6:	f6 2e       	mov	r15, r22
+        if(b > 0 || started || num == 1)
+ 2f8:	66 23       	and	r22, r22
+ 2fa:	29 f4       	brne	.+10     	; 0x306 <uart_putw_dec+0x32>
+ 2fc:	44 23       	and	r20, r20
+ 2fe:	19 f4       	brne	.+6      	; 0x306 <uart_putw_dec+0x32>
+ 300:	c1 30       	cpi	r28, 0x01	; 1
+ 302:	d1 05       	cpc	r29, r1
+ 304:	29 f4       	brne	.+10     	; 0x310 <uart_putw_dec+0x3c>
+        {
+            uart_putc('0' + b);
+ 306:	8f 2d       	mov	r24, r15
+ 308:	80 5d       	subi	r24, 0xD0	; 208
+ 30a:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 30e:	41 e0       	ldi	r20, 0x01	; 1
+            started = 1;
+        }
+        w -= b * num;
+
+        num /= 10;
+ 310:	ce 01       	movw	r24, r28
+ 312:	6a e0       	ldi	r22, 0x0A	; 10
+ 314:	70 e0       	ldi	r23, 0x00	; 0
+ 316:	0e 94 2e 06 	call	0xc5c	; 0xc5c <__udivmodhi4>
+ 31a:	0f 5f       	subi	r16, 0xFF	; 255
+ 31c:	1f 4f       	sbci	r17, 0xFF	; 255
+void uart_putw_dec(unsigned int w)
+{
+    unsigned int num = 10000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 31e:	05 30       	cpi	r16, 0x05	; 5
+ 320:	11 05       	cpc	r17, r1
+ 322:	71 f0       	breq	.+28     	; 0x340 <uart_putw_dec+0x6c>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        w -= b * num;
+ 324:	8f 2d       	mov	r24, r15
+ 326:	90 e0       	ldi	r25, 0x00	; 0
+ 328:	9c 01       	movw	r18, r24
+ 32a:	2c 9f       	mul	r18, r28
+ 32c:	c0 01       	movw	r24, r0
+ 32e:	2d 9f       	mul	r18, r29
+ 330:	90 0d       	add	r25, r0
+ 332:	3c 9f       	mul	r19, r28
+ 334:	90 0d       	add	r25, r0
+ 336:	11 24       	eor	r1, r1
+ 338:	c8 1a       	sub	r12, r24
+ 33a:	d9 0a       	sbc	r13, r25
+ 33c:	eb 01       	movw	r28, r22
+ 33e:	d7 cf       	rjmp	.-82     	; 0x2ee <uart_putw_dec+0x1a>
+
+        num /= 10;
+    }
+}
+ 340:	df 91       	pop	r29
+ 342:	cf 91       	pop	r28
+ 344:	1f 91       	pop	r17
+ 346:	0f 91       	pop	r16
+ 348:	ff 90       	pop	r15
+ 34a:	df 90       	pop	r13
+ 34c:	cf 90       	pop	r12
+ 34e:	08 95       	ret
+
+00000350 <uart_putdw_dec>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_putdw_dec(unsigned long dw)
+{
+ 350:	4f 92       	push	r4
+ 352:	5f 92       	push	r5
+ 354:	6f 92       	push	r6
+ 356:	7f 92       	push	r7
+ 358:	8f 92       	push	r8
+ 35a:	9f 92       	push	r9
+ 35c:	af 92       	push	r10
+ 35e:	bf 92       	push	r11
+ 360:	cf 92       	push	r12
+ 362:	df 92       	push	r13
+ 364:	ef 92       	push	r14
+ 366:	ff 92       	push	r15
+ 368:	0f 93       	push	r16
+ 36a:	1f 93       	push	r17
+ 36c:	cf 93       	push	r28
+ 36e:	df 93       	push	r29
+ 370:	5b 01       	movw	r10, r22
+ 372:	6c 01       	movw	r12, r24
+ 374:	e1 2c       	mov	r14, r1
+ 376:	9a ec       	ldi	r25, 0xCA	; 202
+ 378:	f9 2e       	mov	r15, r25
+ 37a:	9a e9       	ldi	r25, 0x9A	; 154
+ 37c:	09 2f       	mov	r16, r25
+ 37e:	9b e3       	ldi	r25, 0x3B	; 59
+ 380:	19 2f       	mov	r17, r25
+ 382:	44 24       	eor	r4, r4
+ 384:	c0 e0       	ldi	r28, 0x00	; 0
+ 386:	d0 e0       	ldi	r29, 0x00	; 0
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+    {
+        unsigned char b = dw / num;
+ 388:	c6 01       	movw	r24, r12
+ 38a:	b5 01       	movw	r22, r10
+ 38c:	a8 01       	movw	r20, r16
+ 38e:	97 01       	movw	r18, r14
+ 390:	0e 94 55 06 	call	0xcaa	; 0xcaa <__udivmodsi4>
+ 394:	92 2e       	mov	r9, r18
+        if(b > 0 || started || num == 1)
+ 396:	22 23       	and	r18, r18
+ 398:	41 f4       	brne	.+16     	; 0x3aa <uart_putdw_dec+0x5a>
+ 39a:	44 20       	and	r4, r4
+ 39c:	31 f4       	brne	.+12     	; 0x3aa <uart_putdw_dec+0x5a>
+ 39e:	81 e0       	ldi	r24, 0x01	; 1
+ 3a0:	e8 16       	cp	r14, r24
+ 3a2:	f1 04       	cpc	r15, r1
+ 3a4:	01 05       	cpc	r16, r1
+ 3a6:	11 05       	cpc	r17, r1
+ 3a8:	31 f4       	brne	.+12     	; 0x3b6 <uart_putdw_dec+0x66>
+        {
+            uart_putc('0' + b);
+ 3aa:	89 2d       	mov	r24, r9
+ 3ac:	80 5d       	subi	r24, 0xD0	; 208
+ 3ae:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 3b2:	44 24       	eor	r4, r4
+ 3b4:	43 94       	inc	r4
+            started = 1;
+        }
+        dw -= b * num;
+
+        num /= 10;
+ 3b6:	c8 01       	movw	r24, r16
+ 3b8:	b7 01       	movw	r22, r14
+ 3ba:	2a e0       	ldi	r18, 0x0A	; 10
+ 3bc:	30 e0       	ldi	r19, 0x00	; 0
+ 3be:	40 e0       	ldi	r20, 0x00	; 0
+ 3c0:	50 e0       	ldi	r21, 0x00	; 0
+ 3c2:	0e 94 55 06 	call	0xcaa	; 0xcaa <__udivmodsi4>
+ 3c6:	82 2e       	mov	r8, r18
+ 3c8:	73 2e       	mov	r7, r19
+ 3ca:	64 2e       	mov	r6, r20
+ 3cc:	55 2e       	mov	r5, r21
+ 3ce:	21 96       	adiw	r28, 0x01	; 1
+void uart_putdw_dec(unsigned long dw)
+{
+    unsigned long num = 1000000000;
+    unsigned char started = 0;
+
+    while(num > 0)
+ 3d0:	ca 30       	cpi	r28, 0x0A	; 10
+ 3d2:	d1 05       	cpc	r29, r1
+ 3d4:	a9 f0       	breq	.+42     	; 0x400 <uart_putdw_dec+0xb0>
+        if(b > 0 || started || num == 1)
+        {
+            uart_putc('0' + b);
+            started = 1;
+        }
+        dw -= b * num;
+ 3d6:	69 2d       	mov	r22, r9
+ 3d8:	70 e0       	ldi	r23, 0x00	; 0
+ 3da:	80 e0       	ldi	r24, 0x00	; 0
+ 3dc:	90 e0       	ldi	r25, 0x00	; 0
+ 3de:	a8 01       	movw	r20, r16
+ 3e0:	97 01       	movw	r18, r14
+ 3e2:	0e 94 0f 06 	call	0xc1e	; 0xc1e <__mulsi3>
+ 3e6:	a6 1a       	sub	r10, r22
+ 3e8:	b7 0a       	sbc	r11, r23
+ 3ea:	c8 0a       	sbc	r12, r24
+ 3ec:	d9 0a       	sbc	r13, r25
+ 3ee:	28 2d       	mov	r18, r8
+ 3f0:	37 2d       	mov	r19, r7
+ 3f2:	46 2d       	mov	r20, r6
+ 3f4:	55 2d       	mov	r21, r5
+ 3f6:	c9 01       	movw	r24, r18
+ 3f8:	da 01       	movw	r26, r20
+ 3fa:	7c 01       	movw	r14, r24
+ 3fc:	8d 01       	movw	r16, r26
+ 3fe:	c4 cf       	rjmp	.-120    	; 0x388 <uart_putdw_dec+0x38>
+
+        num /= 10;
+    }
+}
+ 400:	df 91       	pop	r29
+ 402:	cf 91       	pop	r28
+ 404:	1f 91       	pop	r17
+ 406:	0f 91       	pop	r16
+ 408:	ff 90       	pop	r15
+ 40a:	ef 90       	pop	r14
+ 40c:	df 90       	pop	r13
+ 40e:	cf 90       	pop	r12
+ 410:	bf 90       	pop	r11
+ 412:	af 90       	pop	r10
+ 414:	9f 90       	pop	r9
+ 416:	8f 90       	pop	r8
+ 418:	7f 90       	pop	r7
+ 41a:	6f 90       	pop	r6
+ 41c:	5f 90       	pop	r5
+ 41e:	4f 90       	pop	r4
+ 420:	08 95       	ret
+
+00000422 <uart_puts>:
+| Returns     : 
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+ 422:	cf 93       	push	r28
+ 424:	df 93       	push	r29
+ 426:	ec 01       	movw	r28, r24
+ 428:	03 c0       	rjmp	.+6      	; 0x430 <uart_puts+0xe>
+    while(*str)
+        uart_putc(*str++);
+ 42a:	21 96       	adiw	r28, 0x01	; 1
+ 42c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+|
++------------------------------------------------------------------------------
+*/
+void uart_puts(const char* str)
+{
+    while(*str)
+ 430:	88 81       	ld	r24, Y
+ 432:	88 23       	and	r24, r24
+ 434:	d1 f7       	brne	.-12     	; 0x42a <uart_puts+0x8>
+        uart_putc(*str++);
+}
+ 436:	df 91       	pop	r29
+ 438:	cf 91       	pop	r28
+ 43a:	08 95       	ret
+
+0000043c <uart_getc>:
++------------------------------------------------------------------------------
+*/
+unsigned char uart_getc(void)
+{
+    /* wait until receive buffer is full */
+    while(!(USART.STATUS & USART_RXCIF_bm));
+ 43c:	80 91 a1 08 	lds	r24, 0x08A1
+ 440:	87 ff       	sbrs	r24, 7
+ 442:	fc cf       	rjmp	.-8      	; 0x43c <uart_getc>
+
+    unsigned char b = USART.DATA;
+ 444:	80 91 a0 08 	lds	r24, 0x08A0
+    if(b == '\r')
+ 448:	8d 30       	cpi	r24, 0x0D	; 13
+ 44a:	09 f4       	brne	.+2      	; 0x44e <uart_getc+0x12>
+ 44c:	8a e0       	ldi	r24, 0x0A	; 10
+        b = '\n';
+		
+    return b;
+}
+ 44e:	08 95       	ret
+
+00000450 <ADC_CalibrationValues_Load>:
+ *  register. The calibration data reduces the non-linearity error in the adc.
+ *
+ *  \param  adc          Pointer to ADC module register section.
+ */
+void ADC_CalibrationValues_Load(ADC_t * adc)
+{
+ 450:	dc 01       	movw	r26, r24
+	if(&ADCA == adc){
+ 452:	82 e0       	ldi	r24, 0x02	; 2
+ 454:	a0 30       	cpi	r26, 0x00	; 0
+ 456:	b8 07       	cpc	r27, r24
+ 458:	81 f4       	brne	.+32     	; 0x47a <ADC_CalibrationValues_Load+0x2a>
+uint8_t SP_ReadCalibrationByte( uint8_t index )
+{
+	uint8_t result;
+
+	/* Load the NVM Command register to read the calibration row. */
+	NVM_CMD = NVM_CMD_READ_CALIB_ROW_gc;
+ 45a:	82 e0       	ldi	r24, 0x02	; 2
+ 45c:	80 93 ca 01 	sts	0x01CA, r24
+ 	result = pgm_read_byte(index);
+ 460:	e0 e2       	ldi	r30, 0x20	; 32
+ 462:	f0 e0       	ldi	r31, 0x00	; 0
+ 464:	e4 91       	lpm	r30, Z+
+
+	/* Clean up NVM Command register. */
+ 	NVM_CMD = NVM_CMD_NO_OPERATION_gc;
+ 466:	10 92 ca 01 	sts	0x01CA, r1
+ */
+void ADC_CalibrationValues_Load(ADC_t * adc)
+{
+	if(&ADCA == adc){
+		 /* Get ADCACAL0 from production signature . */
+		adc->CALL = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCACAL0_offset );
+ 46a:	1c 96       	adiw	r26, 0x0c	; 12
+ 46c:	ec 93       	st	X, r30
+ 46e:	1c 97       	sbiw	r26, 0x0c	; 12
+uint8_t SP_ReadCalibrationByte( uint8_t index )
+{
+	uint8_t result;
+
+	/* Load the NVM Command register to read the calibration row. */
+	NVM_CMD = NVM_CMD_READ_CALIB_ROW_gc;
+ 470:	80 93 ca 01 	sts	0x01CA, r24
+ 	result = pgm_read_byte(index);
+ 474:	e1 e2       	ldi	r30, 0x21	; 33
+ 476:	f0 e0       	ldi	r31, 0x00	; 0
+ 478:	0f c0       	rjmp	.+30     	; 0x498 <ADC_CalibrationValues_Load+0x48>
+uint8_t SP_ReadCalibrationByte( uint8_t index )
+{
+	uint8_t result;
+
+	/* Load the NVM Command register to read the calibration row. */
+	NVM_CMD = NVM_CMD_READ_CALIB_ROW_gc;
+ 47a:	82 e0       	ldi	r24, 0x02	; 2
+ 47c:	80 93 ca 01 	sts	0x01CA, r24
+ 	result = pgm_read_byte(index);
+ 480:	e4 e2       	ldi	r30, 0x24	; 36
+ 482:	f0 e0       	ldi	r31, 0x00	; 0
+ 484:	e4 91       	lpm	r30, Z+
+
+	/* Clean up NVM Command register. */
+ 	NVM_CMD = NVM_CMD_NO_OPERATION_gc;
+ 486:	10 92 ca 01 	sts	0x01CA, r1
+		 /* Get ADCACAL0 from production signature . */
+		adc->CALL = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCACAL0_offset );
+		adc->CALH = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCACAL1_offset );
+	}else {
+		/* Get ADCBCAL0 from production signature  */
+		adc->CALL = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCBCAL0_offset );
+ 48a:	1c 96       	adiw	r26, 0x0c	; 12
+ 48c:	ec 93       	st	X, r30
+ 48e:	1c 97       	sbiw	r26, 0x0c	; 12
+uint8_t SP_ReadCalibrationByte( uint8_t index )
+{
+	uint8_t result;
+
+	/* Load the NVM Command register to read the calibration row. */
+	NVM_CMD = NVM_CMD_READ_CALIB_ROW_gc;
+ 490:	80 93 ca 01 	sts	0x01CA, r24
+ 	result = pgm_read_byte(index);
+ 494:	e5 e2       	ldi	r30, 0x25	; 37
+ 496:	f0 e0       	ldi	r31, 0x00	; 0
+ 498:	e4 91       	lpm	r30, Z+
+
+	/* Clean up NVM Command register. */
+ 	NVM_CMD = NVM_CMD_NO_OPERATION_gc;
+ 49a:	10 92 ca 01 	sts	0x01CA, r1
+		adc->CALL = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCACAL0_offset );
+		adc->CALH = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCACAL1_offset );
+	}else {
+		/* Get ADCBCAL0 from production signature  */
+		adc->CALL = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCBCAL0_offset );
+		adc->CALH = SP_ReadCalibrationByte( PROD_SIGNATURES_START + ADCBCAL1_offset );
+ 49e:	1d 96       	adiw	r26, 0x0d	; 13
+ 4a0:	ec 93       	st	X, r30
+ 4a2:	08 95       	ret
+
+000004a4 <ADC_ResultCh_GetWord_Unsigned>:
+ *  \param  adc_ch  Pointer to ADC channel register section.
+ *  \param  offset  Unsigned offset value to subtract.
+ *  \return  The unsigned Conversion result with the offset substracted.
+ */
+uint16_t ADC_ResultCh_GetWord_Unsigned(ADC_CH_t * adc_ch, uint8_t offset)
+{
+ 4a4:	fc 01       	movw	r30, r24
+  	uint16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 4a6:	81 e0       	ldi	r24, 0x01	; 1
+ 4a8:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - offset;
+ 4aa:	24 81       	ldd	r18, Z+4	; 0x04
+ 4ac:	35 81       	ldd	r19, Z+5	; 0x05
+ 4ae:	26 1b       	sub	r18, r22
+ 4b0:	31 09       	sbc	r19, r1
+
+	return answer;
+}
+ 4b2:	c9 01       	movw	r24, r18
+ 4b4:	08 95       	ret
+
+000004b6 <ADC_ResultCh_GetWord_Signed>:
+ *  \param  adc_ch  Pointer to ADC channel register section.
+ *  \param  signedOffset  Offset value to subtract.
+ *  \return  The signed Conversion result with the offset substracted.
+ */
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+ 4b6:	fc 01       	movw	r30, r24
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 4b8:	81 e0       	ldi	r24, 0x01	; 1
+ 4ba:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 4bc:	24 81       	ldd	r18, Z+4	; 0x04
+ 4be:	35 81       	ldd	r19, Z+5	; 0x05
+ 4c0:	77 27       	eor	r23, r23
+ 4c2:	67 fd       	sbrc	r22, 7
+ 4c4:	70 95       	com	r23
+ 4c6:	26 1b       	sub	r18, r22
+ 4c8:	37 0b       	sbc	r19, r23
+
+	return answer;
+}
+ 4ca:	c9 01       	movw	r24, r18
+ 4cc:	08 95       	ret
+
+000004ce <ADC_ResultCh_GetWord>:
+ *
+ *  \param  adc_ch  Pointer to ADC channel register section.
+ *  \return  Signed conversion result.
+ */
+uint16_t ADC_ResultCh_GetWord(ADC_CH_t * adc_ch)
+{
+ 4ce:	fc 01       	movw	r30, r24
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 4d0:	81 e0       	ldi	r24, 0x01	; 1
+ 4d2:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Return result register contents*/
+	return adc_ch->RES;;
+ 4d4:	24 81       	ldd	r18, Z+4	; 0x04
+ 4d6:	35 81       	ldd	r19, Z+5	; 0x05
+}
+ 4d8:	c9 01       	movw	r24, r18
+ 4da:	08 95       	ret
+
+000004dc <ADC_ResultCh_GetLowByte>:
+ *  \param  adc_ch  Pointer to ADC channel register section.
+ *
+ *  \return  Low byte of conversion result.
+ */
+uint8_t ADC_ResultCh_GetLowByte(ADC_CH_t * adc_ch)
+{
+ 4dc:	fc 01       	movw	r30, r24
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 4de:	81 e0       	ldi	r24, 0x01	; 1
+ 4e0:	83 83       	std	Z+3, r24	; 0x03
+	/* Return result register contents*/
+	return adc_ch->RESL;
+ 4e2:	84 81       	ldd	r24, Z+4	; 0x04
+}
+ 4e4:	08 95       	ret
+
+000004e6 <ADC_ResultCh_GetHighByte>:
+ *  \param  adc_ch  Pointer to ADC channel register section.
+ *
+ *  \return  High byte of conversion result.
+ */
+uint8_t ADC_ResultCh_GetHighByte(ADC_CH_t * adc_ch)
+{
+ 4e6:	fc 01       	movw	r30, r24
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 4e8:	81 e0       	ldi	r24, 0x01	; 1
+ 4ea:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Return low byte result register contents.*/
+	return adc_ch->RESH;
+ 4ec:	85 81       	ldd	r24, Z+5	; 0x05
+}
+ 4ee:	08 95       	ret
+
+000004f0 <ADC_Wait_8MHz>:
+ *        than 8 MHz use the ADC_wait_32MHz function.
+ *
+ *  \param  adc Pointer to ADC module register section.
+ */
+void ADC_Wait_8MHz(ADC_t * adc)
+{
+ 4f0:	fc 01       	movw	r30, r24
+  	/* Store old prescaler value. */
+  	uint8_t prescaler_val = adc->PRESCALER;
+ 4f2:	84 81       	ldd	r24, Z+4	; 0x04
+
+	/* Set prescaler value to minimum value. */
+	adc->PRESCALER = ADC_PRESCALER_DIV4_gc;
+ 4f4:	14 82       	std	Z+4, r1	; 0x04
+    can be achieved.
+*/
+void
+_delay_loop_1(uint8_t __count)
+{
+	__asm__ volatile (
+ 4f6:	9a e2       	ldi	r25, 0x2A	; 42
+ 4f8:	9a 95       	dec	r25
+ 4fa:	f1 f7       	brne	.-4      	; 0x4f8 <ADC_Wait_8MHz+0x8>
+
+	/* Wait 4*COMMON_MODE_CYCLES for common mode to settle. */
+	delay_us(4*COMMON_MODE_CYCLES);
+
+	/* Set prescaler to old value*/
+	adc->PRESCALER = prescaler_val;
+ 4fc:	84 83       	std	Z+4, r24	; 0x04
+}
+ 4fe:	08 95       	ret
+
+00000500 <ADC_Wait_32MHz>:
+ *        device goes into sleep (not Idle sleep mode).
+ *
+ *  \param  adc Pointer to ADC module register section.
+ */
+void ADC_Wait_32MHz(ADC_t * adc)
+{
+ 500:	fc 01       	movw	r30, r24
+  	/* Store old prescaler value. */
+  	uint8_t prescaler_val = adc->PRESCALER;
+ 502:	94 81       	ldd	r25, Z+4	; 0x04
+
+	/* Set prescaler value to minimum value. */
+	adc->PRESCALER = ADC_PRESCALER_DIV8_gc;
+ 504:	81 e0       	ldi	r24, 0x01	; 1
+ 506:	84 83       	std	Z+4, r24	; 0x04
+ 508:	85 e5       	ldi	r24, 0x55	; 85
+ 50a:	8a 95       	dec	r24
+ 50c:	f1 f7       	brne	.-4      	; 0x50a <ADC_Wait_32MHz+0xa>
+
+	/* wait 8*COMMON_MODE_CYCLES for common mode to settle*/
+	delay_us(8*COMMON_MODE_CYCLES);
+
+	/* Set prescaler to old value*/
+	adc->PRESCALER = prescaler_val;
+ 50e:	94 83       	std	Z+4, r25	; 0x04
+}
+ 510:	08 95       	ret
+
+00000512 <ADC_Offset_Get_Unsigned>:
+ *  \param oversampling false for one measurement. true for averaging several measurements.
+ *
+ *  \return Offset on the selected ADC
+ */
+uint8_t ADC_Offset_Get_Unsigned(ADC_t * adc, ADC_CH_t *ch, bool oversampling)
+{
+ 512:	fb 01       	movw	r30, r22
+    if (oversampling)
+ 514:	44 23       	and	r20, r20
+ 516:	d9 f0       	breq	.+54     	; 0x54e <ADC_Offset_Get_Unsigned+0x3c>
+ 518:	20 e0       	ldi	r18, 0x00	; 0
+ 51a:	30 e0       	ldi	r19, 0x00	; 0
+ 51c:	40 e0       	ldi	r20, 0x00	; 0
+ 51e:	50 e0       	ldi	r21, 0x00	; 0
+uint16_t ADC_ResultCh_GetWord_Unsigned(ADC_CH_t * adc_ch, uint8_t offset)
+{
+  	uint16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 520:	61 e0       	ldi	r22, 0x01	; 1
+    {
+      uint16_t offset=0;
+      for (int i=0; i<4; i++)
+      {
+        /* Do one conversion to find offset. */
+        ADC_Ch_Conversion_Start(ch);
+ 522:	80 81       	ld	r24, Z
+ 524:	80 68       	ori	r24, 0x80	; 128
+ 526:	80 83       	st	Z, r24
+    
+        do{
+        }while(!ADC_Ch_Conversion_Complete(ch));
+ 528:	83 81       	ldd	r24, Z+3	; 0x03
+ 52a:	80 ff       	sbrs	r24, 0
+ 52c:	fd cf       	rjmp	.-6      	; 0x528 <ADC_Offset_Get_Unsigned+0x16>
+uint16_t ADC_ResultCh_GetWord_Unsigned(ADC_CH_t * adc_ch, uint8_t offset)
+{
+  	uint16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 52e:	63 83       	std	Z+3, r22	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - offset;
+ 530:	84 81       	ldd	r24, Z+4	; 0x04
+ 532:	95 81       	ldd	r25, Z+5	; 0x05
+        /* Do one conversion to find offset. */
+        ADC_Ch_Conversion_Start(ch);
+    
+        do{
+        }while(!ADC_Ch_Conversion_Complete(ch));
+        offset += ADC_ResultCh_GetWord_Unsigned(ch, 0x00);
+ 534:	28 0f       	add	r18, r24
+ 536:	39 1f       	adc	r19, r25
+uint8_t ADC_Offset_Get_Unsigned(ADC_t * adc, ADC_CH_t *ch, bool oversampling)
+{
+    if (oversampling)
+    {
+      uint16_t offset=0;
+      for (int i=0; i<4; i++)
+ 538:	4f 5f       	subi	r20, 0xFF	; 255
+ 53a:	5f 4f       	sbci	r21, 0xFF	; 255
+ 53c:	44 30       	cpi	r20, 0x04	; 4
+ 53e:	51 05       	cpc	r21, r1
+ 540:	81 f7       	brne	.-32     	; 0x522 <ADC_Offset_Get_Unsigned+0x10>
+    
+        do{
+        }while(!ADC_Ch_Conversion_Complete(ch));
+        offset += ADC_ResultCh_GetWord_Unsigned(ch, 0x00);
+      }
+      return ((uint8_t)(offset>>2));
+ 542:	36 95       	lsr	r19
+ 544:	27 95       	ror	r18
+ 546:	36 95       	lsr	r19
+ 548:	27 95       	ror	r18
+ 54a:	82 2f       	mov	r24, r18
+ 54c:	08 95       	ret
+    else
+    {        
+      uint8_t offset=0;
+      
+      /* Do one conversion to find offset. */
+      ADC_Ch_Conversion_Start(ch);
+ 54e:	80 81       	ld	r24, Z
+ 550:	80 68       	ori	r24, 0x80	; 128
+ 552:	80 83       	st	Z, r24
+  
+      do{
+      }while(!ADC_Ch_Conversion_Complete(ch));
+ 554:	83 81       	ldd	r24, Z+3	; 0x03
+ 556:	80 ff       	sbrs	r24, 0
+ 558:	fd cf       	rjmp	.-6      	; 0x554 <ADC_Offset_Get_Unsigned+0x42>
+ *  \return  Signed conversion result.
+ */
+uint16_t ADC_ResultCh_GetWord(ADC_CH_t * adc_ch)
+{
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 55a:	81 e0       	ldi	r24, 0x01	; 1
+ 55c:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Return result register contents*/
+	return adc_ch->RES;;
+ 55e:	84 81       	ldd	r24, Z+4	; 0x04
+ 560:	95 81       	ldd	r25, Z+5	; 0x05
+      }while(!ADC_Ch_Conversion_Complete(ch));
+      offset = (uint8_t)ADC_ResultCh_GetWord(ch);
+      
+      return offset;
+    }
+}
+ 562:	08 95       	ret
+
+00000564 <ADC_Offset_Get_Signed>:
+ *  \param oversampling false for one measurement. true for averaging several measurements.
+ *
+ *  \return Offset on the selected ADC
+ */
+int8_t ADC_Offset_Get_Signed(ADC_t * adc, ADC_CH_t *ch, bool oversampling)
+{
+ 564:	fb 01       	movw	r30, r22
+    if (oversampling)
+ 566:	44 23       	and	r20, r20
+ 568:	d9 f0       	breq	.+54     	; 0x5a0 <ADC_Offset_Get_Signed+0x3c>
+ 56a:	20 e0       	ldi	r18, 0x00	; 0
+ 56c:	30 e0       	ldi	r19, 0x00	; 0
+ 56e:	40 e0       	ldi	r20, 0x00	; 0
+ 570:	50 e0       	ldi	r21, 0x00	; 0
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 572:	61 e0       	ldi	r22, 0x01	; 1
+    {
+      int16_t offset=0;
+      for (int i=0; i<4; i++)
+      {
+        /* Do one conversion to find offset. */
+        ADC_Ch_Conversion_Start(ch);
+ 574:	80 81       	ld	r24, Z
+ 576:	80 68       	ori	r24, 0x80	; 128
+ 578:	80 83       	st	Z, r24
+    
+        do{
+        }while(!ADC_Ch_Conversion_Complete(ch));
+ 57a:	83 81       	ldd	r24, Z+3	; 0x03
+ 57c:	80 ff       	sbrs	r24, 0
+ 57e:	fd cf       	rjmp	.-6      	; 0x57a <ADC_Offset_Get_Signed+0x16>
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 580:	63 83       	std	Z+3, r22	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 582:	84 81       	ldd	r24, Z+4	; 0x04
+ 584:	95 81       	ldd	r25, Z+5	; 0x05
+        /* Do one conversion to find offset. */
+        ADC_Ch_Conversion_Start(ch);
+    
+        do{
+        }while(!ADC_Ch_Conversion_Complete(ch));
+        offset += ADC_ResultCh_GetWord_Signed(ch, 0x00);
+ 586:	48 0f       	add	r20, r24
+ 588:	59 1f       	adc	r21, r25
+int8_t ADC_Offset_Get_Signed(ADC_t * adc, ADC_CH_t *ch, bool oversampling)
+{
+    if (oversampling)
+    {
+      int16_t offset=0;
+      for (int i=0; i<4; i++)
+ 58a:	2f 5f       	subi	r18, 0xFF	; 255
+ 58c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 58e:	24 30       	cpi	r18, 0x04	; 4
+ 590:	31 05       	cpc	r19, r1
+ 592:	81 f7       	brne	.-32     	; 0x574 <ADC_Offset_Get_Signed+0x10>
+    
+        do{
+        }while(!ADC_Ch_Conversion_Complete(ch));
+        offset += ADC_ResultCh_GetWord_Signed(ch, 0x00);
+      }
+      return ((int8_t)(offset/4));
+ 594:	ca 01       	movw	r24, r20
+ 596:	64 e0       	ldi	r22, 0x04	; 4
+ 598:	70 e0       	ldi	r23, 0x00	; 0
+ 59a:	0e 94 42 06 	call	0xc84	; 0xc84 <__divmodhi4>
+ 59e:	0b c0       	rjmp	.+22     	; 0x5b6 <ADC_Offset_Get_Signed+0x52>
+    else
+    {        
+      int8_t offset=0;
+      
+      /* Do one conversion to find offset. */
+      ADC_Ch_Conversion_Start(ch);
+ 5a0:	80 81       	ld	r24, Z
+ 5a2:	80 68       	ori	r24, 0x80	; 128
+ 5a4:	80 83       	st	Z, r24
+  
+      do{
+      }while(!ADC_Ch_Conversion_Complete(ch));
+ 5a6:	83 81       	ldd	r24, Z+3	; 0x03
+ 5a8:	80 ff       	sbrs	r24, 0
+ 5aa:	fd cf       	rjmp	.-6      	; 0x5a6 <ADC_Offset_Get_Signed+0x42>
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 5ac:	81 e0       	ldi	r24, 0x01	; 1
+ 5ae:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 5b0:	84 81       	ldd	r24, Z+4	; 0x04
+ 5b2:	95 81       	ldd	r25, Z+5	; 0x05
+      /* Do one conversion to find offset. */
+      ADC_Ch_Conversion_Start(ch);
+  
+      do{
+      }while(!ADC_Ch_Conversion_Complete(ch));
+      offset = (uint8_t)ADC_ResultCh_GetWord_Signed(ch, 0x00);
+ 5b4:	68 2f       	mov	r22, r24
+      
+      return offset;
+    }
+}
+ 5b6:	86 2f       	mov	r24, r22
+ 5b8:	08 95       	ret
+
+000005ba <SP_ReadCalibrationByte>:
+uint8_t SP_ReadCalibrationByte( uint8_t index )
+{
+	uint8_t result;
+
+	/* Load the NVM Command register to read the calibration row. */
+	NVM_CMD = NVM_CMD_READ_CALIB_ROW_gc;
+ 5ba:	aa ec       	ldi	r26, 0xCA	; 202
+ 5bc:	b1 e0       	ldi	r27, 0x01	; 1
+ 5be:	92 e0       	ldi	r25, 0x02	; 2
+ 5c0:	9c 93       	st	X, r25
+ 	result = pgm_read_byte(index);
+ 5c2:	e8 2f       	mov	r30, r24
+ 5c4:	f0 e0       	ldi	r31, 0x00	; 0
+ 5c6:	e4 91       	lpm	r30, Z+
+
+	/* Clean up NVM Command register. */
+ 	NVM_CMD = NVM_CMD_NO_OPERATION_gc;
+ 5c8:	1c 92       	st	X, r1
+
+	return result;
+}
+ 5ca:	8e 2f       	mov	r24, r30
+ 5cc:	08 95       	ret
+
+000005ce <uart_init>:
+*/
+void uart_init(void)
+{
+	/* USARTC0 引脚方向设置*/
+  	/* PC3 (TXD0) 输出 */
+	PORTC.DIRSET   = PIN3_bm;
+ 5ce:	e0 e4       	ldi	r30, 0x40	; 64
+ 5d0:	f6 e0       	ldi	r31, 0x06	; 6
+ 5d2:	88 e0       	ldi	r24, 0x08	; 8
+ 5d4:	81 83       	std	Z+1, r24	; 0x01
+	/* PC2 (RXD0) 输入 */
+	PORTC.DIRCLR   = PIN2_bm;
+ 5d6:	84 e0       	ldi	r24, 0x04	; 4
+ 5d8:	82 83       	std	Z+2, r24	; 0x02
+	/* USARTC0 模式 - 异步*/
+	USART_SetMode(&USARTC0,USART_CMODE_ASYNCHRONOUS_gc);
+ 5da:	e0 ea       	ldi	r30, 0xA0	; 160
+ 5dc:	f8 e0       	ldi	r31, 0x08	; 8
+ 5de:	85 81       	ldd	r24, Z+5	; 0x05
+ 5e0:	8f 73       	andi	r24, 0x3F	; 63
+ 5e2:	85 83       	std	Z+5, r24	; 0x05
+	/* USARTC0帧结构, 8 位数据位, 无校验, 1停止位 */
+	USART_Format_Set(&USARTC0, USART_CHSIZE_8BIT_gc,USART_PMODE_DISABLED_gc, false);
+ 5e4:	83 e0       	ldi	r24, 0x03	; 3
+ 5e6:	85 83       	std	Z+5, r24	; 0x05
+	/* 设置波特率 9600*/
+	USART_Baudrate_Set(&USARTC0, 12 , 0);
+ 5e8:	8c e0       	ldi	r24, 0x0C	; 12
+ 5ea:	86 83       	std	Z+6, r24	; 0x06
+ 5ec:	17 82       	std	Z+7, r1	; 0x07
+	/* USARTC0 使能发送*/
+	USART_Tx_Enable(&USARTC0);
+ 5ee:	84 81       	ldd	r24, Z+4	; 0x04
+ 5f0:	88 60       	ori	r24, 0x08	; 8
+ 5f2:	84 83       	std	Z+4, r24	; 0x04
+	/* USARTC0 使能接收*/
+	USART_Rx_Enable(&USARTC0);
+ 5f4:	84 81       	ldd	r24, Z+4	; 0x04
+ 5f6:	80 61       	ori	r24, 0x10	; 16
+ 5f8:	84 83       	std	Z+4, r24	; 0x04
+}
+ 5fa:	08 95       	ret
+
+000005fc <ADCA_CH0_1_2_3_Sweep_Interrupt>:
+
+void ADCA_CH0_1_2_3_Sweep_Interrupt(void)
+{	
+ 5fc:	ef 92       	push	r14
+ 5fe:	ff 92       	push	r15
+ 600:	0f 93       	push	r16
+ 602:	1f 93       	push	r17
+ 604:	cf 93       	push	r28
+ 606:	df 93       	push	r29
+	uart_puts("inside ADCA_CH0_1_2_3_Sweep_Interrupt");
+ 608:	80 e0       	ldi	r24, 0x00	; 0
+ 60a:	90 e2       	ldi	r25, 0x20	; 32
+ 60c:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+	uart_putc('\n');
+ 610:	8a e0       	ldi	r24, 0x0A	; 10
+ 612:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+	// 加载校准值
+	ADC_CalibrationValues_Load(&ADCA);
+ 616:	80 e0       	ldi	r24, 0x00	; 0
+ 618:	92 e0       	ldi	r25, 0x02	; 2
+ 61a:	0e 94 28 02 	call	0x450	; 0x450 <ADC_CalibrationValues_Load>
+
+	// 设置 ADC A 有符号模式 12 位分辨率
+  	ADC_ConvMode_and_Resolution_Config(&ADCA, ADC_ConvMode_Signed, ADC_RESOLUTION_12BIT_gc);
+ 61e:	00 e0       	ldi	r16, 0x00	; 0
+ 620:	12 e0       	ldi	r17, 0x02	; 2
+ 622:	e8 01       	movw	r28, r16
+ 624:	89 81       	ldd	r24, Y+1	; 0x01
+ 626:	89 7e       	andi	r24, 0xE9	; 233
+ 628:	80 61       	ori	r24, 0x10	; 16
+ 62a:	89 83       	std	Y+1, r24	; 0x01
+
+	// 设置ADC分频 
+	ADC_Prescaler_Config(&ADCA, ADC_PRESCALER_DIV32_gc);
+ 62c:	8c 81       	ldd	r24, Y+4	; 0x04
+ 62e:	88 7f       	andi	r24, 0xF8	; 248
+ 630:	83 60       	ori	r24, 0x03	; 3
+ 632:	8c 83       	std	Y+4, r24	; 0x04
+
+	// 设置参考电压 VCC/1.6 V
+	ADC_Reference_Config(&ADCA, ADC_REFSEL_INT1V_gc);
+ 634:	8a 81       	ldd	r24, Y+2	; 0x02
+ 636:	8f 7c       	andi	r24, 0xCF	; 207
+ 638:	8a 83       	std	Y+2, r24	; 0x02
+
+   	//  ADC A，差分输入，无增益
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH0,ADC_CH_INPUTMODE_DIFF_gc,ADC_DRIVER_CH_GAIN_NONE);
+ 63a:	50 e2       	ldi	r21, 0x20	; 32
+ 63c:	e5 2e       	mov	r14, r21
+ 63e:	52 e0       	ldi	r21, 0x02	; 2
+ 640:	f5 2e       	mov	r15, r21
+ 642:	f7 01       	movw	r30, r14
+ 644:	80 81       	ld	r24, Z
+ 646:	80 7e       	andi	r24, 0xE0	; 224
+ 648:	82 60       	ori	r24, 0x02	; 2
+ 64a:	80 83       	st	Z, r24
+
+   	ADC_Ch_InputMux_Config(&ADCA.CH0, ADC_CH_MUXPOS_PIN0_gc, ADC_CH_MUXNEG_PIN0_gc);
+ 64c:	11 82       	std	Z+1, r1	; 0x01
+
+	ADC_Enable(&ADCA);
+ 64e:	88 81       	ld	r24, Y
+ 650:	81 60       	ori	r24, 0x01	; 1
+ 652:	88 83       	st	Y, r24
+ *  \param  adc Pointer to ADC module register section.
+ */
+void ADC_Wait_8MHz(ADC_t * adc)
+{
+  	/* Store old prescaler value. */
+  	uint8_t prescaler_val = adc->PRESCALER;
+ 654:	8c 81       	ldd	r24, Y+4	; 0x04
+
+	/* Set prescaler value to minimum value. */
+	adc->PRESCALER = ADC_PRESCALER_DIV4_gc;
+ 656:	1c 82       	std	Y+4, r1	; 0x04
+ 658:	9a e2       	ldi	r25, 0x2A	; 42
+ 65a:	9a 95       	dec	r25
+ 65c:	f1 f7       	brne	.-4      	; 0x65a <ADCA_CH0_1_2_3_Sweep_Interrupt+0x5e>
+
+	/* Wait 4*COMMON_MODE_CYCLES for common mode to settle. */
+	delay_us(4*COMMON_MODE_CYCLES);
+
+	/* Set prescaler to old value*/
+	adc->PRESCALER = prescaler_val;
+ 65e:	8c 83       	std	Y+4, r24	; 0x04
+	/* Wait until common mode voltage is stable. Default clk is 2MHz and
+	 * therefore below the maximum frequency to use this function. */
+	ADC_Wait_8MHz(&ADCA);
+ 	offset = ADC_Offset_Get_Signed(&ADCA, &ADCA.CH0, false);
+ 660:	80 e0       	ldi	r24, 0x00	; 0
+ 662:	92 e0       	ldi	r25, 0x02	; 2
+ 664:	60 e2       	ldi	r22, 0x20	; 32
+ 666:	72 e0       	ldi	r23, 0x02	; 2
+ 668:	40 e0       	ldi	r20, 0x00	; 0
+ 66a:	0e 94 b2 02 	call	0x564	; 0x564 <ADC_Offset_Get_Signed>
+ 66e:	80 93 34 21 	sts	0x2134, r24
+
+	uart_puts(" ADC offset = ");
+ 672:	86 e2       	ldi	r24, 0x26	; 38
+ 674:	90 e2       	ldi	r25, 0x20	; 32
+ 676:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+	uart_putc_hex(offset);
+ 67a:	80 91 34 21 	lds	r24, 0x2134
+ 67e:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+	uart_putc('\n');
+ 682:	8a e0       	ldi	r24, 0x0A	; 10
+ 684:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+    ADC_Disable(&ADCA);
+ 688:	88 81       	ld	r24, Y
+ 68a:	8e 7f       	andi	r24, 0xFE	; 254
+ 68c:	88 83       	st	Y, r24
+    
+	/* Setup channel 0, 1, 2 and 3 to have single ended input. */
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH0,
+ 68e:	f7 01       	movw	r30, r14
+ 690:	80 81       	ld	r24, Z
+ 692:	80 7e       	andi	r24, 0xE0	; 224
+ 694:	81 60       	ori	r24, 0x01	; 1
+ 696:	80 83       	st	Z, r24
+	                                 ADC_CH_INPUTMODE_SINGLEENDED_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH1,
+ 698:	28 e2       	ldi	r18, 0x28	; 40
+ 69a:	32 e0       	ldi	r19, 0x02	; 2
+ 69c:	e9 01       	movw	r28, r18
+ 69e:	88 81       	ld	r24, Y
+ 6a0:	80 7e       	andi	r24, 0xE0	; 224
+ 6a2:	81 60       	ori	r24, 0x01	; 1
+ 6a4:	88 83       	st	Y, r24
+	                                 ADC_CH_INPUTMODE_SINGLEENDED_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH2,
+ 6a6:	a0 e3       	ldi	r26, 0x30	; 48
+ 6a8:	b2 e0       	ldi	r27, 0x02	; 2
+ 6aa:	8c 91       	ld	r24, X
+ 6ac:	80 7e       	andi	r24, 0xE0	; 224
+ 6ae:	81 60       	ori	r24, 0x01	; 1
+ 6b0:	8c 93       	st	X, r24
+	                                 ADC_CH_INPUTMODE_SINGLEENDED_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH3,
+ 6b2:	e8 e3       	ldi	r30, 0x38	; 56
+ 6b4:	f2 e0       	ldi	r31, 0x02	; 2
+ 6b6:	80 81       	ld	r24, Z
+ 6b8:	80 7e       	andi	r24, 0xE0	; 224
+ 6ba:	81 60       	ori	r24, 0x01	; 1
+ 6bc:	80 83       	st	Z, r24
+	                                 ADC_CH_INPUTMODE_SINGLEENDED_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+    
+	/* Set input to the channels in ADC A to be PIN 0, 2, 4 and 6. */
+	ADC_Ch_InputMux_Config(&ADCA.CH0, ADC_CH_MUXPOS_PIN0_gc, 0);
+ 6be:	e7 01       	movw	r28, r14
+ 6c0:	19 82       	std	Y+1, r1	; 0x01
+	ADC_Ch_InputMux_Config(&ADCA.CH1, ADC_CH_MUXPOS_PIN2_gc, 0);
+ 6c2:	80 e1       	ldi	r24, 0x10	; 16
+ 6c4:	e9 01       	movw	r28, r18
+ 6c6:	89 83       	std	Y+1, r24	; 0x01
+	
+	ADC_Ch_InputMux_Config(&ADCA.CH2, ADC_CH_MUXPOS_PIN4_gc, 0);
+ 6c8:	80 e2       	ldi	r24, 0x20	; 32
+ 6ca:	11 96       	adiw	r26, 0x01	; 1
+ 6cc:	8c 93       	st	X, r24
+ 6ce:	11 97       	sbiw	r26, 0x01	; 1
+	ADC_Ch_InputMux_Config(&ADCA.CH3, ADC_CH_MUXPOS_PIN6_gc, 0);
+ 6d0:	80 e3       	ldi	r24, 0x30	; 48
+ 6d2:	81 83       	std	Z+1, r24	; 0x01
+
+	 /*Setup sweep of all four virtual channels.*/
+	ADC_SweepChannels_Config(&ADCA, ADC_SWEEP_0123_gc);
+ 6d4:	f8 01       	movw	r30, r16
+ 6d6:	83 81       	ldd	r24, Z+3	; 0x03
+ 6d8:	80 6c       	ori	r24, 0xC0	; 192
+ 6da:	83 83       	std	Z+3, r24	; 0x03
+
+	/* Enable low level interrupts on ADCA channel 2, on conversion complete. */
+	ADC_Ch_Interrupts_Config(&ADCA.CH2, ADC_CH_INTMODE_COMPLETE_gc, ADC_CH_INTLVL_LO_gc);
+ 6dc:	12 96       	adiw	r26, 0x02	; 2
+ 6de:	8c 91       	ld	r24, X
+ 6e0:	12 97       	sbiw	r26, 0x02	; 2
+ 6e2:	80 7f       	andi	r24, 0xF0	; 240
+ 6e4:	81 60       	ori	r24, 0x01	; 1
+ 6e6:	12 96       	adiw	r26, 0x02	; 2
+ 6e8:	8c 93       	st	X, r24
+
+	/* Enable PMIC interrupt level low. */
+	PMIC.CTRL |= PMIC_LOLVLEX_bm;
+ 6ea:	e0 ea       	ldi	r30, 0xA0	; 160
+ 6ec:	f0 e0       	ldi	r31, 0x00	; 0
+ 6ee:	82 81       	ldd	r24, Z+2	; 0x02
+ 6f0:	81 60       	ori	r24, 0x01	; 1
+ 6f2:	82 83       	std	Z+2, r24	; 0x02
+
+	/* Enable global interrupts. */
+	sei();
+ 6f4:	78 94       	sei
+
+	/* Enable ADC A with free running mode, VCC reference and signed conversion.*/
+	ADC_Enable(&ADCA);
+ 6f6:	e0 e0       	ldi	r30, 0x00	; 0
+ 6f8:	f2 e0       	ldi	r31, 0x02	; 2
+ 6fa:	80 81       	ld	r24, Z
+ 6fc:	81 60       	ori	r24, 0x01	; 1
+ 6fe:	80 83       	st	Z, r24
+ *  \param  adc Pointer to ADC module register section.
+ */
+void ADC_Wait_8MHz(ADC_t * adc)
+{
+  	/* Store old prescaler value. */
+  	uint8_t prescaler_val = adc->PRESCALER;
+ 700:	84 81       	ldd	r24, Z+4	; 0x04
+
+	/* Set prescaler value to minimum value. */
+	adc->PRESCALER = ADC_PRESCALER_DIV4_gc;
+ 702:	14 82       	std	Z+4, r1	; 0x04
+ 704:	9a e2       	ldi	r25, 0x2A	; 42
+ 706:	9a 95       	dec	r25
+ 708:	f1 f7       	brne	.-4      	; 0x706 <ADCA_CH0_1_2_3_Sweep_Interrupt+0x10a>
+
+	/* Wait 4*COMMON_MODE_CYCLES for common mode to settle. */
+	delay_us(4*COMMON_MODE_CYCLES);
+
+	/* Set prescaler to old value*/
+	adc->PRESCALER = prescaler_val;
+ 70a:	84 83       	std	Z+4, r24	; 0x04
+	/* Wait until common mode voltage is stable. Default clock is 2MHz and
+	 * therefore below the maximum frequency to use this function. */
+	ADC_Wait_8MHz(&ADCA);
+
+	/* Enable free running mode. */
+	ADC_FreeRunning_Enable(&ADCA);
+ 70c:	81 81       	ldd	r24, Z+1	; 0x01
+ 70e:	88 60       	ori	r24, 0x08	; 8
+ 710:	81 83       	std	Z+1, r24	; 0x01
+}
+ 712:	df 91       	pop	r29
+ 714:	cf 91       	pop	r28
+ 716:	1f 91       	pop	r17
+ 718:	0f 91       	pop	r16
+ 71a:	ff 90       	pop	r15
+ 71c:	ef 90       	pop	r14
+ 71e:	08 95       	ret
+
+00000720 <ADCA_CH0_1_2_3_Poll>:
+
+
+void ADCA_CH0_1_2_3_Poll(void)
+{
+ 720:	af 92       	push	r10
+ 722:	bf 92       	push	r11
+ 724:	cf 92       	push	r12
+ 726:	df 92       	push	r13
+ 728:	ef 92       	push	r14
+ 72a:	ff 92       	push	r15
+ 72c:	0f 93       	push	r16
+ 72e:	1f 93       	push	r17
+ 730:	cf 93       	push	r28
+ 732:	df 93       	push	r29
+	uart_puts("inside ADCA_CH0_1_2_3_Poll");
+ 734:	85 e3       	ldi	r24, 0x35	; 53
+ 736:	90 e2       	ldi	r25, 0x20	; 32
+ 738:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+	uart_putc('\n');
+ 73c:	8a e0       	ldi	r24, 0x0A	; 10
+ 73e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+	/* Move stored calibration values to ADC A. */
+	ADC_CalibrationValues_Load(&ADCA);
+ 742:	80 e0       	ldi	r24, 0x00	; 0
+ 744:	92 e0       	ldi	r25, 0x02	; 2
+ 746:	0e 94 28 02 	call	0x450	; 0x450 <ADC_CalibrationValues_Load>
+
+	/* Set up ADC A to have signed conversion mode and 12 bit resolution. */
+  	ADC_ConvMode_and_Resolution_Config(&ADCA, ADC_ConvMode_Signed, ADC_RESOLUTION_12BIT_gc);
+ 74a:	00 e0       	ldi	r16, 0x00	; 0
+ 74c:	12 e0       	ldi	r17, 0x02	; 2
+ 74e:	80 91 01 02 	lds	r24, 0x0201
+ 752:	89 7e       	andi	r24, 0xE9	; 233
+ 754:	80 61       	ori	r24, 0x10	; 16
+ 756:	d8 01       	movw	r26, r16
+ 758:	11 96       	adiw	r26, 0x01	; 1
+ 75a:	8c 93       	st	X, r24
+ 75c:	11 97       	sbiw	r26, 0x01	; 1
+
+	/* Set sample rate. */
+	ADC_Prescaler_Config(&ADCA, ADC_PRESCALER_DIV32_gc);
+ 75e:	80 91 04 02 	lds	r24, 0x0204
+ 762:	88 7f       	andi	r24, 0xF8	; 248
+ 764:	83 60       	ori	r24, 0x03	; 3
+ 766:	14 96       	adiw	r26, 0x04	; 4
+ 768:	8c 93       	st	X, r24
+ 76a:	14 97       	sbiw	r26, 0x04	; 4
+
+	/* Set reference voltage on ADC A to be VCC/1.6 V.*/
+	ADC_Reference_Config(&ADCA, ADC_REFSEL_VCC_gc); 
+ 76c:	80 91 02 02 	lds	r24, 0x0202
+ 770:	8f 7c       	andi	r24, 0xCF	; 207
+ 772:	80 61       	ori	r24, 0x10	; 16
+ 774:	12 96       	adiw	r26, 0x02	; 2
+ 776:	8c 93       	st	X, r24
+ 778:	12 97       	sbiw	r26, 0x02	; 2
+
+	/* Setup channel 0, 1, 2 and 3 with different inputs. */
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH0,
+ 77a:	20 e2       	ldi	r18, 0x20	; 32
+ 77c:	e2 2e       	mov	r14, r18
+ 77e:	22 e0       	ldi	r18, 0x02	; 2
+ 780:	f2 2e       	mov	r15, r18
+ 782:	80 91 20 02 	lds	r24, 0x0220
+ 786:	80 7e       	andi	r24, 0xE0	; 224
+ 788:	82 60       	ori	r24, 0x02	; 2
+ 78a:	80 93 20 02 	sts	0x0220, r24
+	                                 ADC_CH_INPUTMODE_DIFF_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH1,
+ 78e:	80 91 28 02 	lds	r24, 0x0228
+ 792:	80 7e       	andi	r24, 0xE0	; 224
+ 794:	80 93 28 02 	sts	0x0228, r24
+	                                 ADC_CH_INPUTMODE_INTERNAL_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH2,
+ 798:	80 91 30 02 	lds	r24, 0x0230
+ 79c:	80 7e       	andi	r24, 0xE0	; 224
+ 79e:	81 60       	ori	r24, 0x01	; 1
+ 7a0:	80 93 30 02 	sts	0x0230, r24
+	                                 ADC_CH_INPUTMODE_SINGLEENDED_gc,
+                                     ADC_DRIVER_CH_GAIN_NONE);
+
+	ADC_Ch_InputMode_and_Gain_Config(&ADCA.CH3,
+ 7a4:	80 91 38 02 	lds	r24, 0x0238
+ 7a8:	80 7e       	andi	r24, 0xE0	; 224
+ 7aa:	81 60       	ori	r24, 0x01	; 1
+ 7ac:	80 93 38 02 	sts	0x0238, r24
+	                                 ADC_CH_INPUTMODE_SINGLEENDED_gc,
+	                                 ADC_DRIVER_CH_GAIN_NONE);
+
+   	/* Get offset value for ADC A. */
+   	ADC_Ch_InputMux_Config(&ADCA.CH0, ADC_CH_MUXPOS_PIN0_gc, ADC_CH_MUXNEG_PIN0_gc);
+ 7b0:	f7 01       	movw	r30, r14
+ 7b2:	11 82       	std	Z+1, r1	; 0x01
+
+	ADC_Enable(&ADCA);
+ 7b4:	80 91 00 02 	lds	r24, 0x0200
+ 7b8:	81 60       	ori	r24, 0x01	; 1
+ 7ba:	80 93 00 02 	sts	0x0200, r24
+ *  \param  adc Pointer to ADC module register section.
+ */
+void ADC_Wait_8MHz(ADC_t * adc)
+{
+  	/* Store old prescaler value. */
+  	uint8_t prescaler_val = adc->PRESCALER;
+ 7be:	80 91 04 02 	lds	r24, 0x0204
+
+	/* Set prescaler value to minimum value. */
+	adc->PRESCALER = ADC_PRESCALER_DIV4_gc;
+ 7c2:	14 96       	adiw	r26, 0x04	; 4
+ 7c4:	1c 92       	st	X, r1
+ 7c6:	14 97       	sbiw	r26, 0x04	; 4
+ 7c8:	9a e2       	ldi	r25, 0x2A	; 42
+ 7ca:	d9 2e       	mov	r13, r25
+ 7cc:	9d 2d       	mov	r25, r13
+ 7ce:	9a 95       	dec	r25
+ 7d0:	f1 f7       	brne	.-4      	; 0x7ce <ADCA_CH0_1_2_3_Poll+0xae>
+
+	/* Wait 4*COMMON_MODE_CYCLES for common mode to settle. */
+	delay_us(4*COMMON_MODE_CYCLES);
+
+	/* Set prescaler to old value*/
+	adc->PRESCALER = prescaler_val;
+ 7d2:	14 96       	adiw	r26, 0x04	; 4
+ 7d4:	8c 93       	st	X, r24
+	/* Wait until common mode voltage is stable. Default clk is 2MHz and
+	 * therefore below the maximum frequency to use this function. */
+	ADC_Wait_8MHz(&ADCA);
+ 	offset = ADC_Offset_Get_Signed(&ADCA, &ADCA.CH0, false);
+ 7d6:	80 e0       	ldi	r24, 0x00	; 0
+ 7d8:	92 e0       	ldi	r25, 0x02	; 2
+ 7da:	60 e2       	ldi	r22, 0x20	; 32
+ 7dc:	72 e0       	ldi	r23, 0x02	; 2
+ 7de:	40 e0       	ldi	r20, 0x00	; 0
+ 7e0:	0e 94 b2 02 	call	0x564	; 0x564 <ADC_Offset_Get_Signed>
+ 7e4:	80 93 34 21 	sts	0x2134, r24
+	
+	uart_puts(" ADC offset = ");
+ 7e8:	86 e2       	ldi	r24, 0x26	; 38
+ 7ea:	90 e2       	ldi	r25, 0x20	; 32
+ 7ec:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+	uart_putc_hex(offset);
+ 7f0:	80 91 34 21 	lds	r24, 0x2134
+ 7f4:	0e 94 31 01 	call	0x262	; 0x262 <uart_putc_hex>
+	uart_putc('\n');
+ 7f8:	8a e0       	ldi	r24, 0x0A	; 10
+ 7fa:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+    ADC_Disable(&ADCA);
+ 7fe:	80 91 00 02 	lds	r24, 0x0200
+ 802:	8e 7f       	andi	r24, 0xFE	; 254
+ 804:	80 93 00 02 	sts	0x0200, r24
+    
+	/* Set input to the channels in ADC A */
+	ADC_Ch_InputMux_Config(&ADCA.CH0, ADC_CH_MUXPOS_PIN0_gc, ADC_CH_MUXNEG_PIN2_gc);
+ 808:	82 e0       	ldi	r24, 0x02	; 2
+ 80a:	f7 01       	movw	r30, r14
+ 80c:	81 83       	std	Z+1, r24	; 0x01
+	ADC_Ch_InputMux_Config(&ADCA.CH1, ADC_CH_MUXINT_SCALEDVCC_gc, 0);
+ 80e:	80 e1       	ldi	r24, 0x10	; 16
+ 810:	e8 e2       	ldi	r30, 0x28	; 40
+ 812:	f2 e0       	ldi	r31, 0x02	; 2
+ 814:	81 83       	std	Z+1, r24	; 0x01
+	ADC_Ch_InputMux_Config(&ADCA.CH2, ADC_CH_MUXPOS_PIN0_gc, 0);
+ 816:	e0 e3       	ldi	r30, 0x30	; 48
+ 818:	f2 e0       	ldi	r31, 0x02	; 2
+ 81a:	11 82       	std	Z+1, r1	; 0x01
+	ADC_Ch_InputMux_Config(&ADCA.CH3, ADC_CH_MUXPOS_PIN2_gc, 0);
+ 81c:	e8 e3       	ldi	r30, 0x38	; 56
+ 81e:	f2 e0       	ldi	r31, 0x02	; 2
+ 820:	81 83       	std	Z+1, r24	; 0x01
+
+	/* Setup sweep of all four virtual channels. */
+	ADC_SweepChannels_Config(&ADCA, ADC_SWEEP_0123_gc);
+ 822:	80 91 03 02 	lds	r24, 0x0203
+ 826:	80 6c       	ori	r24, 0xC0	; 192
+ 828:	d8 01       	movw	r26, r16
+ 82a:	13 96       	adiw	r26, 0x03	; 3
+ 82c:	8c 93       	st	X, r24
+ 82e:	13 97       	sbiw	r26, 0x03	; 3
+
+	/* Enable ADC A .*/
+	ADC_Enable(&ADCA);
+ 830:	80 91 00 02 	lds	r24, 0x0200
+ 834:	81 60       	ori	r24, 0x01	; 1
+ 836:	80 93 00 02 	sts	0x0200, r24
+ *  \param  adc Pointer to ADC module register section.
+ */
+void ADC_Wait_8MHz(ADC_t * adc)
+{
+  	/* Store old prescaler value. */
+  	uint8_t prescaler_val = adc->PRESCALER;
+ 83a:	80 91 04 02 	lds	r24, 0x0204
+
+	/* Set prescaler value to minimum value. */
+	adc->PRESCALER = ADC_PRESCALER_DIV4_gc;
+ 83e:	14 96       	adiw	r26, 0x04	; 4
+ 840:	1c 92       	st	X, r1
+ 842:	da 94       	dec	r13
+ 844:	f1 f7       	brne	.-4      	; 0x842 <ADCA_CH0_1_2_3_Poll+0x122>
+
+	/* Wait 4*COMMON_MODE_CYCLES for common mode to settle. */
+	delay_us(4*COMMON_MODE_CYCLES);
+
+	/* Set prescaler to old value*/
+	adc->PRESCALER = prescaler_val;
+ 846:	f8 01       	movw	r30, r16
+ 848:	84 83       	std	Z+4, r24	; 0x04
+	/* Wait until common mode voltage is stable. Default clk is 2MHz and
+	 * therefore below the maximum frequency to use this function. */
+	ADC_Wait_8MHz(&ADCA);
+
+	/* Enable free running mode. */
+	ADC_FreeRunning_Enable(&ADCA);
+ 84a:	80 91 01 02 	lds	r24, 0x0201
+ 84e:	88 60       	ori	r24, 0x08	; 8
+ 850:	81 83       	std	Z+1, r24	; 0x01
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 852:	80 91 34 21 	lds	r24, 0x2134
+ 856:	28 2f       	mov	r18, r24
+ 858:	33 27       	eor	r19, r19
+ 85a:	27 fd       	sbrc	r18, 7
+ 85c:	30 95       	com	r19
+ 85e:	c4 ee       	ldi	r28, 0xE4	; 228
+ 860:	d0 e2       	ldi	r29, 0x20	; 32
+ 862:	8e 01       	movw	r16, r28
+ 864:	08 5d       	subi	r16, 0xD8	; 216
+ 866:	1f 4f       	sbci	r17, 0xFF	; 255
+ 868:	f8 01       	movw	r30, r16
+	for (uint16_t i = 0; i < SAMPLE_COUNT; ++i) {
+
+	  	do{
+			/* If the conversion on the ADCA channel 0 never is
+			 * complete this will be a deadlock. */
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH0));
+ 86a:	80 e2       	ldi	r24, 0x20	; 32
+ 86c:	c8 2e       	mov	r12, r24
+ 86e:	82 e0       	ldi	r24, 0x02	; 2
+ 870:	d8 2e       	mov	r13, r24
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 872:	41 e0       	ldi	r20, 0x01	; 1
+		adcSamples[0][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH0, offset);
+
+		do{
+			/* If the conversion on the ADCA channel 1 never is
+			 * complete this will be a deadlock.*/
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH1));
+ 874:	b8 e2       	ldi	r27, 0x28	; 40
+ 876:	eb 2e       	mov	r14, r27
+ 878:	b2 e0       	ldi	r27, 0x02	; 2
+ 87a:	fb 2e       	mov	r15, r27
+		adcSamples[1][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH1, offset);
+
+		do{
+			/* If the conversion on the ADCA channel 2 never is
+			 * complete this will be a deadlock.*/
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH2));
+ 87c:	60 e3       	ldi	r22, 0x30	; 48
+ 87e:	72 e0       	ldi	r23, 0x02	; 2
+		adcSamples[2][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH2, offset);
+
+		do{
+		  /* If the conversion on the ADCA channel 3 never is
+		   * complete this will be a deadlock.*/
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH3));
+ 880:	a8 e3       	ldi	r26, 0x38	; 56
+ 882:	aa 2e       	mov	r10, r26
+ 884:	a2 e0       	ldi	r26, 0x02	; 2
+ 886:	ba 2e       	mov	r11, r26
+	for (uint16_t i = 0; i < SAMPLE_COUNT; ++i) {
+
+	  	do{
+			/* If the conversion on the ADCA channel 0 never is
+			 * complete this will be a deadlock. */
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH0));
+ 888:	80 91 23 02 	lds	r24, 0x0223
+ 88c:	80 ff       	sbrs	r24, 0
+ 88e:	fc cf       	rjmp	.-8      	; 0x888 <ADCA_CH0_1_2_3_Poll+0x168>
+ 890:	d6 01       	movw	r26, r12
+ 892:	13 96       	adiw	r26, 0x03	; 3
+ 894:	4c 93       	st	X, r20
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 896:	80 91 24 02 	lds	r24, 0x0224
+ 89a:	90 91 25 02 	lds	r25, 0x0225
+		adcSamples[0][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH0, offset);
+ 89e:	82 1b       	sub	r24, r18
+ 8a0:	93 0b       	sbc	r25, r19
+ 8a2:	88 83       	st	Y, r24
+ 8a4:	99 83       	std	Y+1, r25	; 0x01
+
+		do{
+			/* If the conversion on the ADCA channel 1 never is
+			 * complete this will be a deadlock.*/
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH1));
+ 8a6:	80 91 2b 02 	lds	r24, 0x022B
+ 8aa:	80 ff       	sbrs	r24, 0
+ 8ac:	fc cf       	rjmp	.-8      	; 0x8a6 <ADCA_CH0_1_2_3_Poll+0x186>
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 8ae:	d7 01       	movw	r26, r14
+ 8b0:	13 96       	adiw	r26, 0x03	; 3
+ 8b2:	4c 93       	st	X, r20
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 8b4:	80 91 2c 02 	lds	r24, 0x022C
+ 8b8:	90 91 2d 02 	lds	r25, 0x022D
+		adcSamples[1][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH1, offset);
+ 8bc:	82 1b       	sub	r24, r18
+ 8be:	93 0b       	sbc	r25, r19
+ 8c0:	8c 8b       	std	Y+20, r24	; 0x14
+ 8c2:	9d 8b       	std	Y+21, r25	; 0x15
+
+		do{
+			/* If the conversion on the ADCA channel 2 never is
+			 * complete this will be a deadlock.*/
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH2));
+ 8c4:	80 91 33 02 	lds	r24, 0x0233
+ 8c8:	80 ff       	sbrs	r24, 0
+ 8ca:	fc cf       	rjmp	.-8      	; 0x8c4 <ADCA_CH0_1_2_3_Poll+0x1a4>
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 8cc:	db 01       	movw	r26, r22
+ 8ce:	13 96       	adiw	r26, 0x03	; 3
+ 8d0:	4c 93       	st	X, r20
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 8d2:	80 91 34 02 	lds	r24, 0x0234
+ 8d6:	90 91 35 02 	lds	r25, 0x0235
+		adcSamples[2][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH2, offset);
+ 8da:	82 1b       	sub	r24, r18
+ 8dc:	93 0b       	sbc	r25, r19
+ 8de:	80 83       	st	Z, r24
+ 8e0:	91 83       	std	Z+1, r25	; 0x01
+
+		do{
+		  /* If the conversion on the ADCA channel 3 never is
+		   * complete this will be a deadlock.*/
+		}while(!ADC_Ch_Conversion_Complete(&ADCA.CH3));
+ 8e2:	80 91 3b 02 	lds	r24, 0x023B
+ 8e6:	80 ff       	sbrs	r24, 0
+ 8e8:	fc cf       	rjmp	.-8      	; 0x8e2 <ADCA_CH0_1_2_3_Poll+0x1c2>
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ 8ea:	d5 01       	movw	r26, r10
+ 8ec:	13 96       	adiw	r26, 0x03	; 3
+ 8ee:	4c 93       	st	X, r20
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ 8f0:	80 91 3c 02 	lds	r24, 0x023C
+ 8f4:	90 91 3d 02 	lds	r25, 0x023D
+		adcSamples[3][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH3, offset);
+ 8f8:	82 1b       	sub	r24, r18
+ 8fa:	93 0b       	sbc	r25, r19
+ 8fc:	84 8b       	std	Z+20, r24	; 0x14
+ 8fe:	95 8b       	std	Z+21, r25	; 0x15
+ 900:	22 96       	adiw	r28, 0x02	; 2
+ 902:	32 96       	adiw	r30, 0x02	; 2
+
+	/* Enable free running mode. */
+	ADC_FreeRunning_Enable(&ADCA);
+
+	/* Store samples in table.*/
+	for (uint16_t i = 0; i < SAMPLE_COUNT; ++i) {
+ 904:	b0 e2       	ldi	r27, 0x20	; 32
+ 906:	c8 3f       	cpi	r28, 0xF8	; 248
+ 908:	db 07       	cpc	r29, r27
+ 90a:	09 f0       	breq	.+2      	; 0x90e <ADCA_CH0_1_2_3_Poll+0x1ee>
+ 90c:	bd cf       	rjmp	.-134    	; 0x888 <ADCA_CH0_1_2_3_Poll+0x168>
+		adcSamples[3][i] = ADC_ResultCh_GetWord_Signed(&ADCA.CH3, offset);
+	}
+
+
+	/* Turn off free running and disable ADC module.*/
+	ADC_FreeRunning_Disable(&ADCA);
+ 90e:	80 91 01 02 	lds	r24, 0x0201
+ 912:	87 7f       	andi	r24, 0xF7	; 247
+ 914:	e0 e0       	ldi	r30, 0x00	; 0
+ 916:	f2 e0       	ldi	r31, 0x02	; 2
+ 918:	81 83       	std	Z+1, r24	; 0x01
+	ADC_Disable(&ADCA);
+ 91a:	80 91 00 02 	lds	r24, 0x0200
+ 91e:	8e 7f       	andi	r24, 0xFE	; 254
+ 920:	80 93 00 02 	sts	0x0200, r24
+
+	
+		uart_puts(" ADCA.CH0 = ");uart_putc('\n');
+ 924:	80 e5       	ldi	r24, 0x50	; 80
+ 926:	90 e2       	ldi	r25, 0x20	; 32
+ 928:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ 92c:	8a e0       	ldi	r24, 0x0A	; 10
+ 92e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 932:	64 97       	sbiw	r28, 0x14	; 20
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[0][i]);uart_puts(",");
+ 934:	89 91       	ld	r24, Y+
+ 936:	99 91       	ld	r25, Y+
+ 938:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ 93c:	8d e5       	ldi	r24, 0x5D	; 93
+ 93e:	90 e2       	ldi	r25, 0x20	; 32
+ 940:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+	ADC_FreeRunning_Disable(&ADCA);
+	ADC_Disable(&ADCA);
+
+	
+		uart_puts(" ADCA.CH0 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+ 944:	e0 e2       	ldi	r30, 0x20	; 32
+ 946:	c8 3f       	cpi	r28, 0xF8	; 248
+ 948:	de 07       	cpc	r29, r30
+ 94a:	a1 f7       	brne	.-24     	; 0x934 <ADCA_CH0_1_2_3_Poll+0x214>
+		uart_putw_dec(adcSamples[0][i]);uart_puts(",");
+		}uart_putc('\n');
+ 94c:	8a e0       	ldi	r24, 0x0A	; 10
+ 94e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		uart_puts(" ADCA.CH1 = ");uart_putc('\n');
+ 952:	8f e5       	ldi	r24, 0x5F	; 95
+ 954:	90 e2       	ldi	r25, 0x20	; 32
+ 956:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ 95a:	8a e0       	ldi	r24, 0x0A	; 10
+ 95c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[1][i]);uart_puts(",");
+ 960:	89 91       	ld	r24, Y+
+ 962:	99 91       	ld	r25, Y+
+ 964:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ 968:	8d e5       	ldi	r24, 0x5D	; 93
+ 96a:	90 e2       	ldi	r25, 0x20	; 32
+ 96c:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_puts(" ADCA.CH0 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[0][i]);uart_puts(",");
+		}uart_putc('\n');
+		uart_puts(" ADCA.CH1 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+ 970:	f1 e2       	ldi	r31, 0x21	; 33
+ 972:	cc 30       	cpi	r28, 0x0C	; 12
+ 974:	df 07       	cpc	r29, r31
+ 976:	a1 f7       	brne	.-24     	; 0x960 <ADCA_CH0_1_2_3_Poll+0x240>
+		uart_putw_dec(adcSamples[1][i]);uart_puts(",");
+		}uart_putc('\n');
+ 978:	8a e0       	ldi	r24, 0x0A	; 10
+ 97a:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		uart_puts(" ADCA.CH2 = ");uart_putc('\n');
+ 97e:	8c e6       	ldi	r24, 0x6C	; 108
+ 980:	90 e2       	ldi	r25, 0x20	; 32
+ 982:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ 986:	8a e0       	ldi	r24, 0x0A	; 10
+ 988:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[2][i]);uart_puts(",");
+ 98c:	d8 01       	movw	r26, r16
+ 98e:	8d 91       	ld	r24, X+
+ 990:	9d 91       	ld	r25, X+
+ 992:	8d 01       	movw	r16, r26
+ 994:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ 998:	8d e5       	ldi	r24, 0x5D	; 93
+ 99a:	90 e2       	ldi	r25, 0x20	; 32
+ 99c:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_puts(" ADCA.CH1 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[1][i]);uart_puts(",");
+		}uart_putc('\n');
+		uart_puts(" ADCA.CH2 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+ 9a0:	b1 e2       	ldi	r27, 0x21	; 33
+ 9a2:	00 32       	cpi	r16, 0x20	; 32
+ 9a4:	1b 07       	cpc	r17, r27
+ 9a6:	91 f7       	brne	.-28     	; 0x98c <ADCA_CH0_1_2_3_Poll+0x26c>
+		uart_putw_dec(adcSamples[2][i]);uart_puts(",");
+		}uart_putc('\n');
+ 9a8:	8a e0       	ldi	r24, 0x0A	; 10
+ 9aa:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		uart_puts(" ADCA.CH3 = ");uart_putc('\n');
+ 9ae:	89 e7       	ldi	r24, 0x79	; 121
+ 9b0:	90 e2       	ldi	r25, 0x20	; 32
+ 9b2:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ 9b6:	8a e0       	ldi	r24, 0x0A	; 10
+ 9b8:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ 9bc:	e8 01       	movw	r28, r16
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[3][i]);uart_puts(",");
+ 9be:	89 91       	ld	r24, Y+
+ 9c0:	99 91       	ld	r25, Y+
+ 9c2:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ 9c6:	8d e5       	ldi	r24, 0x5D	; 93
+ 9c8:	90 e2       	ldi	r25, 0x20	; 32
+ 9ca:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_puts(" ADCA.CH2 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+		uart_putw_dec(adcSamples[2][i]);uart_puts(",");
+		}uart_putc('\n');
+		uart_puts(" ADCA.CH3 = ");uart_putc('\n');
+	for (uint16_t i = 0; i < 10; ++i) {
+ 9ce:	e1 e2       	ldi	r30, 0x21	; 33
+ 9d0:	c4 33       	cpi	r28, 0x34	; 52
+ 9d2:	de 07       	cpc	r29, r30
+ 9d4:	a1 f7       	brne	.-24     	; 0x9be <ADCA_CH0_1_2_3_Poll+0x29e>
+		uart_putw_dec(adcSamples[3][i]);uart_puts(",");
+		}uart_putc('\n');
+ 9d6:	8a e0       	ldi	r24, 0x0A	; 10
+ 9d8:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+}
+ 9dc:	df 91       	pop	r29
+ 9de:	cf 91       	pop	r28
+ 9e0:	1f 91       	pop	r17
+ 9e2:	0f 91       	pop	r16
+ 9e4:	ff 90       	pop	r15
+ 9e6:	ef 90       	pop	r14
+ 9e8:	df 90       	pop	r13
+ 9ea:	cf 90       	pop	r12
+ 9ec:	bf 90       	pop	r11
+ 9ee:	af 90       	pop	r10
+ 9f0:	08 95       	ret
+
+000009f2 <main>:
+
+
+int main(void)
+{
+	uart_init();
+ 9f2:	0e 94 e7 02 	call	0x5ce	; 0x5ce <uart_init>
+	ADCA_CH0_1_2_3_Sweep_Interrupt();
+ 9f6:	0e 94 fe 02 	call	0x5fc	; 0x5fc <ADCA_CH0_1_2_3_Sweep_Interrupt>
+ 9fa:	ff cf       	rjmp	.-2      	; 0x9fa <main+0x8>
+
+000009fc <__vector_73>:
+ *  channels is started. If not the interrupt on ADC A channel 3 is disabled.
+ *
+ */
+
+ISR(ADCA_CH2_vect)
+{
+ 9fc:	1f 92       	push	r1
+ 9fe:	0f 92       	push	r0
+ a00:	0f b6       	in	r0, 0x3f	; 63
+ a02:	0f 92       	push	r0
+ a04:	08 b6       	in	r0, 0x38	; 56
+ a06:	0f 92       	push	r0
+ a08:	09 b6       	in	r0, 0x39	; 57
+ a0a:	0f 92       	push	r0
+ a0c:	0a b6       	in	r0, 0x3a	; 58
+ a0e:	0f 92       	push	r0
+ a10:	0b b6       	in	r0, 0x3b	; 59
+ a12:	0f 92       	push	r0
+ a14:	11 24       	eor	r1, r1
+ a16:	18 be       	out	0x38, r1	; 56
+ a18:	19 be       	out	0x39, r1	; 57
+ a1a:	1a be       	out	0x3a, r1	; 58
+ a1c:	1b be       	out	0x3b, r1	; 59
+ a1e:	2f 93       	push	r18
+ a20:	3f 93       	push	r19
+ a22:	4f 93       	push	r20
+ a24:	5f 93       	push	r21
+ a26:	6f 93       	push	r22
+ a28:	7f 93       	push	r23
+ a2a:	8f 93       	push	r24
+ a2c:	9f 93       	push	r25
+ a2e:	af 93       	push	r26
+ a30:	bf 93       	push	r27
+ a32:	cf 93       	push	r28
+ a34:	df 93       	push	r29
+ a36:	ef 93       	push	r30
+ a38:	ff 93       	push	r31
+	if(interrupt_count == 0)
+ a3a:	80 91 e2 20 	lds	r24, 0x20E2
+ a3e:	90 91 e3 20 	lds	r25, 0x20E3
+ a42:	89 2b       	or	r24, r25
+ a44:	39 f4       	brne	.+14     	; 0xa54 <__vector_73+0x58>
+	{
+		uart_puts("inside Interrupt routine interrupt_count = 0");
+ a46:	86 e8       	ldi	r24, 0x86	; 134
+ a48:	90 e2       	ldi	r25, 0x20	; 32
+ a4a:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_putc('\n');
+ a4e:	8a e0       	ldi	r24, 0x0A	; 10
+ a50:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+	}
+	/*  Read samples and clear interrupt flags. */
+  	adcSamples[0][interrupt_count] = ADC_ResultCh_GetWord_Signed(&ADCA.CH0, offset);
+ a54:	40 91 e2 20 	lds	r20, 0x20E2
+ a58:	50 91 e3 20 	lds	r21, 0x20E3
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ a5c:	61 e0       	ldi	r22, 0x01	; 1
+ a5e:	e0 e2       	ldi	r30, 0x20	; 32
+ a60:	f2 e0       	ldi	r31, 0x02	; 2
+ a62:	63 83       	std	Z+3, r22	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ a64:	80 91 24 02 	lds	r24, 0x0224
+ a68:	90 91 25 02 	lds	r25, 0x0225
+ a6c:	20 91 34 21 	lds	r18, 0x2134
+ a70:	33 27       	eor	r19, r19
+ a72:	27 fd       	sbrc	r18, 7
+ a74:	30 95       	com	r19
+ a76:	fa 01       	movw	r30, r20
+ a78:	ee 0f       	add	r30, r30
+ a7a:	ff 1f       	adc	r31, r31
+ a7c:	ec 51       	subi	r30, 0x1C	; 28
+ a7e:	ff 4d       	sbci	r31, 0xDF	; 223
+ a80:	82 1b       	sub	r24, r18
+ a82:	93 0b       	sbc	r25, r19
+ a84:	80 83       	st	Z, r24
+ a86:	91 83       	std	Z+1, r25	; 0x01
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ a88:	e8 e2       	ldi	r30, 0x28	; 40
+ a8a:	f2 e0       	ldi	r31, 0x02	; 2
+ a8c:	63 83       	std	Z+3, r22	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ a8e:	80 91 2c 02 	lds	r24, 0x022C
+ a92:	90 91 2d 02 	lds	r25, 0x022D
+	adcSamples[1][interrupt_count] = ADC_ResultCh_GetWord_Signed(&ADCA.CH1, offset);
+ a96:	fa 01       	movw	r30, r20
+ a98:	ee 0f       	add	r30, r30
+ a9a:	ff 1f       	adc	r31, r31
+ a9c:	e8 50       	subi	r30, 0x08	; 8
+ a9e:	ff 4d       	sbci	r31, 0xDF	; 223
+ aa0:	82 1b       	sub	r24, r18
+ aa2:	93 0b       	sbc	r25, r19
+ aa4:	80 83       	st	Z, r24
+ aa6:	91 83       	std	Z+1, r25	; 0x01
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ aa8:	e0 e3       	ldi	r30, 0x30	; 48
+ aaa:	f2 e0       	ldi	r31, 0x02	; 2
+ aac:	63 83       	std	Z+3, r22	; 0x03
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ aae:	80 91 34 02 	lds	r24, 0x0234
+ ab2:	90 91 35 02 	lds	r25, 0x0235
+	adcSamples[2][interrupt_count] = ADC_ResultCh_GetWord_Signed(&ADCA.CH2, offset);
+ ab6:	fa 01       	movw	r30, r20
+ ab8:	ee 0f       	add	r30, r30
+ aba:	ff 1f       	adc	r31, r31
+ abc:	e4 5f       	subi	r30, 0xF4	; 244
+ abe:	fe 4d       	sbci	r31, 0xDE	; 222
+ ac0:	82 1b       	sub	r24, r18
+ ac2:	93 0b       	sbc	r25, r19
+ ac4:	80 83       	st	Z, r24
+ ac6:	91 83       	std	Z+1, r25	; 0x01
+int16_t ADC_ResultCh_GetWord_Signed(ADC_CH_t * adc_ch, int8_t signedOffset)
+{
+  	int16_t answer;
+
+	/* Clear interrupt flag.*/
+	adc_ch->INTFLAGS = ADC_CH_CHIF_bm;
+ ac8:	a8 e3       	ldi	r26, 0x38	; 56
+ aca:	b2 e0       	ldi	r27, 0x02	; 2
+ acc:	13 96       	adiw	r26, 0x03	; 3
+ ace:	6c 93       	st	X, r22
+ ad0:	13 97       	sbiw	r26, 0x03	; 3
+
+	/* Return result register contents*/
+	answer = adc_ch->RES - signedOffset;
+ ad2:	80 91 3c 02 	lds	r24, 0x023C
+ ad6:	90 91 3d 02 	lds	r25, 0x023D
+	adcSamples[3][interrupt_count] = ADC_ResultCh_GetWord_Signed(&ADCA.CH3, offset);
+ ada:	fa 01       	movw	r30, r20
+ adc:	ee 0f       	add	r30, r30
+ ade:	ff 1f       	adc	r31, r31
+ ae0:	e0 5e       	subi	r30, 0xE0	; 224
+ ae2:	fe 4d       	sbci	r31, 0xDE	; 222
+ ae4:	82 1b       	sub	r24, r18
+ ae6:	93 0b       	sbc	r25, r19
+ ae8:	80 83       	st	Z, r24
+ aea:	91 83       	std	Z+1, r25	; 0x01
+
+  	if(interrupt_count == SAMPLE_COUNT-1)
+ aec:	49 30       	cpi	r20, 0x09	; 9
+ aee:	51 05       	cpc	r21, r1
+ af0:	09 f0       	breq	.+2      	; 0xaf4 <__vector_73+0xf8>
+ af2:	71 c0       	rjmp	.+226    	; 0xbd6 <__vector_73+0x1da>
+	{
+		ADC_Ch_Interrupts_Config(&ADCA.CH3, ADC_CH_INTMODE_COMPLETE_gc, ADC_CH_INTLVL_OFF_gc);
+ af4:	80 91 3a 02 	lds	r24, 0x023A
+ af8:	80 7f       	andi	r24, 0xF0	; 240
+ afa:	12 96       	adiw	r26, 0x02	; 2
+ afc:	8c 93       	st	X, r24
+		ADC_FreeRunning_Disable(&ADCA);
+ afe:	80 91 01 02 	lds	r24, 0x0201
+ b02:	87 7f       	andi	r24, 0xF7	; 247
+ b04:	e0 e0       	ldi	r30, 0x00	; 0
+ b06:	f2 e0       	ldi	r31, 0x02	; 2
+ b08:	81 83       	std	Z+1, r24	; 0x01
+		ADC_Disable(&ADCA);
+ b0a:	80 91 00 02 	lds	r24, 0x0200
+ b0e:	8e 7f       	andi	r24, 0xFE	; 254
+ b10:	80 93 00 02 	sts	0x0200, r24
+
+		uart_puts("inside Interrupt routine interrupt_count = 99 ");uart_putc('\n');
+ b14:	83 eb       	ldi	r24, 0xB3	; 179
+ b16:	90 e2       	ldi	r25, 0x20	; 32
+ b18:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ b1c:	8a e0       	ldi	r24, 0x0A	; 10
+ b1e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+
+		uart_puts(" ADCA.CH0 = ");uart_putc('\n');
+ b22:	80 e5       	ldi	r24, 0x50	; 80
+ b24:	90 e2       	ldi	r25, 0x20	; 32
+ b26:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ b2a:	8a e0       	ldi	r24, 0x0A	; 10
+ b2c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+ b30:	c4 ee       	ldi	r28, 0xE4	; 228
+ b32:	d0 e2       	ldi	r29, 0x20	; 32
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[0][i]);uart_puts(",");
+ b34:	89 91       	ld	r24, Y+
+ b36:	99 91       	ld	r25, Y+
+ b38:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ b3c:	8d e5       	ldi	r24, 0x5D	; 93
+ b3e:	90 e2       	ldi	r25, 0x20	; 32
+ b40:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		ADC_Disable(&ADCA);
+
+		uart_puts("inside Interrupt routine interrupt_count = 99 ");uart_putc('\n');
+
+		uart_puts(" ADCA.CH0 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+ b44:	80 e2       	ldi	r24, 0x20	; 32
+ b46:	c8 3f       	cpi	r28, 0xF8	; 248
+ b48:	d8 07       	cpc	r29, r24
+ b4a:	a1 f7       	brne	.-24     	; 0xb34 <__vector_73+0x138>
+			uart_putw_dec(adcSamples[0][i]);uart_puts(",");
+			}uart_putc('\n');
+ b4c:	8a e0       	ldi	r24, 0x0A	; 10
+ b4e:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+			uart_puts(" ADCA.CH1 = ");uart_putc('\n');
+ b52:	8f e5       	ldi	r24, 0x5F	; 95
+ b54:	90 e2       	ldi	r25, 0x20	; 32
+ b56:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ b5a:	8a e0       	ldi	r24, 0x0A	; 10
+ b5c:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[1][i]);uart_puts(",");
+ b60:	89 91       	ld	r24, Y+
+ b62:	99 91       	ld	r25, Y+
+ b64:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ b68:	8d e5       	ldi	r24, 0x5D	; 93
+ b6a:	90 e2       	ldi	r25, 0x20	; 32
+ b6c:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+		uart_puts(" ADCA.CH0 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[0][i]);uart_puts(",");
+			}uart_putc('\n');
+			uart_puts(" ADCA.CH1 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+ b70:	81 e2       	ldi	r24, 0x21	; 33
+ b72:	cc 30       	cpi	r28, 0x0C	; 12
+ b74:	d8 07       	cpc	r29, r24
+ b76:	a1 f7       	brne	.-24     	; 0xb60 <__vector_73+0x164>
+			uart_putw_dec(adcSamples[1][i]);uart_puts(",");
+			}uart_putc('\n');
+ b78:	8a e0       	ldi	r24, 0x0A	; 10
+ b7a:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+			uart_puts(" ADCA.CH2 = ");uart_putc('\n');
+ b7e:	8c e6       	ldi	r24, 0x6C	; 108
+ b80:	90 e2       	ldi	r25, 0x20	; 32
+ b82:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ b86:	8a e0       	ldi	r24, 0x0A	; 10
+ b88:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[2][i]);uart_puts(",");
+ b8c:	89 91       	ld	r24, Y+
+ b8e:	99 91       	ld	r25, Y+
+ b90:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ b94:	8d e5       	ldi	r24, 0x5D	; 93
+ b96:	90 e2       	ldi	r25, 0x20	; 32
+ b98:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+			uart_puts(" ADCA.CH1 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[1][i]);uart_puts(",");
+			}uart_putc('\n');
+			uart_puts(" ADCA.CH2 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+ b9c:	81 e2       	ldi	r24, 0x21	; 33
+ b9e:	c0 32       	cpi	r28, 0x20	; 32
+ ba0:	d8 07       	cpc	r29, r24
+ ba2:	a1 f7       	brne	.-24     	; 0xb8c <__vector_73+0x190>
+			uart_putw_dec(adcSamples[2][i]);uart_puts(",");
+			}uart_putc('\n');
+ ba4:	8a e0       	ldi	r24, 0x0A	; 10
+ ba6:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+			uart_puts(" ADCA.CH3 = ");uart_putc('\n');
+ baa:	89 e7       	ldi	r24, 0x79	; 121
+ bac:	90 e2       	ldi	r25, 0x20	; 32
+ bae:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+ bb2:	8a e0       	ldi	r24, 0x0A	; 10
+ bb4:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[3][i]);uart_puts(",");
+ bb8:	89 91       	ld	r24, Y+
+ bba:	99 91       	ld	r25, Y+
+ bbc:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <uart_putw_dec>
+ bc0:	8d e5       	ldi	r24, 0x5D	; 93
+ bc2:	90 e2       	ldi	r25, 0x20	; 32
+ bc4:	0e 94 11 02 	call	0x422	; 0x422 <uart_puts>
+			uart_puts(" ADCA.CH2 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+			uart_putw_dec(adcSamples[2][i]);uart_puts(",");
+			}uart_putc('\n');
+			uart_puts(" ADCA.CH3 = ");uart_putc('\n');
+		for (uint16_t i = 0; i < 10; ++i) {
+ bc8:	81 e2       	ldi	r24, 0x21	; 33
+ bca:	c4 33       	cpi	r28, 0x34	; 52
+ bcc:	d8 07       	cpc	r29, r24
+ bce:	a1 f7       	brne	.-24     	; 0xbb8 <__vector_73+0x1bc>
+			uart_putw_dec(adcSamples[3][i]);uart_puts(",");
+			}uart_putc('\n');
+ bd0:	8a e0       	ldi	r24, 0x0A	; 10
+ bd2:	0e 94 22 01 	call	0x244	; 0x244 <uart_putc>
+	}
+	interrupt_count++;
+ bd6:	80 91 e2 20 	lds	r24, 0x20E2
+ bda:	90 91 e3 20 	lds	r25, 0x20E3
+ bde:	01 96       	adiw	r24, 0x01	; 1
+ be0:	80 93 e2 20 	sts	0x20E2, r24
+ be4:	90 93 e3 20 	sts	0x20E3, r25
+}
+ be8:	ff 91       	pop	r31
+ bea:	ef 91       	pop	r30
+ bec:	df 91       	pop	r29
+ bee:	cf 91       	pop	r28
+ bf0:	bf 91       	pop	r27
+ bf2:	af 91       	pop	r26
+ bf4:	9f 91       	pop	r25
+ bf6:	8f 91       	pop	r24
+ bf8:	7f 91       	pop	r23
+ bfa:	6f 91       	pop	r22
+ bfc:	5f 91       	pop	r21
+ bfe:	4f 91       	pop	r20
+ c00:	3f 91       	pop	r19
+ c02:	2f 91       	pop	r18
+ c04:	0f 90       	pop	r0
+ c06:	0b be       	out	0x3b, r0	; 59
+ c08:	0f 90       	pop	r0
+ c0a:	0a be       	out	0x3a, r0	; 58
+ c0c:	0f 90       	pop	r0
+ c0e:	09 be       	out	0x39, r0	; 57
+ c10:	0f 90       	pop	r0
+ c12:	08 be       	out	0x38, r0	; 56
+ c14:	0f 90       	pop	r0
+ c16:	0f be       	out	0x3f, r0	; 63
+ c18:	0f 90       	pop	r0
+ c1a:	1f 90       	pop	r1
+ c1c:	18 95       	reti
+
+00000c1e <__mulsi3>:
+ c1e:	62 9f       	mul	r22, r18
+ c20:	d0 01       	movw	r26, r0
+ c22:	73 9f       	mul	r23, r19
+ c24:	f0 01       	movw	r30, r0
+ c26:	82 9f       	mul	r24, r18
+ c28:	e0 0d       	add	r30, r0
+ c2a:	f1 1d       	adc	r31, r1
+ c2c:	64 9f       	mul	r22, r20
+ c2e:	e0 0d       	add	r30, r0
+ c30:	f1 1d       	adc	r31, r1
+ c32:	92 9f       	mul	r25, r18
+ c34:	f0 0d       	add	r31, r0
+ c36:	83 9f       	mul	r24, r19
+ c38:	f0 0d       	add	r31, r0
+ c3a:	74 9f       	mul	r23, r20
+ c3c:	f0 0d       	add	r31, r0
+ c3e:	65 9f       	mul	r22, r21
+ c40:	f0 0d       	add	r31, r0
+ c42:	99 27       	eor	r25, r25
+ c44:	72 9f       	mul	r23, r18
+ c46:	b0 0d       	add	r27, r0
+ c48:	e1 1d       	adc	r30, r1
+ c4a:	f9 1f       	adc	r31, r25
+ c4c:	63 9f       	mul	r22, r19
+ c4e:	b0 0d       	add	r27, r0
+ c50:	e1 1d       	adc	r30, r1
+ c52:	f9 1f       	adc	r31, r25
+ c54:	bd 01       	movw	r22, r26
+ c56:	cf 01       	movw	r24, r30
+ c58:	11 24       	eor	r1, r1
+ c5a:	08 95       	ret
+
+00000c5c <__udivmodhi4>:
+ c5c:	aa 1b       	sub	r26, r26
+ c5e:	bb 1b       	sub	r27, r27
+ c60:	51 e1       	ldi	r21, 0x11	; 17
+ c62:	07 c0       	rjmp	.+14     	; 0xc72 <__udivmodhi4_ep>
+
+00000c64 <__udivmodhi4_loop>:
+ c64:	aa 1f       	adc	r26, r26
+ c66:	bb 1f       	adc	r27, r27
+ c68:	a6 17       	cp	r26, r22
+ c6a:	b7 07       	cpc	r27, r23
+ c6c:	10 f0       	brcs	.+4      	; 0xc72 <__udivmodhi4_ep>
+ c6e:	a6 1b       	sub	r26, r22
+ c70:	b7 0b       	sbc	r27, r23
+
+00000c72 <__udivmodhi4_ep>:
+ c72:	88 1f       	adc	r24, r24
+ c74:	99 1f       	adc	r25, r25
+ c76:	5a 95       	dec	r21
+ c78:	a9 f7       	brne	.-22     	; 0xc64 <__udivmodhi4_loop>
+ c7a:	80 95       	com	r24
+ c7c:	90 95       	com	r25
+ c7e:	bc 01       	movw	r22, r24
+ c80:	cd 01       	movw	r24, r26
+ c82:	08 95       	ret
+
+00000c84 <__divmodhi4>:
+ c84:	97 fb       	bst	r25, 7
+ c86:	09 2e       	mov	r0, r25
+ c88:	07 26       	eor	r0, r23
+ c8a:	0a d0       	rcall	.+20     	; 0xca0 <__divmodhi4_neg1>
+ c8c:	77 fd       	sbrc	r23, 7
+ c8e:	04 d0       	rcall	.+8      	; 0xc98 <__divmodhi4_neg2>
+ c90:	e5 df       	rcall	.-54     	; 0xc5c <__udivmodhi4>
+ c92:	06 d0       	rcall	.+12     	; 0xca0 <__divmodhi4_neg1>
+ c94:	00 20       	and	r0, r0
+ c96:	1a f4       	brpl	.+6      	; 0xc9e <__divmodhi4_exit>
+
+00000c98 <__divmodhi4_neg2>:
+ c98:	70 95       	com	r23
+ c9a:	61 95       	neg	r22
+ c9c:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000c9e <__divmodhi4_exit>:
+ c9e:	08 95       	ret
+
+00000ca0 <__divmodhi4_neg1>:
+ ca0:	f6 f7       	brtc	.-4      	; 0xc9e <__divmodhi4_exit>
+ ca2:	90 95       	com	r25
+ ca4:	81 95       	neg	r24
+ ca6:	9f 4f       	sbci	r25, 0xFF	; 255
+ ca8:	08 95       	ret
+
+00000caa <__udivmodsi4>:
+ caa:	a1 e2       	ldi	r26, 0x21	; 33
+ cac:	1a 2e       	mov	r1, r26
+ cae:	aa 1b       	sub	r26, r26
+ cb0:	bb 1b       	sub	r27, r27
+ cb2:	fd 01       	movw	r30, r26
+ cb4:	0d c0       	rjmp	.+26     	; 0xcd0 <__udivmodsi4_ep>
+
+00000cb6 <__udivmodsi4_loop>:
+ cb6:	aa 1f       	adc	r26, r26
+ cb8:	bb 1f       	adc	r27, r27
+ cba:	ee 1f       	adc	r30, r30
+ cbc:	ff 1f       	adc	r31, r31
+ cbe:	a2 17       	cp	r26, r18
+ cc0:	b3 07       	cpc	r27, r19
+ cc2:	e4 07       	cpc	r30, r20
+ cc4:	f5 07       	cpc	r31, r21
+ cc6:	20 f0       	brcs	.+8      	; 0xcd0 <__udivmodsi4_ep>
+ cc8:	a2 1b       	sub	r26, r18
+ cca:	b3 0b       	sbc	r27, r19
+ ccc:	e4 0b       	sbc	r30, r20
+ cce:	f5 0b       	sbc	r31, r21
+
+00000cd0 <__udivmodsi4_ep>:
+ cd0:	66 1f       	adc	r22, r22
+ cd2:	77 1f       	adc	r23, r23
+ cd4:	88 1f       	adc	r24, r24
+ cd6:	99 1f       	adc	r25, r25
+ cd8:	1a 94       	dec	r1
+ cda:	69 f7       	brne	.-38     	; 0xcb6 <__udivmodsi4_loop>
+ cdc:	60 95       	com	r22
+ cde:	70 95       	com	r23
+ ce0:	80 95       	com	r24
+ ce2:	90 95       	com	r25
+ ce4:	9b 01       	movw	r18, r22
+ ce6:	ac 01       	movw	r20, r24
+ ce8:	bd 01       	movw	r22, r26
+ cea:	cf 01       	movw	r24, r30
+ cec:	08 95       	ret
+
+00000cee <_exit>:
+ cee:	f8 94       	cli
+
+00000cf0 <__stop_program>:
+ cf0:	ff cf       	rjmp	.-2      	; 0xcf0 <__stop_program>

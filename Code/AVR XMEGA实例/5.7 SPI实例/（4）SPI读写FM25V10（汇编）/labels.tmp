@@ -1,0 +1,47 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega32A4</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega32A4def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>135</LINE></RESET>
+  <USARTC0_INT_RXC><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>240</LINE></USARTC0_INT_RXC>
+  <PLL_XOSC_Initial><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>57</LINE></PLL_XOSC_Initial>
+  <SPI_MasterInit><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>98</LINE></SPI_MasterInit>
+  <uart_init><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>109</LINE></uart_init>
+  <TimerC0><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>146</LINE></TimerC0>
+  <LOOP><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>156</LINE></LOOP>
+  <SPI_READ_DATA><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>162</LINE></SPI_READ_DATA>
+  <SPI_WAITING_IF><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>222</LINE></SPI_WAITING_IF>
+  <SPI_WRITE_ADDRESS><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>229</LINE></SPI_WRITE_ADDRESS>
+  <LOOP_READ_DATA><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>174</LINE></LOOP_READ_DATA>
+  <SPI_WRITE_DATA><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>188</LINE></SPI_WRITE_DATA>
+  <LOOP_WRITE_DATA><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>211</LINE></LOOP_WRITE_DATA>
+  <LOOP_ADDRESS><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>231</LINE></LOOP_ADDRESS>
+  <STORE_DATA><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>245</LINE></STORE_DATA>
+  <WAITING_RECEIVE><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>253</LINE></WAITING_RECEIVE>
+  <RECEIVE_END><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>262</LINE></RECEIVE_END>
+  <SPI_WRITE><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>273</LINE></SPI_WRITE>
+  <SPI_READ><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>288</LINE></SPI_READ>
+  <AA_C0><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>308</LINE></AA_C0>
+  <BB_C0><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>311</LINE></BB_C0>
+  <DELAY><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>322</LINE></DELAY>
+  <TT><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>325</LINE></TT>
+  <HH><FILE>E:\ATMAGE\example\ASM_example\7-2 SPI_fm25v10_asm\SPI_fm25v10_asm.asm</FILE><LINE>327</LINE></HH>
+ </LABELS>
+</ASSEMBLER_INFO>

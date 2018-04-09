@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\°²×°\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\example\ASM_example\8-1 EEPROM_ON_CHIP_asm\labels.tmp" -fI -W+ie -o "E:\ATMAGE\example\ASM_example\8-1 EEPROM_ON_CHIP_asm\EEPROM_ON_CHIP_asm.hex" -d "E:\ATMAGE\example\ASM_example\8-1 EEPROM_ON_CHIP_asm\EEPROM_ON_CHIP_asm.obj" -e "E:\ATMAGE\example\ASM_example\8-1 EEPROM_ON_CHIP_asm\EEPROM_ON_CHIP_asm.eep" -m "E:\ATMAGE\example\ASM_example\8-1 EEPROM_ON_CHIP_asm\EEPROM_ON_CHIP_asm.map" "E:\ATMAGE\example\ASM_example\8-1 EEPROM_ON_CHIP_asm\EEPROM_ON_CHIP_asm.asm"

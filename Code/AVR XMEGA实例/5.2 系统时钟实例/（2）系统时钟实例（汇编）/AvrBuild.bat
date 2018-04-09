@@ -1,0 +1,2 @@
+@ECHO OFF
+"D:\安装\AvrAssembler2\avrasm2.exe" -S "E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\labels.tmp" -fI -W+ie -C V3X -o "E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.hex" -d "E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.obj" -e "E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.eep" -m "E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.map" "E:\ATMAGE\书稿例子\ASM_example\2-1 CLK_OSC_asm\CLK_OSC_asm.asm"

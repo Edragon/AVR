@@ -1,0 +1,43 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\usart_driver.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>80</LINE></RESET>
+  <ISRT_TWIC_TWIM_vect><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>154</LINE></ISRT_TWIC_TWIM_vect>
+  <ISR_TWIC_TWIS_vect><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>221</LINE></ISR_TWIC_TWIS_vect>
+  <sendBuffer><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>44</LINE></sendBuffer>
+  <MAIN><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>45</LINE></MAIN>
+  <uart_init><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>53</LINE></uart_init>
+  <RESET_2><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>149</LINE></RESET_2>
+  <ISRT_TWIC_TWIM_vect_2><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>192</LINE></ISRT_TWIC_TWIM_vect_2>
+  <ISRT_TWIC_TWIM_vect_0><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>169</LINE></ISRT_TWIC_TWIM_vect_0>
+  <ISRT_TWIC_TWIM_vect_1><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>184</LINE></ISRT_TWIC_TWIM_vect_1>
+  <ISRT_TWIC_TWIM_vect_3><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>216</LINE></ISRT_TWIC_TWIM_vect_3>
+  <ISRT_TWIC_TWIM_vect_4><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>210</LINE></ISRT_TWIC_TWIM_vect_4>
+  <end_1><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>231</LINE></end_1>
+  <end><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>297</LINE></end>
+  <end_2><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>242</LINE></end_2>
+  <end_5><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>278</LINE></end_5>
+  <end_3><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>249</LINE></end_3>
+  <end_4><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>262</LINE></end_4>
+  <end_6><FILE>E:\ATMAGE\书稿例子\ASM_example\6-1 I2C_asm\I2C_asm.asm</FILE><LINE>293</LINE></end_6>
+ </LABELS>
+</ASSEMBLER_INFO>

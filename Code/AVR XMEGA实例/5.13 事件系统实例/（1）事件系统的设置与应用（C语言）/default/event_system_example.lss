@@ -1,0 +1,1070 @@
+
+event_system_example.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000055c  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000020  00000000  00000000  000005b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 000002d8  00000000  00000000  000005d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   000021a3  00000000  00000000  000008a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 0000026c  00000000  00000000  00002a4b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000005c5  00000000  00000000  00002cb7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000210  00000000  00000000  0000327c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    0000211e  00000000  00000000  0000348c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000441  00000000  00000000  000055aa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+   c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  10:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  14:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  18:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  1c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  20:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  24:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  28:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  2c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  30:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  34:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  38:	0c 94 46 02 	jmp	0x48c	; 0x48c <__vector_14>
+  3c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  40:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  44:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  48:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  4c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  50:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  54:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  58:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  5c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  60:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  64:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  68:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  6c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  70:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  74:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  78:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  7c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  80:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  84:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  88:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  8c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  90:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  94:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  98:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  9c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  f8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+  fc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 100:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 104:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 108:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 10c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 110:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 114:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 118:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 11c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 120:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 124:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 128:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 12c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 130:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 134:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 138:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 13c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 140:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 144:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 148:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 14c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 150:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 154:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 158:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 15c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 160:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 164:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 168:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 16c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 170:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 174:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 178:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 17c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 180:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 184:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 188:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 18c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 190:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 194:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 198:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 19c:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1a8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ac:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1b8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1bc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1c8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1cc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1d8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1dc:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e4:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1e8:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1ec:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+ 1f0:	0c 94 18 01 	jmp	0x230	; 0x230 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	ec e5       	ldi	r30, 0x5C	; 92
+ 214:	f5 e0       	ldi	r31, 0x05	; 5
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a0 30       	cpi	r26, 0x00	; 0
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+ 228:	0e 94 a9 02 	call	0x552	; 0x552 <main>
+ 22c:	0c 94 ac 02 	jmp	0x558	; 0x558 <_exit>
+
+00000230 <__bad_interrupt>:
+ 230:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000234 <EVSYS_SetEventSource>:
+	volatile uint8_t * chMux;
+
+	/*  Check if channel is valid and set the pointer offset for the selected
+	 *  channel and assign the eventSource value.
+	 */
+	if (eventChannel < 8) {
+ 234:	88 30       	cpi	r24, 0x08	; 8
+ 236:	10 f0       	brcs	.+4      	; 0x23c <EVSYS_SetEventSource+0x8>
+ 238:	80 e0       	ldi	r24, 0x00	; 0
+ 23a:	08 95       	ret
+		chMux = &EVSYS.CH0MUX + eventChannel;
+ 23c:	e8 2f       	mov	r30, r24
+ 23e:	f0 e0       	ldi	r31, 0x00	; 0
+ 240:	e0 58       	subi	r30, 0x80	; 128
+ 242:	fe 4f       	sbci	r31, 0xFE	; 254
+		*chMux = eventSource;
+ 244:	60 83       	st	Z, r22
+ 246:	81 e0       	ldi	r24, 0x01	; 1
+
+		return true;
+	} else {
+		return false;
+	}
+}
+ 248:	08 95       	ret
+
+0000024a <EVSYS_SetEventChannelParameters>:
+bool EVSYS_SetEventChannelParameters( uint8_t eventChannel,
+                                      EVSYS_QDIRM_t QDIRM,
+                                      bool QDIndexEnable,
+                                      bool QDEnable,
+                                      EVSYS_DIGFILT_t filterCoefficient )
+{
+ 24a:	0f 93       	push	r16
+
+	/*  Check if channel is valid and set the pointer offset for the selected
+	 *  channel and assign the configuration value.
+	 */
+	if ( ( eventChannel == 0 ) ||
+ 24c:	88 23       	and	r24, r24
+ 24e:	31 f0       	breq	.+12     	; 0x25c <EVSYS_SetEventChannelParameters+0x12>
+ 250:	82 30       	cpi	r24, 0x02	; 2
+ 252:	21 f0       	breq	.+8      	; 0x25c <EVSYS_SetEventChannelParameters+0x12>
+ 254:	84 30       	cpi	r24, 0x04	; 4
+ 256:	11 f0       	breq	.+4      	; 0x25c <EVSYS_SetEventChannelParameters+0x12>
+ 258:	80 e0       	ldi	r24, 0x00	; 0
+ 25a:	10 c0       	rjmp	.+32     	; 0x27c <EVSYS_SetEventChannelParameters+0x32>
+	     ( eventChannel == 2 ) ||
+	     ( eventChannel == 4 ) ) {
+
+		volatile uint8_t * chCtrl;
+		chCtrl = &EVSYS.CH0CTRL + eventChannel;
+		*chCtrl = ( uint8_t ) QDIRM |
+ 25c:	44 23       	and	r20, r20
+ 25e:	11 f4       	brne	.+4      	; 0x264 <EVSYS_SetEventChannelParameters+0x1a>
+ 260:	90 e0       	ldi	r25, 0x00	; 0
+ 262:	01 c0       	rjmp	.+2      	; 0x266 <EVSYS_SetEventChannelParameters+0x1c>
+ 264:	90 e1       	ldi	r25, 0x10	; 16
+ 266:	21 11       	cpse	r18, r1
+ 268:	28 e0       	ldi	r18, 0x08	; 8
+ 26a:	06 2b       	or	r16, r22
+ 26c:	90 2b       	or	r25, r16
+ 26e:	92 2b       	or	r25, r18
+	if ( ( eventChannel == 0 ) ||
+	     ( eventChannel == 2 ) ||
+	     ( eventChannel == 4 ) ) {
+
+		volatile uint8_t * chCtrl;
+		chCtrl = &EVSYS.CH0CTRL + eventChannel;
+ 270:	e8 2f       	mov	r30, r24
+ 272:	f0 e0       	ldi	r31, 0x00	; 0
+ 274:	e8 57       	subi	r30, 0x78	; 120
+ 276:	fe 4f       	sbci	r31, 0xFE	; 254
+		*chCtrl = ( uint8_t ) QDIRM |
+ 278:	90 83       	st	Z, r25
+ 27a:	81 e0       	ldi	r24, 0x01	; 1
+
+		return true;
+	} else {
+		return false;
+	}
+}
+ 27c:	0f 91       	pop	r16
+ 27e:	08 95       	ret
+
+00000280 <EVSYS_SetEventChannelFilter>:
+                                  EVSYS_DIGFILT_t filterCoefficient )
+{
+	/*  Check if channel is valid and set the pointer offset for the selected
+	 *  channel and assign the configuration value.
+	 */
+	if (eventChannel < 8) {
+ 280:	88 30       	cpi	r24, 0x08	; 8
+ 282:	10 f0       	brcs	.+4      	; 0x288 <EVSYS_SetEventChannelFilter+0x8>
+ 284:	80 e0       	ldi	r24, 0x00	; 0
+ 286:	08 95       	ret
+
+		volatile uint8_t * chCtrl;
+		chCtrl = &EVSYS.CH0CTRL + eventChannel;
+ 288:	e8 2f       	mov	r30, r24
+ 28a:	f0 e0       	ldi	r31, 0x00	; 0
+ 28c:	e8 57       	subi	r30, 0x78	; 120
+ 28e:	fe 4f       	sbci	r31, 0xFE	; 254
+		*chCtrl = filterCoefficient;
+ 290:	60 83       	st	Z, r22
+ 292:	81 e0       	ldi	r24, 0x01	; 1
+
+		return true;
+	} else {
+		return false;
+	}
+}
+ 294:	08 95       	ret
+
+00000296 <EVSYS_ManualTrigger>:
+ *                    position n correspond to the channel n.
+ */
+void EVSYS_ManualTrigger( uint8_t dataMask, uint8_t strobeMask )
+{
+	/* The datamask register must be set before the strobe register. */
+	EVSYS.DATA = dataMask;
+ 296:	e0 e8       	ldi	r30, 0x80	; 128
+ 298:	f1 e0       	ldi	r31, 0x01	; 1
+ 29a:	81 8b       	std	Z+17, r24	; 0x11
+	EVSYS.STROBE = strobeMask;
+ 29c:	60 8b       	std	Z+16, r22	; 0x10
+}
+ 29e:	08 95       	ret
+
+000002a0 <TC0_ConfigClockSource>:
+ *
+ *  \param tc              Timer/Counter module instance.
+ *  \param clockSelection  Timer/Counter clock source setting.
+ */
+void TC0_ConfigClockSource( volatile TC0_t * tc, TC_CLKSEL_t clockSelection )
+{
+ 2a0:	fc 01       	movw	r30, r24
+	tc->CTRLA = ( tc->CTRLA & ~TC0_CLKSEL_gm ) | clockSelection;
+ 2a2:	80 81       	ld	r24, Z
+ 2a4:	80 7f       	andi	r24, 0xF0	; 240
+ 2a6:	86 2b       	or	r24, r22
+ 2a8:	80 83       	st	Z, r24
+}
+ 2aa:	08 95       	ret
+
+000002ac <TC1_ConfigClockSource>:
+ *
+ *  \param tc              Timer/Counter module instance.
+ *  \param clockSelection  Timer/Counter clock source setting.
+ */
+void TC1_ConfigClockSource( volatile TC1_t * tc, TC_CLKSEL_t clockSelection )
+{
+ 2ac:	fc 01       	movw	r30, r24
+	tc->CTRLA = ( tc->CTRLA & ~TC1_CLKSEL_gm ) | clockSelection;
+ 2ae:	80 81       	ld	r24, Z
+ 2b0:	80 7f       	andi	r24, 0xF0	; 240
+ 2b2:	86 2b       	or	r24, r22
+ 2b4:	80 83       	st	Z, r24
+}
+ 2b6:	08 95       	ret
+
+000002b8 <TC0_ConfigWGM>:
+ *
+ *  \param tc    Timer/Counter module instance.
+ *  \param wgm   Waveform generation mode.
+ */
+void TC0_ConfigWGM( volatile TC0_t * tc, TC_WGMODE_t wgm )
+{
+ 2b8:	fc 01       	movw	r30, r24
+	tc->CTRLB = ( tc->CTRLB & ~TC0_WGMODE_gm ) | wgm;
+ 2ba:	81 81       	ldd	r24, Z+1	; 0x01
+ 2bc:	88 7f       	andi	r24, 0xF8	; 248
+ 2be:	86 2b       	or	r24, r22
+ 2c0:	81 83       	std	Z+1, r24	; 0x01
+}
+ 2c2:	08 95       	ret
+
+000002c4 <TC1_ConfigWGM>:
+ *
+ *  \param tc    Timer/Counter module instance.
+ *  \param wgm   Waveform generation mode.
+ */
+void TC1_ConfigWGM( volatile TC1_t * tc, TC_WGMODE_t wgm )
+{
+ 2c4:	fc 01       	movw	r30, r24
+	tc->CTRLB = ( tc->CTRLB & ~TC1_WGMODE_gm ) | wgm;
+ 2c6:	81 81       	ldd	r24, Z+1	; 0x01
+ 2c8:	88 7f       	andi	r24, 0xF8	; 248
+ 2ca:	86 2b       	or	r24, r22
+ 2cc:	81 83       	std	Z+1, r24	; 0x01
+}
+ 2ce:	08 95       	ret
+
+000002d0 <TC0_ConfigInputCapture>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param eventSource      Event source selection.
+ */
+void TC0_ConfigInputCapture( volatile TC0_t * tc, TC_EVSEL_t eventSource )
+{
+ 2d0:	fc 01       	movw	r30, r24
+	tc->CTRLD = ( tc->CTRLD & ~( TC0_EVSEL_gm | TC0_EVACT_gm ) ) |
+ 2d2:	83 81       	ldd	r24, Z+3	; 0x03
+ 2d4:	80 71       	andi	r24, 0x10	; 16
+ 2d6:	80 62       	ori	r24, 0x20	; 32
+ 2d8:	86 2b       	or	r24, r22
+ 2da:	83 83       	std	Z+3, r24	; 0x03
+	            eventSource |
+	            TC_EVACT_CAPT_gc;
+}
+ 2dc:	08 95       	ret
+
+000002de <TC1_ConfigInputCapture>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param eventSource      Event source selection.
+ */
+void TC1_ConfigInputCapture( volatile TC1_t * tc, TC_EVSEL_t eventSource )
+{
+ 2de:	fc 01       	movw	r30, r24
+	tc->CTRLD = ( tc->CTRLD & ~( TC1_EVSEL_gm | TC1_EVACT_gm ) ) |
+ 2e0:	83 81       	ldd	r24, Z+3	; 0x03
+ 2e2:	80 71       	andi	r24, 0x10	; 16
+ 2e4:	80 62       	ori	r24, 0x20	; 32
+ 2e6:	86 2b       	or	r24, r22
+ 2e8:	83 83       	std	Z+3, r24	; 0x03
+	            eventSource |
+	            TC_EVACT_CAPT_gc;
+}
+ 2ea:	08 95       	ret
+
+000002ec <TC0_EnableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param enableMask       Mask of channels to enable.
+ */
+void TC0_EnableCCChannels( volatile TC0_t * tc, uint8_t enableMask )
+{
+ 2ec:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in enableMask. */
+	enableMask &= ( TC0_CCAEN_bm | TC0_CCBEN_bm | TC0_CCCEN_bm | TC0_CCDEN_bm );
+
+	/* Enable channels. */
+	tc->CTRLB |= enableMask;
+ 2ee:	81 81       	ldd	r24, Z+1	; 0x01
+ 2f0:	60 7f       	andi	r22, 0xF0	; 240
+ 2f2:	86 2b       	or	r24, r22
+ 2f4:	81 83       	std	Z+1, r24	; 0x01
+}
+ 2f6:	08 95       	ret
+
+000002f8 <TC1_EnableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param enableMask       Mask of channels to enable.
+ */
+void TC1_EnableCCChannels( volatile TC1_t * tc, uint8_t enableMask )
+{
+ 2f8:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in enableMask. */
+	enableMask &= ( TC1_CCAEN_bm | TC1_CCBEN_bm );
+
+	/* Enable channels. */
+	tc->CTRLB |= enableMask;
+ 2fa:	81 81       	ldd	r24, Z+1	; 0x01
+ 2fc:	60 73       	andi	r22, 0x30	; 48
+ 2fe:	86 2b       	or	r24, r22
+ 300:	81 83       	std	Z+1, r24	; 0x01
+}
+ 302:	08 95       	ret
+
+00000304 <TC0_DisableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param disableMask      Mask of channels to disable.
+ */
+void TC0_DisableCCChannels( volatile TC0_t * tc, uint8_t disableMask )
+{
+ 304:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in disableMask. */
+	disableMask &= ( TC0_CCAEN_bm | TC0_CCBEN_bm | TC0_CCCEN_bm | TC0_CCDEN_bm );
+
+	/* Disable channels. */
+	tc->CTRLB &= ~disableMask;
+ 306:	81 81       	ldd	r24, Z+1	; 0x01
+ 308:	60 7f       	andi	r22, 0xF0	; 240
+ 30a:	60 95       	com	r22
+ 30c:	86 23       	and	r24, r22
+ 30e:	81 83       	std	Z+1, r24	; 0x01
+}
+ 310:	08 95       	ret
+
+00000312 <TC1_DisableCCChannels>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param disableMask      Mask of channels to disable.
+ */
+void TC1_DisableCCChannels( volatile TC1_t * tc, uint8_t disableMask )
+{
+ 312:	fc 01       	movw	r30, r24
+	/* Make sure only CCxEN bits are set in disableMask. */
+	disableMask &= ( TC1_CCAEN_bm | TC1_CCBEN_bm );
+
+	/* Disable channels. */
+	tc->CTRLB &= ~disableMask;
+ 314:	81 81       	ldd	r24, Z+1	; 0x01
+ 316:	60 73       	andi	r22, 0x30	; 48
+ 318:	60 95       	com	r22
+ 31a:	86 23       	and	r24, r22
+ 31c:	81 83       	std	Z+1, r24	; 0x01
+}
+ 31e:	08 95       	ret
+
+00000320 <TC0_SetOverflowIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New overflow interrupt level.
+ */
+void TC0_SetOverflowIntLevel( volatile TC0_t * tc, TC_OVFINTLVL_t intLevel )
+{
+ 320:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC0_OVFINTLVL_gm ) | intLevel;
+ 322:	86 81       	ldd	r24, Z+6	; 0x06
+ 324:	8c 7f       	andi	r24, 0xFC	; 252
+ 326:	86 2b       	or	r24, r22
+ 328:	86 83       	std	Z+6, r24	; 0x06
+}
+ 32a:	08 95       	ret
+
+0000032c <TC1_SetOverflowIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New overflow interrupt level.
+ */
+void TC1_SetOverflowIntLevel( volatile TC1_t * tc, TC_OVFINTLVL_t intLevel )
+{
+ 32c:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC1_OVFINTLVL_gm ) | intLevel;
+ 32e:	86 81       	ldd	r24, Z+6	; 0x06
+ 330:	8c 7f       	andi	r24, 0xFC	; 252
+ 332:	86 2b       	or	r24, r22
+ 334:	86 83       	std	Z+6, r24	; 0x06
+}
+ 336:	08 95       	ret
+
+00000338 <TC0_SetErrorIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New error interrupt level.
+ */
+void TC0_SetErrorIntLevel( volatile TC0_t * tc, TC_ERRINTLVL_t intLevel )
+{
+ 338:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC0_ERRINTLVL_gm ) | intLevel;
+ 33a:	86 81       	ldd	r24, Z+6	; 0x06
+ 33c:	83 7f       	andi	r24, 0xF3	; 243
+ 33e:	86 2b       	or	r24, r22
+ 340:	86 83       	std	Z+6, r24	; 0x06
+}
+ 342:	08 95       	ret
+
+00000344 <TC1_SetErrorIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New error interrupt level.
+ */
+void TC1_SetErrorIntLevel( volatile TC1_t * tc, TC_ERRINTLVL_t intLevel )
+{
+ 344:	fc 01       	movw	r30, r24
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC1_ERRINTLVL_gm ) | intLevel;
+ 346:	86 81       	ldd	r24, Z+6	; 0x06
+ 348:	83 7f       	andi	r24, 0xF3	; 243
+ 34a:	86 2b       	or	r24, r22
+ 34c:	86 83       	std	Z+6, r24	; 0x06
+}
+ 34e:	08 95       	ret
+
+00000350 <TC0_SetCCAIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC0_SetCCAIntLevel( volatile TC0_t * tc, TC_CCAINTLVL_t intLevel )
+{
+ 350:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCAINTLVL_gm ) | intLevel;
+ 352:	87 81       	ldd	r24, Z+7	; 0x07
+ 354:	8c 7f       	andi	r24, 0xFC	; 252
+ 356:	86 2b       	or	r24, r22
+ 358:	87 83       	std	Z+7, r24	; 0x07
+}
+ 35a:	08 95       	ret
+
+0000035c <TC1_SetCCAIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC1_SetCCAIntLevel( volatile TC1_t * tc, TC_CCAINTLVL_t intLevel )
+{
+ 35c:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC1_CCAINTLVL_gm ) | intLevel;
+ 35e:	87 81       	ldd	r24, Z+7	; 0x07
+ 360:	8c 7f       	andi	r24, 0xFC	; 252
+ 362:	86 2b       	or	r24, r22
+ 364:	87 83       	std	Z+7, r24	; 0x07
+}
+ 366:	08 95       	ret
+
+00000368 <TC0_SetCCBIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel B interrupt level.
+ */
+void TC0_SetCCBIntLevel( volatile TC0_t * tc, TC_CCBINTLVL_t intLevel )
+{
+ 368:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCBINTLVL_gm ) | intLevel;
+ 36a:	87 81       	ldd	r24, Z+7	; 0x07
+ 36c:	83 7f       	andi	r24, 0xF3	; 243
+ 36e:	86 2b       	or	r24, r22
+ 370:	87 83       	std	Z+7, r24	; 0x07
+}
+ 372:	08 95       	ret
+
+00000374 <TC1_SetCCBIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel B interrupt level.
+ */
+void TC1_SetCCBIntLevel( volatile TC1_t * tc, TC_CCBINTLVL_t intLevel )
+{
+ 374:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC1_CCBINTLVL_gm ) | intLevel;
+ 376:	87 81       	ldd	r24, Z+7	; 0x07
+ 378:	83 7f       	andi	r24, 0xF3	; 243
+ 37a:	86 2b       	or	r24, r22
+ 37c:	87 83       	std	Z+7, r24	; 0x07
+}
+ 37e:	08 95       	ret
+
+00000380 <TC0_SetCCCIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC0_SetCCCIntLevel( volatile TC0_t * tc, TC_CCCINTLVL_t intLevel )
+{
+ 380:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCCINTLVL_gm ) | intLevel;
+ 382:	87 81       	ldd	r24, Z+7	; 0x07
+ 384:	8f 7c       	andi	r24, 0xCF	; 207
+ 386:	86 2b       	or	r24, r22
+ 388:	87 83       	std	Z+7, r24	; 0x07
+}
+ 38a:	08 95       	ret
+
+0000038c <TC0_SetCCDIntLevel>:
+ *
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New compare/capture channel A interrupt level.
+ */
+void TC0_SetCCDIntLevel( volatile TC0_t * tc, TC_CCDINTLVL_t intLevel )
+{
+ 38c:	fc 01       	movw	r30, r24
+	tc->INTCTRLB = ( tc->INTCTRLB & ~TC0_CCDINTLVL_gm ) | intLevel;
+ 38e:	87 81       	ldd	r24, Z+7	; 0x07
+ 390:	8f 73       	andi	r24, 0x3F	; 63
+ 392:	86 2b       	or	r24, r22
+ 394:	87 83       	std	Z+7, r24	; 0x07
+}
+ 396:	08 95       	ret
+
+00000398 <TC0_Reset>:
+ *  reset of the device.
+ *
+ *  \param tc  Timer/Counter 0 module instance.
+ */
+void TC0_Reset( volatile TC0_t * tc )
+{
+ 398:	fc 01       	movw	r30, r24
+	/* TC must be turned off before a Reset command. */
+	tc->CTRLA = ( tc->CTRLA & ~TC0_CLKSEL_gm ) | TC_CLKSEL_OFF_gc;
+ 39a:	80 81       	ld	r24, Z
+ 39c:	80 7f       	andi	r24, 0xF0	; 240
+ 39e:	80 83       	st	Z, r24
+
+	/* Issue Reset command. */
+	tc->CTRLFSET = TC_CMD_RESET_gc;
+ 3a0:	8c e0       	ldi	r24, 0x0C	; 12
+ 3a2:	81 87       	std	Z+9, r24	; 0x09
+}
+ 3a4:	08 95       	ret
+
+000003a6 <TC1_Reset>:
+ *  reset of the device.
+ *
+ *  \param tc  Timer/Counter 1 module instance.
+ */
+void TC1_Reset( volatile TC1_t * tc )
+{
+ 3a6:	fc 01       	movw	r30, r24
+	/* TC must be turned off before a Reset command. */
+	tc->CTRLA = ( tc->CTRLA & ~TC1_CLKSEL_gm ) | TC_CLKSEL_OFF_gc;
+ 3a8:	80 81       	ld	r24, Z
+ 3aa:	80 7f       	andi	r24, 0xF0	; 240
+ 3ac:	80 83       	st	Z, r24
+
+	/* Issue Reset command. */
+	tc->CTRLFSET = TC_CMD_RESET_gc;
+ 3ae:	8c e0       	ldi	r24, 0x0C	; 12
+ 3b0:	81 87       	std	Z+9, r24	; 0x09
+}
+ 3b2:	08 95       	ret
+
+000003b4 <Example1>:
++------------------------------------------------------------------------------
+*/
+void Example1( void )
+{
+	/* PD.0 输入/双沿感知*/
+	PORTD.PIN0CTRL |= PORT_ISC_BOTHEDGES_gc;
+ 3b4:	e0 e6       	ldi	r30, 0x60	; 96
+ 3b6:	f6 e0       	ldi	r31, 0x06	; 6
+ 3b8:	80 91 70 06 	lds	r24, 0x0670
+ 3bc:	80 8b       	std	Z+16, r24	; 0x10
+	PORTD.DIRCLR = 0x01;
+ 3be:	21 e0       	ldi	r18, 0x01	; 1
+ 3c0:	22 83       	std	Z+2, r18	; 0x02
+	PORTD_DIRSET = 0x20;
+ 3c2:	80 e2       	ldi	r24, 0x20	; 32
+ 3c4:	80 93 61 06 	sts	0x0661, r24
+	/*  Check if channel is valid and set the pointer offset for the selected
+	 *  channel and assign the eventSource value.
+	 */
+	if (eventChannel < 8) {
+		chMux = &EVSYS.CH0MUX + eventChannel;
+		*chMux = eventSource;
+ 3c8:	88 e6       	ldi	r24, 0x68	; 104
+ 3ca:	80 93 80 01 	sts	0x0180, r24
+
+	/*选择PD0为channel 0事件输入*/
+	EVSYS_SetEventSource( 0, EVSYS_CHMUX_PORTD_PIN0_gc );
+
+	//选择通道0作为TCC0的事件源 并且事件行为是输入捕获
+	TCC0.CTRLD = (uint8_t) TC_EVSEL_CH0_gc | TC_EVACT_CAPT_gc;
+ 3ce:	e0 e0       	ldi	r30, 0x00	; 0
+ 3d0:	f8 e0       	ldi	r31, 0x08	; 8
+ 3d2:	88 e2       	ldi	r24, 0x28	; 40
+ 3d4:	83 83       	std	Z+3, r24	; 0x03
+
+	/* 使能TCC0比较捕获通道A */
+	TCC0.CTRLB |= TC0_CCAEN_bm;
+ 3d6:	80 91 01 08 	lds	r24, 0x0801
+ 3da:	80 61       	ori	r24, 0x10	; 16
+ 3dc:	81 83       	std	Z+1, r24	; 0x01
+
+	/*设置TCC0计数周期 */
+	TCC0.PER = 0xFFFF;
+ 3de:	8f ef       	ldi	r24, 0xFF	; 255
+ 3e0:	9f ef       	ldi	r25, 0xFF	; 255
+ 3e2:	86 a3       	std	Z+38, r24	; 0x26
+ 3e4:	97 a3       	std	Z+39, r25	; 0x27
+	//TCC0时钟源
+	TCC0.CTRLA = TC_CLKSEL_DIV1_gc;
+ 3e6:	20 93 00 08 	sts	0x0800, r18
+
+	while (1) {
+		if ( TCC0.INTFLAGS & TC0_CCAIF_bm ) {
+    /* 当捕获发生时标志位置位，清除标志位*/
+			TCC0.INTFLAGS |= TC0_CCAIF_bm;
+			LED1_T();
+ 3ea:	90 e2       	ldi	r25, 0x20	; 32
+	TCC0.PER = 0xFFFF;
+	//TCC0时钟源
+	TCC0.CTRLA = TC_CLKSEL_DIV1_gc;
+
+	while (1) {
+		if ( TCC0.INTFLAGS & TC0_CCAIF_bm ) {
+ 3ec:	80 91 0c 08 	lds	r24, 0x080C
+ 3f0:	84 ff       	sbrs	r24, 4
+ 3f2:	fc cf       	rjmp	.-8      	; 0x3ec <Example1+0x38>
+    /* 当捕获发生时标志位置位，清除标志位*/
+			TCC0.INTFLAGS |= TC0_CCAIF_bm;
+ 3f4:	80 91 0c 08 	lds	r24, 0x080C
+ 3f8:	80 61       	ori	r24, 0x10	; 16
+ 3fa:	84 87       	std	Z+12, r24	; 0x0c
+			LED1_T();
+ 3fc:	90 93 67 06 	sts	0x0667, r25
+ 400:	f5 cf       	rjmp	.-22     	; 0x3ec <Example1+0x38>
+
+00000402 <Example2>:
+| Function    : Example2
++------------------------------------------------------------------------------
+*/
+void Example2( void )
+{
+    PORTD_DIRSET = 0x20;
+ 402:	90 e2       	ldi	r25, 0x20	; 32
+ 404:	90 93 61 06 	sts	0x0661, r25
+ 408:	80 ec       	ldi	r24, 0xC0	; 192
+ 40a:	80 93 80 01 	sts	0x0180, r24
+	/*选择TCCO益处作为事件通道0的事件*/
+	EVSYS_SetEventSource( 0, EVSYS_CHMUX_TCC0_OVF_gc );
+
+	/*ADC被选择的通道0 1 2 3，事件通道0，1 ，2,3作为所选事件通道；
+	EVSEL定义的通道号最小的事件通道将触发SWEEP中定义的ADC通道的一次扫描*/
+	ADCA.EVCTRL = (uint8_t) ADC_SWEEP_0123_gc |
+ 40e:	e0 e0       	ldi	r30, 0x00	; 0
+ 410:	f2 e0       	ldi	r31, 0x02	; 2
+ 412:	85 ec       	ldi	r24, 0xC5	; 197
+ 414:	83 83       	std	Z+3, r24	; 0x03
+	              ADC_EVSEL_0123_gc |
+	              ADC_EVACT_SWEEP_gc;
+
+	/* 通道0,1,2,3配置为单端正向输入信号 并且设置0,1,2,3的各个通道的正向输入引脚*/
+	ADCA.CH0.MUXCTRL = (uint8_t) ADC_CH_MUXPOS_PIN4_gc |0;
+ 416:	91 a3       	std	Z+33, r25	; 0x21
+	ADCA.CH0.CTRL = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+ 418:	91 e0       	ldi	r25, 0x01	; 1
+ 41a:	90 a3       	std	Z+32, r25	; 0x20
+	ADCA.CH1.MUXCTRL = (uint8_t) ADC_CH_MUXPOS_PIN5_gc |0;
+ 41c:	88 e2       	ldi	r24, 0x28	; 40
+ 41e:	81 a7       	std	Z+41, r24	; 0x29
+	ADCA.CH1.CTRL = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+ 420:	90 a7       	std	Z+40, r25	; 0x28
+	ADCA.CH2.MUXCTRL = (uint8_t) ADC_CH_MUXPOS_PIN6_gc |0;
+ 422:	80 e3       	ldi	r24, 0x30	; 48
+ 424:	81 ab       	std	Z+49, r24	; 0x31
+	ADCA.CH2.CTRL = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+ 426:	90 ab       	std	Z+48, r25	; 0x30
+	ADCA.CH3.MUXCTRL = (uint8_t) ADC_CH_MUXPOS_PIN7_gc |0;
+ 428:	88 e3       	ldi	r24, 0x38	; 56
+ 42a:	81 af       	std	Z+57, r24	; 0x39
+	ADCA.CH3.CTRL = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+ 42c:	90 af       	std	Z+56, r25	; 0x38
+
+
+	/*  设置ADC时钟预分频为DIV8；精度为12位；ADC自由运行模式
+	 *   ADC参考电压为内部VCC / 1.6V；使能ADC
+	 */
+	ADCA.PRESCALER = ( ADCA.PRESCALER & ~ADC_PRESCALER_gm ) |
+ 42e:	80 91 04 02 	lds	r24, 0x0204
+ 432:	88 7f       	andi	r24, 0xF8	; 248
+ 434:	81 60       	ori	r24, 0x01	; 1
+ 436:	84 83       	std	Z+4, r24	; 0x04
+	                 ADC_PRESCALER_DIV8_gc;
+	ADCA.CTRLB = ( ADCA.CTRLB & ~ADC_RESOLUTION_gm ) |
+ 438:	80 91 01 02 	lds	r24, 0x0201
+ 43c:	89 7f       	andi	r24, 0xF9	; 249
+ 43e:	81 83       	std	Z+1, r24	; 0x01
+	             ADC_RESOLUTION_12BIT_gc;
+	ADCA.CTRLB = ( ADCA.CTRLB & ~( ADC_CONMODE_bm | ADC_FREERUN_bm ) );
+ 440:	80 91 01 02 	lds	r24, 0x0201
+ 444:	87 7e       	andi	r24, 0xE7	; 231
+ 446:	81 83       	std	Z+1, r24	; 0x01
+	ADCA.REFCTRL = ( ADCA.REFCTRL & ~ADC_REFSEL_gm ) |
+ 448:	80 91 02 02 	lds	r24, 0x0202
+ 44c:	8f 7c       	andi	r24, 0xCF	; 207
+ 44e:	80 61       	ori	r24, 0x10	; 16
+ 450:	82 83       	std	Z+2, r24	; 0x02
+	               ADC_REFSEL_VCC_gc;
+	ADCA.CTRLA |= ADC_ENABLE_bm;
+ 452:	80 91 00 02 	lds	r24, 0x0200
+ 456:	81 60       	ori	r24, 0x01	; 1
+ 458:	80 93 00 02 	sts	0x0200, r24
+
+	/*设置TCC0计数周期 */
+	TCC0.PER = 0x0FFF;
+ 45c:	e0 e0       	ldi	r30, 0x00	; 0
+ 45e:	f8 e0       	ldi	r31, 0x08	; 8
+ 460:	8f ef       	ldi	r24, 0xFF	; 255
+ 462:	9f e0       	ldi	r25, 0x0F	; 15
+ 464:	86 a3       	std	Z+38, r24	; 0x26
+ 466:	97 a3       	std	Z+39, r25	; 0x27
+ *  \param tc               Timer/Counter module instance.
+ *  \param intLevel         New overflow interrupt level.
+ */
+void TC0_SetOverflowIntLevel( volatile TC0_t * tc, TC_OVFINTLVL_t intLevel )
+{
+	tc->INTCTRLA = ( tc->INTCTRLA & ~TC0_OVFINTLVL_gm ) | intLevel;
+ 468:	80 91 06 08 	lds	r24, 0x0806
+ 46c:	8c 7f       	andi	r24, 0xFC	; 252
+ 46e:	81 60       	ori	r24, 0x01	; 1
+ 470:	86 83       	std	Z+6, r24	; 0x06
+
+	/* 设置溢出中断为低级别中断 */
+	TC0_SetOverflowIntLevel( &TCC0, TC_OVFINTLVL_LO_gc );
+	PMIC.CTRL |= PMIC_LOLVLEN_bm;
+ 472:	80 91 a2 00 	lds	r24, 0x00A2
+ 476:	81 60       	ori	r24, 0x01	; 1
+ 478:	e0 ea       	ldi	r30, 0xA0	; 160
+ 47a:	f0 e0       	ldi	r31, 0x00	; 0
+ 47c:	82 83       	std	Z+2, r24	; 0x02
+
+	sei();	
+ 47e:	78 94       	sei
+	//TCC0时钟源
+	TCC0.CTRLA |= TC_CLKSEL_DIV256_gc;
+ 480:	80 91 00 08 	lds	r24, 0x0800
+ 484:	86 60       	ori	r24, 0x06	; 6
+ 486:	80 93 00 08 	sts	0x0800, r24
+ 48a:	ff cf       	rjmp	.-2      	; 0x48a <Example2+0x88>
+
+0000048c <__vector_14>:
+	PD5上面的灯会不断的闪烁*/
+	           }
+}
+
+ISR(TCC0_OVF_vect)
+{
+ 48c:	1f 92       	push	r1
+ 48e:	0f 92       	push	r0
+ 490:	0f b6       	in	r0, 0x3f	; 63
+ 492:	0f 92       	push	r0
+ 494:	08 b6       	in	r0, 0x38	; 56
+ 496:	0f 92       	push	r0
+ 498:	11 24       	eor	r1, r1
+ 49a:	18 be       	out	0x38, r1	; 56
+ 49c:	8f 93       	push	r24
+ LED1_T();
+ 49e:	80 e2       	ldi	r24, 0x20	; 32
+ 4a0:	80 93 67 06 	sts	0x0667, r24
+}
+ 4a4:	8f 91       	pop	r24
+ 4a6:	0f 90       	pop	r0
+ 4a8:	08 be       	out	0x38, r0	; 56
+ 4aa:	0f 90       	pop	r0
+ 4ac:	0f be       	out	0x3f, r0	; 63
+ 4ae:	0f 90       	pop	r0
+ 4b0:	1f 90       	pop	r1
+ 4b2:	18 95       	reti
+
+000004b4 <Example3>:
++------------------------------------------------------------------------------
+*/
+void Example3( void )
+{
+	/* PD.0 输入/双沿感知*/
+	PORTD.PIN0CTRL = PORT_ISC_BOTHEDGES_gc;
+ 4b4:	e0 e6       	ldi	r30, 0x60	; 96
+ 4b6:	f6 e0       	ldi	r31, 0x06	; 6
+ 4b8:	10 8a       	std	Z+16, r1	; 0x10
+	PORTD.DIRCLR = 0x01;
+ 4ba:	91 e0       	ldi	r25, 0x01	; 1
+ 4bc:	92 83       	std	Z+2, r25	; 0x02
+ 4be:	80 ec       	ldi	r24, 0xC0	; 192
+ 4c0:	80 93 80 01 	sts	0x0180, r24
+
+	/*选择PD0为通道1事件输入 */
+	EVSYS_SetEventSource( 1, EVSYS_CHMUX_PORTD_PIN0_gc );
+
+	/* 选择通道0作为TCC1的时钟源 TCC0与TCC1级联成了32为计数器*/
+	TCC1.CTRLA = TC_CLKSEL_EVCH0_gc;
+ 4c4:	88 e6       	ldi	r24, 0x68	; 104
+ 4c6:	80 93 81 01 	sts	0x0181, r24
+ 4ca:	a0 e4       	ldi	r26, 0x40	; 64
+ 4cc:	b8 e0       	ldi	r27, 0x08	; 8
+ 4ce:	88 e0       	ldi	r24, 0x08	; 8
+ 4d0:	80 93 40 08 	sts	0x0840, r24
+
+	/* 设置通道TCC0为捕获模式 */
+	TCC0.CTRLD = (uint8_t) TC_EVSEL_CH1_gc | TC_EVACT_CAPT_gc;
+ 4d4:	e0 e0       	ldi	r30, 0x00	; 0
+ 4d6:	f8 e0       	ldi	r31, 0x08	; 8
+ 4d8:	89 e2       	ldi	r24, 0x29	; 41
+ 4da:	83 83       	std	Z+3, r24	; 0x03
+
+	/* 设置通道TCC1为捕获模式并且添加事件的延迟来弥补插入的传播时延 */
+	TCC1.CTRLD = (uint8_t) TC_EVSEL_CH1_gc | TC0_EVDLY_bm | TC_EVACT_CAPT_gc;
+ 4dc:	89 e3       	ldi	r24, 0x39	; 57
+ 4de:	13 96       	adiw	r26, 0x03	; 3
+ 4e0:	8c 93       	st	X, r24
+ 4e2:	13 97       	sbiw	r26, 0x03	; 3
+
+	/* 使能TCC0,TCC1的A通道 */
+	TCC0.CTRLB = TC0_CCAEN_bm;
+ 4e4:	80 e1       	ldi	r24, 0x10	; 16
+ 4e6:	81 83       	std	Z+1, r24	; 0x01
+	TCC1.CTRLB = TC1_CCAEN_bm;
+ 4e8:	11 96       	adiw	r26, 0x01	; 1
+ 4ea:	8c 93       	st	X, r24
+ 4ec:	11 97       	sbiw	r26, 0x01	; 1
+
+	//TCC0时钟源
+	TCC0.CTRLA = TC_CLKSEL_DIV1_gc;
+ 4ee:	90 93 00 08 	sts	0x0800, r25
+
+	while (1) {
+		if ( TCC1.INTFLAGS & TC0_CCAIF_bm ) {
+ 4f2:	80 91 4c 08 	lds	r24, 0x084C
+ 4f6:	84 ff       	sbrs	r24, 4
+ 4f8:	fc cf       	rjmp	.-8      	; 0x4f2 <Example3+0x3e>
+			/* 当捕获发生时标志位置位，清除标志位*/
+			 
+			TCC0.INTFLAGS |= TC0_CCAIF_bm;
+ 4fa:	80 91 0c 08 	lds	r24, 0x080C
+ 4fe:	80 61       	ori	r24, 0x10	; 16
+ 500:	84 87       	std	Z+12, r24	; 0x0c
+			TCC1.INTFLAGS |= TC1_CCAIF_bm;
+ 502:	80 91 4c 08 	lds	r24, 0x084C
+ 506:	80 61       	ori	r24, 0x10	; 16
+ 508:	1c 96       	adiw	r26, 0x0c	; 12
+ 50a:	8c 93       	st	X, r24
+ 50c:	1c 97       	sbiw	r26, 0x0c	; 12
+ 50e:	f1 cf       	rjmp	.-30     	; 0x4f2 <Example3+0x3e>
+
+00000510 <Example4>:
++------------------------------------------------------------------------------
+*/
+void Example4( void )
+{
+	/* PD.0 输入/双沿感知*/
+	PORTD.PIN0CTRL = PORT_ISC_RISING_gc;
+ 510:	e0 e6       	ldi	r30, 0x60	; 96
+ 512:	f6 e0       	ldi	r31, 0x06	; 6
+ 514:	81 e0       	ldi	r24, 0x01	; 1
+ 516:	80 8b       	std	Z+16, r24	; 0x10
+	PORTD.DIRCLR = 0x01;
+ 518:	82 83       	std	Z+2, r24	; 0x02
+
+	/* PC引脚全部输出*/
+	PORTC.DIRSET = 0xFF;
+ 51a:	8f ef       	ldi	r24, 0xFF	; 255
+ 51c:	e0 e4       	ldi	r30, 0x40	; 64
+ 51e:	f6 e0       	ldi	r31, 0x06	; 6
+ 520:	81 83       	std	Z+1, r24	; 0x01
+ 522:	88 e6       	ldi	r24, 0x68	; 104
+ 524:	80 93 80 01 	sts	0x0180, r24
+	 */
+	if (eventChannel < 8) {
+
+		volatile uint8_t * chCtrl;
+		chCtrl = &EVSYS.CH0CTRL + eventChannel;
+		*chCtrl = filterCoefficient;
+ 528:	87 e0       	ldi	r24, 0x07	; 7
+ 52a:	80 93 88 01 	sts	0x0188, r24
+	/*  在TCC0通道A上加数字滤波器*/
+	  
+	EVSYS_SetEventChannelFilter( 0, EVSYS_DIGFILT_8SAMPLES_gc );
+
+	/*设置TCC0计数周期 */ 
+	TCC0.PER = 0xFFFF;
+ 52e:	8f ef       	ldi	r24, 0xFF	; 255
+ 530:	9f ef       	ldi	r25, 0xFF	; 255
+ 532:	e0 e0       	ldi	r30, 0x00	; 0
+ 534:	f8 e0       	ldi	r31, 0x08	; 8
+ 536:	86 a3       	std	Z+38, r24	; 0x26
+ 538:	97 a3       	std	Z+39, r25	; 0x27
+    //TCC0时钟源为事件通道0
+	TCC0.CTRLA = TC_CLKSEL_EVCH0_gc;
+ 53a:	88 e0       	ldi	r24, 0x08	; 8
+ 53c:	80 93 00 08 	sts	0x0800, r24
+
+
+	while (1) {
+		/* 输出TCCO计数器中数值的相反*/
+		PORTC.OUT = ~TCC0.CNT;
+ 540:	e0 e4       	ldi	r30, 0x40	; 64
+ 542:	f6 e0       	ldi	r31, 0x06	; 6
+ 544:	80 91 20 08 	lds	r24, 0x0820
+ 548:	90 91 21 08 	lds	r25, 0x0821
+ 54c:	80 95       	com	r24
+ 54e:	84 83       	std	Z+4, r24	; 0x04
+ 550:	f9 cf       	rjmp	.-14     	; 0x544 <Example4+0x34>
+
+00000552 <main>:
++------------------------------------------------------------------------------
+*/
+int main( void )
+{
+
+	Example4();
+ 552:	0e 94 88 02 	call	0x510	; 0x510 <Example4>
+ 556:	ff cf       	rjmp	.-2      	; 0x556 <main+0x4>
+
+00000558 <_exit>:
+ 558:	f8 94       	cli
+
+0000055a <__stop_program>:
+ 55a:	ff cf       	rjmp	.-2      	; 0x55a <__stop_program>

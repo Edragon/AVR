@@ -1,0 +1,610 @@
+
+RTC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000454  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000002  00802000  00802000  000004c8  2**0
+                  ALLOC
+  2 .debug_aranges 00000020  00000000  00000000  000004c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 000000c0  00000000  00000000  000004e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   000007f3  00000000  00000000  000005a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000001fd  00000000  00000000  00000d9b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000002bd  00000000  00000000  00000f98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000000a0  00000000  00000000  00001258  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000555  00000000  00000000  000012f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000048  00000000  00000000  0000184d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <__ctors_end>
+   4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+   c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  10:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  14:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  18:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  1c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  20:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  24:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  28:	0c 94 b3 01 	jmp	0x366	; 0x366 <__vector_10>
+  2c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__vector_11>
+  30:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  34:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  38:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  3c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  40:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  44:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  48:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  4c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  50:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  54:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  58:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  5c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  60:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  64:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  68:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  6c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  70:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  74:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  78:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  7c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  80:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  84:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  88:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  8c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  90:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  94:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  98:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  9c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  f8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+  fc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 100:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 104:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 108:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 10c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 110:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 114:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 118:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 11c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 120:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 124:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 128:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 12c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 130:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 134:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 138:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 13c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 140:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 144:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 148:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 14c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 150:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 154:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 158:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 15c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 160:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 164:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 168:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 16c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 170:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 174:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 178:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 17c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 180:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 184:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 188:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 18c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 190:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 194:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 198:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 19c:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1a8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ac:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1b8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1bc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1c8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1cc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1d8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1dc:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e4:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1e8:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1ec:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+ 1f0:	0c 94 20 01 	jmp	0x240	; 0x240 <__bad_interrupt>
+
+000001f4 <__ctors_end>:
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	1f be       	out	0x3f, r1	; 63
+ 1f8:	cf ef       	ldi	r28, 0xFF	; 255
+ 1fa:	df e3       	ldi	r29, 0x3F	; 63
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	cd bf       	out	0x3d, r28	; 61
+ 200:	00 e0       	ldi	r16, 0x00	; 0
+ 202:	0c bf       	out	0x3c, r16	; 60
+ 204:	18 be       	out	0x38, r1	; 56
+ 206:	19 be       	out	0x39, r1	; 57
+ 208:	1a be       	out	0x3a, r1	; 58
+ 20a:	1b be       	out	0x3b, r1	; 59
+
+0000020c <__do_copy_data>:
+ 20c:	10 e2       	ldi	r17, 0x20	; 32
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	e4 e5       	ldi	r30, 0x54	; 84
+ 214:	f4 e0       	ldi	r31, 0x04	; 4
+ 216:	00 e0       	ldi	r16, 0x00	; 0
+ 218:	0b bf       	out	0x3b, r16	; 59
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <__do_copy_data+0x14>
+ 21c:	07 90       	elpm	r0, Z+
+ 21e:	0d 92       	st	X+, r0
+ 220:	a0 30       	cpi	r26, 0x00	; 0
+ 222:	b1 07       	cpc	r27, r17
+ 224:	d9 f7       	brne	.-10     	; 0x21c <__do_copy_data+0x10>
+ 226:	1b be       	out	0x3b, r1	; 59
+
+00000228 <__do_clear_bss>:
+ 228:	10 e2       	ldi	r17, 0x20	; 32
+ 22a:	a0 e0       	ldi	r26, 0x00	; 0
+ 22c:	b0 e2       	ldi	r27, 0x20	; 32
+ 22e:	01 c0       	rjmp	.+2      	; 0x232 <.do_clear_bss_start>
+
+00000230 <.do_clear_bss_loop>:
+ 230:	1d 92       	st	X+, r1
+
+00000232 <.do_clear_bss_start>:
+ 232:	a2 30       	cpi	r26, 0x02	; 2
+ 234:	b1 07       	cpc	r27, r17
+ 236:	e1 f7       	brne	.-8      	; 0x230 <.do_clear_bss_loop>
+ 238:	0e 94 65 01 	call	0x2ca	; 0x2ca <main>
+ 23c:	0c 94 28 02 	jmp	0x450	; 0x450 <_exit>
+
+00000240 <__bad_interrupt>:
+ 240:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000244 <RTC_Initialize>:
+void RTC_Initialize( uint16_t period,
+                     uint16_t count,
+                     uint16_t compareValue,
+                     RTC_PRESCALER_t prescaler )
+{
+	RTC.PER = period - 1;
+ 244:	01 97       	sbiw	r24, 0x01	; 1
+ 246:	e0 e0       	ldi	r30, 0x00	; 0
+ 248:	f4 e0       	ldi	r31, 0x04	; 4
+ 24a:	82 87       	std	Z+10, r24	; 0x0a
+ 24c:	93 87       	std	Z+11, r25	; 0x0b
+	RTC.CNT = count;
+ 24e:	60 87       	std	Z+8, r22	; 0x08
+ 250:	71 87       	std	Z+9, r23	; 0x09
+	RTC.COMP = compareValue;
+ 252:	44 87       	std	Z+12, r20	; 0x0c
+ 254:	55 87       	std	Z+13, r21	; 0x0d
+	RTC.CTRL = ( RTC.CTRL & ~RTC_PRESCALER_gm ) | prescaler;
+ 256:	80 81       	ld	r24, Z
+ 258:	88 7f       	andi	r24, 0xF8	; 248
+ 25a:	82 2b       	or	r24, r18
+ 25c:	80 83       	st	Z, r24
+}
+ 25e:	08 95       	ret
+
+00000260 <RTC_SetOverflowIntLevel>:
+ *
+ *  \参数 intLevel 溢出中断级别
+ */
+void RTC_SetOverflowIntLevel( RTC_OVFINTLVL_t intLevel )
+{
+	RTC.INTCTRL = ( RTC.INTCTRL & ~RTC_OVFINTLVL_gm ) | intLevel;
+ 260:	e0 e0       	ldi	r30, 0x00	; 0
+ 262:	f4 e0       	ldi	r31, 0x04	; 4
+ 264:	92 81       	ldd	r25, Z+2	; 0x02
+ 266:	9c 7f       	andi	r25, 0xFC	; 252
+ 268:	98 2b       	or	r25, r24
+ 26a:	92 83       	std	Z+2, r25	; 0x02
+}
+ 26c:	08 95       	ret
+
+0000026e <RTC_SetCompareIntLevel>:
+ *
+ *  \参数 intLevel 比较中断级别
+ */
+void RTC_SetCompareIntLevel( RTC_COMPINTLVL_t intLevel )
+{
+	RTC.INTCTRL = ( RTC.INTCTRL & ~RTC_COMPINTLVL_gm ) | intLevel;
+ 26e:	e0 e0       	ldi	r30, 0x00	; 0
+ 270:	f4 e0       	ldi	r31, 0x04	; 4
+ 272:	92 81       	ldd	r25, Z+2	; 0x02
+ 274:	93 7f       	andi	r25, 0xF3	; 243
+ 276:	98 2b       	or	r25, r24
+ 278:	92 83       	std	Z+2, r25	; 0x02
+}
+ 27a:	08 95       	ret
+
+0000027c <RTC_SetIntLevels>:
+ *  \参数 compIntLevel 比较中断级别
+ */
+void RTC_SetIntLevels( RTC_OVFINTLVL_t ovfIntLevel,
+                       RTC_COMPINTLVL_t compIntLevel )
+{
+	RTC.INTCTRL = ( RTC.INTCTRL &
+ 27c:	e0 e0       	ldi	r30, 0x00	; 0
+ 27e:	f4 e0       	ldi	r31, 0x04	; 4
+ 280:	92 81       	ldd	r25, Z+2	; 0x02
+ 282:	90 7f       	andi	r25, 0xF0	; 240
+ 284:	98 2b       	or	r25, r24
+ 286:	96 2b       	or	r25, r22
+ 288:	92 83       	std	Z+2, r25	; 0x02
+	              ~( RTC_COMPINTLVL_gm | RTC_OVFINTLVL_gm ) ) |
+	              ovfIntLevel |
+	              compIntLevel;
+}
+ 28a:	08 95       	ret
+
+0000028c <RTC_SetAlarm>:
+ *  \参数 alarmTimeout Timeout time in RTC clock cycles (scaled).
+ */
+void RTC_SetAlarm( uint16_t alarmTimeout )
+{
+	//计算比较值
+	uint16_t compareValue = RTC.CNT + alarmTimeout;
+ 28c:	20 91 08 04 	lds	r18, 0x0408
+ 290:	30 91 09 04 	lds	r19, 0x0409
+ 294:	28 0f       	add	r18, r24
+ 296:	39 1f       	adc	r19, r25
+
+	//超过周期值
+	if (compareValue > RTC.PER)
+ 298:	80 91 0a 04 	lds	r24, 0x040A
+ 29c:	90 91 0b 04 	lds	r25, 0x040B
+ 2a0:	82 17       	cp	r24, r18
+ 2a2:	93 07       	cpc	r25, r19
+ 2a4:	30 f4       	brcc	.+12     	; 0x2b2 <RTC_SetAlarm+0x26>
+	{
+		compareValue -= RTC.PER;
+ 2a6:	80 91 0a 04 	lds	r24, 0x040A
+ 2aa:	90 91 0b 04 	lds	r25, 0x040B
+ 2ae:	28 1b       	sub	r18, r24
+ 2b0:	39 0b       	sbc	r19, r25
+	}
+	RTC.COMP = compareValue;
+ 2b2:	e0 e0       	ldi	r30, 0x00	; 0
+ 2b4:	f4 e0       	ldi	r31, 0x04	; 4
+ 2b6:	24 87       	std	Z+12, r18	; 0x0c
+ 2b8:	35 87       	std	Z+13, r19	; 0x0d
+}
+ 2ba:	08 95       	ret
+
+000002bc <RTC_SetPrescaler>:
+ *
+ *  \参数 prescaler Clock prescaler setting.
+ */
+void RTC_SetPrescaler( RTC_PRESCALER_t prescaler )
+{
+	RTC.CTRL = ( RTC.CTRL & ~RTC_PRESCALER_gm ) | prescaler;
+ 2bc:	e0 e0       	ldi	r30, 0x00	; 0
+ 2be:	f4 e0       	ldi	r31, 0x04	; 4
+ 2c0:	90 81       	ld	r25, Z
+ 2c2:	98 7f       	andi	r25, 0xF8	; 248
+ 2c4:	98 2b       	or	r25, r24
+ 2c6:	90 83       	st	Z, r25
+}
+ 2c8:	08 95       	ret
+
+000002ca <main>:
+*/
+
+int main(void)
+{
+	//打开内部 32.768 kHz RC振荡器产生1.024 kHz
+	OSC.CTRL |= OSC_RC32KEN_bm;
+ 2ca:	80 91 50 00 	lds	r24, 0x0050
+ 2ce:	84 60       	ori	r24, 0x04	; 4
+ 2d0:	80 93 50 00 	sts	0x0050, r24
+
+	do {//等待时钟稳定
+	} while ( ( OSC.STATUS & OSC_RC32KRDY_bm ) == 0);
+ 2d4:	80 91 51 00 	lds	r24, 0x0051
+ 2d8:	82 ff       	sbrs	r24, 2
+ 2da:	fc cf       	rjmp	.-8      	; 0x2d4 <main+0xa>
+
+	//设置内部32kHz为RTC时钟源
+	CLK.RTCCTRL = CLK_RTCSRC_RCOSC_gc | CLK_RTCEN_bm;
+ 2dc:	85 e0       	ldi	r24, 0x05	; 5
+ 2de:	e0 e4       	ldi	r30, 0x40	; 64
+ 2e0:	f0 e0       	ldi	r31, 0x00	; 0
+ 2e2:	83 83       	std	Z+3, r24	; 0x03
+
+	//设置LED端口为输出
+	LED_PORT.DIR = 0xFF;
+ 2e4:	8f ef       	ldi	r24, 0xFF	; 255
+ 2e6:	80 93 60 06 	sts	0x0660, r24
+
+	do {//检查RTC忙否
+	} while ( RTC_Busy() );
+ 2ea:	e0 e0       	ldi	r30, 0x00	; 0
+ 2ec:	f4 e0       	ldi	r31, 0x04	; 4
+ 2ee:	80 91 01 04 	lds	r24, 0x0401
+ 2f2:	80 fd       	sbrc	r24, 0
+ 2f4:	fa cf       	rjmp	.-12     	; 0x2ea <main+0x20>
+void RTC_Initialize( uint16_t period,
+                     uint16_t count,
+                     uint16_t compareValue,
+                     RTC_PRESCALER_t prescaler )
+{
+	RTC.PER = period - 1;
+ 2f6:	8f ef       	ldi	r24, 0xFF	; 255
+ 2f8:	93 e0       	ldi	r25, 0x03	; 3
+ 2fa:	82 87       	std	Z+10, r24	; 0x0a
+ 2fc:	93 87       	std	Z+11, r25	; 0x0b
+	RTC.CNT = count;
+ 2fe:	10 86       	std	Z+8, r1	; 0x08
+ 300:	11 86       	std	Z+9, r1	; 0x09
+	RTC.COMP = compareValue;
+ 302:	14 86       	std	Z+12, r1	; 0x0c
+ 304:	15 86       	std	Z+13, r1	; 0x0d
+	RTC.CTRL = ( RTC.CTRL & ~RTC_PRESCALER_gm ) | prescaler;
+ 306:	80 91 00 04 	lds	r24, 0x0400
+ 30a:	88 7f       	andi	r24, 0xF8	; 248
+ 30c:	81 60       	ori	r24, 0x01	; 1
+ 30e:	80 93 00 04 	sts	0x0400, r24
+ *  \参数 alarmTimeout Timeout time in RTC clock cycles (scaled).
+ */
+void RTC_SetAlarm( uint16_t alarmTimeout )
+{
+	//计算比较值
+	uint16_t compareValue = RTC.CNT + alarmTimeout;
+ 312:	20 91 08 04 	lds	r18, 0x0408
+ 316:	30 91 09 04 	lds	r19, 0x0409
+ 31a:	20 50       	subi	r18, 0x00	; 0
+ 31c:	3e 4f       	sbci	r19, 0xFE	; 254
+
+	//超过周期值
+	if (compareValue > RTC.PER)
+ 31e:	80 91 0a 04 	lds	r24, 0x040A
+ 322:	90 91 0b 04 	lds	r25, 0x040B
+ 326:	82 17       	cp	r24, r18
+ 328:	93 07       	cpc	r25, r19
+ 32a:	30 f4       	brcc	.+12     	; 0x338 <main+0x6e>
+	{
+		compareValue -= RTC.PER;
+ 32c:	80 91 0a 04 	lds	r24, 0x040A
+ 330:	90 91 0b 04 	lds	r25, 0x040B
+ 334:	28 1b       	sub	r18, r24
+ 336:	39 0b       	sbc	r19, r25
+	}
+	RTC.COMP = compareValue;
+ 338:	e0 e0       	ldi	r30, 0x00	; 0
+ 33a:	f4 e0       	ldi	r31, 0x04	; 4
+ 33c:	24 87       	std	Z+12, r18	; 0x0c
+ 33e:	35 87       	std	Z+13, r19	; 0x0d
+ *
+ *  \参数 intLevel 溢出中断级别
+ */
+void RTC_SetOverflowIntLevel( RTC_OVFINTLVL_t intLevel )
+{
+	RTC.INTCTRL = ( RTC.INTCTRL & ~RTC_OVFINTLVL_gm ) | intLevel;
+ 340:	80 91 02 04 	lds	r24, 0x0402
+ 344:	8c 7f       	andi	r24, 0xFC	; 252
+ 346:	81 60       	ori	r24, 0x01	; 1
+ 348:	82 83       	std	Z+2, r24	; 0x02
+ *
+ *  \参数 intLevel 比较中断级别
+ */
+void RTC_SetCompareIntLevel( RTC_COMPINTLVL_t intLevel )
+{
+	RTC.INTCTRL = ( RTC.INTCTRL & ~RTC_COMPINTLVL_gm ) | intLevel;
+ 34a:	80 91 02 04 	lds	r24, 0x0402
+ 34e:	83 7f       	andi	r24, 0xF3	; 243
+ 350:	84 60       	ori	r24, 0x04	; 4
+ 352:	82 83       	std	Z+2, r24	; 0x02
+	//使能溢出中断
+	RTC_SetOverflowIntLevel( RTC_OVFINTLVL_LO_gc);
+	//使能比较中断
+	RTC_SetCompareIntLevel( RTC_COMPINTLVL_LO_gc);
+
+	PMIC.CTRL |= PMIC_LOLVLEN_bm;
+ 354:	80 91 a2 00 	lds	r24, 0x00A2
+ 358:	81 60       	ori	r24, 0x01	; 1
+ 35a:	e0 ea       	ldi	r30, 0xA0	; 160
+ 35c:	f0 e0       	ldi	r31, 0x00	; 0
+ 35e:	82 83       	std	Z+2, r24	; 0x02
+	sei();
+ 360:	78 94       	sei
+
+	do {
+		nop();
+ 362:	00 00       	nop
+ 364:	fe cf       	rjmp	.-4      	; 0x362 <main+0x98>
+
+00000366 <__vector_10>:
+
+
+/*! \溢出中断服务程序 在端口D的LED上显示秒数
+ */
+ISR(RTC_OVF_vect)
+{
+ 366:	1f 92       	push	r1
+ 368:	0f 92       	push	r0
+ 36a:	0f b6       	in	r0, 0x3f	; 63
+ 36c:	0f 92       	push	r0
+ 36e:	08 b6       	in	r0, 0x38	; 56
+ 370:	0f 92       	push	r0
+ 372:	0b b6       	in	r0, 0x3b	; 59
+ 374:	0f 92       	push	r0
+ 376:	11 24       	eor	r1, r1
+ 378:	18 be       	out	0x38, r1	; 56
+ 37a:	1b be       	out	0x3b, r1	; 59
+ 37c:	8f 93       	push	r24
+ 37e:	9f 93       	push	r25
+ 380:	ef 93       	push	r30
+ 382:	ff 93       	push	r31
+	static RTC_BCD_t rtcTime;
+
+	if ( ++rtcTime.sec_ones > 9 )
+ 384:	80 91 00 20 	lds	r24, 0x2000
+ 388:	8f 5f       	subi	r24, 0xFF	; 255
+ 38a:	80 93 00 20 	sts	0x2000, r24
+ 38e:	8a 30       	cpi	r24, 0x0A	; 10
+ 390:	38 f0       	brcs	.+14     	; 0x3a0 <__vector_10+0x3a>
+	{
+		rtcTime.sec_ones = 0;
+ 392:	10 92 00 20 	sts	0x2000, r1
+		rtcTime.sec_tens++;
+ 396:	80 91 01 20 	lds	r24, 0x2001
+ 39a:	8f 5f       	subi	r24, 0xFF	; 255
+ 39c:	80 93 01 20 	sts	0x2001, r24
+	}
+
+	if ( rtcTime.sec_tens > 5 )
+ 3a0:	80 91 01 20 	lds	r24, 0x2001
+ 3a4:	86 30       	cpi	r24, 0x06	; 6
+ 3a6:	10 f0       	brcs	.+4      	; 0x3ac <__vector_10+0x46>
+	{
+		rtcTime.sec_tens = 0;
+ 3a8:	10 92 01 20 	sts	0x2001, r1
+	}
+
+	LED_PORT.OUT = ( ( rtcTime.sec_tens << 4 ) | rtcTime.sec_ones );
+ 3ac:	80 91 01 20 	lds	r24, 0x2001
+ 3b0:	82 95       	swap	r24
+ 3b2:	80 7f       	andi	r24, 0xF0	; 240
+ 3b4:	90 91 00 20 	lds	r25, 0x2000
+ 3b8:	89 2b       	or	r24, r25
+ 3ba:	e0 e6       	ldi	r30, 0x60	; 96
+ 3bc:	f6 e0       	ldi	r31, 0x06	; 6
+ 3be:	84 83       	std	Z+4, r24	; 0x04
+}
+ 3c0:	ff 91       	pop	r31
+ 3c2:	ef 91       	pop	r30
+ 3c4:	9f 91       	pop	r25
+ 3c6:	8f 91       	pop	r24
+ 3c8:	0f 90       	pop	r0
+ 3ca:	0b be       	out	0x3b, r0	; 59
+ 3cc:	0f 90       	pop	r0
+ 3ce:	08 be       	out	0x38, r0	; 56
+ 3d0:	0f 90       	pop	r0
+ 3d2:	0f be       	out	0x3f, r0	; 63
+ 3d4:	0f 90       	pop	r0
+ 3d6:	1f 90       	pop	r1
+ 3d8:	18 95       	reti
+
+000003da <__vector_11>:
+/*! \比较中断服务程序 在端口D的LED上显示秒数
+ */
+ISR(RTC_COMP_vect)
+   {
+ 3da:	1f 92       	push	r1
+ 3dc:	0f 92       	push	r0
+ 3de:	0f b6       	in	r0, 0x3f	; 63
+ 3e0:	0f 92       	push	r0
+ 3e2:	08 b6       	in	r0, 0x38	; 56
+ 3e4:	0f 92       	push	r0
+ 3e6:	0b b6       	in	r0, 0x3b	; 59
+ 3e8:	0f 92       	push	r0
+ 3ea:	11 24       	eor	r1, r1
+ 3ec:	18 be       	out	0x38, r1	; 56
+ 3ee:	1b be       	out	0x3b, r1	; 59
+ 3f0:	2f 93       	push	r18
+ 3f2:	3f 93       	push	r19
+ 3f4:	8f 93       	push	r24
+ 3f6:	9f 93       	push	r25
+ 3f8:	ef 93       	push	r30
+ 3fa:	ff 93       	push	r31
+      LED_PORT.OUTTGL = 0X80;
+ 3fc:	80 e8       	ldi	r24, 0x80	; 128
+ 3fe:	e0 e6       	ldi	r30, 0x60	; 96
+ 400:	f6 e0       	ldi	r31, 0x06	; 6
+ 402:	87 83       	std	Z+7, r24	; 0x07
+ *  \参数 alarmTimeout Timeout time in RTC clock cycles (scaled).
+ */
+void RTC_SetAlarm( uint16_t alarmTimeout )
+{
+	//计算比较值
+	uint16_t compareValue = RTC.CNT + alarmTimeout;
+ 404:	20 91 08 04 	lds	r18, 0x0408
+ 408:	30 91 09 04 	lds	r19, 0x0409
+ 40c:	20 50       	subi	r18, 0x00	; 0
+ 40e:	3e 4f       	sbci	r19, 0xFE	; 254
+
+	//超过周期值
+	if (compareValue > RTC.PER)
+ 410:	80 91 0a 04 	lds	r24, 0x040A
+ 414:	90 91 0b 04 	lds	r25, 0x040B
+ 418:	82 17       	cp	r24, r18
+ 41a:	93 07       	cpc	r25, r19
+ 41c:	30 f4       	brcc	.+12     	; 0x42a <__vector_11+0x50>
+	{
+		compareValue -= RTC.PER;
+ 41e:	80 91 0a 04 	lds	r24, 0x040A
+ 422:	90 91 0b 04 	lds	r25, 0x040B
+ 426:	28 1b       	sub	r18, r24
+ 428:	39 0b       	sbc	r19, r25
+	}
+	RTC.COMP = compareValue;
+ 42a:	e0 e0       	ldi	r30, 0x00	; 0
+ 42c:	f4 e0       	ldi	r31, 0x04	; 4
+ 42e:	24 87       	std	Z+12, r18	; 0x0c
+ 430:	35 87       	std	Z+13, r19	; 0x0d
+	  RTC_SetAlarm(RTC_CYCLES_1S/2);
+   }
+ 432:	ff 91       	pop	r31
+ 434:	ef 91       	pop	r30
+ 436:	9f 91       	pop	r25
+ 438:	8f 91       	pop	r24
+ 43a:	3f 91       	pop	r19
+ 43c:	2f 91       	pop	r18
+ 43e:	0f 90       	pop	r0
+ 440:	0b be       	out	0x3b, r0	; 59
+ 442:	0f 90       	pop	r0
+ 444:	08 be       	out	0x38, r0	; 56
+ 446:	0f 90       	pop	r0
+ 448:	0f be       	out	0x3f, r0	; 63
+ 44a:	0f 90       	pop	r0
+ 44c:	1f 90       	pop	r1
+ 44e:	18 95       	reti
+
+00000450 <_exit>:
+ 450:	f8 94       	cli
+
+00000452 <__stop_program>:
+ 452:	ff cf       	rjmp	.-2      	; 0x452 <__stop_program>

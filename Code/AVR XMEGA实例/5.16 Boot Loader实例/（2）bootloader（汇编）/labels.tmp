@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\example\ASM_example\16-1 bootloader</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+  <FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\usart_driver.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>70</LINE></RESET>
+  <ISR><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>238</LINE></ISR>
+  <uart_init><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>42</LINE></uart_init>
+  <RESET_LOOP><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>107</LINE></RESET_LOOP>
+  <QUIT_BOOT><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>230</LINE></QUIT_BOOT>
+  <RECEIVE_DATA><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>125</LINE></RECEIVE_DATA>
+  <STORE_DATA><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>129</LINE></STORE_DATA>
+  <WAITING_RECEIVE><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>137</LINE></WAITING_RECEIVE>
+  <RECEIVE_END><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>145</LINE></RECEIVE_END>
+  <SP_LoadFlashPage><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>147</LINE></SP_LoadFlashPage>
+  <SP_LoadFlashPage_1><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>160</LINE></SP_LoadFlashPage_1>
+  <SP_EraseWriteApplicationPage><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>174</LINE></SP_EraseWriteApplicationPage>
+  <SP_WaitForSPM><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>191</LINE></SP_WaitForSPM>
+  <SP_ReadWord><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>198</LINE></SP_ReadWord>
+  <SP_ReadWord_1><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>207</LINE></SP_ReadWord_1>
+  <SEND_DATA><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>217</LINE></SEND_DATA>
+  <SEND_DATA_1><FILE>E:\ATMAGE\example\ASM_example\16-1 bootloader\BOOT_ASM.asm</FILE><LINE>221</LINE></SEND_DATA_1>
+ </LABELS>
+</ASSEMBLER_INFO>

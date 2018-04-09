@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATxmega128A1</DEVICE>
+ <WORKING_DIR>E:\ATMAGE\example\ASM_example\12-1 AC_asm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\安装\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\安装\AvrAssembler2\Appnotes\ATxmega128A1def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.asm</FILE><LINE>50</LINE></RESET>
+  <ISR_ACA_AC0_vect><FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.asm</FILE><LINE>127</LINE></ISR_ACA_AC0_vect>
+  <ISR_ACA_AC1_vect><FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.asm</FILE><LINE>133</LINE></ISR_ACA_AC1_vect>
+  <LOOP><FILE>E:\ATMAGE\example\ASM_example\12-1 AC_asm\AC.asm</FILE><LINE>116</LINE></LOOP>
+ </LABELS>
+</ASSEMBLER_INFO>
